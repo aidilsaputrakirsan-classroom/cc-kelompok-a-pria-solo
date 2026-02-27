@@ -1,0 +1,30 @@
+#missingDocsMessage::-webkit-scrollbar {
+    width: 6px;
+}
+
+#missingDocsMessage::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+#missingDocsMessage::-webkit-scrollbar-thumb {
+    background: #d1d5db;
+    border-radius: 10px;
+}
+
+#missingDocsMessage::-webkit-scrollbar-thumb:hover {
+    background: #9ca3af;
+}
+
+/* Modal backdrop */
+.modal-backdrop {
+    background-color: rgba(0, 0, 0, 0.4);
+    backdrop-filter: blur(2px);
+}
+
+/* Focus state untuk textarea */
+#missingDocsMessage:focus {
+    outline: none;
+    border-color: #3b82f6;
+    background: white;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.1);
+}

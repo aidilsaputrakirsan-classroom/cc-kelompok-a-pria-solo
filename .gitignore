@@ -1,0 +1,39 @@
+# =============================================================================
+# Frontend
+# =============================================================================
+frontend/node_modules
+frontend/public/hot
+frontend/public/storage
+frontend/storage
+frontend/storage/*.key
+frontend/storage/admin/
+frontend/storage/app/
+frontend/vendor
+frontend/.env
+frontend/.env.backup
+frontend/.phpunit.result.cache
+frontend/docker-compose.override.yml
+frontend/Homestead.json
+frontend/Homestead.yaml
+frontend/npm-debug.log
+frontend/yarn-error.log
+frontend/.idea
+frontend/.vscode
+frontend/rso4_db-back-januari-07-2026.sql
+frontend/admin_db.sql
+frontend/sail
+frontend/docker
+frontend/projess-436012.json
+frontend/service_key.json
+
+# =============================================================================
+# Backend
+# =============================================================================
+backend/pyvenv.cfg
+backend/Lib/
+backend/Scripts/
+backend/.idea/
+backend/.env
+backend/Testing Files/
+backend/Temporary Storage/
+backend/prompts.txt

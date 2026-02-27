@@ -1,0 +1,866 @@
+/* Global */
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+h1,
+p {
+    color: #2c3e50;
+}
+
+/* Button overrides */
+.btn-primary {
+    background: #000000;
+    border: none;
+    color: #ffffff;
+}
+
+.btn-primary:hover {
+    background: #111111;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    border-color: #000000;
+}
+
+.btn-outline-primary {
+    border: 2px solid #000000;
+    color: #000000;
+    background: transparent;
+}
+
+.btn-outline-primary:hover {
+    background: #000000;
+    color: #ffffff;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+    border-color: black;
+}
+
+/* Loading overlay */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999;
+    flex-direction: column;
+    animation: fadeIn 0.3s ease-in-out;
+}
+
+.loading-overlay.show {
+    display: flex;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
+}
+
+/* Loading spinner */
+.loading-spinner {
+    width: 80px;
+    height: 80px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #007bff;
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(0, 123, 255, 0.3);
+    transition: all 0.3s ease;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Loading text */
+.loading-text {
+    font-size: 24px;
+    font-weight: 600;
+    color: #007bff;
+    margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+/* Success state untuk loading text */
+.loading-text .bi-check-circle-fill {
+    font-size: 2rem;
+    animation: successPulse 0.6s ease-out;
+}
+
+@keyframes successPulse {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.2);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.loading-dots::after {
+    content: "";
+    animation: dots 1.5s steps(4, end) infinite;
+}
+
+@keyframes dots {
+    0%,
+    20% {
+        content: "";
+    }
+    40% {
+        content: ".";
+    }
+    60% {
+        content: "..";
+    }
+    80%,
+    100% {
+        content: "...";
+    }
+}
+
+/* Text success color */
+.text-success {
+    color: #198754 !important;
+}
+
+/* Result modal (error only - success dihapus karena pakai overlay) */
+.result-modal .modal-content {
+    border-radius: 20px;
+    border: none;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15);
+    animation: modalSlideIn 0.3s ease-out;
+}
+
+@keyframes modalSlideIn {
+    from {
+        opacity: 0;
+        transform: translateY(-50px) scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0) scale(1);
+    }
+}
+
+.result-modal .modal-header {
+    border-bottom: none;
+    padding-bottom: 0;
+    justify-content: flex-end;
+}
+
+.result-modal .modal-body {
+    text-align: center;
+    padding: 2rem 2.5rem;
+}
+
+.result-icon {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 2rem;
+    font-size: 3rem;
+    animation: iconPulse 0.6s ease-out;
+}
+
+@keyframes iconPulse {
+    0% {
+        transform: scale(0);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+
+.result-icon.error {
+    background-color: #fadbd8;
+    color: #e74c3c;
+    box-shadow: 0 0 20px rgba(231, 76, 60, 0.2);
+}
+
+.result-title {
+    font-size: 1.8rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+    font-family: "Poppins", sans-serif;
+}
+
+.result-message {
+    color: #6c757d;
+    margin-bottom: 2rem;
+    font-size: 1.1rem;
+    line-height: 1.6;
+}
+
+.result-modal .btn {
+    border-radius: 10px;
+    padding: 12px 30px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    transition: all 0.3s ease;
+}
+
+.result-modal .btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+/* Global alert & links */
+.alert {
+    border-radius: 8px;
+    padding: 12px 16px;
+}
+
+@media (max-width: 768px) {
+    .loading-text {
+        font-size: 20px;
+    }
+
+    .loading-spinner {
+        width: 60px;
+        height: 60px;
+    }
+
+    .result-icon {
+        width: 80px;
+        height: 80px;
+        font-size: 2.5rem;
+    }
+
+    .result-title {
+        font-size: 1.5rem;
+    }
+
+    .result-message {
+        font-size: 1rem;
+    }
+}
+
+/* Link behavior umum */
+a {
+    color: inherit;
+    text-decoration: none;
+}
+
+a:hover {
+    color: inherit;
+    text-decoration: none;
+}
+
+/* ============================================
+   IMPROVED UI/UX STYLES - DOCUMENT REVIEW MAIN PAGE
+   ============================================ */
+
+/* CSS Variables for consistent spacing and colors */
+:root {
+    --doc-review-spacing-xs: 0.5rem;
+    --doc-review-spacing-sm: 1rem;
+    --doc-review-spacing-md: 1.5rem;
+    --doc-review-spacing-lg: 2rem;
+    --doc-review-spacing-xl: 3rem;
+    --doc-review-spacing-2xl: 4rem;
+    
+    --doc-review-color-primary: #000000;
+    --doc-review-color-primary-hover: #111111;
+    --doc-review-color-secondary: #6c757d;
+    --doc-review-color-success: #198754;
+    --doc-review-color-bg-light: #f8f9fa;
+    --doc-review-color-bg-white: #ffffff;
+    --doc-review-color-border: #e5e7eb;
+    
+    --doc-review-shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.05);
+    --doc-review-shadow-md: 0 4px 6px rgba(0, 0, 0, 0.07);
+    --doc-review-shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.1);
+    --doc-review-shadow-xl: 0 20px 40px rgba(0, 0, 0, 0.12);
+    
+    --doc-review-radius-sm: 8px;
+    --doc-review-radius-md: 12px;
+    --doc-review-radius-lg: 16px;
+    --doc-review-radius-xl: 24px;
+    
+    --doc-review-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    --doc-review-transition-fast: all 0.15s ease-out;
+}
+
+/* ============================================
+   OPENADMIN CARD LAYOUT IMPROVEMENTS
+   ============================================ */
+
+.doc-review-openadmin {
+    padding: var(--doc-review-spacing-md);
+}
+
+.doc-review-card {
+    border: none;
+    border-radius: var(--doc-review-radius-lg);
+    box-shadow: var(--doc-review-shadow-md);
+    overflow: hidden;
+    transition: var(--doc-review-transition);
+    background: var(--doc-review-color-bg-white);
+}
+
+.doc-review-card:hover {
+    box-shadow: var(--doc-review-shadow-lg);
+}
+
+.doc-review-card-header {
+    background: linear-gradient(135deg, #f8f9fa 0%, #ffffff 100%);
+    border-bottom: 2px solid var(--doc-review-color-border);
+    padding: var(--doc-review-spacing-lg);
+    border-radius: var(--doc-review-radius-lg) var(--doc-review-radius-lg) 0 0;
+}
+
+.doc-review-icon-wrapper {
+    width: 56px;
+    height: 56px;
+    border-radius: var(--doc-review-radius-md);
+    background: linear-gradient(135deg, var(--doc-review-color-primary) 0%, #333333 100%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    font-size: 1.75rem;
+    flex-shrink: 0;
+    box-shadow: var(--doc-review-shadow-sm);
+    transition: var(--doc-review-transition);
+}
+
+.doc-review-icon-wrapper:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--doc-review-shadow-md);
+}
+
+.doc-review-title {
+    font-size: 1.75rem;
+    font-weight: 700;
+    color: #1a1a1a;
+    line-height: 1.3;
+    letter-spacing: -0.02em;
+    margin-bottom: 0;
+}
+
+.doc-review-card-body {
+    padding: var(--doc-review-spacing-xl);
+}
+
+.doc-review-content {
+    padding-right: var(--doc-review-spacing-lg);
+}
+
+.doc-review-description {
+    font-size: 1.125rem;
+    line-height: 1.7;
+    color: var(--doc-review-color-secondary);
+    margin-bottom: var(--doc-review-spacing-lg);
+    font-weight: 400;
+}
+
+.doc-review-features {
+    display: flex;
+    flex-direction: column;
+    gap: var(--doc-review-spacing-sm);
+    margin-bottom: var(--doc-review-spacing-lg);
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: var(--doc-review-spacing-sm);
+    font-size: 0.95rem;
+    color: #495057;
+    transition: var(--doc-review-transition-fast);
+    padding: 0.5rem 0;
+}
+
+.feature-item:hover {
+    transform: translateX(4px);
+    color: var(--doc-review-color-primary);
+}
+
+.feature-item i {
+    font-size: 1.1rem;
+    flex-shrink: 0;
+}
+
+.doc-review-cta-btn {
+    padding: 0.875rem 2rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: var(--doc-review-radius-md);
+    box-shadow: var(--doc-review-shadow-md);
+    transition: var(--doc-review-transition);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--doc-review-spacing-xs);
+    position: relative;
+    overflow: hidden;
+}
+
+.doc-review-cta-btn::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.doc-review-cta-btn:hover::before {
+    width: 300px;
+    height: 300px;
+}
+
+.doc-review-cta-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--doc-review-shadow-lg);
+}
+
+.doc-review-cta-btn:active {
+    transform: translateY(0);
+    box-shadow: var(--doc-review-shadow-sm);
+}
+
+.doc-review-image-wrapper {
+    position: relative;
+    border-radius: var(--doc-review-radius-lg);
+    overflow: hidden;
+    box-shadow: var(--doc-review-shadow-lg);
+    transition: var(--doc-review-transition);
+    background: var(--doc-review-color-bg-light);
+    aspect-ratio: 16 / 10;
+}
+
+.doc-review-image-wrapper:hover {
+    transform: translateY(-4px);
+    box-shadow: var(--doc-review-shadow-xl);
+}
+
+.doc-review-image {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    transition: var(--doc-review-transition);
+}
+
+.doc-review-image-wrapper:hover .doc-review-image {
+    transform: scale(1.05);
+}
+
+/* ============================================
+   STANDALONE HERO SECTION IMPROVEMENTS
+   ============================================ */
+
+.doc-review-hero-section {
+    min-height: 100vh;
+    background: linear-gradient(180deg, #ffffff 0%, #f8f9fa 100%);
+    display: flex;
+    align-items: center;
+    padding: var(--doc-review-spacing-2xl) 0;
+    margin-top: 9rem;
+    position: relative;
+    overflow: hidden;
+}
+
+.doc-review-hero-section::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    right: -10%;
+    width: 600px;
+    height: 600px;
+    background: radial-gradient(circle, rgba(0, 0, 0, 0.03) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+}
+
+.doc-review-hero-container {
+    position: relative;
+    z-index: 1;
+    max-width: 1200px;
+}
+
+.doc-review-hero-content {
+    padding: var(--doc-review-spacing-lg) 0;
+}
+
+.doc-review-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: var(--doc-review-spacing-xs);
+    padding: 0.5rem 1rem;
+    background: linear-gradient(135deg, #e7f5ff 0%, #d0ebff 100%);
+    border: 1px solid #a5d8ff;
+    border-radius: 50px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1971c2;
+    margin-bottom: var(--doc-review-spacing-md);
+    animation: fadeInUp 0.6s ease-out;
+}
+
+.doc-review-hero-title {
+    font-size: clamp(2rem, 5vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.2;
+    color: #1a1a1a;
+    margin-bottom: var(--doc-review-spacing-md);
+    letter-spacing: -0.03em;
+    animation: fadeInUp 0.6s ease-out 0.1s both;
+}
+
+.doc-review-hero-description {
+    font-size: clamp(1rem, 2vw, 1.25rem);
+    line-height: 1.7;
+    color: var(--doc-review-color-secondary);
+    margin-bottom: var(--doc-review-spacing-lg);
+    max-width: 540px;
+    animation: fadeInUp 0.6s ease-out 0.2s both;
+}
+
+.doc-review-hero-features {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--doc-review-spacing-md);
+    margin-bottom: var(--doc-review-spacing-xl);
+    animation: fadeInUp 0.6s ease-out 0.3s both;
+}
+
+.hero-feature-item {
+    display: flex;
+    align-items: center;
+    gap: var(--doc-review-spacing-xs);
+    padding: 0.625rem 1.25rem;
+    background: var(--doc-review-color-bg-white);
+    border: 1px solid var(--doc-review-color-border);
+    border-radius: 50px;
+    font-size: 0.9375rem;
+    font-weight: 500;
+    color: #495057;
+    box-shadow: var(--doc-review-shadow-sm);
+    transition: var(--doc-review-transition-fast);
+}
+
+.hero-feature-item:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--doc-review-shadow-md);
+    border-color: var(--doc-review-color-primary);
+    color: var(--doc-review-color-primary);
+}
+
+.hero-feature-item i {
+    font-size: 1.125rem;
+    color: var(--doc-review-color-primary);
+}
+
+.doc-review-hero-cta {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: var(--doc-review-radius-md);
+    box-shadow: var(--doc-review-shadow-md);
+    transition: var(--doc-review-transition);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--doc-review-spacing-xs);
+    animation: fadeInUp 0.6s ease-out 0.4s both;
+}
+
+.doc-review-hero-cta:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--doc-review-shadow-lg);
+}
+
+.doc-review-hero-secondary {
+    padding: 1rem 2.5rem;
+    font-size: 1.125rem;
+    font-weight: 600;
+    border-radius: var(--doc-review-radius-md);
+    border: 2px solid var(--doc-review-color-border);
+    transition: var(--doc-review-transition);
+    display: inline-flex;
+    align-items: center;
+    gap: var(--doc-review-spacing-xs);
+    animation: fadeInUp 0.6s ease-out 0.5s both;
+}
+
+.doc-review-hero-secondary:hover {
+    border-color: var(--doc-review-color-primary);
+    background: var(--doc-review-color-primary);
+    color: white;
+    transform: translateY(-2px);
+    box-shadow: var(--doc-review-shadow-md);
+}
+
+.doc-review-hero-image-wrapper {
+    position: relative;
+    padding: var(--doc-review-spacing-md);
+    animation: fadeInRight 0.8s ease-out 0.3s both;
+}
+
+.doc-review-hero-image-decoration {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(0, 0, 0, 0.05) 0%, transparent 50%);
+    border-radius: var(--doc-review-radius-xl);
+    z-index: 0;
+    pointer-events: none;
+}
+
+.doc-review-hero-image {
+    width: 100%;
+    height: auto;
+    border-radius: var(--doc-review-radius-xl);
+    box-shadow: var(--doc-review-shadow-xl);
+    position: relative;
+    z-index: 1;
+    transition: var(--doc-review-transition);
+    object-fit: cover;
+    aspect-ratio: 16 / 10;
+}
+
+.doc-review-hero-image-wrapper:hover .doc-review-hero-image {
+    transform: scale(1.02);
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+}
+
+/* ============================================
+   ANIMATIONS
+   ============================================ */
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes fadeInRight {
+    from {
+        opacity: 0;
+        transform: translateX(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+/* ============================================
+   RESPONSIVE DESIGN - MOBILE FIRST
+   ============================================ */
+
+/* Mobile devices (up to 575px) */
+@media (max-width: 575.98px) {
+    .doc-review-openadmin {
+        padding: var(--doc-review-spacing-sm);
+    }
+    
+    .doc-review-card-header {
+        padding: var(--doc-review-spacing-md);
+    }
+    
+    .doc-review-icon-wrapper {
+        width: 48px;
+        height: 48px;
+        font-size: 1.5rem;
+    }
+    
+    .doc-review-title {
+        font-size: 1.375rem;
+    }
+    
+    .doc-review-card-body {
+        padding: var(--doc-review-spacing-md);
+    }
+    
+    .doc-review-content {
+        padding-right: 0;
+        margin-bottom: var(--doc-review-spacing-md);
+    }
+    
+    .doc-review-description {
+        font-size: 1rem;
+        margin-bottom: var(--doc-review-spacing-md);
+    }
+    
+    .doc-review-features {
+        margin-bottom: var(--doc-review-spacing-md);
+    }
+    
+    .doc-review-cta-btn {
+        width: 100%;
+        justify-content: center;
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .doc-review-image-wrapper {
+        margin-top: var(--doc-review-spacing-md);
+    }
+    
+    .doc-review-hero-section {
+        padding: var(--doc-review-spacing-lg) 0;
+        margin-top: 6rem;
+    }
+    
+    .doc-review-hero-content {
+        padding: 0;
+        text-align: center;
+    }
+    
+    .doc-review-hero-description {
+        max-width: 100%;
+    }
+    
+    .doc-review-hero-features {
+        justify-content: center;
+        gap: var(--doc-review-spacing-sm);
+    }
+    
+    .hero-feature-item {
+        font-size: 0.875rem;
+        padding: 0.5rem 1rem;
+    }
+    
+    .doc-review-hero-cta,
+    .doc-review-hero-secondary {
+        width: 100%;
+        justify-content: center;
+        padding: 0.875rem 1.5rem;
+        font-size: 1rem;
+    }
+    
+    .doc-review-hero-image-wrapper {
+        padding: var(--doc-review-spacing-sm);
+        margin-top: var(--doc-review-spacing-lg);
+    }
+}
+
+/* Small devices (576px and up) */
+@media (min-width: 576px) and (max-width: 767.98px) {
+    .doc-review-openadmin {
+        padding: var(--doc-review-spacing-md);
+    }
+    
+    .doc-review-card-body {
+        padding: var(--doc-review-spacing-lg);
+    }
+    
+    .doc-review-hero-section {
+        padding: var(--doc-review-spacing-xl) 0;
+    }
+    
+    .doc-review-hero-cta,
+    .doc-review-hero-secondary {
+        padding: 0.9375rem 2rem;
+    }
+}
+
+/* Medium devices (768px and up) */
+@media (min-width: 768px) and (max-width: 991.98px) {
+    .doc-review-content {
+        padding-right: var(--doc-review-spacing-md);
+    }
+    
+    .doc-review-hero-features {
+        gap: var(--doc-review-spacing-md);
+    }
+}
+
+/* Large devices (992px and up) */
+@media (min-width: 992px) {
+    .doc-review-openadmin {
+        padding: var(--doc-review-spacing-lg);
+    }
+    
+    .doc-review-card-body {
+        padding: var(--doc-review-spacing-2xl);
+    }
+}
+
+/* Extra large devices (1200px and up) */
+@media (min-width: 1200px) {
+    .doc-review-hero-container {
+        max-width: 1320px;
+    }
+}
+
+/* ============================================
+   ACCESSIBILITY IMPROVEMENTS
+   ============================================ */
+
+.doc-review-cta-btn:focus-visible,
+.doc-review-hero-cta:focus-visible,
+.doc-review-hero-secondary:focus-visible {
+    outline: 3px solid rgba(0, 123, 255, 0.5);
+    outline-offset: 2px;
+}
+
+/* Reduced motion for users who prefer it */
+@media (prefers-reduced-motion: reduce) {
+    *,
+    *::before,
+    *::after {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        transition-duration: 0.01ms !important;
+    }
+    
+    .doc-review-hero-section::before {
+        display: none;
+    }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+    .doc-review-card {
+        border: 2px solid #000000;
+    }
+    
+    .doc-review-icon-wrapper {
+        border: 2px solid #ffffff;
+    }
+    
+    .hero-feature-item {
+        border-width: 2px;
+    }
+}

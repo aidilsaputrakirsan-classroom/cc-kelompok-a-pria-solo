@@ -1,0 +1,15 @@
+pyvenv.cfg
+
+Lib/
+
+Scripts/
+
+.idea/
+
+.env
+
+Testing Files/
+
+Temporary Storage/
+
+prompts.txt

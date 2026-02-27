@@ -1,0 +1,231 @@
+/* Navbar Base */
+#ar-navbar {
+    background-color: transparent;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+    margin: 20px auto;
+    border-radius: 100px;
+    border-top-left-radius: 100px;
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+    border-bottom-left-radius: 100px;
+    width: 1110px;
+    padding: 12px 0;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    max-width: calc(1400px + 1.5rem * 2); /* Increased width to match validate-ground-truth container-fluid */
+}
+
+@media (min-width: 768px) {
+    #ar-navbar {
+        max-width: calc(1400px + 3rem * 2); /* Increased width to match validate-ground-truth container-fluid */
+    }
+}
+
+/* Navbar Container - Increased width to match validate-ground-truth */
+#ar-navbar .container {
+    max-width: 1400px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Logo Brand dengan Dark Pill Background */
+#navbar-brand-pill {
+    font-weight: 700;
+    font-size: 1.3rem;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+    padding: 14px 56px;
+    border-radius: 60px;
+    box-shadow: 0 4px 15px rgba(44, 62, 80, 0.25), 
+                0 2px 8px rgba(44, 62, 80, 0.15),
+                inset 0 1px 0 rgba(255, 255, 255, 0.1);
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    text-decoration: none;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 25px;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    position: relative;
+    overflow: hidden;
+}
+
+#navbar-brand-pill::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: -100%;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+    transition: left 0.5s;
+}
+
+#navbar-brand-pill:hover::before {
+    left: 100%;
+}
+
+#navbar-brand-pill:hover {
+    background: linear-gradient(135deg, #1a252f 0%, #2c3e50 100%);
+    box-shadow: 0 6px 20px rgba(44, 62, 80, 0.35), 
+                0 4px 12px rgba(44, 62, 80, 0.25),
+                inset 0 1px 0 rgba(255, 255, 255, 0.15);
+    transform: translateY(-3px);
+    color: #ffffff;
+}
+
+#navbar-brand-pill:active {
+    transform: translateY(-1px);
+    box-shadow: 0 3px 12px rgba(44, 62, 80, 0.3);
+}
+
+/* Navbar Nav - Prevent wrapping */
+#ar-navbar .navbar-nav {
+    flex-wrap: nowrap;
+    white-space: nowrap;
+}
+
+#ar-navbar .nav-item {
+    white-space: nowrap;
+}
+
+/* Nav Links - Scoped to navbar ID */
+#ar-navbar .nav-link {
+    color: #2c3e50;
+    font-weight: 500;
+    padding: 10px 20px;
+    border-radius: 12px;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    margin: 0 4px;
+    position: relative;
+    white-space: nowrap;
+}
+
+#ar-navbar .nav-link::after {
+    content: '';
+    position: absolute;
+    bottom: 6px;
+    left: 50%;
+    transform: translateX(-50%) scaleX(0);
+    width: 60%;
+    height: 2px;
+    background: linear-gradient(90deg, #007bff, #0056b3);
+    border-radius: 2px;
+    transition: transform 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#ar-navbar .nav-link:hover {
+    color: #007bff;
+    background-color: rgba(0, 123, 255, 0.08);
+    transform: translateY(-2px);
+}
+
+#ar-navbar .nav-link:hover::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+#ar-navbar .nav-link.active {
+    color: #007bff;
+    background: linear-gradient(135deg, rgba(0, 123, 255, 0.12), rgba(0, 123, 255, 0.08));
+    font-weight: 600;
+    box-shadow: 0 2px 8px rgba(0, 123, 255, 0.15);
+}
+
+#ar-navbar .nav-link.active::after {
+    transform: translateX(-50%) scaleX(1);
+}
+
+/* Progress Circle */
+#progress-circle {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    background: conic-gradient(#2c3e50 var(--progress), #e5e7eb 0);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #2c3e50;
+    font-weight: 700;
+    position: relative;
+    box-shadow: 0 4px 12px rgba(44, 62, 80, 0.2),
+                inset 0 2px 4px rgba(255, 255, 255, 0.8);
+    border: 3px solid #ffffff;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+#progress-circle:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 16px rgba(44, 62, 80, 0.3),
+                inset 0 2px 4px rgba(255, 255, 255, 0.8);
+}
+
+#progress-circle::before {
+    content: '';
+    position: absolute;
+    width: calc(100% - 6px);
+    height: calc(100% - 6px);
+    border-radius: 50%;
+    background: #ffffff;
+    z-index: -1;
+}
+
+#progress-circle span {
+    position: absolute;
+    font-size: 14px;
+    z-index: 1;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    #ar-navbar {
+        border-radius: 100px;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        padding: 10px 16px;
+        margin: 16px;
+    }
+
+    #navbar-brand-pill {
+        padding: 12px 32px;
+        font-size: 1.1rem;
+        border-radius: 50px;
+        margin-right: 15px;
+    }
+
+    #ar-navbar .nav-link {
+        padding: 8px 16px;
+        border-radius: 10px;
+        margin: 2px;
+        font-size: 0.95rem;
+    }
+
+    #progress-circle {
+        width: 50px;
+        height: 50px;
+    }
+
+    #progress-circle span {
+        font-size: 12px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    #ar-navbar {
+        border-radius: 100px;
+        border-top-left-radius: 100px;
+        border-top-right-radius: 100px;
+        border-bottom-right-radius: 100px;
+        border-bottom-left-radius: 100px;
+        padding: 8px 12px;
+        margin: 12px;
+    }
+
+    #navbar-brand-pill {
+        padding: 10px 24px;
+        font-size: 1rem;
+        border-radius: 45px;
+        margin-right: 10px;
+    }
+}

@@ -1,0 +1,23 @@
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+.mt-6 {
+    margin-top: 9rem;
+}
+
+.mx-6 {
+    margin-left: 5rem !important;
+    margin-right: 5rem !important;
+    margin-top: 3rem;
+}
+
+h1,
+p {
+    color: #2c3e50;
+}
+
+.container {
+    margin-left: 5rem;
+    margin-right: 5rem;
+}

@@ -1,0 +1,450 @@
+/* template-npk.css */
+
+.template-npk {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+/* Section */
+.template-npk .npk-section {
+    margin-bottom: 1rem;
+}
+
+.template-npk .npk-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 0.375rem;
+}
+
+.template-npk .npk-label i {
+    color: #1d1d1f;
+}
+
+.template-npk .npk-input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 0.9375rem;
+    color: #1d1d1f;
+    transition: all 0.2s;
+    background: white;
+}
+
+.template-npk .npk-input:focus {
+    outline: none;
+    border-color: #1d1d1f;
+    box-shadow: 0 0 0 4px rgba(29, 29, 31, 0.1);
+}
+
+.template-npk .npk-input::placeholder {
+    color: #9ca3af;
+}
+
+.template-npk .npk-help-text {
+    display: block;
+    font-size: 0.8125rem;
+    color: #6b7280;
+    margin-top: 0.375rem;
+    margin-bottom: 0.75rem;
+}
+
+/* Table Header with Button */
+.template-npk .npk-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+}
+
+.template-npk .npk-add-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.625rem 1rem;
+    background: #1d1d1f;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(29, 29, 31, 0.15);
+}
+
+.template-npk .npk-add-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(29, 29, 31, 0.25);
+    background: #2d2d2f;
+}
+
+.template-npk .npk-add-btn:active {
+    transform: translateY(0);
+}
+
+.template-npk .npk-add-btn i {
+    font-size: 0.75rem;
+}
+
+/* Table Wrapper */
+.template-npk .npk-table-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e5e7eb;
+}
+
+/* Table */
+.template-npk .npk-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.template-npk .npk-table thead {
+    background: #1d1d1f;
+}
+
+.template-npk .npk-table thead tr th {
+    padding: 1rem 0.75rem;
+    text-align: left;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.025em;
+}
+
+.template-npk .npk-table thead tr th.npk-table-action {
+    text-align: center;
+    width: 80px;
+}
+
+.template-npk .npk-table thead tr th:nth-child(1) {
+    width: 45%;
+}
+
+.template-npk .npk-table thead tr th:nth-child(2) {
+    width: calc(55% - 80px);
+}
+
+/* Table Body */
+.template-npk .npk-table tbody tr {
+    border-bottom: 1px solid #f3f4f6;
+    transition: background-color 0.2s;
+}
+
+.template-npk .npk-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.template-npk .npk-table tbody tr:hover {
+    background-color: #f9fafb;
+}
+
+.template-npk .npk-table tbody tr td {
+    padding: 1rem 0.75rem;
+    font-size: 0.9375rem;
+    color: #1d1d1f;
+}
+
+.template-npk .npk-table tbody tr td.npk-table-action {
+    text-align: center;
+}
+
+/* Table Input */
+.template-npk .npk-table-input {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    color: #1d1d1f;
+    transition: all 0.2s;
+    background: white;
+}
+
+.template-npk .npk-table-input:focus {
+    outline: none;
+    border-color: #1d1d1f;
+    box-shadow: 0 0 0 3px rgba(29, 29, 31, 0.1);
+}
+
+.template-npk .npk-table-input:hover {
+    border-color: #cbd5e1;
+}
+
+.template-npk .npk-table-input::placeholder {
+    color: #9ca3af;
+}
+
+/* Table Input with Prefix (Rp) */
+.template-npk .npk-table-input-wrapper {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.template-npk .npk-table-input-prefix {
+    position: absolute;
+    left: 0.875rem;
+    font-size: 0.875rem;
+    color: #6b7280;
+    font-weight: 600;
+    pointer-events: none;
+    z-index: 1;
+}
+
+.template-npk .npk-table-input-number {
+    padding-left: 2.25rem;
+    text-align: right;
+    font-weight: 600;
+}
+
+/* Delete Button */
+.template-npk .npk-delete-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.8125rem;
+}
+
+.template-npk .npk-delete-btn:hover {
+    background: #fecaca;
+    transform: scale(1.05);
+}
+
+.template-npk .npk-delete-btn:active {
+    transform: scale(0.95);
+}
+
+/* Empty State */
+.template-npk .npk-table-empty td {
+    padding: 3rem 1.25rem;
+    text-align: center;
+    color: #9ca3af;
+}
+
+.template-npk .npk-table-empty i {
+    font-size: 2.5rem;
+    color: #d1d5db;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.template-npk .npk-table-empty p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin: 0 0 0.5rem 0;
+}
+
+.template-npk .npk-table-empty small {
+    font-size: 0.875rem;
+    color: #9ca3af;
+}
+
+/* Hilangkan spinner di input number */
+.template-npk .npk-table-input[type="number"]::-webkit-inner-spin-button,
+.template-npk .npk-table-input[type="number"]::-webkit-outer-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+.template-npk .npk-table-input[type="number"] {
+    -moz-appearance: textfield; /* Firefox */
+}
+
+/* ✅ Multiple SID Table Styles */
+.template-npk .sid-table-row td {
+    vertical-align: top;
+    padding: 1rem 0.75rem;
+}
+
+.template-npk .sid-input {
+    width: 100%;
+    min-width: 150px;
+}
+
+/* ✅ Expand/Collapse Button */
+.template-npk .npk-expand-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 0.875rem;
+    background: #f3f4f6;
+    color: #1d1d1f;
+    border: 2px solid #e5e7eb;
+    border-radius: 8px;
+    font-size: 0.8125rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.template-npk .npk-expand-btn:hover {
+    background: #e5e7eb;
+    border-color: #cbd5e1;
+}
+
+.template-npk .npk-expand-btn i {
+    font-size: 0.75rem;
+    transition: transform 0.2s;
+}
+
+/* ✅ Nested Section (Prorate/Usage within SID row) */
+.template-npk .sid-nested-section {
+    margin-top: 1rem;
+    padding: 1rem;
+    background: #f9fafb;
+    border-radius: 12px;
+    border: 1px solid #e5e7eb;
+}
+
+/* ✅ Nested Table (Prorate/Usage tables within SID row) */
+.template-npk .npk-nested-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 8px;
+    overflow: hidden;
+    margin-bottom: 0.75rem;
+}
+
+.template-npk .npk-nested-table thead {
+    background: #4b5563;
+}
+
+.template-npk .npk-nested-table thead tr th {
+    padding: 0.75rem 0.625rem;
+    text-align: left;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    color: white;
+}
+
+.template-npk .npk-nested-table tbody tr {
+    border-bottom: 1px solid #f3f4f6;
+}
+
+.template-npk .npk-nested-table tbody tr:last-child {
+    border-bottom: none;
+}
+
+.template-npk .npk-nested-table tbody tr td {
+    padding: 0.75rem 0.625rem;
+    font-size: 0.8125rem;
+}
+
+.template-npk .npk-nested-table .npk-table-input {
+    padding: 0.5rem 0.625rem;
+    font-size: 0.8125rem;
+}
+
+/* ✅ Add Nested Button (for adding prorate/usage within SID) */
+.template-npk .npk-add-nested-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.5rem 0.875rem;
+    background: #4b5563;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 0.75rem;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+}
+
+.template-npk .npk-add-nested-btn:hover {
+    background: #374151;
+    transform: translateY(-1px);
+}
+
+.template-npk .npk-add-nested-btn:active {
+    transform: translateY(0);
+}
+
+/* ✅ SID Table Column Widths */
+.template-npk #sid-table thead tr th:nth-child(1) {
+    width: 25%;
+}
+
+.template-npk #sid-table thead tr th:nth-child(2),
+.template-npk #sid-table thead tr th:nth-child(3) {
+    width: 30%;
+}
+
+.template-npk #sid-table thead tr th:nth-child(4) {
+    width: 15%;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .template-npk .npk-table-header {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    .template-npk .npk-add-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .template-npk .npk-table-wrapper {
+        overflow-x: auto;
+    }
+
+    .template-npk .npk-table {
+        min-width: 600px;
+    }
+
+    .template-npk .npk-table thead tr th,
+    .template-npk .npk-table tbody tr td {
+        padding: 0.875rem 1rem;
+        font-size: 0.8125rem;
+    }
+
+    .template-npk .npk-table-input {
+        font-size: 0.8125rem;
+        padding: 0.5rem 0.75rem;
+    }
+
+    .template-npk .npk-table-input-number {
+        padding-left: 2rem;
+    }
+
+    .template-npk .npk-table-input-prefix {
+        left: 0.75rem;
+        font-size: 0.8125rem;
+    }
+
+    .template-npk .npk-delete-btn {
+        width: 32px;
+        height: 32px;
+        font-size: 0.8125rem;
+    }
+
+    /* ✅ Responsive for Multiple SID Table */
+    .template-npk #sid-table {
+        min-width: 800px;
+    }
+
+    .template-npk .sid-nested-section {
+        padding: 0.75rem;
+    }
+
+    .template-npk .npk-nested-table {
+        font-size: 0.75rem;
+    }
+}
