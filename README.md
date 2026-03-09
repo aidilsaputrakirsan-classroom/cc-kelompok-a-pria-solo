@@ -81,12 +81,27 @@ php artisan serve --port 8080
 ```
 Aplikasi: http://localhost:8080 (pastikan backend berjalan di port 8000)
 
+## 📡 API (Backend FastAPI)
+
+**Base URL:** `http://localhost:8000`  
+**Dokumentasi interaktif:** http://localhost:8000/docs
+
+| Method | Endpoint | Deskripsi |
+|--------|----------|------------|
+| GET | `/` | Info API |
+| GET | `/health` | Health check |
+| GET | `/team` | Info tim (modul) |
+| POST | `/information-extraction` | Upload PDF, ekstraksi OCR + ground truth |
+| POST | `/review` | Validasi & advance review (butuh hasil ekstraksi dulu) |
+
+Detail parameter, request/response body, dan kode error: **[docs/api-dokumen-validasi-ai.md](docs/api-dokumen-validasi-ai.md)**. Hasil testing API: **[docs/api-test-results.md](docs/api-test-results.md)**.
+
 ## 📅 Roadmap
 
 | Minggu | Target                  | Status |
 |--------|-------------------------|--------|
 | 1      | Setup & Hello World     | ✅     |
-| 2      | REST API + Database     | ⬜     |
+| 2      | REST API + Database     |   ✅   |
 | 3      | React Frontend          | ⬜     |
 | 4      | Full-Stack Integration  | ⬜     |
 | 5-7    | Docker & Compose        | ⬜     |
