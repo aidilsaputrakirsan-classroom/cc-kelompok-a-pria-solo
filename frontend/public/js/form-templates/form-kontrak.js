@@ -1,4 +1,9 @@
 const FormTemplateKontrak = {
+    escapeHtml: function (s) {
+        if (s == null) return '';
+        return String(s).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/'/g, '&#39;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
+    },
+
     /**
      * Metadata
      */
@@ -16,50 +21,65 @@ const FormTemplateKontrak = {
         const wrapper = document.createElement('div');
         wrapper.className = 'template-kontrak';
 
-        // Section 1: Judul Project
-        wrapper.appendChild(this.createJudulProjectField(data.judul_project));
+        const isBastOnly = (data.nomor_mitra !== undefined || data.nomor_telkom !== undefined || data.tanggal_bast !== undefined) && data.judul_project === undefined;
 
-        // Section 2: Nama Pelanggan
-        wrapper.appendChild(this.createNamaPelangganField(data.nama_pelanggan));
-
-        // Section 3: Nomor Kontrak (Table)
-        wrapper.appendChild(this.createNomorKontrakTable(data.nomor_surat_utama, data.nomor_surat_lainnya));
-
-        // Section 4: Tanggal (Table) - ✅ FIXED MAPPING
-        wrapper.appendChild(this.createTanggalTable(data));
-
-        // Section 5: Detail Pembayaran (Table)
-        wrapper.appendChild(this.createDetailPembayaranTable(data));
-
-        // Section 6: Detail Rekening (Table)
-        wrapper.appendChild(this.createDetailRekeningTable(data.detail_rekening));
-
-        // Section 7: Ketentuan Layanan (Table)
-        wrapper.appendChild(this.createKetentuanLayananTable(data.slg, data.skema_bisnis));
-
-        // Section 8: Rujukan (Dynamic Table)
-        wrapper.appendChild(this.createRujukanSection(data.rujukan));
-
-        // Section 9: Pejabat Penanda Tangan (Sections)
-        wrapper.appendChild(this.createPejabatSection(data.pejabat_penanda_tangan));
+        if (isBastOnly) {
+            // BAST-only view (validate-ground-truth): only Data BAST (editable) + Pejabat (BAST only)
+            wrapper.appendChild(this.createBastDataSectionEditable(data));
+            wrapper.appendChild(this.createPejabatSection(data.pejabat_penanda_tangan || {}, { documentsOnly: ['bast'] }));
+        } else {
+            // Full kontrak form
+            wrapper.appendChild(this.createJudulProjectField(data.judul_project));
+            wrapper.appendChild(this.createNamaPelangganField(data.nama_pelanggan));
+            wrapper.appendChild(this.createNomorKontrakTable(data.nomor_surat_utama, data.nomor_surat_lainnya));
+            wrapper.appendChild(this.createTanggalTable(data));
+            wrapper.appendChild(this.createDetailPembayaranTable(data));
+            wrapper.appendChild(this.createDetailRekeningTable(data.detail_rekening));
+            wrapper.appendChild(this.createKetentuanLayananTable(data.slg, data.skema_bisnis));
+            wrapper.appendChild(this.createRujukanSection(data.rujukan));
+            wrapper.appendChild(this.createPejabatSection(data.pejabat_penanda_tangan));
+        }
 
         container.appendChild(wrapper);
 
         // Auto-resize all textareas
         setTimeout(() => this.initAutoResize(), 100);
+        // Recalc Durasi when start/end date change (Option A: calendar months / days)
+        setTimeout(() => this.attachTanggalDurationListeners(wrapper), 100);
+    },
+
+    /**
+     * When start or end date changes, recalc Durasi (Option A) and set text input (user can still edit).
+     */
+    attachTanggalDurationListeners: function (container) {
+        var self = this;
+        var startEl = container.querySelector('#kontrak_start_date');
+        var endEl = container.querySelector('#kontrak_end_date');
+        var durationEl = container.querySelector('#kontrak_duration');
+        if (!startEl || !endEl || !durationEl) return;
+
+        function updateDuration() {
+            var startYmd = startEl.value && startEl.value.trim();
+            var endYmd = endEl.value && endEl.value.trim();
+            if (!startYmd || !endYmd) return;
+            var result = self.computeDurationFromDates(startYmd, endYmd);
+            durationEl.value = result.value + ' ' + result.unit;
+        }
+
+        startEl.addEventListener('change', updateDuration);
+        endEl.addEventListener('change', updateDuration);
     },
 
     /**
      * Helper: Convert date to yyyy-mm-dd format for input[type="date"]
-     * Handles multiple formats:
-     * - "1 Januari 2025" (Indonesian month name)
-     * - "dd-mm-yyyy" (standard format)
+     * Handles: "1 Januari 2025", "dd-mm-yyyy", "dd/mm/yyyy", "yyyy-mm-dd" (from DB/API).
      */
     convertDateToInput: function (dateStr) {
-        if (!dateStr || typeof dateStr !== 'string') return '';
+        if (dateStr == null) return '';
+        const trimmed = String(dateStr).trim();
+        if (!trimmed) return '';
 
-        // Try parsing Indonesian date format: "1 Januari 2025"
-        const indonesianDate = this.parseIndonesianDate(dateStr);
+        const indonesianDate = this.parseIndonesianDate(trimmed);
         if (indonesianDate) {
             const year = indonesianDate.getFullYear();
             const month = String(indonesianDate.getMonth() + 1).padStart(2, '0');
@@ -67,15 +87,17 @@ const FormTemplateKontrak = {
             return `${year}-${month}-${day}`;
         }
 
-        // Try parsing dd-mm-yyyy format
-        const parts = dateStr.split('-');
+        // Support both dashes and slashes (dd-mm-yyyy, dd/mm/yyyy, yyyy-mm-dd, yyyy/mm/dd)
+        const parts = trimmed.split(/[-/]/);
         if (parts.length === 3) {
-            const [day, month, year] = parts;
-            if (year.length === 4) {
-                return `${year}-${month.padStart(2, '0')}-${day.padStart(2, '0')}`;
+            const [a, b, c] = parts;
+            if (a.length === 4 && b.length <= 2 && c.length <= 2) {
+                return a + '-' + String(b).padStart(2, '0') + '-' + String(c).padStart(2, '0');
+            }
+            if (c.length === 4) {
+                return c + '-' + String(b).padStart(2, '0') + '-' + String(a).padStart(2, '0');
             }
         }
-
         return '';
     },
 
@@ -101,6 +123,57 @@ const FormTemplateKontrak = {
         if (monthIndex === undefined) return null;
 
         return new Date(year, monthIndex, day);
+    },
+
+    /**
+     * Compute gap in days between two yyyy-mm-dd dates.
+     */
+    computeGapInDays: function (startYmd, endYmd) {
+        if (!startYmd || !endYmd) return 0;
+        var s = new Date(startYmd + 'T00:00:00');
+        var e = new Date(endYmd + 'T00:00:00');
+        if (isNaN(s.getTime()) || isNaN(e.getTime())) return 0;
+        return Math.round((e - s) / 86400000);
+    },
+
+    /**
+     * Compute calendar months between two yyyy-mm-dd dates (no fixed 30/31 days).
+     */
+    computeCalendarMonths: function (startYmd, endYmd) {
+        if (!startYmd || !endYmd) return 0;
+        var p1 = startYmd.split('-').map(Number);
+        var p2 = endYmd.split('-').map(Number);
+        if (p1.length !== 3 || p2.length !== 3) return 0;
+        var y1 = p1[0], m1 = p1[1], d1 = p1[2];
+        var y2 = p2[0], m2 = p2[1], d2 = p2[2];
+        var months = (y2 - y1) * 12 + (m2 - m1);
+        if (d2 < d1) months -= 1;
+        return Math.max(0, months);
+    },
+
+    /**
+     * Option A: from start/end dates, get duration as { value, unit }.
+     * If gap < 45 days use "Hari", else use calendar "Bulan".
+     */
+    computeDurationFromDates: function (startYmd, endYmd, thresholdDays) {
+        thresholdDays = thresholdDays != null ? thresholdDays : 45;
+        var gapDays = this.computeGapInDays(startYmd, endYmd);
+        if (gapDays < 0) return { value: 0, unit: 'Hari' };
+        if (gapDays < thresholdDays) return { value: gapDays, unit: 'Hari' };
+        return { value: this.computeCalendarMonths(startYmd, endYmd), unit: 'Bulan' };
+    },
+
+    /**
+     * Parse duration string from DB: "24 Bulan" or "4 Hari" -> { value, unit }.
+     */
+    parseDurationFromDb: function (str) {
+        if (!str || typeof str !== 'string') return { value: 0, unit: 'Bulan' };
+        var m = str.trim().match(/^(\d+)\s*(Bulan|Hari)$/i);
+        if (!m) {
+            var num = str.match(/\d+/);
+            return { value: num ? parseInt(num[0], 10) : 0, unit: 'Bulan' };
+        }
+        return { value: parseInt(m[1], 10), unit: m[2].charAt(0).toUpperCase() + m[2].slice(1).toLowerCase() };
     },
 
     /**
@@ -215,19 +288,34 @@ const FormTemplateKontrak = {
         const section = document.createElement('div');
         section.className = 'kontrak-section';
 
-        // ✅ FLEXIBLE: Handle both 'delivery' and 'delivery_date'
+        if (!data || typeof data !== 'object') data = {};
+        var jw = (data.jangka_waktu && typeof data.jangka_waktu === 'object') ? data.jangka_waktu : {};
+
         const deliveryValue = data.delivery_date || data.delivery || '';
         const delivery = this.convertDateToInput(deliveryValue);
+        const tanggalKontrakValue = data.tanggal_kontrak || '';
+        const tanggalKontrak = this.convertDateToInput(tanggalKontrakValue);
+        // Jangka Waktu (Awal)/(Akhir): use jangka_waktu if present, else fallback to Kontrak date and Delivery date
+        var startDateRaw = jw.start_date || jw.startDate || data.start_date || data.startDate || data['start date'] || '';
+        var endDateRaw = jw.end_date || jw.endDate || data.end_date || data.endDate || data['end date'] || '';
+        if (!startDateRaw && tanggalKontrakValue) startDateRaw = tanggalKontrakValue;
+        if (!endDateRaw && deliveryValue) endDateRaw = deliveryValue;
+        const startDate = this.convertDateToInput(startDateRaw);
+        const endDate = this.convertDateToInput(endDateRaw);
 
-        const tanggalKontrak = this.convertDateToInput(data.tanggal_kontrak);
-        const startDate = this.convertDateToInput(data.jangka_waktu?.start_date);
-        const endDate = this.convertDateToInput(data.jangka_waktu?.end_date);
-
-        let duration = 0;
-        if (data.jangka_waktu?.duration) {
-            const match = data.jangka_waktu.duration.match(/\d+/);
-            duration = match ? parseInt(match[0]) : 0;
+        var durationValue = 0;
+        var durationUnit = 'Bulan';
+        if (startDate && endDate) {
+            var computed = this.computeDurationFromDates(startDate, endDate);
+            durationValue = computed.value;
+            durationUnit = computed.unit;
+        } else {
+            var durationStr = jw.duration || data.duration;
+            var parsed = this.parseDurationFromDb(durationStr);
+            durationValue = parsed.value;
+            durationUnit = parsed.unit;
         }
+        var durationDisplay = (durationValue || 0) + ' ' + durationUnit;
 
         section.innerHTML = `
         <div class="kontrak-field">
@@ -267,12 +355,11 @@ const FormTemplateKontrak = {
                         <tr>
                             <td class="kontrak-table-label">Durasi</td>
                             <td>
-                                <input type="number" 
+                                <input type="text" 
                                        class="kontrak-table-input" 
                                        id="kontrak_duration"
-                                       value="${duration}"
-                                       placeholder="0"
-                                       min="0">
+                                       value="${durationDisplay}"
+                                       placeholder="e.g. 30 Hari or 1 Bulan">
                             </td>
                         </tr>
                         <tr>
@@ -562,7 +649,7 @@ const FormTemplateKontrak = {
             </td>
             <td class="kontrak-table-action">
                 <button type="button" class="kontrak-delete-btn" onclick="FormTemplateKontrak.deleteRujukanItem(${index})">
-                    <i class="fas fa-trash-alt"></i>
+                    <i class="bi bi-trash"></i>
                 </button>
             </td>
         `;
@@ -647,14 +734,55 @@ const FormTemplateKontrak = {
     },
 
     /**
-     * Create Pejabat Penanda Tangan section
+     * Create editable Data BAST section (NOMOR MITRA, NOMOR TELKOM, TANGGAL BAST).
+     * Used when rendering BAST-only view (validate-ground-truth).
      */
-    createPejabatSection: function (pejabatData) {
+    createBastDataSectionEditable: function (data) {
+        const section = document.createElement('div');
+        section.className = 'kontrak-section';
+
+        const bast = data?.BAST || data?.bast;
+        const nomor = bast?.nomor || (data?.nomor && (data.nomor.mitra || data.nomor.telkom) ? data.nomor : null);
+        const nomorMitra = nomor?.mitra ?? data?.nomor_mitra ?? '';
+        const nomorTelkom = nomor?.telkom ?? data?.nomor_telkom ?? '';
+        const tanggalBast = bast?.tanggal_bast ?? data?.tanggal_bast ?? '';
+
+        const tanggalForInput = tanggalBast ? this.convertDateToInput(String(tanggalBast).trim().split(/\r?\n/)[0] || '') : '';
+
+        section.innerHTML = `
+            <div class="kontrak-field">
+                <label class="kontrak-label">Data BAST</label>
+                <div class="kontrak-field" style="margin-top: 0.75rem;">
+                    <label class="kontrak-label" for="kontrak_nomor_mitra">NOMOR MITRA</label>
+                    <input type="text" class="form-control kontrak-input" id="kontrak_nomor_mitra" value="${this.escapeHtml(String(nomorMitra))}" placeholder="Nomor BAST Mitra" style="display: block; width: 100%; margin-top: 0.25rem;">
+                </div>
+                <div class="kontrak-field" style="margin-top: 0.75rem;">
+                    <label class="kontrak-label" for="kontrak_nomor_telkom">NOMOR TELKOM</label>
+                    <input type="text" class="form-control kontrak-input" id="kontrak_nomor_telkom" value="${this.escapeHtml(String(nomorTelkom))}" placeholder="Nomor BAST Telkom" style="display: block; width: 100%; margin-top: 0.25rem;">
+                </div>
+                <div style="margin-top: 0.75rem;">
+                    <label class="kontrak-label" for="kontrak_tanggal_bast">TANGGAL DOKUMEN BAST</label>
+                    <input type="date" class="form-control kontrak-input" id="kontrak_tanggal_bast" value="${this.escapeHtml(tanggalForInput)}" placeholder="Tanggal BAST" style="display: block; width: 100%; margin-top: 0.25rem;">
+                </div>
+            </div>
+        `;
+        return section;
+    },
+
+    /**
+     * Create Pejabat Penanda Tangan section.
+     * @param {Object} pejabatData - { baut: {telkom, mitra}, bast: {...}, ... }
+     * @param {Object} [options] - Optional. { documentsOnly: ['bast'] } to show only BAST (e.g. for BAST doc type).
+     */
+    createPejabatSection: function (pejabatData, options) {
         const section = document.createElement('div');
         section.className = 'kontrak-section';
 
         const data = pejabatData || {};
-        const documents = ['baut', 'bast', 'bapl', 'bard'];
+        const allDocs = ['baut', 'bast', 'bapl', 'bard'];
+        const documents = (options && Array.isArray(options.documentsOnly) && options.documentsOnly.length > 0)
+            ? options.documentsOnly
+            : allDocs;
         const docLabels = {
             'baut': 'BAUT',
             'bast': 'BAST',
@@ -669,7 +797,7 @@ const FormTemplateKontrak = {
         `;
 
         documents.forEach(doc => {
-            const docData = data[doc] || {};
+            const docData = data[doc] || data[doc.toUpperCase?.() || doc] || data[doc.toLowerCase?.() || doc] || {};
             html += `
                 <div class="kontrak-pejabat-section">
                     <div class="kontrak-pejabat-header">${docLabels[doc]}</div>
@@ -756,10 +884,13 @@ const FormTemplateKontrak = {
         if (startDate) data.jangka_waktu.start_date = this.convertDateFromInput(startDate);
         if (endDate) data.jangka_waktu.end_date = this.convertDateFromInput(endDate);
 
-        // Duration with "Bulan"
-        const duration = parseInt(document.getElementById('kontrak_duration')?.value);
-        if (duration) {
-            data.jangka_waktu.duration = `${duration} Bulan`;
+        // Duration: parse "30 Hari" or "1 Bulan" from text input (user can type/correct)
+        const durationInput = document.getElementById('kontrak_duration')?.value;
+        if (durationInput && typeof durationInput === 'string' && durationInput.trim()) {
+            var parsed = this.parseDurationFromDb(durationInput.trim());
+            if (parsed.value >= 0) {
+                data.jangka_waktu.duration = parsed.value + ' ' + parsed.unit;
+            }
         }
 
         // SLG with %
@@ -789,6 +920,14 @@ const FormTemplateKontrak = {
             data.pejabat_penanda_tangan[doc].telkom = telkom || null;
             data.pejabat_penanda_tangan[doc].mitra = mitra || null;
         });
+
+        // Data BAST (when BAST or BAST-only form was rendered)
+        const nomorMitraEl = document.getElementById('kontrak_nomor_mitra');
+        const nomorTelkomEl = document.getElementById('kontrak_nomor_telkom');
+        const tanggalBastEl = document.getElementById('kontrak_tanggal_bast');
+        if (nomorMitraEl) data.nomor_mitra = nomorMitraEl.value?.trim() || null;
+        if (nomorTelkomEl) data.nomor_telkom = nomorTelkomEl.value?.trim() || null;
+        if (tanggalBastEl && tanggalBastEl.value) data.tanggal_bast = this.convertDateFromInput(tanggalBastEl.value);
 
         return data;
     }

@@ -15,7 +15,24 @@
                     <span class="text-dark">{{ $ticket->project_title }}</span>
                 @endif
             </p>
-            <div class="d-flex gap-3">
+            <div class="d-flex gap-3 flex-wrap align-items-center">
+                <a href="{{ route('projess.ai.riwayat.index') }}" class="text-decoration-none d-flex align-items-center gap-2"
+                    style="padding: 12px 28px;
+                    border: 1px solid #e5e7eb;
+                    border-radius: 50px;
+                    font-weight: 600;
+                    font-size: 0.95rem;
+                    cursor: pointer;
+                    transition: all 0.3s ease;
+                    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+                    letter-spacing: 0.3px;
+                    background: white;
+                    color: #1f2937;"
+                    onmouseover="this.style.background='#f9fafb'; this.style.borderColor='#d1d5db'; this.style.transform='translateY(-2px)'; this.style.boxShadow='0 4px 12px rgba(0, 0, 0, 0.15)';"
+                    onmouseout="this.style.background='white'; this.style.borderColor='#e5e7eb'; this.style.transform='translateY(0)'; this.style.boxShadow='0 2px 8px rgba(0, 0, 0, 0.1)';"
+                    onmousedown="this.style.transform='translateY(0)';">
+                    ← Kembali ke Riwayat Review
+                </a>
                 <button data-bs-toggle="modal" data-bs-target="#missingDocsModal"
                     style="padding: 12px 28px;
                     border: none;
@@ -110,18 +127,15 @@
                             ]);
                             $cardTitle = $review->doc_type;
                             
-                            // Extract errors_count from review_data - query from database
+                            // Extract issues from review_data and count those with is_valid === true (same as Review Notes)
                             $reviewData = null;
-                            $errorsCount = 0;
+                            $issuesData = [];
                             try {
-                                // Try to get from object first (if it's an Eloquent model)
                                 if (isset($review->review_data)) {
                                     $reviewData = $review->review_data;
                                 } elseif (is_object($review) && method_exists($review, 'getAttribute')) {
                                     $reviewData = $review->getAttribute('review_data');
                                 }
-                                
-                                // If still null, query database directly using doc_type (which corresponds to pdfFilename)
                                 if ($reviewData === null && isset($ticket->ticket_number)) {
                                     $reviewResult = \App\Models\AdvanceReviewResult::whereHas('groundTruth', function ($query) use ($ticket) {
                                         $query->whereHas('ticket', function ($q) use ($ticket) {
@@ -132,57 +146,75 @@
                                     ->first();
                                     $reviewData = $reviewResult ? $reviewResult->review_data : null;
                                 }
-                                
-                                // Extract errors_count from review_data structure
                                 if (!empty($reviewData) && (is_array($reviewData) || is_object($reviewData))) {
-                                    // Check if review_data contains advance_review structure
-                                    if (isset($reviewData['advance_review']) && is_array($reviewData['advance_review'])) {
-                                        $advanceReview = $reviewData['advance_review'];
-                                        $docTypeUpper = strtoupper($review->doc_type);
-                                        
-                                        // Try uppercase doc_type first
-                                        if (isset($advanceReview[$docTypeUpper]) && is_array($advanceReview[$docTypeUpper])) {
-                                            $docReview = $advanceReview[$docTypeUpper];
-                                            if (isset($docReview['review_data']['errors_count'])) {
-                                                $errorsCount = (int) $docReview['review_data']['errors_count'];
-                                            } elseif (isset($docReview['review_result']['errors_count'])) {
-                                                $errorsCount = (int) $docReview['review_result']['errors_count'];
-                                            }
+                                    $rd = (array) $reviewData;
+                                    $docTypeUpper = strtoupper($review->doc_type);
+                                    if (isset($rd['advance_review']) && is_array($rd['advance_review'])) {
+                                        $ar = $rd['advance_review'];
+                                        if (isset($ar[$docTypeUpper]) && is_array($ar[$docTypeUpper])) {
+                                            $docReview = $ar[$docTypeUpper];
+                                            $issuesData = (array) ($docReview['review_data'] ?? $docReview['review_result'] ?? []);
                                         }
-                                        // Try original case doc_type
-                                        if ($errorsCount === 0 && isset($advanceReview[$review->doc_type]) && is_array($advanceReview[$review->doc_type])) {
-                                            $docReview = $advanceReview[$review->doc_type];
-                                            if (isset($docReview['review_data']['errors_count'])) {
-                                                $errorsCount = (int) $docReview['review_data']['errors_count'];
-                                            } elseif (isset($docReview['review_result']['errors_count'])) {
-                                                $errorsCount = (int) $docReview['review_result']['errors_count'];
-                                            }
+                                        if (empty($issuesData) && isset($ar[$review->doc_type]) && is_array($ar[$review->doc_type])) {
+                                            $docReview = $ar[$review->doc_type];
+                                            $issuesData = (array) ($docReview['review_data'] ?? $docReview['review_result'] ?? []);
                                         }
                                     }
-                                    // Check if review_data has nested review_data or review_result
-                                    elseif (isset($reviewData['review_data']) && is_array($reviewData['review_data']) && isset($reviewData['review_data']['errors_count'])) {
-                                        $errorsCount = (int) $reviewData['review_data']['errors_count'];
-                                    } elseif (isset($reviewData['review_result']) && is_array($reviewData['review_result']) && isset($reviewData['review_result']['errors_count'])) {
-                                        $errorsCount = (int) $reviewData['review_result']['errors_count'];
+                                    if (empty($issuesData) && isset($rd['review_data']) && is_array($rd['review_data'])) {
+                                        $issuesData = (array) $rd['review_data'];
                                     }
-                                    // Check if review_data is the issues structure directly (with errors_count at root level)
-                                    elseif (isset($reviewData['errors_count'])) {
-                                        $errorsCount = (int) $reviewData['errors_count'];
+                                    if (empty($issuesData) && isset($rd['review_result']) && is_array($rd['review_result'])) {
+                                        $issuesData = (array) $rd['review_result'];
+                                    }
+                                    if (empty($issuesData)) {
+                                        $hasIssueKeys = false;
+                                        foreach (array_keys($rd) as $k) {
+                                            if (str_starts_with((string) $k, 'issue_')) {
+                                                $hasIssueKeys = true;
+                                                break;
+                                            }
+                                        }
+                                        if ($hasIssueKeys) {
+                                            $issuesData = $rd;
+                                        }
                                     }
                                 }
                             } catch (\Exception $e) {
-                                // If query fails, reviewData remains null and errorsCount stays 0
                                 $reviewData = null;
-                                $errorsCount = 0;
+                                $issuesData = [];
                             }
-                            
-                            // Build subtitle with errors_count
-                            $cardSubtitle = sprintf(
-                                '%d Notes',
-                                $errorsCount
-                            );
+                            // Count only issues with is_valid === true and non-empty description (matches Review Notes display)
+                            $countValidIssues = function ($data) use (&$countValidIssues) {
+                                if (empty($data) || (!is_array($data) && !is_object($data))) {
+                                    return 0;
+                                }
+                                $count = 0;
+                                foreach ($data as $key => $item) {
+                                    if ($key === 'errors_count' || $key === 'quality_warnings') {
+                                        continue;
+                                    }
+                                    if (!is_array($item) && !is_object($item)) {
+                                        continue;
+                                    }
+                                    $item = (array) $item;
+                                    if (isset($item['description'], $item['is_valid'])) {
+                                        $isValid = $item['is_valid'];
+                                        if (is_string($isValid)) {
+                                            $isValid = strtolower($isValid) === 'true';
+                                        }
+                                        $description = trim((string) ($item['description'] ?? ''));
+                                        if ($isValid === true && $description !== '') {
+                                            $count++;
+                                        }
+                                        continue;
+                                    }
+                                    $count += $countValidIssues($item);
+                                }
+                                return $count;
+                            };
+                            $errorsCount = $countValidIssues($issuesData);
+                            $cardSubtitle = sprintf('%d Notes', $errorsCount);
                             $cardIcon = 'document';
-                            // Use errors_count from review_data
                             $issueCount = $errorsCount;
                         }
                     @endphp
@@ -237,10 +269,15 @@
 
                                 <!-- Title & Subtitle -->
                                 <div style="position: relative; z-index: 1;">
-                                    <h3 class="fw-bold mb-3"
-                                        style="font-size: 1.5rem; color: #ffffff; line-height: 1.3; letter-spacing: -0.5px;">
-                                        {{ $cardTitle }}
-                                    </h3>
+                                    <div class="d-flex align-items-center gap-2 flex-wrap mb-2">
+                                        <h3 class="fw-bold mb-0"
+                                            style="font-size: 1.5rem; color: #ffffff; line-height: 1.3; letter-spacing: -0.5px;">
+                                            {{ $cardTitle }}
+                                        </h3>
+                                        @if (!empty($review->is_ground_truth))
+                                            <span class="badge" style="background: rgba(255,255,255,0.25); color: #fff; font-size: 0.65rem; padding: 4px 8px; border-radius: 12px; font-weight: 600;">Ground truth</span>
+                                        @endif
+                                    </div>
                                     <p class="mb-0"
                                         style="font-size: 0.875rem; color: rgba(255,255,255,0.6); font-weight: 500;">
                                         {{ $cardSubtitle }}

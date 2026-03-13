@@ -82,10 +82,15 @@ const FormTemplateKontrakReadOnly = {
             wrapper.appendChild(this.createRujukanSection(data.rujukan));
         }
 
-        // Section 9: Pejabat Penanda Tangan (Sections)
-        if (data.pejabat_penanda_tangan) {
-            wrapper.appendChild(this.createPejabatSection(data.pejabat_penanda_tangan));
+        // Section 8b: Data BAST (NOMOR MITRA, NOMOR TELKOM, TANGGAL BAST)
+        const bastSection = this.createBastDataSection(data);
+        if (bastSection) {
+            wrapper.appendChild(bastSection);
         }
+
+        // Section 9: Pejabat Penanda Tangan (Sections)
+        // Always show so BAST/other doc-only views still display the section; use empty object when missing
+        wrapper.appendChild(this.createPejabatSection(data.pejabat_penanda_tangan || {}));
 
         container.appendChild(wrapper);
     },
@@ -219,11 +224,18 @@ const FormTemplateKontrakReadOnly = {
         const section = document.createElement('div');
         section.className = 'kontrak-section';
 
+        if (!data || typeof data !== 'object') data = {};
+        var jw = (data.jangka_waktu && typeof data.jangka_waktu === 'object') ? data.jangka_waktu : {};
         const deliveryValue = cleanText(data.delivery_date || data.delivery);
-        const tanggalKontrak = cleanText(data.tanggal_kontrak);
-        const startDate = cleanText(data.jangka_waktu?.start_date);
-        const endDate = cleanText(data.jangka_waktu?.end_date);
-        const duration = cleanText(data.jangka_waktu?.duration);
+        const tanggalKontrakVal = data.tanggal_kontrak || '';
+        const tanggalKontrak = cleanText(tanggalKontrakVal);
+        var startDateRaw = jw.start_date || jw.startDate || data.start_date || data.startDate || data['start date'] || '';
+        var endDateRaw = jw.end_date || jw.endDate || data.end_date || data.endDate || data['end date'] || '';
+        if (!startDateRaw && tanggalKontrakVal) startDateRaw = tanggalKontrakVal;
+        if (!endDateRaw && (data.delivery_date || data.delivery)) endDateRaw = data.delivery_date || data.delivery;
+        const startDate = cleanText(startDateRaw);
+        const endDate = cleanText(endDateRaw);
+        const duration = cleanText(jw.duration || data.duration);
 
         section.innerHTML = `
         <div class="kontrak-field">
@@ -571,6 +583,55 @@ const FormTemplateKontrakReadOnly = {
     },
 
     /**
+     * Create Data BAST section (READ-ONLY): NOMOR MITRA, NOMOR TELKOM, TANGGAL BAST.
+     * Accepts: data.BAST/data.bast (nested), data.nomor (mitra/telkom), or backend flat shape (nomor_mitra, nomor_telkom, tanggal_bast).
+     */
+    createBastDataSection: function (data) {
+        const bast = data?.BAST || data?.bast;
+        // Nested: bast.nomor; flat: data.nomor (mitra/telkom); backend: data.nomor_mitra, data.nomor_telkom
+        const nomorFromNested = bast?.nomor;
+        const nomorFromFlat = data?.nomor && (data.nomor.mitra || data.nomor.telkom) ? data.nomor : null;
+        const hasFlatBackend = (data?.nomor_mitra !== undefined && data.nomor_mitra !== '' && data.nomor_mitra !== null) ||
+            (data?.nomor_telkom !== undefined && data.nomor_telkom !== '' && data.nomor_telkom !== null);
+        const nomor = nomorFromNested || nomorFromFlat || (hasFlatBackend ? { mitra: data.nomor_mitra, telkom: data.nomor_telkom } : undefined);
+        const tanggalBast = bast?.tanggal_bast ?? data?.tanggal_bast;
+        const hasNomor = nomor && (nomor.mitra || nomor.telkom || (nomor.mitra !== undefined && nomor.mitra !== '-') || (nomor.telkom !== undefined && nomor.telkom !== '-'));
+        const hasTanggal = tanggalBast !== undefined && tanggalBast !== null && String(tanggalBast).trim() !== '';
+
+        if (!hasNomor && !hasTanggal) return null;
+
+        const section = document.createElement('div');
+        section.className = 'kontrak-section';
+        section.style.maxWidth = '100%';
+        section.style.overflow = 'hidden';
+
+        const cleanMitra = cleanText(nomor?.mitra);
+        const cleanTelkom = cleanText(nomor?.telkom);
+        const cleanDate = hasTanggal ? cleanText(String(tanggalBast).trim().split(/\r?\n/)[0] || '') : '';
+
+        let html = `<div class="kontrak-field" style="max-width: 100%; overflow: hidden;"><label class="kontrak-label">Data BAST</label>`;
+
+        if (hasNomor) {
+            html += `
+                <div class="kontrak-table-wrapper" style="margin-top: 0.5rem;">
+                    <table class="kontrak-table kontrak-table-static">
+                        <tbody>
+                            <tr><td class="kontrak-table-label">NOMOR MITRA</td><td><div class="kontrak-input" style="background: #f9fafb; cursor: default; word-break: break-word; overflow-wrap: break-word;">${cleanMitra}</div></td></tr>
+                            <tr><td class="kontrak-table-label">NOMOR TELKOM</td><td><div class="kontrak-input" style="background: #f9fafb; cursor: default; word-break: break-word; overflow-wrap: break-word;">${cleanTelkom}</div></td></tr>
+                        </tbody>
+                    </table>
+                </div>`;
+        }
+        if (hasTanggal) {
+            html += `<div style="margin-top: 0.5rem;"><label class="kontrak-pejabat-label">TANGGAL DOKUMEN BAST</label><div class="kontrak-input" style="background: #f9fafb; cursor: default; word-break: break-word;">${cleanDate}</div></div>`;
+        }
+
+        html += `</div>`;
+        section.innerHTML = html;
+        return section;
+    },
+
+    /**
      * Create Pejabat Penanda Tangan section (READ-ONLY)
      */
     createPejabatSection: function (pejabatData) {
@@ -580,18 +641,15 @@ const FormTemplateKontrakReadOnly = {
         section.style.overflow = 'hidden';
 
         const data = pejabatData || {};
-        const documents = ['baut', 'bast', 'bapl', 'bard'];
+        const documents = ['bast'];
         const docLabels = {
-            'baut': 'BAUT',
             'bast': 'BAST',
-            'bapl': 'BAPL',
-            'bard': 'BARD'
         };
 
         let html = `<div class="kontrak-field" style="max-width: 100%; overflow: hidden;"><label class="kontrak-label">Pejabat Penanda Tangan</label><small class="kontrak-help-text">Pejabat yang Menandatangani Dokumen</small>`;
 
         documents.forEach(doc => {
-            const docData = data[doc] || {};
+            const docData = data[doc] || data[doc.toUpperCase?.() || doc] || data[doc.toLowerCase?.() || doc] || {};
             const cleanTelkom = cleanText(docData.telkom);
             const cleanMitra = cleanText(docData.mitra);
 

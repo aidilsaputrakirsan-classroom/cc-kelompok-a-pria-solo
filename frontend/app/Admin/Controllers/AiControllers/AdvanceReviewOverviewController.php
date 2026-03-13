@@ -126,23 +126,13 @@ class AdvanceReviewOverviewController extends Controller
             'price_count' => $basicReviewCounts['price_count'],
         ]);
 
-        // B. Add cards for each uploaded file (excluding ground truth files)
-        // Ground truth document types: NOPES, KL, SP, WO
+        // B. Add cards for each uploaded file (including ground truth documents)
         $groundTruthDocTypes = ['NOPES', 'KL', 'SP', 'WO', 'KONTRAK LAYANAN', 'NOTA PESANAN', 'SURAT PESANAN', 'WORK ORDER'];
-        
+
         foreach ($uploadedFiles as $fileInfo) {
             $docType = $fileInfo['doc_type'];
-            
-            // Skip ground truth files - they should not appear as cards
-            if (in_array($docType, $groundTruthDocTypes, true)) {
-                Log::debug('Skipping ground truth file from cards', [
-                    'ticket' => $ticketNumber,
-                    'doc_type' => $docType,
-                    'filename' => $fileInfo['filename']
-                ]);
-                continue;
-            }
-            
+            $isGroundTruth = in_array($docType, $groundTruthDocTypes, true);
+
             $filename = $fileInfo['filename'];
             $filePath = $fileInfo['storage_path'];
             $fileModifiedTime = $fileInfo['modified_time'] ?? Carbon::now();
@@ -173,6 +163,7 @@ class AdvanceReviewOverviewController extends Controller
                 'status' => $status,
                 'created_at' => $dbReviewResult->created_at ?? $fileModifiedTime,
                 'is_basic_review' => false,
+                'is_ground_truth' => $isGroundTruth,
                 'typo_count' => $counts['typo_count'],
                 'date_count' => $counts['date_count'],
                 'price_count' => $counts['price_count'],

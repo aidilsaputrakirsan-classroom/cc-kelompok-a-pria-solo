@@ -43,6 +43,24 @@ p {
     z-index: 1057;
 }
 
+/* Rename document type popup - above upload modal */
+#renameDocumentTypeModal {
+    z-index: 1075 !important;
+}
+
+#renameDocumentTypeModal .modal-dialog {
+    max-width: 380px;
+}
+
+#renameDocumentTypeModal .modal-body {
+    max-height: 70vh;
+    overflow-y: auto;
+}
+
+#renameDocumentTypeModal .list-group-item-action {
+    cursor: pointer;
+}
+
 /* Ensure backdrop is below modal but above everything else */
 .modal-backdrop {
     position: fixed !important;
@@ -416,7 +434,18 @@ a:hover {
     background-color: #f8f9fa;
 }
 
-/* Rename button styling */
+/* Rename dropdown (predefined document types) */
+.rename-dropdown-btn {
+    flex-shrink: 0;
+    font-size: 0.8rem;
+}
+
+.rename-dropdown-menu {
+    max-height: 280px;
+    overflow-y: auto;
+}
+
+/* Rename button styling (legacy) */
 .rename-btn {
     opacity: 0.6;
     transition: opacity 0.2s ease;

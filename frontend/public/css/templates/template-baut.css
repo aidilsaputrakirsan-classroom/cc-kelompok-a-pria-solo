@@ -1,0 +1,288 @@
+/* template-baut.css - BAUT (Berita Acara Uji Teknis) form template */
+
+.template-baut {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+/* ============================================
+   SECTIONS
+============================================ */
+.template-baut .baut-section {
+    margin-bottom: 0.5rem;
+}
+
+.template-baut .baut-field {
+    display: flex;
+    flex-direction: column;
+}
+
+/* ============================================
+   LABELS & HELP TEXT
+============================================ */
+.template-baut .baut-label {
+    display: block;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: #1d1d1f;
+    margin-bottom: 0.25rem;
+}
+
+.template-baut .baut-help-text {
+    display: block;
+    font-size: 0.8125rem;
+    color: #6b7280;
+    margin-bottom: 0.75rem;
+}
+
+/* ============================================
+   INPUTS (Tanggal BAUT)
+============================================ */
+.template-baut .baut-input {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 12px;
+    font-size: 0.9375rem;
+    color: #1d1d1f;
+    transition: all 0.2s;
+    background: white;
+}
+
+.template-baut .baut-input:focus {
+    outline: none;
+    border-color: #1d1d1f;
+    box-shadow: 0 0 0 4px rgba(29, 29, 31, 0.1);
+}
+
+.template-baut .baut-input::placeholder {
+    color: #9ca3af;
+}
+
+.template-baut .baut-input:hover {
+    border-color: #cbd5e1;
+}
+
+/* ============================================
+   LAMPIRAN BAUT TABLE - Header & Add Button
+============================================ */
+.template-baut .baut-table-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 0.75rem;
+}
+
+.template-baut .baut-add-btn {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.625rem 1rem;
+    background: #1d1d1f;
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 0.8125rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.2s;
+    box-shadow: 0 2px 8px rgba(29, 29, 31, 0.15);
+    flex-shrink: 0;
+}
+
+.template-baut .baut-add-btn:hover {
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(29, 29, 31, 0.25);
+    background: #2d2d2f;
+}
+
+.template-baut .baut-add-btn:active {
+    transform: translateY(0);
+}
+
+/* ============================================
+   TABLE WRAPPER & TABLE
+============================================ */
+.template-baut .baut-table-wrapper {
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid #e5e7eb;
+}
+
+.template-baut .baut-table {
+    width: 100%;
+    border-collapse: collapse;
+    background: white;
+}
+
+.template-baut .baut-table thead {
+    background: #1d1d1f;
+}
+
+.template-baut .baut-table thead tr th {
+    padding: 1rem 0.75rem;
+    text-align: left;
+    font-size: 0.875rem;
+    font-weight: 600;
+    color: white;
+    letter-spacing: 0.025em;
+}
+
+.template-baut .baut-table thead tr th.baut-table-action {
+    text-align: center;
+    width: 80px;
+}
+
+/* Table body rows */
+.template-baut .baut-table tbody tr.baut-table-row {
+    border-bottom: 1px solid #f3f4f6;
+    transition: background-color 0.2s;
+}
+
+.template-baut .baut-table tbody tr.baut-table-row:last-child {
+    border-bottom: none;
+}
+
+.template-baut .baut-table tbody tr.baut-table-row:hover {
+    background-color: #f9fafb;
+}
+
+.template-baut .baut-table tbody tr.baut-table-row td {
+    padding: 1rem 0.75rem;
+    font-size: 0.9375rem;
+    color: #1d1d1f;
+    vertical-align: middle;
+}
+
+.template-baut .baut-table tbody tr.baut-table-row td.baut-table-action {
+    text-align: center;
+    vertical-align: middle;
+}
+
+/* Table inputs (No Order, Tanggal Aktivasi) */
+.template-baut .baut-table-input {
+    width: 100%;
+    padding: 0.625rem 0.875rem;
+    border: 2px solid #e5e7eb;
+    border-radius: 10px;
+    font-size: 0.875rem;
+    color: #1d1d1f;
+    transition: all 0.2s;
+    background: white;
+}
+
+.template-baut .baut-table-input:focus {
+    outline: none;
+    border-color: #1d1d1f;
+    box-shadow: 0 0 0 3px rgba(29, 29, 31, 0.1);
+}
+
+.template-baut .baut-table-input:hover {
+    border-color: #cbd5e1;
+}
+
+.template-baut .baut-table-input::placeholder {
+    color: #9ca3af;
+}
+
+/* Delete button */
+.template-baut .baut-delete-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 32px;
+    height: 32px;
+    background: #fee2e2;
+    color: #dc2626;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-size: 0.8125rem;
+}
+
+.template-baut .baut-delete-btn:hover {
+    background: #fecaca;
+    transform: scale(1.05);
+}
+
+.template-baut .baut-delete-btn:active {
+    transform: scale(0.95);
+}
+
+/* Empty state (no lampiran) */
+.template-baut .baut-table-empty td {
+    padding: 3rem 1.25rem;
+    text-align: center;
+    color: #9ca3af;
+}
+
+.template-baut .baut-table-empty i {
+    font-size: 2.5rem;
+    color: #d1d5db;
+    margin-bottom: 1rem;
+    display: block;
+}
+
+.template-baut .baut-table-empty p {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #6b7280;
+    margin: 0 0 0.5rem 0;
+}
+
+.template-baut .baut-table-empty small {
+    font-size: 0.875rem;
+    color: #9ca3af;
+}
+
+/* Read-only table number column (form-baut-readonly.js) */
+.template-baut .baut-table-number {
+    text-align: center;
+    font-weight: 600;
+    color: #6b7280;
+    vertical-align: middle;
+}
+
+/* ============================================
+   RESPONSIVE
+============================================ */
+@media (max-width: 768px) {
+    .template-baut {
+        gap: 0.75rem;
+    }
+
+    .template-baut .baut-section {
+        margin-bottom: 0.25rem;
+    }
+
+    .template-baut .baut-table-header {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0.75rem;
+    }
+
+    .template-baut .baut-add-btn {
+        width: 100%;
+        justify-content: center;
+    }
+
+    .template-baut .baut-table-wrapper {
+        overflow-x: auto;
+    }
+
+    .template-baut .baut-table {
+        min-width: 320px;
+    }
+
+    .template-baut .baut-input {
+        font-size: 0.875rem;
+        padding: 0.75rem 0.875rem;
+    }
+
+    .template-baut .baut-table-input {
+        font-size: 0.8125rem;
+        padding: 0.5rem 0.75rem;
+    }
+}

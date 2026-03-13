@@ -18,6 +18,11 @@ let currentPdfDoc = null;
 let currentFormData = {};
 let pageRotations = {}; // State untuk menyimpan rotasi per halaman
 
+// Ensure ground truth data is available (blade sets window.GROUND_TRUTH_DATA; OpenAdmin may set GROUND_TRUTH_DATA)
+if (typeof GROUND_TRUTH_DATA === 'undefined' && typeof window !== 'undefined' && window.GROUND_TRUTH_DATA) {
+    var GROUND_TRUTH_DATA = window.GROUND_TRUTH_DATA;
+}
+
 // ============================================
 // DOCUMENT TYPE MAPPING (Backend ↔ Frontend)
 // ============================================
@@ -42,7 +47,9 @@ const FORM_TEMPLATES = {
     'WO': typeof FormTemplateKontrak !== 'undefined' ? FormTemplateKontrak : null,
     'SP': typeof FormTemplateKontrak !== 'undefined' ? FormTemplateKontrak : null,
     'NOPES': typeof FormTemplateKontrak !== 'undefined' ? FormTemplateKontrak : null,
-    'BAUT': typeof FormTemplateBAUT !== 'undefined' ? FormTemplateBAUT : null
+    'BAUT': typeof FormTemplateBAUT !== 'undefined' ? FormTemplateBAUT : null,
+    'BAST': typeof FormTemplateKontrak !== 'undefined' ? FormTemplateKontrak : null,
+    'P7': typeof FormTemplateP7 !== 'undefined' ? FormTemplateP7 : null
 };
 
 // ============================================
@@ -614,9 +621,24 @@ function loadFormData(docType) {
     const formContainer = document.getElementById('extraction-form');
     const formTitle = document.getElementById('form-title');
     const dataKey = getDataKey(docType);
+    const template = FORM_TEMPLATES[dataKey];
 
-    if (!GROUND_TRUTH_DATA[dataKey]) {
-        console.warn(`⚠️ No data found in GROUND_TRUTH_DATA for key: ${dataKey}`);
+    // Resolve data: prefer GROUND_TRUTH_DATA[dataKey], fallback to alternate key (e.g. "Kontrak Layanan" if DB sent that)
+    let docData = GROUND_TRUTH_DATA && GROUND_TRUTH_DATA[dataKey];
+    if (!docData && docType && GROUND_TRUTH_DATA && GROUND_TRUTH_DATA[docType]) {
+        docData = GROUND_TRUTH_DATA[docType];
+    }
+
+    // BAUT: show form with empty table when data is [] or missing (so user can add lampiran via CRUD)
+    if (dataKey === 'BAUT' && template) {
+        if (docData === undefined || docData === null) {
+            docData = { tanggal_baut: null, lampiran_baut: {} };
+            if (GROUND_TRUTH_DATA) GROUND_TRUTH_DATA[dataKey] = docData;
+        }
+    }
+
+    if (!docData) {
+        console.warn(`⚠️ No data found in GROUND_TRUTH_DATA for key: ${dataKey} or docType: ${docType}`);
         formContainer.innerHTML = `
             <div class="alert alert-info">
                 <i class="bi bi-info-circle me-2"></i>
@@ -627,9 +649,43 @@ function loadFormData(docType) {
         return;
     }
 
-    currentFormData = GROUND_TRUTH_DATA[dataKey];
+    currentFormData = docData;
 
-    const template = FORM_TEMPLATES[dataKey];
+    // Normalize BAUT data when backend returns [] or wrong shape so template always gets { tanggal_baut, lampiran_baut }
+    if (dataKey === 'BAUT' && template) {
+        if (Array.isArray(currentFormData) || typeof currentFormData !== 'object') {
+            currentFormData = { tanggal_baut: null, lampiran_baut: {} };
+        } else if (Array.isArray(currentFormData.lampiran_baut) || (currentFormData.lampiran_baut !== undefined && typeof currentFormData.lampiran_baut !== 'object')) {
+            currentFormData = {
+                tanggal_baut: currentFormData.tanggal_baut ?? null,
+                lampiran_baut: {}
+            };
+        }
+    }
+
+    // BAST: if pejabat_penanda_tangan is missing/empty, follow from KL (Kontrak Layanan) so Pejabat section shows
+    if (dataKey === 'BAST' && GROUND_TRUTH_DATA) {
+        const hasPejabat = currentFormData.pejabat_penanda_tangan && typeof currentFormData.pejabat_penanda_tangan === 'object' && Object.keys(currentFormData.pejabat_penanda_tangan).length > 0;
+        if (!hasPejabat) {
+            const klData = GROUND_TRUTH_DATA['KL'] || GROUND_TRUTH_DATA['Kontrak Layanan'] || GROUND_TRUTH_DATA['WO'] || GROUND_TRUTH_DATA['SP'];
+            const fromKl = klData && klData.pejabat_penanda_tangan && typeof klData.pejabat_penanda_tangan === 'object';
+            if (fromKl) {
+                currentFormData = { ...currentFormData, pejabat_penanda_tangan: klData.pejabat_penanda_tangan };
+            }
+        }
+    }
+
+    // P7: merge in KL data for Tanggal, Detail Pembayaran, and Pejabat so P7 gets ground truth; P7's nomor/tanggal override
+    if (dataKey === 'P7' && GROUND_TRUTH_DATA) {
+        const klData = GROUND_TRUTH_DATA['KL'] || GROUND_TRUTH_DATA['Kontrak Layanan'] || GROUND_TRUTH_DATA['WO'] || GROUND_TRUTH_DATA['SP'];
+        if (klData && typeof klData === 'object') {
+            currentFormData = {
+                ...klData,
+                ...currentFormData
+            };
+        }
+    }
+
     if (template) {
         formTitle.textContent = template.meta.title;
         template.render(currentFormData, formContainer);

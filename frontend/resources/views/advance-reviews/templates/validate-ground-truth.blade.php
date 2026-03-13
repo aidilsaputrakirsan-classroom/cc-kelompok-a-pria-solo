@@ -173,6 +173,7 @@
     <script src="{{ asset('js/form-templates/form-npk-readonly.js') }}"></script>
     <script src="{{ asset('js/form-templates/form-kontrak.js') }}"></script>
     <script src="{{ asset('js/form-templates/form-kontrak-readonly.js') }}"></script>
+    <script src="{{ asset('js/form-templates/form-p7.js') }}"></script>
 
     <!-- Inline scripts with PHP data -->
     <script>

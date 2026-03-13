@@ -11,6 +11,7 @@ class AiAdvanceReviewController extends Controller
 {
     public function index(Content $content)
     {
+        Admin::css('https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.1/font/bootstrap-icons.css');
         Admin::css(asset('css/doc-review-landing-page.css'));
         Admin::css(asset('css/file-upload.css'));
         Admin::js(asset('js/file-upload-handler.js'));

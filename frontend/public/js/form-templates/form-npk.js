@@ -169,7 +169,7 @@ const FormTemplateNPK = {
             </td>
             <td class="npk-table-action">
                 <button type="button" class="npk-delete-btn" onclick="FormTemplateNPK.deleteSIDItem(${index})">
-                    <i class="fas fa-trash-alt"></i>
+                    <i class="bi bi-trash"></i>
                 </button>
             </td>
         `;
@@ -430,7 +430,7 @@ const FormTemplateNPK = {
             </td>
             <td class="npk-table-action">
                 <button type="button" class="npk-delete-btn" onclick="FormTemplateNPK.deleteProrateItem(${index})">
-                    <i class="fas fa-trash-alt"></i>
+                    <i class="bi bi-trash"></i>
                 </button>
             </td>
         `;
@@ -602,7 +602,7 @@ const FormTemplateNPK = {
                     </td>
                     <td class="npk-table-action">
                         <button type="button" class="npk-delete-btn" onclick="FormTemplateNPK.deleteUsageItem(${index})">
-                            <i class="fas fa-trash-alt"></i>
+                            <i class="bi bi-trash"></i>
                         </button>
                     </td>
                 </tr>
@@ -669,7 +669,7 @@ const FormTemplateNPK = {
             </td>
             <td class="npk-table-action">
                 <button type="button" class="npk-delete-btn" onclick="FormTemplateNPK.deleteUsageItem(${newIndex})">
-                    <i class="fas fa-trash-alt"></i>
+                    <i class="bi bi-trash"></i>
                 </button>
             </td>
         `;

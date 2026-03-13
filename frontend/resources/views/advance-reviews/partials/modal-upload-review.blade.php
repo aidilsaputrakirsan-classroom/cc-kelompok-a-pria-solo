@@ -120,3 +120,21 @@
         </div>
     </div>
 </div>
+
+{{-- Rename document type popup (list shown in modal) --}}
+<div class="modal fade" id="renameDocumentTypeModal" tabindex="-1" aria-labelledby="renameDocumentTypeModalLabel" aria-hidden="true" data-bs-backdrop="true" data-bs-keyboard="true">
+    <div class="modal-dialog modal-dialog-centered modal-dialog-scrollable">
+        <div class="modal-content">
+            <div class="modal-header py-2">
+                <h6 class="modal-title" id="renameDocumentTypeModalLabel">
+                    <i class="bi bi-pencil-square me-2"></i>Pilih nama dokumen
+                </h6>
+                <button type="button" class="btn-close btn-close-sm" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body py-2" id="renameDocumentTypeModalBody">
+                <p class="text-muted small mb-2">Pilih jenis dokumen untuk mengganti nama file.</p>
+                <div class="list-group list-group-flush" id="renameDocumentTypeList"></div>
+            </div>
+        </div>
+    </div>
+</div>

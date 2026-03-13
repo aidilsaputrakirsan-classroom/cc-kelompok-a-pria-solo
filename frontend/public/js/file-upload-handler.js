@@ -8,9 +8,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const validationAlertAdv = document.getElementById("validationAlertAdv");
     const loadingOverlay = document.getElementById("loadingOverlay");
     const typeSelectAdv = document.getElementById("typeSelectAdv");
+    const renameDocumentTypeModalEl = document.getElementById("renameDocumentTypeModal");
+    const renameDocumentTypeListEl = document.getElementById("renameDocumentTypeList");
 
     let selectedFilesAdv = [];
     let companiesData = [];
+    /** File index for rename popup (set when opening modal) */
+    let renameModalFileIndex = null;
 
     const ADVANCE_UPLOAD_ENDPOINT = "/projess/api/advance-upload";
     const CHUNK_SIZE = 20; // PHP max_file_uploads; chunked uploads allow more files total
@@ -21,6 +25,13 @@ document.addEventListener("DOMContentLoaded", function () {
         groundTruth: ["KL", "SP", "WO", "Nopes"],
         singleReview: ["PO", "GR", "PR", "NPK", "SPB", "BAST", "BAUT", "BARD", "P7", "SKM", "P8"]
     };
+
+    /** Predefined document type names for rename dropdown */
+    const RENAME_DOCUMENT_TYPES = [
+        "PR", "PO", "GR", "Checklist OBL", "NPK", "KKP", "SPB", "INVOICE",
+        "KUITANSI", "FAKTUR PAJAK", "BAPLA/BAST", "BAUT", "BARD", "BAPL",
+        "P8", "WO", "SP", "NP", "KL", "SKM", "P7", "KB", "BA SPLIT"
+    ];
 
     function isGroundTruthFile(filename) {
         let upperName = filename.toUpperCase().replace('.PDF', '');
@@ -368,31 +379,43 @@ document.addEventListener("DOMContentLoaded", function () {
     }
 
     /**
-     * Start rename mode - show input field
+     * Apply rename from dropdown selection (predefined document type)
      */
-    function startRenameMode(index, displaySpan, editInput, renameBtn) {
-        // Guard against null elements
-        if (!displaySpan || !editInput || !renameBtn) {
-            console.warn('startRenameMode: Missing required DOM elements', {
-                displaySpan: !!displaySpan,
-                editInput: !!editInput,
-                renameBtn: !!renameBtn
-            });
+    function applyRenameFromDropdown(index, selectedLabel) {
+        if (!selectedLabel || !selectedLabel.trim()) return;
+        const oldFile = selectedFilesAdv[index];
+        const oldFileName = oldFile.name.replace(/\.pdf$/i, '');
+        const newName = selectedLabel.trim();
+        if (newName === oldFileName) return;
+
+        const newFileName = `${newName}.pdf`;
+        const isDuplicate = selectedFilesAdv.some((f, idx) =>
+            idx !== index && f.name.toLowerCase() === newFileName.toLowerCase()
+        );
+        if (isDuplicate) {
+            showNotification(`File dengan nama "${newFileName}" sudah ada.`, 'danger');
             return;
         }
+
+        const newFile = new File([oldFile], newFileName, { type: oldFile.type });
+        selectedFilesAdv[index] = newFile;
+        displayFilesAdv();
+        showNotification(`File berhasil direname menjadi "${newFileName}"`, 'success');
+    }
+
+    /**
+     * Start rename mode (typing) - show inline input field
+     */
+    function startRenameMode(index, displaySpan, editInput, renameBtn) {
+        if (!displaySpan || !editInput || !renameBtn) return;
 
         displaySpan.classList.add('d-none');
         editInput.classList.remove('d-none');
         renameBtn.classList.add('d-none');
-
         editInput.focus();
         editInput.select();
 
-        // Ensure parentNode exists before replacing
-        if (!editInput.parentNode) {
-            console.warn('startRenameMode: editInput has no parentNode');
-            return;
-        }
+        if (!editInput.parentNode) return;
 
         const newEditInput = editInput.cloneNode(true);
         editInput.parentNode.replaceChild(newEditInput, editInput);
@@ -411,20 +434,18 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
 
-        newEditInput.addEventListener('blur', function (e) {
-            setTimeout(() => {
-                saveRename(index, newEditInput, displaySpan, renameBtn);
-            }, 200);
+        newEditInput.addEventListener('blur', function () {
+            setTimeout(function () { saveRename(index, newEditInput, displaySpan, renameBtn); }, 200);
         });
     }
 
     /**
-     * Save renamed file
+     * Save renamed file (from typed input)
      */
     function saveRename(index, editInput, displaySpan, renameBtn) {
         const newName = editInput.value.trim();
         const oldFile = selectedFilesAdv[index];
-        const oldFileName = oldFile.name.replace('.pdf', '');
+        const oldFileName = oldFile.name.replace(/\.pdf$/i, '');
 
         if (newName === oldFileName) {
             cancelRename(displaySpan, editInput, renameBtn);
@@ -438,20 +459,20 @@ document.addEventListener("DOMContentLoaded", function () {
             return;
         }
 
-        if (!/^[a-zA-Z0-9\s\-_\.]+$/.test(newName)) {
-            showNotification('Nama file hanya boleh mengandung huruf, angka, spasi, dash, underscore, dan titik.', 'danger');
+        if (!/^[a-zA-Z0-9\s\-_\.\/]+$/.test(newName)) {
+            showNotification('Nama file hanya boleh mengandung huruf, angka, spasi, dash, underscore, titik, dan slash.', 'danger');
             editInput.value = oldFileName;
             cancelRename(displaySpan, editInput, renameBtn);
             return;
         }
 
-        const newFileName = `${newName}.pdf`;
-        const isDuplicate = selectedFilesAdv.some((f, idx) =>
-            idx !== index && f.name === newFileName
-        );
+        const newFileName = newName.endsWith('.pdf') ? newName : newName + '.pdf';
+        const isDuplicate = selectedFilesAdv.some(function (f, idx) {
+            return idx !== index && f.name.toLowerCase() === newFileName.toLowerCase();
+        });
 
         if (isDuplicate) {
-            showNotification(`File dengan nama "${newFileName}" sudah ada.`, 'danger');
+            showNotification('File dengan nama "' + newFileName + '" sudah ada.', 'danger');
             editInput.value = oldFileName;
             cancelRename(displaySpan, editInput, renameBtn);
             return;
@@ -459,19 +480,56 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const newFile = new File([oldFile], newFileName, { type: oldFile.type });
         selectedFilesAdv[index] = newFile;
-
         displayFilesAdv();
-        showNotification(`File berhasil direname menjadi "${newFileName}"`, 'success');
+        showNotification('File berhasil direname menjadi "' + newFileName + '"', 'success');
     }
 
     /**
-     * Cancel rename - restore display mode
+     * Cancel rename (typing) - restore display mode
      */
     function cancelRename(displaySpan, editInput, renameBtn) {
         editInput.classList.add('d-none');
         displaySpan.classList.remove('d-none');
         renameBtn.classList.remove('d-none');
     }
+
+    /**
+     * Open rename document type popup for file at index
+     */
+    function openRenameDocumentTypePopup(index) {
+        renameModalFileIndex = index;
+        if (renameDocumentTypeModalEl && typeof bootstrap !== "undefined" && bootstrap.Modal) {
+            var modalInstance = bootstrap.Modal.getOrCreateInstance(renameDocumentTypeModalEl);
+            modalInstance.show();
+        }
+    }
+
+    /**
+     * Build the rename document type popup list (once)
+     */
+    function initRenameDocumentTypePopup() {
+        if (!renameDocumentTypeListEl) return;
+        renameDocumentTypeListEl.innerHTML = "";
+        RENAME_DOCUMENT_TYPES.forEach(function (label) {
+            var item = document.createElement("button");
+            item.type = "button";
+            item.className = "list-group-item list-group-item-action text-start";
+            item.textContent = label;
+            item.dataset.renameLabel = label;
+            item.addEventListener("click", function () {
+                if (renameModalFileIndex !== null) {
+                    applyRenameFromDropdown(renameModalFileIndex, label);
+                    renameModalFileIndex = null;
+                }
+                if (renameDocumentTypeModalEl && typeof bootstrap !== "undefined" && bootstrap.Modal) {
+                    var m = bootstrap.Modal.getInstance(renameDocumentTypeModalEl);
+                    if (m) m.hide();
+                }
+            });
+            renameDocumentTypeListEl.appendChild(item);
+        });
+    }
+    initRenameDocumentTypePopup();
 
     function displayFilesAdv() {
         updateTypeSelect();
@@ -486,26 +544,28 @@ document.addEventListener("DOMContentLoaded", function () {
                 listItem.className =
                     "list-group-item d-flex justify-content-between align-items-center px-3 py-2";
 
-                const fileName = file.name.replace('.pdf', '');
-
+                const fileName = file.name.replace(/\.pdf$/i, '');
                 const isGT = isGroundTruthFile(file.name);
                 const gtBadge = isGT
                     ? '<span class="badge bg-primary ms-2" style="font-size: 0.7rem;">Ground Truth</span>'
                     : "";
+                const safeFileName = String(file.name).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;').replace(/>/g, '&gt;');
 
                 listItem.innerHTML = `
                     <div class="d-flex align-items-center flex-grow-1" style="min-width: 0;">
                         <i class="bi bi-file-earmark-pdf text-danger me-2 fs-5"></i>
                         <div class="d-flex align-items-center flex-grow-1" style="min-width: 0;">
                             <div class="fw-medium d-flex align-items-center flex-grow-1" style="min-width: 0;">
-                                <span class="file-name-display" data-index="${index}" title="${file.name}">
-                                    ${file.name}
+                                <span class="file-name-display" data-index="${index}" title="${safeFileName}">
+                                    ${safeFileName}
                                 </span>
                                 <input type="text" class="form-control form-control-sm file-name-edit d-none" 
-                                       data-index="${index}" 
-                                       value="${fileName}" 
+                                       data-index="${index}" value="${fileName.replace(/"/g, '&quot;')}" 
                                        style="max-width: 250px;">
-                                <button class="btn btn-sm btn-link p-0 ms-2 rename-btn" data-index="${index}" title="Rename file">
+                                <button type="button" class="btn btn-sm btn-outline-secondary ms-2 rename-popup-btn" data-index="${index}" title="Rename from list">
+                                    Rename
+                                </button>
+                                <button class="btn btn-sm btn-link p-0 ms-1 rename-btn" data-index="${index}" title="Rename by typing">
                                     <i class="bi bi-pencil-square text-primary"></i>
                                 </button>
                                 ${gtBadge}
@@ -522,6 +582,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     e.stopPropagation();
                     selectedFilesAdv.splice(index, 1);
                     displayFilesAdv();
+                });
+
+                listItem.querySelector(".rename-popup-btn").addEventListener("click", function (e) {
+                    e.stopPropagation();
+                    openRenameDocumentTypePopup(index);
                 });
 
                 const renameBtn = listItem.querySelector(".rename-btn");

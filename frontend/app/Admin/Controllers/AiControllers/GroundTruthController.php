@@ -81,6 +81,8 @@ class GroundTruthController extends Controller
             Admin::css(asset('css/validate-ground-truth.css'));
             Admin::css(asset('css/templates/template-npk.css'));
             Admin::css(asset('css/templates/template-kontrak.css'));
+            Admin::css(asset('css/templates/template-baut.css'));
+            Admin::css(asset('css/templates/template-p7.css'));
 
             // Inject config for validate-ground-truth.js (required when using OpenAdmin Content — @stack('scripts') is not rendered)
             $prefix = config('admin.route.prefix');
@@ -99,6 +101,8 @@ class GroundTruthController extends Controller
             Admin::js(asset('js/form-templates/form-npk-readonly.js'));
             Admin::js(asset('js/form-templates/form-kontrak.js'));
             Admin::js(asset('js/form-templates/form-kontrak-readonly.js'));
+            Admin::js(asset('js/form-templates/form-baut.js'));
+            Admin::js(asset('js/form-templates/form-p7.js'));
             Admin::js(asset('js/validate-ground-truth.js'));
 
             return $content
@@ -310,12 +314,15 @@ class GroundTruthController extends Controller
         // Remove _metadata if exists
         unset($extractedData['_metadata']);
 
-        // Sort data untuk setiap doc_type
+        // Build data for frontend: normalize keys to KL, WO, SP, NOPES so JS always finds GROUND_TRUTH_DATA.KL etc.
         $data = [];
         foreach ($extractedData as $docType => $docData) {
-            // Sort date-related data
+            if (! is_array($docData)) {
+                $docData = is_object($docData) ? (array) $docData : [];
+            }
             $sortedData = $this->sortDateRelatedData($docData, $docType);
-            $data[$docType] = $sortedData;
+            $frontendKey = $this->normalizeDocTypeKeyForFrontend((string) $docType);
+            $data[$frontendKey] = $sortedData;
         }
 
         Log::info('Ground truth data retrieved from database (Single GT)', [
@@ -326,6 +333,23 @@ class GroundTruthController extends Controller
         ]);
 
         return $data;
+    }
+
+    /**
+     * Map backend/doc_type keys to frontend keys (validate-ground-truth.js expects KL, WO, SP, NOPES, NPK, BAUT).
+     */
+    private function normalizeDocTypeKeyForFrontend(string $docType): string
+    {
+        $map = [
+            'Kontrak Layanan' => 'KL',
+            'Work Order' => 'WO',
+            'Surat Pesanan' => 'SP',
+            'Nota Pesanan' => 'NOPES',
+            'NOTA PESANAN' => 'NOPES',
+            'NOTA_PESANAN' => 'NOPES',
+        ];
+
+        return $map[$docType] ?? $docType;
     }
 
     /**
