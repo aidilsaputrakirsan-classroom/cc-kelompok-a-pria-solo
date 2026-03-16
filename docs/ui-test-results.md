@@ -51,7 +51,8 @@ Setiap test case di bawah dapat dilengkapi dengan **screenshot aktual** dari bro
   - Hero section tampil dengan judul seperti **“Validasi Dokumen dengan Mudah!”**.
   - Terdapat tombol utama **“Mulai Review”** (CTA) yang akan membuka modal upload.
   - Tidak ada error JavaScript/console yang fatal.
-- **Screenshot:** *(tambahkan screenshot hero halaman utama)*.
+- **Screenshot:** 
+  ![](images/ui-test-case-1.png)
 
 ---
 
@@ -66,7 +67,7 @@ Setiap test case di bawah dapat dilengkapi dengan **screenshot aktual** dari bro
     - Input untuk upload file dokumen (PDF).
     - Field lain yang wajib diisi (mis. ticket, tipe dokumen, dsb., sesuai implementasi).
   - Latar belakang halaman menjadi diblur/gelap (efek modal Bootstrap).
-- **Screenshot:** *(tambahkan screenshot modal upload yang terbuka)*.
+- **Screenshot:** ![](images/ui-test-case-2.png)
 
 ---
 
@@ -81,7 +82,9 @@ Setiap test case di bawah dapat dilengkapi dengan **screenshot aktual** dari bro
   - Modal tertutup atau dikunci sementara.
   - **Loading overlay** dengan teks seperti *“Ekstraksi Informasi…”* muncul (elemen `#loadingOverlay` di halaman).
   - Tidak ada pesan error langsung; network tab di browser menunjukkan request ke backend FastAPI (mis. `/information-extraction` dan/atau `/review`).
-- **Screenshot:** *(tambahkan screenshot overlay loading yang sedang aktif)*.
+- **Screenshot:** 
+![](images/ui-test-case-3.1.png)
+![](images/ui-test-case-3.2.png)
 
 ---
 
@@ -98,7 +101,8 @@ Setiap test case di bawah dapat dilengkapi dengan **screenshot aktual** dari bro
     - Teks judul kurang lebih: **“Validasi Berhasil!”**.
     - Pesan yang menyatakan bahwa dokumen akan diarahkan ke halaman hasil.
   - Tidak ada error JS di console.
-- **Screenshot:** *(tambahkan screenshot success modal)*.
+- **Screenshot:** 
+![](images/ui-test-case-4.2.png)
 
 ---
 
@@ -112,7 +116,11 @@ Setiap test case di bawah dapat dilengkapi dengan **screenshot aktual** dari bro
     - Informasi tiket.
     - Ringkasan hasil validasi (typo/date/price) dan/atau advance review.
   - Layout hasil sesuai template di `resources/views/advance-reviews/templates/` (mis. `review-overview`, `basic-review-result`, dsb.).
-- **Screenshot:** *(tambahkan screenshot halaman hasil review setelah redirect)*.
+- **Screenshot:** 
+![](images/ui-test-case-5.1.png)
+![](images/ui-test-case-5.2.png)
+![](images/ui-test-case-5.3.png)
+![](images/ui-test-case-5.4.png)
 
 ---
 
@@ -130,7 +138,8 @@ Setiap test case di bawah dapat dilengkapi dengan **screenshot aktual** dari bro
     - Judul kira-kira: **“Upload Gagal!”**.
     - Pesan error spesifik di elemen `#errorMessage`, misalnya “file wajib diisi” / “format tidak didukung” / pesan dari backend.
     - Teks tambahan di bawah menjelaskan bahwa form sudah di-reset.
-- **Screenshot:** *(tambahkan screenshot error modal beserta pesan error)*.
+- **Screenshot:** 
+![](images/ui-test-case-6.png)
 
 ---
 
@@ -143,7 +152,8 @@ Setiap test case di bawah dapat dilengkapi dengan **screenshot aktual** dari bro
 - **Expected result:**
   - Semua nilai input di modal upload **sudah kosong / kembali ke nilai default** (sesuai pesan di error modal: *“Form sudah di-reset”*).
   - Tidak ada file yang masih terpilih secara otomatis.
-- **Screenshot:** *(opsional; screenshot form kosong setelah error)*.
+- **Screenshot:** 
+![](images/ui-test-case-2.png)
 
 ---
 
@@ -159,7 +169,9 @@ Setiap test case di bawah dapat dilengkapi dengan **screenshot aktual** dari bro
   - Proses berakhir dengan success modal seperti di Test Case 4.
   - Redirect ke halaman hasil seperti di Test Case 5.
   - Tidak ada “state sisa” dari error sebelumnya (artinya error tidak membuat UI masuk kondisi rusak).
-- **Screenshot:** *(screenshot overlay/success modal setelah retry)*.
+- **Screenshot:** 
+![](images/ui-test-case-3.1.png)
+![](images/ui-test-case-3.2.png)
 
 ---
 
@@ -174,7 +186,9 @@ Setiap test case di bawah dapat dilengkapi dengan **screenshot aktual** dari bro
   - Informasi utama tiket (nomor tiket, nama perusahaan/proyek) tampil benar.
   - Blok hasil validasi (mis. tabel atau kartu) menampilkan data yang konsisten dengan dokumen yang diupload.
   - Jika ada highlight error/remark dari AI, tampil dengan styling yang jelas (warna, ikon, dsb.).
-- **Screenshot:** *(tambahkan screenshot halaman hasil review yang lengkap)*.
+- **Screenshot:** 
+![](images/ui-test-case-9.1.png)
+![](images/ui-test-case-9.2.png)
 
 ---
 
@@ -189,7 +203,8 @@ Setiap test case di bawah dapat dilengkapi dengan **screenshot aktual** dari bro
     - Status yang sesuai (mis. “completed”).
     - Timestamp yang masuk akal (mendekati waktu pengujian).
   - Jika listing mendukung sorting/filter, fitur tersebut dapat digunakan untuk menemukan tiket dengan mudah (melengkapi konsep “sorting/pagination” dari modul).
-- **Screenshot:** *(tambahkan screenshot halaman riwayat dengan tiket yang baru diproses disorot)*.
+- **Screenshot:** 
+![](images/ui-test-case-10.png)
 
 ---
 
