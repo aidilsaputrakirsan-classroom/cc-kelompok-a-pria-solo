@@ -10,8 +10,8 @@ Dokumen ini memuat **dokumentasi hasil testing** semua endpoint backend (FastAPI
 
 | Item | Keterangan |
 |------|------------|
-| **Base URL** | `http://localhost:8000` |
-| **Swagger UI** | http://localhost:8000/docs |
+| **Base URL** | `http://127.0.0.1:8001` |
+| **Swagger UI** | http://127.0.0.1:8001/docs |
 | **Tool** | Swagger UI / Thunder Client (sesuai yang dipakai saat test) |
 | **Tanggal test** | *(isi tanggal saat testing dilakukan)* |
 | **Backend** | FastAPI — Document Validator API |
@@ -174,7 +174,7 @@ Detail parameter dan contoh request/response lengkap: **[docs/api-dokumen-valida
 | 4 | POST | `/information-extraction` | 200 | *(centang ✅ setelah test)* |
 | 5 | POST | `/review` | 200 | *(centang ✅ setelah test)* |
 
-**Catatan:** Untuk endpoint 4 dan 5, pastikan backend berjalan (`uvicorn app.main:app --reload --port 8000`) dan variabel environment (Azure DI, OpenAI, TEMP_STORAGE) sudah diisi jika dipakai. Endpoint 5 memerlukan tiket yang sudah diekstraksi lewat endpoint 4.
+**Catatan:** Untuk endpoint 4 dan 5, pastikan backend berjalan (`uvicorn app.main:app --reload --port 8001`) dan variabel environment (Azure DI, OpenAI, TEMP_STORAGE) sudah diisi jika dipakai. Endpoint 5 memerlukan tiket yang sudah diekstraksi lewat endpoint 4.
 
 ---
 

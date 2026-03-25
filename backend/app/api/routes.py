@@ -8,11 +8,21 @@ from typing import List
 
 from app.orchestrators.document_extraction_orchestrator import run_document_extraction
 from app.orchestrators.unified_review_orchestrator import run_unified_review_orchestrator
+from app.schemas.route_inputs import (
+    GroundTruthJsonField,
+    TicketField,
+    validation_error_message,
+)
 from dotenv import load_dotenv
 from fastapi import APIRouter, UploadFile, File
 from fastapi import Form, HTTPException
+from pydantic import ValidationError
 
 load_dotenv()
+
+# Batas praktis untuk upload (setara “validasi kuat” di sisi server)
+MAX_PDF_FILES_PER_REQUEST = 100
+MAX_PDF_SIZE_BYTES = 50 * 1024 * 1024  # 50 MiB per file
 
 # Setup Temporary Storage
 TEMP_STORAGE = Path(os.getenv("TEMP_STORAGE", "./temp"))
@@ -27,19 +37,35 @@ async def document_information_extraction(
         ticket: str = Form(...),
         files: List[UploadFile] = File(...)
 ):
-    # 1. Validasi Input Dasar
+    # 1. Validasi ticket (Pydantic)
+    try:
+        ticket = TicketField.model_validate({"ticket": ticket}).ticket
+    except ValidationError as e:
+        raise HTTPException(status_code=400, detail=validation_error_message(e))
+
     if not files:
-        raise HTTPException(status_code=400, detail="No files provided")
+        raise HTTPException(
+            status_code=400,
+            detail="Tidak ada file yang diunggah. Lampirkan minimal satu file PDF.",
+        )
 
-    if not ticket or not ticket.strip():
-        raise HTTPException(status_code=400, detail="Ticket is required")
+    if len(files) > MAX_PDF_FILES_PER_REQUEST:
+        raise HTTPException(
+            status_code=400,
+            detail=f"Terlalu banyak file sekaligus (maksimal {MAX_PDF_FILES_PER_REQUEST} PDF per request).",
+        )
 
-    # 2. Validasi File PDF
+    # 2. Validasi nama & ekstensi PDF
     for file in files:
+        if not file.filename:
+            raise HTTPException(
+                status_code=400,
+                detail="Salah satu file tidak memiliki nama. Unggah ulang dengan nama file yang valid.",
+            )
         if not file.filename.lower().endswith(".pdf"):
             raise HTTPException(
                 status_code=400,
-                detail=f"Only PDF files allowed: {file.filename}"
+                detail=f"Hanya file PDF yang diizinkan: '{file.filename}'.",
             )
 
     # 3. Setup Folder Penyimpanan (Ticket Based)
@@ -81,6 +107,14 @@ async def document_information_extraction(
             # Save file fisik
             with open(file_location, "wb") as buffer:
                 content = await file.read()
+                if len(content) > MAX_PDF_SIZE_BYTES:
+                    raise HTTPException(
+                        status_code=400,
+                        detail=(
+                            f"File '{file.filename}' terlalu besar "
+                            f"(maksimal {MAX_PDF_SIZE_BYTES // (1024 * 1024)} MiB per PDF)."
+                        ),
+                    )
                 buffer.write(content)
 
             file_paths.append(str(file_location))
@@ -122,6 +156,11 @@ async def document_information_extraction(
             "ground_truth_results": extraction_result.get("ground_truth_results", {})
         }
 
+    except HTTPException:
+        if ticket_storage.exists():
+            shutil.rmtree(ticket_storage)
+            logger.info(f"Storage cleaned up after client error for ticket {ticket}")
+        raise
     except Exception as e:
         # Jika terjadi Error FATAL (sebelum return), hapus satu folder tiket
         if ticket_storage.exists():
@@ -142,24 +181,17 @@ async def validate_review(
         ticket: str = Form(...),
         ground_truth: str = Form(...)
 ):
-    # Validate input
-    if not ticket or not ticket.strip():
-        raise HTTPException(status_code=400, detail="Ticket is required")
-
-    # Parse ground truth 
     try:
-        gt_data = json.loads(ground_truth)
-    except json.JSONDecodeError as e:
-        raise HTTPException(
-            status_code=400,
-            detail=f"Invalid JSON format in ground_truth: {str(e)}"
-        )
+        ticket = TicketField.model_validate({"ticket": ticket}).ticket
+    except ValidationError as e:
+        raise HTTPException(status_code=400, detail=validation_error_message(e))
 
-    if not isinstance(gt_data, dict):
-        raise HTTPException(
-            status_code=400,
-            detail="ground_truth must be a JSON object"
-        )
+    try:
+        GroundTruthJsonField.model_validate({"ground_truth": ground_truth})
+    except ValidationError as e:
+        raise HTTPException(status_code=400, detail=validation_error_message(e))
+
+    gt_data = json.loads(ground_truth)
 
     # Load OCR extraction results dari root ticket
     ticket_storage = TEMP_STORAGE / ticket

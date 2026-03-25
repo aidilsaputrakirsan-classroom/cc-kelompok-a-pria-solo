@@ -1,9 +1,13 @@
 import logging
+import os
 from datetime import datetime
 
 from app.api import routes
+from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
+
+load_dotenv()
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger(__name__)
@@ -16,11 +20,11 @@ app = FastAPI(
     redoc_url="/redoc"
 )
 
-# Middleware
-origins = [
-    "http://127.0.0.1:8000",       # Laravel dev
-    "http://localhost:8000",
-]
+# CORS dari environment (whitelist — setara Modul 4; jangan pakai "*" di production)
+# Origin browser = Laravel (port 8000). API FastAPI berjalan di port terpisah (mis. 8001).
+_default_origins = "http://127.0.0.1:8000,http://localhost:8000"
+_raw = os.getenv("ALLOWED_ORIGINS", _default_origins)
+origins = [o.strip() for o in _raw.split(",") if o.strip()]
 
 app.add_middleware(
     CORSMiddleware,

@@ -162,12 +162,13 @@ OPENAI_API_KEY=your_openai_key
 TEMP_STORAGE=./temp
 ```
 
-5. **Jalankan Server**
+5. **Jalankan Server**  
+   Gunakan port **8001** jika Laravel sudah memakai **8000** (setup standar monorepo pria-solo).
 ```bash
-uvicorn app.main:app --reload --host 0.0.0.0 --port 8000
+uvicorn app.main:app --reload --host 0.0.0.0 --port 8001
 ```
 
-Server akan berjalan di `http://localhost:8000`
+Server akan berjalan di `http://127.0.0.1:8001`
 
 ## 📡 API Endpoints
 
@@ -290,11 +291,10 @@ Content-Type: multipart/form-data
 
 ### CORS Configuration
 
-CORS dikonfigurasi untuk menerima request dari:
-- `http://127.0.0.1:8000` (Laravel development)
-- `http://localhost:8000`
+CORS mem-whitelist **origin browser** (halaman Laravel), bukan port API Python:
+- `http://127.0.0.1:8000` dan `http://localhost:8000` (Laravel di port 8000)
 
-Edit di `app/main.py` untuk menambah origins lain.
+Atur variabel `ALLOWED_ORIGINS` di `.env` atau edit default di `app/main.py`.
 
 ## 🧪 Testing
 

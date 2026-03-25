@@ -2,8 +2,8 @@
 
 Dokumen ini memuat daftar seluruh endpoint API yang terkait dengan fitur **AI Document Validator**, baik dari **Backend (FastAPI)** maupun **Frontend (Laravel Open Admin)**.
 
-**Base URL Backend:** `http://localhost:8000`  
-**Base URL Frontend:** `http://localhost:8080` (route admin memakai prefix, mis. `/admin`)
+**Base URL Backend (FastAPI):** `http://127.0.0.1:8001`  
+**Base URL Frontend (Laravel):** `http://127.0.0.1:8000` (route admin memakai prefix, mis. `/admin`)
 
 ---
 
@@ -17,7 +17,7 @@ Dokumen ini memuat daftar seluruh endpoint API yang terkait dengan fitur **AI Do
 
 ## 1. Backend API (FastAPI)
 
-Backend menyediakan layanan ekstraksi dokumen (OCR) dan validasi/review berbasis AI. Dijalankan terpisah (mis. port 8000).
+Backend menyediakan layanan ekstraksi dokumen (OCR) dan validasi/review berbasis AI. Dijalankan terpisah dari Laravel (standar proyek ini: **FastAPI port 8001**, Laravel **8000**).
 
 ### 1.1 Root & Health Check
 
@@ -115,7 +115,7 @@ Backend menyediakan layanan ekstraksi dokumen (OCR) dan validasi/review berbasis
 
 Rute berikut dapat dipanggil tanpa login admin (mis. untuk polling status dari halaman validasi).
 
-**Base URL:** `http://localhost:8080` (atau domain frontend)
+**Base URL:** `http://127.0.0.1:8000` (atau domain frontend; sesuaikan dengan `APP_URL` / `php artisan serve`)
 
 | Method | Endpoint | Deskripsi |
 |--------|----------|-----------|

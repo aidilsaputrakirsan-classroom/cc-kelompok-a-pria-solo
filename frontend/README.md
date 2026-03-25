@@ -217,7 +217,7 @@ Frontend ini terhubung dengan Backend FastAPI melalui HTTP REST API:
 - PHP 7.3 atau 8.0+ (sesuai `composer.json`)
 - Composer (PHP package manager)
 - MySQL (server & database)
-- Backend FastAPI harus sudah berjalan di port 8000
+- Backend FastAPI harus sudah berjalan (standar proyek: port **8001**; Laravel di **8000**)
 
 ### Langkah Instalasi
 
@@ -241,7 +241,7 @@ Edit file `.env` dan atur konfigurasi:
 APP_NAME="Document Validator"
 APP_ENV=local
 APP_DEBUG=true
-APP_URL=http://localhost:8080
+APP_URL=http://127.0.0.1:8000
 
 DB_CONNECTION=mysql
 DB_HOST=127.0.0.1
@@ -250,7 +250,8 @@ DB_DATABASE=laravel
 DB_USERNAME=root
 DB_PASSWORD=
 
-BACKEND_API_URL=http://localhost:8000
+# Base URL FastAPI (tanpa trailing slash) — dipakai job/controller ke Python
+URL_VM_PYTHON=http://127.0.0.1:8001
 BACKEND_TIMEOUT=300
 ```
 
@@ -272,10 +273,10 @@ php artisan db:seed --class=AdminUserSeeder
 
 6. **Jalankan Development Server**
 ```bash
-php artisan serve --port 8080
+php artisan serve --host=127.0.0.1 --port=8000
 ```
 
-Aplikasi dapat diakses di `http://localhost:8080` (pastikan backend berjalan di port 8000).
+Aplikasi dapat diakses di `http://127.0.0.1:8000` (pastikan FastAPI berjalan di port **8001** dan `URL_VM_PYTHON` mengarah ke sana).
 
 ## 📡 API Routes
 

@@ -663,6 +663,10 @@ document.addEventListener("DOMContentLoaded", function () {
             if (pollCount >= TICKET_STATUS_MAX_POLLS) {
                 clearInterval(pollInterval);
                 hideLoading();
+                showNotification(
+                    "Ekstraksi terlalu lama. Cek riwayat tiket atau coba lagi.",
+                    "danger"
+                );
                 showErrorModal('Proses ekstraksi memakan waktu terlalu lama. Silakan cek tiket di halaman history atau coba lagi.');
             }
         }, TICKET_STATUS_POLL_INTERVAL_MS);
@@ -1008,6 +1012,10 @@ document.addEventListener("DOMContentLoaded", function () {
                         lastData = await sendChunk(i, chunks[i]);
                     }
                     console.log("Upload success:", lastData);
+                    showNotification(
+                        "Upload berhasil diterima. Memproses ekstraksi dokumen…",
+                        "success"
+                    );
                     selectedFilesAdv = [];
                     displayFilesAdv();
                     document.getElementById("ticketNumberAdv").value = "";
