@@ -1,0 +1,28 @@
+# Python virtual environments
+venv/
+.venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*.pyd
+.pytest_cache/
+
+# Environment and secrets
+.env
+.env.*
+
+# VCS and editor files
+.git/
+.gitignore
+.vscode/
+.idea/
+
+# OS artifacts
+.DS_Store
+Thumbs.db
+
+# Documentation and tests not required in runtime image
+docs/
+tests/
+*.md
