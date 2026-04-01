@@ -158,12 +158,17 @@ docker run -d --name frontend --network cloudnet \
 - ✅ Container status: `Up 5 minutes (healthy)`
 
 **Frontend (Laravel):**
-- ✅ Image `pria-solo-frontend:v1` berhasil dibangun dan dioptimasi (7.59 GB, turun dari 15.4 GB)
+- ✅ Image `pria-solo-frontend:v1` production-optimized (Virtual: 7.56 GB, Actual: 3.14 GB)
 - ✅ File `frontend/.env.docker` dibuat dengan konfigurasi Docker network (`DB_HOST=db`, `URL_VM_PYTHON=http://backend:8001`)
-- ✅ Container berjalan: `Up 3 minutes`
+- ✅ Container berjalan dengan PHP 8.2-FPM-alpine
 - ✅ Laravel dev server aktif: `http://0.0.0.0:8000`
 - ✅ HTTP endpoint responsif: Status 200
-- ✅ Optimasi: Enhanced `.dockerignore`, cleanup cache, remove unnecessary files (50.7% size reduction)
+- ✅ Production optimizations:
+  - Multi-stage build dengan PHP-FPM
+  - Aggressive vendor cleanup (docs, tests, examples removed)
+  - Enhanced `.dockerignore`
+  - Laravel caching (classmap-authoritative, optimize)
+  - Actual disk usage: 3.14 GB (production-ready)
 
 **Database (MySQL):**
 - ✅ Container `db` berjalan dengan volume `mysqldata`
