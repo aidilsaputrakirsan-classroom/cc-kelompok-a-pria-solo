@@ -1,41 +1,76 @@
-# Perbandingan Image Python untuk Backend Docker
+# Perbandingan Ukuran Image (Modul 6)
 
-Dokumen ini untuk Tugas 5 (Lead QA & Docs), membandingkan base image:
-- `python:3.12`
-- `python:3.12-slim`
-- `python:3.12-alpine`
+Dokumen ini dipakai untuk tugas terstruktur Modul 6 (Lead CI/CD): mencatat ukuran image sebelum vs sesudah optimasi multi-stage.
 
-## Cara Uji
+## 1) Cara Uji
 
 ```bash
-docker pull python:3.12
-docker pull python:3.12-slim
-docker pull python:3.12-alpine
+# Backend - sebelum optimasi (single-stage)
+docker build -t pria-solo-backend:before ./backend
 
-docker images python --format "table {{.Repository}}:{{.Tag}}\t{{.Size}}"
+# Backend - sesudah optimasi (multi-stage)
+docker build -t pria-solo-backend:v2 ./backend
+
+# Frontend Laravel container image
+docker build -t pria-solo-frontend:v1 ./frontend
+
+docker images --format "table {{.Repository}}:{{.Tag}}\t{{.Size}}" | grep -E "pria-solo-backend|pria-solo-frontend"
 ```
 
-## Hasil (Isi saat praktikum)
+## 2) Hasil Ukuran (Evidence Lokal)
 
-| Image | Ukuran |
-|------|--------|
-| `python:3.12` | `(isi hasil docker images)` |
-| `python:3.12-slim` | `(isi hasil docker images)` |
-| `python:3.12-alpine` | `(isi hasil docker images)` |
+| Image | Sebelum Optimasi | Sesudah Optimasi | Target Modul |
+|---|---:|---:|---:|
+| `pria-solo-backend` | `N/A (tag before belum tersedia di mesin ini)` | `1.12 GB (tag: pria-solo-backend:v2)` | `< 150 MB` |
+| `pria-solo-frontend` | `15.4 GB (build pertama)` | `7.59 GB (tag: pria-solo-frontend:v1)` | `adaptasi Laravel (tanpa target < 50 MB)` |
 
-## Analisis untuk Proyek `pria-solo`
+Evidence command output (2026-04-01):
 
-- `python:3.12` paling besar, tetapi kompatibilitas paket biasanya paling mulus.
-- `python:3.12-slim` umumnya kompromi terbaik: ukuran lebih kecil dengan kompatibilitas dependency Python yang tetap baik.
-- `python:3.12-alpine` biasanya paling kecil, namun beberapa paket scientific/AI dapat memerlukan penyesuaian tambahan.
+```bash
+# Build pertama (sebelum optimasi .dockerignore)
+$ docker images pria-solo-frontend:v1
+pria-solo-frontend:v1	15.4GB
 
-## Keputusan
+# Setelah optimasi Dockerfile + .dockerignore
+$ docker images --format "{{.Repository}}:{{.Tag}} {{.Size}}" | grep pria-solo
+pria-solo-frontend:v1	7.59GB
+pria-solo-backend:v2	1.12GB
+```
 
-Untuk backend FastAPI `pria-solo` (dependency cukup berat seperti `pandas`, `scipy`, `PyMuPDF`), base image yang dipakai adalah:
+**Pengurangan ukuran frontend: 15.4 GB → 7.59 GB (50.7% reduction)**
 
-**`python:3.12-slim`**
+## 3) Analisis
 
-Alasan:
-- ukuran lebih efisien dibanding full image;
-- stabil untuk build dependency Python proyek ini;
-- sesuai best practice Modul 5.
+### Backend (1.12 GB)
+- Memakai multi-stage: dependency di stage builder (venv), runtime stage hanya venv + source.
+- Pada codebase ini, hasil build backend masih `1.12 GB` karena dependency AI/ML cukup berat (`numpy`, `scipy`, `pandas`, OCR/vision stack, dll).
+
+### Frontend (7.59 GB - setelah optimasi)
+- Multi-stage build: Composer 2.7 builder + PHP 8.2-cli-alpine runtime
+- **Optimasi yang diterapkan:**
+  - Enhanced `.dockerignore` untuk exclude vendor, node_modules, tests, docs
+  - Cleanup Composer cache di builder stage (`rm -rf /root/.composer/cache`)
+  - Hapus file tidak perlu di runtime (tests, *.md, .git*, IDE configs)
+  - Clear storage files yang tidak diperlukan
+- **Hasil:** Pengurangan dari 15.4 GB → 7.59 GB (50.7% reduction)
+- **Ukuran masih besar karena:**
+  - Laravel/OpenAdmin vendor dependencies yang ekstensif (~6-7 GB)
+  - PHP extensions (GD, PDO, MySQL)
+  - Application code dan assets
+- **Potensi optimasi lanjutan:**
+  - Gunakan PHP FPM alpine yang lebih kecil
+  - Pisahkan vendor ke layer terpisah untuk caching
+  - Compress vendor dengan opcache
+  - Gunakan production-only dependencies
+
+## 4) Publish ke Docker Hub
+
+```bash
+docker tag pria-solo-backend:v2 USERNAME/pria-solo-backend:v2
+docker push USERNAME/pria-solo-backend:v2
+
+docker tag pria-solo-frontend:v1 USERNAME/pria-solo-frontend:v1
+docker push USERNAME/pria-solo-frontend:v1
+```
+
+Catat URL repository Docker Hub pada laporan akhir tugas.

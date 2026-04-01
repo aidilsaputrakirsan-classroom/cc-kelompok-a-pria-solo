@@ -1,0 +1,57 @@
+# Dependencies (will be installed by composer in Dockerfile)
+vendor/
+node_modules/
+
+# Environment and secrets
+.env
+.env.*
+!.env.example
+
+# Version control
+.git/
+.gitignore
+.gitattributes
+
+# Storage and cache
+storage/logs/
+storage/framework/cache/
+storage/framework/sessions/
+storage/framework/views/
+storage/app/public/
+storage/debugbar/
+
+# Tests and documentation
+tests/
+*.md
+README.md
+CHANGELOG.md
+
+# IDE and editor files
+.vscode/
+.idea/
+.editorconfig
+.styleci.yml
+
+# Build artifacts and temp files
+*.log
+*.cache
+.DS_Store
+Thumbs.db
+
+# Docker and deployment
+docker/
+.dockerignore
+Dockerfile
+
+# CI/CD
+.github/
+.gitlab-ci.yml
+
+# PHP and Composer cache
+.phpunit.result.cache
+bootstrap/cache/*.php
+!bootstrap/cache/.gitignore
+
+# Sail and other dev tools
+sail
+docker-compose.yml
