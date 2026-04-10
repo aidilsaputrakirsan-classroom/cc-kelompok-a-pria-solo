@@ -10,6 +10,7 @@ frontend/storage/admin/
 frontend/storage/app/
 frontend/vendor
 frontend/.env
+frontend/.env.docker
 frontend/.env.backup
 frontend/.phpunit.result.cache
 frontend/docker-compose.override.yml
@@ -34,6 +35,7 @@ backend/Lib/
 backend/Scripts/
 backend/.idea/
 backend/.env
+backend/.env.docker
 backend/Testing Files/
 backend/Temporary Storage/
 backend/prompts.txt

@@ -83,6 +83,103 @@ php artisan serve --host=127.0.0.1 --port=8000
 ```
 Aplikasi: http://127.0.0.1:8000 (pastikan backend FastAPI berjalan di port 8001)
 
+## 🐳 Docker Compose (Modul 7)
+
+Satu perintah menjalankan **MySQL 8**, **FastAPI** (port **8001**), dan **Laravel** (port **8000**). Data MySQL disimpan di volume bernama `pria-solo-mysql-data` sehingga tetap ada setelah `docker compose down` (tanpa `-v`).
+
+### Prasyarat
+
+- Docker Desktop (atau Docker Engine + Compose plugin)
+- Salin file environment (satu kali setelah clone):
+
+```bash
+cp backend/.env.docker.example backend/.env.docker
+cp frontend/.env.docker.example frontend/.env.docker
+```
+
+Isi `backend/.env.docker` dengan kredensial yang diperlukan (mis. `AZURE_*`, `OPENAI_API_KEY`, `TEMP_STORAGE`). File `*.env.docker` **tidak** di-commit (lihat `.gitignore`).
+
+### Perintah cepat
+
+```bash
+make build          # atau: docker compose up --build -d
+docker compose ps   # db + backend harus healthy; frontend mengikuti
+make migrate        # pertama kali / setelah volume DB baru: php artisan migrate --force
+```
+
+- **Laravel:** http://localhost:8000  
+- **FastAPI docs:** http://localhost:8001/docs  
+- **MySQL dari host (opsional):** `localhost:3307` (user `clouduser`, DB `cloudapp`)
+
+### Makefile (ringkas)
+
+| Target | Fungsi |
+|--------|--------|
+| `make up` | `docker compose up -d` |
+| `make build` | Build image + start (`docker compose up --build -d`) |
+| `make down` | Stop & hapus container + network (volume **tetap**) |
+| `make logs` / `make logs-backend` | Log semua service / backend saja |
+| `make ps` | Status service |
+| `make clean` | `docker compose down -v` + prune (⚠️ data DB hilang) |
+| `make migrate` | Migrasi Laravel di container `frontend` |
+| `make shell-backend` / `make shell-db` | Shell backend / MySQL |
+| `make compose-images` | Build image `backend` + `frontend` dari Compose |
+| `make compose-push-latest DOCKERHUB_USERNAME=... TAG=v1` | Tag + push kedua image ke Docker Hub (`v1` + `latest`) |
+| `make image-sizes` | Tampilkan ukuran image backend/frontend |
+
+### Docker Hub (Modul 7 CI/CD)
+
+Module meminta push image ke Docker Hub dengan tag `latest`. Untuk stack ini, image yang dipush adalah:
+
+- `<username>/pria-solo-backend:<tag>` dan `<username>/pria-solo-backend:latest`
+- `<username>/pria-solo-frontend:<tag>` dan `<username>/pria-solo-frontend:latest`
+
+Perintah:
+
+```bash
+# 1) Login sekali
+docker login
+
+# 2) Build dua image dari compose
+make compose-images
+
+# 3) Tag + push (versi + latest)
+make compose-push-latest DOCKERHUB_USERNAME=yourusername TAG=v1
+
+# 4) Cek ukuran image (untuk dokumentasi tugas)
+make image-sizes
+```
+
+Image publik (Docker Hub — akun `dynofr`):
+
+- [dynofr/pria-solo-backend](https://hub.docker.com/r/dynofr/pria-solo-backend) — tag `v1` dan `latest`
+- [dynofr/pria-solo-frontend](https://hub.docker.com/r/dynofr/pria-solo-frontend) — tag `v1` dan `latest`
+
+Pull contoh:
+
+```bash
+docker pull dynofr/pria-solo-backend:v1
+docker pull dynofr/pria-solo-frontend:v1
+```
+
+Tabel ukuran (build lokal terakhir; layer sama dengan yang di-push):
+
+| Image | Tag | Size |
+|------|-----|------|
+| `dynofr/pria-solo-backend` | `v1` / `latest` | `1.12GB` |
+| `dynofr/pria-solo-frontend` | `v1` / `latest` | `7.56GB` |
+
+Digest manifest (referensi reproducible):
+
+| Image:tag | Digest |
+|-----------|--------|
+| `dynofr/pria-solo-backend:v1` | `sha256:a9e2f9c1f722dfee0b886c4dea4fba7e755bcf9364e19dfb8b909b23b12b521d` |
+| `dynofr/pria-solo-frontend:v1` | `sha256:a2a192a0399f559c162bbf740092725a99e05d61d2e08109fd5983d7a0d4151a` |
+
+### Demo UTS
+
+Langkah demi langkah untuk presentasi: **[docs/uts-demo-script.md](docs/uts-demo-script.md)**
+
 ## 🔐 Authentication & security model
 
 - **Laravel (Open Admin):** pengguna admin masuk lewat mekanisme autentikasi Laravel (session). Akses halaman validasi dokumen dan rute admin dilindungi oleh guard/middleware aplikasi.
@@ -115,7 +212,7 @@ Aplikasi: http://127.0.0.1:8000 (pastikan backend FastAPI berjalan di port 8001)
 | 2      | REST API + Database     |   ✅   |
 | 3      | UI Laravel + Open Admin | ✅     |
 | 4      | Full-Stack Integration  | ✅     |
-| 5-7    | Docker & Compose        | ⬜     |
+| 5-7    | Docker & Compose        | ✅     |
 | 8      | UTS Demo                | ⬜     |
 | 9-11   | CI/CD Pipeline          | ⬜     |
 | 12-14  | Microservices           | ⬜     |

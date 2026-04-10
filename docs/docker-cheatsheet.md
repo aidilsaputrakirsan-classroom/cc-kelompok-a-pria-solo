@@ -83,13 +83,35 @@ docker run -p 8001:8001 --env-file ./backend/.env USERNAME/pria-solo-backend:v1
 
 ## 6) Makefile Shortcuts (Repo Root)
 
+**Docker Compose (stack penuh — Modul 7):**
+
 ```bash
-make build
-make run
+make up
+make build          # compose up --build -d
+make down
 make logs
-make health
-make push DOCKERHUB_USERNAME=yourusername
-make clean
+make ps
+make migrate
+make clean          # down -v + prune (hapus data DB)
+```
+
+**Image backend saja / Docker Hub:**
+
+```bash
+make backend-image
+make backend-run
+make backend-logs
+make backend-health
+make backend-push DOCKERHUB_USERNAME=yourusername
+make backend-clean
+```
+
+**Compose images (backend + frontend) ke Docker Hub:**
+
+```bash
+make compose-images
+make compose-push-latest DOCKERHUB_USERNAME=yourusername TAG=v1
+make image-sizes
 ```
 
 ## 7) Catatan Integrasi Frontend Laravel
