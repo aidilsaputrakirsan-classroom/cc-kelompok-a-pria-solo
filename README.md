@@ -127,6 +127,22 @@ make migrate        # pertama kali / setelah volume DB baru: php artisan migrate
 | `make compose-push-latest DOCKERHUB_USERNAME=... TAG=v1` | Tag + push kedua image ke Docker Hub (`v1` + `latest`) |
 | `make image-sizes` | Tampilkan ukuran image backend/frontend |
 
+### Workflow PR (Modul 9)
+
+Jalankan target berikut sebelum membuat Pull Request:
+
+| Target | Fungsi |
+|--------|--------|
+| `make lint` | Cek sintaks backend Python (`compileall`) + frontend PHP (`php -l`) |
+| `make test` | Jalankan Laravel test (`php artisan test`) + backend pytest (placeholder) |
+| `make pr-check` | Pipeline lokal: `build` → `lint` → `test` |
+
+Contoh:
+
+```bash
+make pr-check
+```
+
 ### Docker Hub (Modul 7 CI/CD)
 
 Module meminta push image ke Docker Hub dengan tag `latest`. Untuk stack ini, image yang dipush adalah:

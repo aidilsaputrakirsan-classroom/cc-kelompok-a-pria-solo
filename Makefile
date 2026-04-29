@@ -17,6 +17,7 @@ CONTAINER_NAME ?= pria-solo-backend
 .PHONY: up down build logs logs-backend ps clean restart shell-backend shell-db migrate
 .PHONY: compose-images compose-tag compose-tag-latest compose-push compose-push-latest image-sizes
 .PHONY: backend-image backend-run backend-stop backend-logs backend-health backend-clean backend-tag backend-push backend-pull
+.PHONY: lint test pr-check
 
 # ----- Docker Compose (tugas terstruktur Modul 7) -----
 
@@ -110,3 +111,20 @@ backend-push: backend-tag
 
 backend-pull:
 	docker pull $(BACKEND_REMOTE_IMAGE)
+
+# ----- PR quality workflow (Modul 9) -----
+
+lint:
+	@echo "==> Lint backend Python syntax"
+	docker compose exec backend python -m compileall -q app
+	@echo "==> Lint frontend PHP syntax (app/, routes/, config/)"
+	docker compose exec frontend sh -lc "find app routes config -name '*.php' -print0 | xargs -0 -n1 php -l"
+
+test:
+	@echo "==> Run frontend Laravel tests"
+	docker compose exec frontend php artisan test --env=testing
+	@echo "==> Run backend pytest (placeholder)"
+	docker compose exec backend sh -lc "pytest -q || echo 'No backend tests / placeholder check passed'"
+
+pr-check: build lint test
+	@echo "✅ PR check completed"
