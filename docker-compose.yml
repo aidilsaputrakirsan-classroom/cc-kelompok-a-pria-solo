@@ -1,0 +1,95 @@
+# ============================================================
+# Docker Compose — PRIA SOLO (FastAPI + Laravel + MySQL)
+# Komputasi Awan — SI ITK (Modul 7)
+# ============================================================
+# Prasyarat:
+#   cp backend/.env.docker.example backend/.env.docker
+#   cp frontend/.env.docker.example frontend/.env.docker
+#   Isi secret di backend/.env.docker (Azure, OpenAI, dll.)
+# Migrasi pertama:
+#   docker compose exec frontend php artisan migrate --force
+#
+# Perintah umum:
+#   docker compose up --build -d
+#   docker compose ps
+#   docker compose logs -f
+#   docker compose down
+# ============================================================
+
+services:
+  db:
+    image: mysql:8.0
+    container_name: pria-solo-db
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: root123
+      MYSQL_DATABASE: cloudapp
+      MYSQL_USER: clouduser
+      MYSQL_PASSWORD: cloudpass
+    ports:
+      - "3307:3306"
+    volumes:
+      - mysql_data:/var/lib/mysql
+    networks:
+      - cloudnet
+    healthcheck:
+      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-proot123"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+      start_period: 30s
+
+  backend:
+    build:
+      context: ./backend
+      dockerfile: Dockerfile
+    container_name: pria-solo-backend
+    restart: unless-stopped
+    env_file:
+      - ./backend/.env.docker
+    ports:
+      - "8001:8001"
+    networks:
+      - cloudnet
+    depends_on:
+      db:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:8001/health"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 45s
+
+  frontend:
+    build:
+      context: ./frontend
+      dockerfile: Dockerfile
+    container_name: pria-solo-frontend
+    restart: unless-stopped
+    env_file:
+      - ./frontend/.env.docker
+    ports:
+      - "8000:8000"
+    networks:
+      - cloudnet
+    depends_on:
+      db:
+        condition: service_healthy
+      backend:
+        condition: service_healthy
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://127.0.0.1:8000/"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+      start_period: 25s
+
+volumes:
+  mysql_data:
+    name: pria-solo-mysql-data
+
+networks:
+  cloudnet:
+    name: pria-solo-network
+    driver: bridge

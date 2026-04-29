@@ -34,7 +34,7 @@ FROM php:8.2-fpm-alpine
 WORKDIR /app
 
 # Install only runtime dependencies
-RUN apk add --no-cache freetype-dev libjpeg-turbo-dev libpng-dev nginx \
+RUN apk add --no-cache curl freetype-dev libjpeg-turbo-dev libpng-dev nginx \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd pdo pdo_mysql opcache
 
