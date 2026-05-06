@@ -47,6 +47,10 @@ jobs:
     env:
       CHUNK_SIZE: "10"
       OPENAI_API_KEY: "test-dummy-key-for-ci"
+      AZURE_DI_PROJESSAI_KEY: "dummy-key"
+      AZURE_DI_PROJESSAI_ENDPOINT: "https://example.cognitiveservices.azure.com/"
+      AZURE_OCR_PROJESSAI_KEY: "dummy-key"
+      AZURE_OCR_PROJESSAI_ENDPOINT: "https://example.cognitiveservices.azure.com/"
 
     steps:
       - name: Checkout code
@@ -92,13 +96,18 @@ jobs:
           extensions: mbstring, xml, ctype, json, bcmath, gd, pdo_sqlite
           coverage: none
 
-      - name: Install Composer dependencies
-        run: composer install --no-interaction --prefer-dist --optimize-autoloader
-
       - name: Prepare Laravel environment
         run: |
           cp .env.example .env
-          php artisan key:generate --ansi
+          mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views
+          mkdir -p storage/logs bootstrap/cache
+          chmod -R 775 storage bootstrap/cache || true
+
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader --no-progress
+
+      - name: Generate app key
+        run: php artisan key:generate --ansi
 
       - name: Run tests
         run: php artisan test
