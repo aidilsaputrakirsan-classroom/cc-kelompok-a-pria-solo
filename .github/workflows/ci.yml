@@ -1,0 +1,176 @@
+# CI Pipeline — automated lint, tests, and Docker image builds (Modul 10 — Bagian C).
+# Triggers: push to main, pull_request to main.
+
+name: CI Pipeline
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  lint:
+    name: 🔍 Lint
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Install ruff
+        run: pip install ruff
+
+      - name: Run ruff
+        run: ruff check backend/
+
+  test-backend:
+    name: 🐍 Test Backend
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: ./backend
+
+    env:
+      CHUNK_SIZE: "10"
+      OPENAI_API_KEY: "test-dummy-key-for-ci"
+      AZURE_DI_PROJESSAI_KEY: "dummy-key"
+      AZURE_DI_PROJESSAI_ENDPOINT: "https://example.cognitiveservices.azure.com/"
+      AZURE_OCR_PROJESSAI_KEY: "dummy-key"
+      AZURE_OCR_PROJESSAI_ENDPOINT: "https://example.cognitiveservices.azure.com/"
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Cache pip packages
+        uses: actions/cache@v4
+        with:
+          path: ~/.cache/pip
+          key: ${{ runner.os }}-pip-${{ hashFiles('backend/requirements.txt') }}
+          restore-keys: |
+            ${{ runner.os }}-pip-
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run tests with coverage
+        run: pytest --cov=app --cov-report=term-missing
+
+  test-frontend:
+    name: ⚛️ Test Frontend
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    defaults:
+      run:
+        working-directory: ./frontend
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup PHP
+        uses: shivammathur/setup-php@v2
+        with:
+          php-version: "8.2"
+          extensions: mbstring, xml, ctype, json, bcmath, gd, pdo_sqlite
+          coverage: none
+
+      - name: Prepare Laravel environment
+        run: |
+          cp .env.example .env
+          mkdir -p storage/framework/cache storage/framework/sessions storage/framework/views
+          mkdir -p storage/logs bootstrap/cache
+          chmod -R 775 storage bootstrap/cache || true
+
+      - name: Install Composer dependencies
+        run: composer install --no-interaction --prefer-dist --optimize-autoloader --no-progress
+
+      - name: Generate app key
+        run: php artisan key:generate --ansi
+
+      - name: Run tests
+        run: php artisan test
+
+  build-docker:
+    name: 🐳 Build Docker
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: [lint, test-backend, test-frontend]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Build backend image
+        run: docker build -t cloudapp-backend:ci ./backend
+
+      - name: Build frontend image
+        run: docker build -t cloudapp-frontend:ci ./frontend
+
+      - name: Build success
+        run: |
+          echo "All Docker images built successfully."
+          docker images | grep cloudapp || true
+
+  notify-ci-failure:
+    name: 💬 CI failure notice
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    needs: [lint, test-backend, test-frontend, build-docker]
+    if: >
+      always() &&
+      github.event_name == 'pull_request' &&
+      (needs.lint.result == 'failure' ||
+       needs.test-backend.result == 'failure' ||
+       needs.test-frontend.result == 'failure' ||
+       needs.build-docker.result == 'failure')
+
+    permissions:
+      contents: read
+      pull-requests: write
+
+    steps:
+      - name: Comment on PR
+        uses: actions/github-script@v7
+        with:
+          script: |
+            const issue_number = context.payload.pull_request?.number;
+            if (!issue_number) return;
+
+            const runUrl = `${context.serverUrl}/${context.repo.owner}/${context.repo.repo}/actions/runs/${context.runId}`;
+
+            const body = [
+              '### CI Pipeline failed',
+              '',
+              'One or more jobs failed in **CI Pipeline**. Open the **Checks** tab and inspect the failing job logs.',
+              '',
+              `[View workflow run](${runUrl})`,
+            ].join('\n');
+
+            await github.rest.issues.createComment({
+              owner: context.repo.owner,
+              repo: context.repo.repo,
+              issue_number,
+              body,
+            });

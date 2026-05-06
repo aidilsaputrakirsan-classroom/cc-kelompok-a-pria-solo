@@ -3,6 +3,8 @@ pyvenv.cfg
 Lib/
 
 Scripts/
+!scripts/
+!scripts/wait-for-db.sh
 
 .idea/
 

@@ -155,7 +155,7 @@ def extract_all_days_and_dates(text: str) -> List[ExtractedInfo]:
             from datetime import datetime
             date_obj = datetime.strptime(tanggal_bracket_standardized, "%d-%m-%Y")
             tanggal_terbilang = angka_ke_teks_tanggal(date_obj.day)
-        except:
+        except Exception:
             # Fallback: gunakan angka dari bracket
             tanggal_terbilang = tanggal_bracket_standardized.split("-")[0]
 
@@ -249,7 +249,7 @@ def angka_ke_teks_tanggal(angka: int) -> str:
 
     try:
         return num2words(angka, lang='id')
-    except:
+    except Exception:
         return str(angka)
 
 
@@ -257,7 +257,7 @@ def angka_ke_teks_tahun(tahun: int) -> str:
 
     try:
         return num2words(tahun, lang='id')
-    except:
+    except Exception:
         return str(tahun)
 
 

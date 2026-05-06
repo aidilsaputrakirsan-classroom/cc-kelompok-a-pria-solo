@@ -33,9 +33,18 @@ frontend/service_key.json
 backend/pyvenv.cfg
 backend/Lib/
 backend/Scripts/
+!backend/scripts/
+!backend/scripts/wait-for-db.sh
 backend/.idea/
 backend/.env
 backend/.env.docker
 backend/Testing Files/
 backend/Temporary Storage/
 backend/prompts.txt
+# Python cache / bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+# Python tooling/cache
+.pytest_cache/
+.coverage
