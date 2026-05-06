@@ -33,6 +33,8 @@ frontend/service_key.json
 backend/pyvenv.cfg
 backend/Lib/
 backend/Scripts/
+!backend/scripts/
+!backend/scripts/wait-for-db.sh
 backend/.idea/
 backend/.env
 backend/.env.docker
