@@ -36,5 +36,5 @@ def create_version_storage(TEMP_STORAGE, ticket: str, version: int = None) -> Tu
 
         return version_storage, version
 
-    except Exception as e:
+    except Exception:
         raise

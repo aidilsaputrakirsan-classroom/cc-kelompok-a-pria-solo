@@ -3,7 +3,7 @@ import json
 import logging
 import os
 from pathlib import Path
-from typing import Dict, Any, List, Optional, Tuple
+from typing import Any, Dict, Optional
 
 from app.utils.advance_review_utils import (
     extract_json_from_llm_response,

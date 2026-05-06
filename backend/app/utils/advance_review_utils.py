@@ -385,11 +385,7 @@ def expand_ground_truth_info(ground_truth: json, doc_type: str):
 
     # urutan uraian
     if doc_type == "PO":
-        start_date = ground_truth["jangka_waktu"]['start_date']
-        end_data = ground_truth["jangka_waktu"]['end_date']
         duration = ground_truth['jangka_waktu']['duration']
-
-        cycle_bulanan = []
 
         for period in range(duration):
             pass

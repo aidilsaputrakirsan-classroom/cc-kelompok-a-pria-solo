@@ -270,7 +270,6 @@ def find_bounding_box_with_context(paragraphs_data, full_context, target_numeric
                     digits_found = ''
                     target_digits = target_numeric.replace('-', '').replace(' ', '')
 
-                    start_idx = i
                     for j in range(i, i + window_size):
                         word = words[j]['word']
                         # Jika word mengandung digit, masukkan ke matched
