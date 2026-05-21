@@ -617,11 +617,24 @@ async function rotatePage(pageNum) {
 // ============================================
 // FORM DATA LOADING
 // ============================================
+
+/**
+ * Empty ground-truth shape so templates render editable manual-entry forms when the backend sent nothing.
+ * BAST uses Kontrak template in "BAST-only" mode when these keys exist and judul_project is absent.
+ */
+function getDefaultGroundTruthForManualEntry(dataKey) {
+    if (dataKey === 'BAST') {
+        return { nomor_mitra: '', nomor_telkom: '', tanggal_bast: '' };
+    }
+    return {};
+}
+
 function loadFormData(docType) {
     const formContainer = document.getElementById('extraction-form');
     const formTitle = document.getElementById('form-title');
     const dataKey = getDataKey(docType);
     const template = FORM_TEMPLATES[dataKey];
+    let showMissingBackendNotice = false;
 
     // Resolve data: prefer GROUND_TRUTH_DATA[dataKey], fallback to alternate key (e.g. "Kontrak Layanan" if DB sent that)
     let docData = GROUND_TRUTH_DATA && GROUND_TRUTH_DATA[dataKey];
@@ -629,24 +642,39 @@ function loadFormData(docType) {
         docData = GROUND_TRUTH_DATA[docType];
     }
 
+    // BAST: empty {} from backend is not usable for BAST-only form — seed defaults and warn
+    if (
+        dataKey === 'BAST' &&
+        docData &&
+        typeof docData === 'object' &&
+        !Array.isArray(docData) &&
+        Object.keys(docData).length === 0
+    ) {
+        showMissingBackendNotice = true;
+        docData = getDefaultGroundTruthForManualEntry('BAST');
+        if (GROUND_TRUTH_DATA) {
+            GROUND_TRUTH_DATA[dataKey] = docData;
+        }
+    }
+
     // BAUT: show form with empty table when data is [] or missing (so user can add lampiran via CRUD)
     if (dataKey === 'BAUT' && template) {
-        if (docData === undefined || docData === null) {
+        if (docData === undefined || docData === null || Array.isArray(docData)) {
             docData = { tanggal_baut: null, lampiran_baut: {} };
-            if (GROUND_TRUTH_DATA) GROUND_TRUTH_DATA[dataKey] = docData;
+            if (GROUND_TRUTH_DATA) {
+                GROUND_TRUTH_DATA[dataKey] = docData;
+            }
+            showMissingBackendNotice = true;
         }
     }
 
     if (!docData) {
         console.warn(`⚠️ No data found in GROUND_TRUTH_DATA for key: ${dataKey} or docType: ${docType}`);
-        formContainer.innerHTML = `
-            <div class="alert alert-info">
-                <i class="bi bi-info-circle me-2"></i>
-                Tidak ada data dari Backend untuk dokumen ini. Silakan isi form manual.
-            </div>
-        `;
-        formTitle.textContent = `Data ${docType}`;
-        return;
+        showMissingBackendNotice = true;
+        docData = getDefaultGroundTruthForManualEntry(dataKey);
+        if (GROUND_TRUTH_DATA) {
+            GROUND_TRUTH_DATA[dataKey] = docData;
+        }
     }
 
     currentFormData = docData;
@@ -655,11 +683,13 @@ function loadFormData(docType) {
     if (dataKey === 'BAUT' && template) {
         if (Array.isArray(currentFormData) || typeof currentFormData !== 'object') {
             currentFormData = { tanggal_baut: null, lampiran_baut: {} };
+            showMissingBackendNotice = true;
         } else if (Array.isArray(currentFormData.lampiran_baut) || (currentFormData.lampiran_baut !== undefined && typeof currentFormData.lampiran_baut !== 'object')) {
             currentFormData = {
                 tanggal_baut: currentFormData.tanggal_baut ?? null,
                 lampiran_baut: {}
             };
+            showMissingBackendNotice = true;
         }
     }
 
@@ -694,6 +724,16 @@ function loadFormData(docType) {
         formTitle.textContent = `Data ${doc ? doc.label : 'Ekstraksi'}`;
         formContainer.innerHTML = '';
         renderFormFields(currentFormData, formContainer);
+    }
+
+    if (showMissingBackendNotice) {
+        const docLabel =
+            dataKey === 'BAUT' ? 'Data BAUT' : dataKey === 'BAST' ? 'Data BAST' : 'dokumen ini';
+        const notice = document.createElement('div');
+        notice.className = 'alert alert-info mb-3';
+        notice.setAttribute('role', 'alert');
+        notice.innerHTML = `<i class="bi bi-info-circle me-2"></i>Tidak ada data dari Backend untuk ${docLabel}. Silakan isi form manual.`;
+        formContainer.insertBefore(notice, formContainer.firstChild);
     }
 }
 
