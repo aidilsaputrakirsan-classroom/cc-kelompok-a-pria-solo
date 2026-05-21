@@ -202,11 +202,11 @@ jobs:
             elif [ "$force" = "true" ]; then
               fe_status="🔨 BUILD (force_full_rebuild=true)"
             else
-              fe_status="🔨 BUILD (perubahan signifikan terdeteksi)"
+              fe_status="🔨 BUILD (CI: Mix; DeployCC: composer install)"
             fi
-            # Composer + Mix sudah di CI → DeployCC tidak perlu rebuild frontend
+            # Option A: ZIP tanpa vendor/ — Mix/assets dari CI, Composer di server
             prebuilt_fe="1"
-            skip_fe="1"
+            skip_fe="0"
           else
             do_build="0"
             if [ "$fe_cos" = "true" ]; then
@@ -392,8 +392,19 @@ jobs:
             echo "::warning::Tanpa package.json — skip verifikasi Mix"
           fi
 
+      - name: Strip CI-only Laravel caches before packaging
+        if: steps.flags.outputs.do_build == '1'
+        working-directory: frontend
+        run: |
+          set -e
+          php artisan config:clear || true
+          php artisan route:clear || true
+          php artisan view:clear || true
+          find bootstrap/cache -maxdepth 1 -type f -name '*.php' -delete 2>/dev/null || true
+          echo "✓ Cleared config/route/view cache (server will rebuild after composer install)"
+
       # ──────────────────────────────────────────────────────────────
-      # BUILD ZIP
+      # BUILD ZIP (Option A: tanpa frontend/vendor — Composer di DeployCC)
       # ──────────────────────────────────────────────────────────────
       - name: Build deploy package
         id: pkg
@@ -405,34 +416,61 @@ jobs:
           do_build="${{ steps.flags.outputs.do_build }}"
 
           if [ "$do_build" = "1" ]; then
-            if [ ! -d "frontend/vendor" ]; then
-              echo "::error::frontend/vendor tidak ada padahal do_build=1"
+            if [ ! -f "frontend/composer.lock" ]; then
+              echo "::error::frontend/composer.lock wajib ada untuk composer install di DeployCC"
               exit 1
             fi
             if [ -f "frontend/public/mix-manifest.json" ]; then
-              echo "Frontend Laravel: vendor/ + Mix assets di public/ (prebuilt)"
+              echo "Frontend ZIP: composer.lock + Mix di public/ (vendor/ di server)"
             else
-              echo "Frontend Laravel: vendor/ (Mix tidak dijalankan atau tidak ada package.json)"
+              echo "Frontend ZIP: composer.lock (Mix tidak dijalankan; vendor/ di server)"
             fi
+            du -sh frontend/public 2>/dev/null || true
           else
             echo "Frontend tidak di-build di CI — DeployCC memakai artefak sebelumnya"
           fi
 
           zip -r "$zipfile" . \
+            -x "frontend/vendor/*" \
+            -x "frontend/vendor/**" \
+            -x "frontend/node_modules/*" \
+            -x "frontend/node_modules/**" \
+            -x "frontend/.env" \
+            -x "frontend/tests/*" \
+            -x "frontend/tests/**" \
+            -x "frontend/storage/logs/*" \
+            -x "frontend/storage/logs/**" \
+            -x "frontend/storage/framework/cache/*" \
+            -x "frontend/storage/framework/cache/**" \
+            -x "frontend/storage/framework/sessions/*" \
+            -x "frontend/storage/framework/sessions/**" \
+            -x "frontend/storage/framework/views/*" \
+            -x "frontend/storage/framework/views/**" \
             -x "*/node_modules/*" \
             -x "*/node_modules/**" \
             -x "backend/venv/*" \
             -x "backend/venv/**" \
             -x "backend/.venv/*" \
             -x "backend/.venv/**" \
+            -x "backend/tests/*" \
+            -x "backend/tests/**" \
+            -x "backend/.pytest_cache/*" \
+            -x "backend/.pytest_cache/**" \
             -x "*/__pycache__/*" \
             -x "**/__pycache__/**" \
             -x "*.pyc" \
             -x "**/*.pyc" \
             -x ".git/*" \
             -x ".git/**" \
+            -x "docs/*" \
+            -x "docs/**" \
             -x "**/.DS_Store" \
             > /dev/null
+
+          if [ "$do_build" = "1" ] && unzip -l "$zipfile" | grep -q 'frontend/vendor/'; then
+            echo "::error::frontend/vendor masih ada di ZIP — Option A gagal"
+            exit 1
+          fi
 
           size=$(du -h "$zipfile" | cut -f1)
           size_bytes=$(stat -c%s "$zipfile")
@@ -475,44 +513,52 @@ jobs:
           echo "::endgroup::"
 
           response_file="/tmp/deploy-response.txt"
-          http_code=$(curl -sS \
-            --http1.1 \
-            --no-keepalive \
-            --max-time 1200 \
-            --connect-timeout 30 \
-            --expect100-timeout 5 \
-            --retry 3 \
-            --retry-delay 15 \
-            --retry-all-errors \
-            --retry-connrefused \
-            -o "$response_file" \
-            -w "%{http_code}" \
-            -X POST "${{ env.DEPLOY_ENDPOINT }}" \
-            -F "key=$DEPLOY_KEY" \
-            -F "repo=$repo" \
-            -F "mode=full" \
-            -F "prebuilt_fe=$prebuilt_fe" \
-            -F "skip_fe_build=$skip_fe" \
-            -F "skip_be_install=$skip_be" \
-            -F "file=@$zipfile" \
-            -F "handle_db_on_server=true" \
-            -A "GitHub-Actions-DeployCC" \
-            -H "Expect:")
+          http_code="000"
+          deploy_ok=0
+
+          for attempt in 1 2 3; do
+            echo "Deploy attempt ${attempt}/3 …"
+            set +e
+            http_code=$(curl -sS \
+              --http1.1 \
+              --no-keepalive \
+              --max-time 1200 \
+              --connect-timeout 30 \
+              --expect100-timeout 5 \
+              -o "$response_file" \
+              -w "%{http_code}" \
+              -X POST "${{ env.DEPLOY_ENDPOINT }}" \
+              -F "key=$DEPLOY_KEY" \
+              -F "repo=$repo" \
+              -F "mode=full" \
+              -F "prebuilt_fe=$prebuilt_fe" \
+              -F "skip_fe_build=$skip_fe" \
+              -F "skip_be_install=$skip_be" \
+              -F "file=@$zipfile" \
+              -F "handle_db_on_server=true" \
+              -A "GitHub-Actions-DeployCC" \
+              -H "Expect:")
+            curl_exit=$?
+            set -e
+
+            if [ "$curl_exit" -eq 0 ] && [ "$http_code" = "200" ] && ! grep -q "DEPLOYCC_ERROR" "$response_file"; then
+              deploy_ok=1
+              break
+            fi
+
+            echo "::warning::Attempt ${attempt} failed (curl_exit=$curl_exit, HTTP $http_code)"
+            [ "$attempt" -lt 3 ] && sleep 30
+          done
+
+          if [ "$deploy_ok" != "1" ]; then
+            echo "::error::Deploy gagal setelah 3 percobaan (HTTP $http_code, curl_exit=${curl_exit:-?})"
+            exit 1
+          fi
 
           echo "::group::Response dari DeployCC (HTTP $http_code)"
           cat "$response_file"
           echo ""
           echo "::endgroup::"
-
-          if [ "$http_code" != "200" ]; then
-            echo "::error::Deploy gagal dengan HTTP $http_code"
-            exit 1
-          fi
-
-          if grep -q "DEPLOYCC_ERROR" "$response_file"; then
-            echo "::error::DeployCC mengembalikan error"
-            exit 1
-          fi
 
           if ! grep -q "DEPLOYCC_START" "$response_file"; then
             echo "::error::Response tidak valid"
