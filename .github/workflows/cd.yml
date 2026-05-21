@@ -350,8 +350,6 @@ jobs:
       - name: Build frontend assets (Laravel Mix)
         if: steps.flags.outputs.do_build == '1' && hashFiles('frontend/package.json') != ''
         working-directory: frontend
-        env:
-          NODE_ENV: production
         run: |
           set -e
           if [ -f package-lock.json ]; then
@@ -359,7 +357,7 @@ jobs:
           else
             npm install
           fi
-          npm run production
+          NODE_ENV=production npm run production
 
       - name: Optimize Laravel for deploy
         if: steps.flags.outputs.do_build == '1'
