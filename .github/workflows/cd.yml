@@ -321,8 +321,6 @@ jobs:
             echo "URL_VM_PYTHON=${PY_URL}" >> .env
           fi
 
-          php artisan key:generate --ansi --force
-
       - name: Install Composer dependencies (production)
         if: steps.flags.outputs.do_build == '1'
         working-directory: frontend
@@ -335,6 +333,11 @@ jobs:
             --no-dev \
             --no-progress \
             --ignore-platform-req=ext-gd
+
+      - name: Generate Laravel app key
+        if: steps.flags.outputs.do_build == '1'
+        working-directory: frontend
+        run: php artisan key:generate --ansi --force
 
       - name: Setup Node.js (Laravel Mix)
         if: steps.flags.outputs.do_build == '1'
