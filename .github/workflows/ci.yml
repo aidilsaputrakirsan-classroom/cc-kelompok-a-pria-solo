@@ -133,6 +133,109 @@ jobs:
           echo "All Docker images built successfully."
           docker images | grep cloudapp || true
 
+  # ================================
+  # Modul 11 — CD: Railway + health + deployment summary
+  # ================================
+  deploy:
+    name: 🚀 Deploy to Railway
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    needs: [test-backend, test-frontend, build-docker]
+    if: github.ref == 'refs/heads/main' && github.event_name == 'push'
+
+    permissions:
+      contents: read
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Detect Railway token
+        id: railway
+        run: |
+          if [ -n "${{ secrets.RAILWAY_TOKEN }}" ]; then
+            echo "ready=true" >> "$GITHUB_OUTPUT"
+          else
+            echo "ready=false" >> "$GITHUB_OUTPUT"
+            echo "RAILWAY_TOKEN tidak di-set — melewati deploy Railway (CI tetap hijau)."
+          fi
+
+      - name: Install Railway CLI
+        if: steps.railway.outputs.ready == 'true'
+        run: npm install -g @railway/cli
+
+      - name: Deploy backend
+        if: steps.railway.outputs.ready == 'true'
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+          RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}
+        run: |
+          cd backend
+          railway up --service backend --detach
+
+      - name: Deploy frontend
+        if: steps.railway.outputs.ready == 'true'
+        env:
+          RAILWAY_TOKEN: ${{ secrets.RAILWAY_TOKEN }}
+          RAILWAY_PROJECT_ID: ${{ secrets.RAILWAY_PROJECT_ID }}
+        run: |
+          cd frontend
+          railway up --service frontend --detach
+
+      - name: Tunggu rollout Railway
+        if: steps.railway.outputs.ready == 'true'
+        run: |
+          echo "Waiting for deployment to be ready..."
+          sleep 30
+
+      - name: Health check (production)
+        env:
+          BACKEND_BASE: ${{ secrets.BACKEND_PRODUCTION_URL }}
+        run: |
+          if [ -z "${BACKEND_BASE:-}" ]; then
+            echo "BACKEND_PRODUCTION_URL tidak di-set — melewati GET /health ke cloud."
+            echo "Set secret ini (base URL tanpa slash akhir, mis. https://xxx.up.railway.app) untuk mengaktifkan pengecekan."
+            exit 0
+          fi
+          HEALTH_URL="${BACKEND_BASE%/}/health"
+          echo "GET $HEALTH_URL"
+          HTTP_STATUS=$(curl -sS --max-time 60 -o /tmp/health.json -w "%{http_code}" "$HEALTH_URL" || echo "000")
+          if [ "$HTTP_STATUS" = "200" ]; then
+            echo "Health check passed (HTTP $HTTP_STATUS)"
+            cat /tmp/health.json
+          else
+            echo "Health check FAILED (HTTP $HTTP_STATUS)"
+            cat /tmp/health.json 2>/dev/null || true
+            echo "Periksa log deploy di Railway."
+            exit 1
+          fi
+
+      - name: Deployment summary
+        env:
+          BACKEND_BASE: ${{ secrets.BACKEND_PRODUCTION_URL }}
+        run: |
+          TS=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          {
+            echo "## Deployment summary"
+            echo ""
+            echo "| Field | Value |"
+            echo "|-------|-------|"
+            echo "| Workflow | ${{ github.workflow }} |"
+            echo "| Run | ${{ github.run_id }} |"
+            echo "| Ref | \`${{ github.ref }}\` |"
+            echo "| SHA | \`${{ github.sha }}\` |"
+            echo "| Timestamp (UTC) | $TS |"
+            echo "| Railway deploy | ${{ steps.railway.outputs.ready }} |"
+            if [ -n "${BACKEND_BASE:-}" ]; then
+              echo "| Backend base (secret set) | yes |"
+            else
+              echo "| Backend base (secret set) | no |"
+            fi
+            echo ""
+            echo "Run log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
+          } >> "$GITHUB_STEP_SUMMARY"
+          echo "Deployment summary written to GitHub Actions step summary."
+
   notify-ci-failure:
     name: 💬 CI failure notice
     runs-on: ubuntu-latest

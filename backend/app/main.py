@@ -1,34 +1,30 @@
 import logging
-import os
 from datetime import datetime
 
 from app.api import routes
+from config import settings
 from dotenv import load_dotenv
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
-logging.basicConfig(level=logging.INFO)
-logger = logging.getLogger(__name__)
+_log_level_name = str(settings.LOG_LEVEL).upper()
+_log_level = getattr(logging, _log_level_name, logging.INFO)
+logging.basicConfig(level=_log_level, force=True)
 
 app = FastAPI(
     title="Document Validator API",
     description="API untuk validasi dokumen",
-    version="1.0.0",
+    version=settings.APP_VERSION,
     docs_url="/docs",
-    redoc_url="/redoc"
+    redoc_url="/redoc",
 )
 
-# CORS dari environment (whitelist — setara Modul 4; jangan pakai "*" di production)
-# Origin browser = Laravel (port 8000). API FastAPI berjalan di port terpisah (mis. 8001).
-_default_origins = "http://127.0.0.1:8000,http://localhost:8000"
-_raw = os.getenv("ALLOWED_ORIGINS", _default_origins)
-origins = [o.strip() for o in _raw.split(",") if o.strip()]
-
+# CORS — whitelist (Modul 11: CORS_ORIGINS; proyek: ALLOWED_ORIGINS)
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=origins,
+    allow_origins=list(settings.CORS_ORIGINS),
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -43,7 +39,13 @@ async def root():
 
 @app.get("/health")
 async def health_check():
-    return {"status": "healthy", "timestamp": datetime.utcnow().isoformat()}
+    return {
+        "status": "healthy",
+        "service": "backend",
+        "version": settings.APP_VERSION,
+        "database": "not_applicable",
+        "timestamp": datetime.utcnow().isoformat(),
+    }
 
 
 @app.get("/team")
@@ -51,11 +53,11 @@ async def team_info():
     return {
         "team": "pria-solo",
         "members": [
-            {"name": "Hyundo", "nim": "78903422", "role": "Lead Backend"},
-            {"name": "Hyundo", "nim": "78903422", "role": "Lead Frontend"},
-            {"name": "Hyundo", "nim": "78903422", "role": "Lead DevOps"},
-            {"name": "Hyundo", "nim": "78903422", "role": "Lead QA & Docs"},
-        ]
+            {"name": "Dyno Fadillah Ramadhani", "nim": "10231033", "role": "Lead Backend"},
+            {"name": "Dyno Fadillah Ramadhani", "nim": "10231033", "role": "Lead Frontend"},
+            {"name": "Dyno Fadillah Ramadhani", "nim": "10231033", "role": "Lead DevOps"},
+            {"name": "Dyno Fadillah Ramadhani", "nim": "10231033", "role": "Lead QA & Docs"},
+        ],
     }
 
 

@@ -52,6 +52,23 @@ Berdasarkan struktur proyek di `backend/` dan `frontend/`:
        (Blade, Eloquent, MySQL)                      (Document Validator API)    (MySQL)
 ```
 
+## 🌐 Live Demo (production)
+
+Setelah deploy ke Railway (atau platform lain), isi tabel berikut:
+
+| Service | URL |
+|---------|-----|
+| Frontend (Laravel) | *(setelah deploy)* |
+| Backend API (FastAPI) | *(setelah deploy)* |
+| API docs (Swagger) | `{BACKEND_URL}/docs` |
+
+Detail setup & rollback: **[docs/deployment-guide.md](docs/deployment-guide.md)** · Release M2: **[docs/release-notes-m2.md](docs/release-notes-m2.md)** · Smoke test: **[docs/production-test.md](docs/production-test.md)**
+
+## 🔄 CI/CD
+
+![CI Pipeline](https://github.com/aidilsaputrakirsan-classroom/cc-kelompok-a-pria-solo/actions/workflows/ci.yml/badge.svg)
+
+Pada **push ke `main`** (setelah merge): lint backend (ruff), test backend (pytest), test frontend (`php artisan test`), build Docker, lalu opsional **deploy ke Railway** jika secret `RAILWAY_TOKEN` di-set. Lihat [.github/workflows/ci.yml](.github/workflows/ci.yml).
 
 ## 🚀 Getting Started
 
@@ -66,7 +83,7 @@ Ringkas di bawah ini; **langkah lengkap** (clone → `.env` → DB → port): **
 ```bash
 cd backend
 pip install -r requirements.txt
-# Salin .env dari .env.example — isi AZURE_*, OPENAI_API_KEY, TEMP_STORAGE, ALLOWED_ORIGINS
+# Salin .env dari .env.example — isi AZURE_*, OPENAI_API_KEY, TEMP_STORAGE, ALLOWED_ORIGINS atau CORS_ORIGINS
 uvicorn app.main:app --reload --port 8001
 ```
 API: http://127.0.0.1:8001 — Docs: http://127.0.0.1:8001/docs
@@ -200,7 +217,7 @@ Langkah demi langkah untuk presentasi: **[docs/uts-demo-script.md](docs/uts-demo
 
 - **Laravel (Open Admin):** pengguna admin masuk lewat mekanisme autentikasi Laravel (session). Akses halaman validasi dokumen dan rute admin dilindungi oleh guard/middleware aplikasi.
 - **FastAPI (Document Validator):** endpoint `POST /information-extraction` dan `POST /review` **tidak** memakai JWT pada proyek magang ini; yang memanggil ke FastAPI adalah **server Laravel** (mis. job `ProcessAdvanceUploadJob` dengan Guzzle) menggunakan base URL dari **`URL_VM_PYTHON`** di `.env`. Untuk production, pembatasan jaringan (hanya jaringan internal / reverse proxy) disarankan.
-- **CORS:** daftar origin di **`ALLOWED_ORIGINS`** pada `backend/.env` (whitelist), bukan `*`.
+- **CORS:** daftar origin di **`CORS_ORIGINS`** (Modul 11) atau **`ALLOWED_ORIGINS`** pada `backend/.env` (whitelist), bukan `*`.
 
 ## 📡 API (Backend FastAPI)
 
@@ -230,6 +247,6 @@ Langkah demi langkah untuk presentasi: **[docs/uts-demo-script.md](docs/uts-demo
 | 4      | Full-Stack Integration  | ✅     |
 | 5-7    | Docker & Compose        | ✅     |
 | 8      | UTS Demo                | ⬜     |
-| 9-11   | CI/CD Pipeline          | ⬜     |
+| 9-11   | CI/CD Pipeline          | ✅     |
 | 12-14  | Microservices           | ⬜     |
 | 15-16  | Final & UAS             | ⬜     |
