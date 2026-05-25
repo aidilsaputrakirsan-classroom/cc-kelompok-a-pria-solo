@@ -3,11 +3,11 @@
 @section('content')
     {{-- Include Modals --}}
     @include('advance-reviews.partials.modal-upload-review')
-    <!-- Loading Overlay -->
-    <div class="loading-overlay" id="loadingOverlay">
-        <div class="loading-spinner"></div>
-        <div class="loading-text">Ektraksi Informasi<span class="loading-dots"></span></div>
-        <p class="text-muted">Mohon tunggu, proses ektraksi informasi sedang berlangsung</p>
+    <!-- Loading Overlay (hidden until upload starts; moved to body via JS) -->
+    <div class="loading-overlay" id="loadingOverlay" role="alert" aria-live="polite" aria-busy="false" aria-hidden="true">
+        <div class="loading-spinner" aria-hidden="true"></div>
+        <div class="loading-text">Ekstraksi Informasi<span class="loading-dots"></span></div>
+        <p class="text-muted">Mohon tunggu, proses ekstraksi informasi sedang berlangsung</p>
     </div>
 
     <!-- Success Modal -->

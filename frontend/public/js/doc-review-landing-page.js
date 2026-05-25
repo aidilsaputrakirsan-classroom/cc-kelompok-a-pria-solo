@@ -8,7 +8,7 @@
 (function() {
     function moveModalsToBody() {
         const modalIds = ['uploadModalAdvanced', 'successModal', 'errorModal'];
-        
+
         modalIds.forEach(function(modalId) {
             const modal = document.getElementById(modalId);
             if (modal && modal.parentElement !== document.body) {
@@ -16,6 +16,11 @@
                 document.body.appendChild(modal);
             }
         });
+
+        const loadingOverlay = document.getElementById('loadingOverlay');
+        if (loadingOverlay && loadingOverlay.parentElement !== document.body) {
+            document.body.appendChild(loadingOverlay);
+        }
     }
 
     // Try immediately

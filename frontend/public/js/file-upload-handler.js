@@ -627,6 +627,8 @@ document.addEventListener("DOMContentLoaded", function () {
             document.activeElement.blur();
         }
         loadingOverlay.classList.add("show");
+        loadingOverlay.setAttribute("aria-hidden", "false");
+        loadingOverlay.setAttribute("aria-busy", "true");
         document.body.style.overflow = "hidden";
         const loadingText = loadingOverlay.querySelector('.loading-text');
         const loadingSubtext = loadingOverlay.querySelector('.text-muted');
@@ -670,6 +672,8 @@ document.addEventListener("DOMContentLoaded", function () {
 
     function hideLoading() {
         loadingOverlay.classList.remove("show");
+        loadingOverlay.setAttribute("aria-hidden", "true");
+        loadingOverlay.setAttribute("aria-busy", "false");
         document.body.style.overflow = "";
     }
 

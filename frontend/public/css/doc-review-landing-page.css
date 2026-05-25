@@ -101,17 +101,76 @@
     transform: scale(1.02);
 }
 
-/* Loading Overlay Refinements */
+/* Loading Overlay - full-screen, hidden until .show */
 .loading-overlay {
-    background: rgba(255, 255, 255, 0.95);
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.98);
+    backdrop-filter: blur(8px);
+    display: none;
+    justify-content: center;
+    align-items: center;
+    z-index: 99999;
+    flex-direction: column;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.loading-overlay.show {
+    display: flex;
+    opacity: 1;
+    animation: loadingOverlayFadeIn 0.3s ease-in-out;
+}
+
+@keyframes loadingOverlayFadeIn {
+    from {
+        opacity: 0;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .loading-spinner {
-    border-top-color: #0d6efd;
+    width: 80px;
+    height: 80px;
+    border: 5px solid #f3f3f3;
+    border-top: 5px solid #0d6efd;
+    border-radius: 50%;
+    animation: loadingOverlaySpin 1s linear infinite;
+    margin-bottom: 30px;
+    box-shadow: 0 4px 15px rgba(13, 110, 253, 0.3);
 }
 
-.loading-text {
+@keyframes loadingOverlaySpin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+.loading-overlay .loading-text {
+    font-size: 24px;
+    font-weight: 600;
     color: #0d6efd;
+    margin-bottom: 15px;
+    font-family: "Poppins", sans-serif;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.loading-overlay .text-muted {
+    color: #6c757d;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    margin: 0;
+    text-align: center;
+    max-width: 90%;
 }
 
 /* Fix for OpenAdmin Container */
