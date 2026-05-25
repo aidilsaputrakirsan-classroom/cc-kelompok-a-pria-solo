@@ -6,7 +6,7 @@ from typing import List, Dict, Any
 from dotenv import load_dotenv
 
 load_dotenv()
-TOTAL_CHUNKS = int(os.getenv("CHUNK_SIZE"))
+TOTAL_CHUNKS = int(os.getenv("CHUNK_SIZE", "35"))
 
 
 def preprocess_ocr_indonesian(text):

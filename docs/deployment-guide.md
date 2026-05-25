@@ -71,7 +71,26 @@ Setelah rollback, jalankan smoke test di production (lihat [production-test.md](
 | Health check gagal | Pastikan `BACKEND_PRODUCTION_URL` benar dan `/health` mengembalikan HTTP 200; cek log service backend di Railway. |
 | CORS di browser | Pastikan `CORS_ORIGINS` / `ALLOWED_ORIGINS` backend memuat origin frontend production. |
 
-## 6. Referensi modul
+## 6. URL production (tim pria-solo)
+
+| Service | URL |
+|---------|-----|
+| Frontend | https://cc-kelompok-a-pria-solo-production.up.railway.app |
+| Backend | https://backend-production-bdd8.up.railway.app |
+| Health | https://backend-production-bdd8.up.railway.app/health |
+
+**GitHub secret `BACKEND_PRODUCTION_URL`:** `https://backend-production-bdd8.up.railway.app` (tanpa slash akhir).
+
+Contoh variabel backend Railway untuk CORS:
+
+```text
+ALLOWED_ORIGINS=https://cc-kelompok-a-pria-solo-production.up.railway.app
+CHUNK_SIZE=10
+ENVIRONMENT=production
+```
+
+## 7. Referensi modul
 
 - Modul praktikum: `docs/2026-modul-praktikum-cloudcomputing/11-modul.md`
 - Release Milestone 2: [release-notes-m2.md](release-notes-m2.md)
+- Smoke test: [production-test.md](production-test.md)

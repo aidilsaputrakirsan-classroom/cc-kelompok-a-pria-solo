@@ -54,13 +54,13 @@ Berdasarkan struktur proyek di `backend/` dan `frontend/`:
 
 ## 🌐 Live Demo (production)
 
-Setelah deploy ke Railway (atau platform lain), isi tabel berikut:
-
 | Service | URL |
 |---------|-----|
-| Frontend (Laravel) | *(setelah deploy)* |
-| Backend API (FastAPI) | *(setelah deploy)* |
-| API docs (Swagger) | `{BACKEND_URL}/docs` |
+| Frontend (Laravel) | [https://cc-kelompok-a-pria-solo-production.up.railway.app](https://cc-kelompok-a-pria-solo-production.up.railway.app) |
+| Open Admin | [https://cc-kelompok-a-pria-solo-production.up.railway.app/projess/auth/login](https://cc-kelompok-a-pria-solo-production.up.railway.app/projess/auth/login) |
+| Backend API (FastAPI) | [https://backend-production-bdd8.up.railway.app](https://backend-production-bdd8.up.railway.app) |
+| Health check | [https://backend-production-bdd8.up.railway.app/health](https://backend-production-bdd8.up.railway.app/health) |
+| API docs (Swagger) | [https://backend-production-bdd8.up.railway.app/docs](https://backend-production-bdd8.up.railway.app/docs) |
 
 Detail setup & rollback: **[docs/deployment-guide.md](docs/deployment-guide.md)** · Release M2: **[docs/release-notes-m2.md](docs/release-notes-m2.md)** · Smoke test: **[docs/production-test.md](docs/production-test.md)**
 
@@ -68,7 +68,9 @@ Detail setup & rollback: **[docs/deployment-guide.md](docs/deployment-guide.md)*
 
 ![CI Pipeline](https://github.com/aidilsaputrakirsan-classroom/cc-kelompok-a-pria-solo/actions/workflows/ci.yml/badge.svg)
 
-Pada **push ke `main`** (setelah merge): lint backend (ruff), test backend (pytest), test frontend (`php artisan test`), build Docker, lalu opsional **deploy ke Railway** jika secret `RAILWAY_TOKEN` di-set. Lihat [.github/workflows/ci.yml](.github/workflows/ci.yml).
+Pada **push ke `main`** (setelah merge): lint backend (ruff), test backend (pytest), test frontend (`php artisan test`), build Docker, lalu **deploy ke Railway** jika secret `RAILWAY_TOKEN` di-set, plus **GET /health** jika `BACKEND_PRODUCTION_URL` di-set. Lihat [.github/workflows/ci.yml](.github/workflows/ci.yml).
+
+**Secrets disarankan:** `RAILWAY_TOKEN`, `RAILWAY_PROJECT_ID`, `BACKEND_PRODUCTION_URL` = `https://backend-production-bdd8.up.railway.app`
 
 ## 🚀 Getting Started
 

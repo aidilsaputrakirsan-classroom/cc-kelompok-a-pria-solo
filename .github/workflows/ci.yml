@@ -215,6 +215,8 @@ jobs:
           BACKEND_BASE: ${{ secrets.BACKEND_PRODUCTION_URL }}
         run: |
           TS=$(date -u +"%Y-%m-%dT%H:%M:%SZ")
+          FE_URL="https://cc-kelompok-a-pria-solo-production.up.railway.app"
+          BE_URL="${BACKEND_BASE:-https://backend-production-bdd8.up.railway.app}"
           {
             echo "## Deployment summary"
             echo ""
@@ -226,15 +228,20 @@ jobs:
             echo "| SHA | \`${{ github.sha }}\` |"
             echo "| Timestamp (UTC) | $TS |"
             echo "| Railway deploy | ${{ steps.railway.outputs.ready }} |"
+            echo "| Frontend (production) | $FE_URL |"
+            echo "| Backend (production) | $BE_URL |"
+            echo "| Health | ${BE_URL%/}/health |"
             if [ -n "${BACKEND_BASE:-}" ]; then
-              echo "| Backend base (secret set) | yes |"
+              echo "| BACKEND_PRODUCTION_URL secret | set |"
             else
-              echo "| Backend base (secret set) | no |"
+              echo "| BACKEND_PRODUCTION_URL secret | not set (health check skipped) |"
             fi
             echo ""
             echo "Run log: ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }}"
           } >> "$GITHUB_STEP_SUMMARY"
           echo "Deployment summary written to GitHub Actions step summary."
+          echo "Frontend: $FE_URL"
+          echo "Backend: $BE_URL"
 
   notify-ci-failure:
     name: 💬 CI failure notice
