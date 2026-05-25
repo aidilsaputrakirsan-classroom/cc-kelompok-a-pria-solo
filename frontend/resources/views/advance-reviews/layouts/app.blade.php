@@ -94,6 +94,9 @@
 <!-- Bootstrap JS Bundle (with Popper) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
+{{-- Modul 12: 503 handling untuk layanan downstream --}}
+<script src="{{ asset('js/api-gateway-client.js') }}"></script>
+
 @stack('scripts')
 
 </html>

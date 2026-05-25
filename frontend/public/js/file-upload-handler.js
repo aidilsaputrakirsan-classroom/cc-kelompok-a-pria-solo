@@ -945,6 +945,11 @@ document.addEventListener("DOMContentLoaded", function () {
                     throw new Error('Session expired');
                 }
                 if (response.status === 413) throw new Error('File terlalu besar. Maksimal ukuran file yang diizinkan oleh server telah terlampaui.');
+                if (response.status === 503) {
+                    const msg = (window.PriaGateway && window.PriaGateway.unavailableMessage)
+                        || 'Service temporarily unavailable. Please try again in a few minutes.';
+                    throw new Error(msg);
+                }
                 if (response.status === 504 || response.status === 502) throw new Error('Server timeout. Proses upload memakan waktu terlalu lama. Silakan coba lagi atau hubungi administrator.');
                 if (response.status === 500) {
                     return response.text().then((text) => {

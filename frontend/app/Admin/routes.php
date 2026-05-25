@@ -30,6 +30,9 @@ Route::group([
 	// 4. API Helpers (Dropdown & Alamat)
 	$router->get('api/company-address', 'AutoDraftingController@getCompanyAddress')->name('api.company.address');
 
+	// Modul 12 — stats document-service (auth: middleware OpenAdmin `admin`)
+	$router->get('api/document-stats', 'AiControllers\DocumentServiceStatsController@stats')->name('api.document.stats');
+
 	// AI Projess - Document Review Features
 	// Main Landing Page
 	$router->get('validasi-dokumen', 'AiAdvanceReviewController@index')->name('ai.validasi-dokumen');
