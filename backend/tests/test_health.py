@@ -6,7 +6,7 @@ def test_health(client):
     assert response.status_code == 200
     data = response.json()
     assert data["status"] == "healthy"
-    assert data["service"] == "backend"
+    assert data["service"] == "document-service"
     assert data["database"] == "not_applicable"
     assert "version" in data
 

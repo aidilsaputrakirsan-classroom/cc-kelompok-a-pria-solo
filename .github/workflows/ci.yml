@@ -75,7 +75,7 @@ jobs:
           pip install -r requirements.txt
 
       - name: Run tests with coverage
-        run: pytest --cov=app --cov-report=term-missing
+        run: pytest --cov=app --cov-report=term-missing -q
 
   test-frontend:
     name: ⚛️ Test Frontend
@@ -122,16 +122,16 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
 
-      - name: Build backend image
-        run: docker build -t cloudapp-backend:ci ./backend
+      - name: Build document-service image
+        run: docker build -t pria-solo-document-service:ci ./backend
 
       - name: Build frontend image
-        run: docker build -t cloudapp-frontend:ci ./frontend
+        run: docker build -t pria-solo-frontend:ci ./frontend
 
       - name: Build success
         run: |
           echo "All Docker images built successfully."
-          docker images | grep cloudapp || true
+          docker images | grep pria-solo || true
 
   # ================================
   # Modul 11 — CD: Railway + health + deployment summary

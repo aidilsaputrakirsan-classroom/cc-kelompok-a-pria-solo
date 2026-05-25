@@ -163,7 +163,7 @@ TEMP_STORAGE=./temp
 ```
 
 5. **Jalankan Server**  
-   Gunakan port **8001** jika Laravel sudah memakai **8000** (setup standar monorepo pria-solo).
+   Backend FastAPI memakai port **8001** (Laravel di **8000**). Dengan gateway: `http://localhost:8080/api/python/`.
 ```bash
 uvicorn app.main:app --reload --host 0.0.0.0 --port 8001
 ```

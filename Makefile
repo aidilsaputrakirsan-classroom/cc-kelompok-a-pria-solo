@@ -14,7 +14,7 @@ BACKEND_REMOTE_LATEST := $(DOCKERHUB_USERNAME)/$(BACKEND_IMAGE_NAME):latest
 FRONTEND_REMOTE_LATEST := $(DOCKERHUB_USERNAME)/$(FRONTEND_IMAGE_NAME):latest
 CONTAINER_NAME ?= pria-solo-backend
 
-.PHONY: up down build logs logs-backend ps clean restart shell-backend shell-db migrate
+.PHONY: up down build logs logs-backend logs-document ps clean restart shell-backend shell-document shell-db migrate up-dev
 .PHONY: compose-images compose-tag compose-tag-latest compose-push compose-push-latest image-sizes
 .PHONY: backend-image backend-run backend-stop backend-logs backend-health backend-clean backend-tag backend-push backend-pull
 .PHONY: lint test pr-check
@@ -33,8 +33,10 @@ down:
 logs:
 	docker compose logs -f
 
-logs-backend:
-	docker compose logs -f backend
+logs-backend: logs-document
+
+logs-document:
+	docker compose logs -f document-service
 
 ps:
 	docker compose ps
@@ -42,12 +44,17 @@ ps:
 restart:
 	docker compose restart
 
+up-dev:
+	docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d
+
 clean:
 	docker compose down -v
 	docker system prune -f
 
-shell-backend:
-	docker compose exec backend bash
+shell-backend: shell-document
+
+shell-document:
+	docker compose exec document-service bash
 
 shell-db:
 	docker compose exec db mysql -uclouduser -pcloudpass cloudapp
@@ -58,7 +65,7 @@ migrate:
 # ----- Docker Hub workflow (Modul 7: backend + frontend) -----
 
 compose-images:
-	docker compose build backend frontend
+	docker compose build document-service frontend
 
 # Compose names images <project>-<service>:latest (e.g. pria-solo-backend:latest).
 compose-tag:
@@ -115,8 +122,8 @@ backend-pull:
 # ----- PR quality workflow (Modul 9) -----
 
 lint:
-	@echo "==> Lint backend Python syntax"
-	docker compose exec backend python -m compileall -q app
+	@echo "==> Lint document-service Python syntax"
+	docker compose exec document-service python -m compileall -q app
 	@echo "==> Lint frontend PHP syntax (app/, routes/, config/)"
 	docker compose exec frontend sh -lc "find app routes config -name '*.php' -print0 | xargs -0 -n1 php -l"
 
@@ -124,7 +131,7 @@ test:
 	@echo "==> Run frontend Laravel tests"
 	docker compose exec frontend php artisan test --env=testing
 	@echo "==> Run backend pytest (placeholder)"
-	docker compose exec backend sh -lc "pytest -q || echo 'No backend tests / placeholder check passed'"
+	docker compose exec document-service sh -lc "pytest -q"
 
 pr-check: build lint test
 	@echo "✅ PR check completed"

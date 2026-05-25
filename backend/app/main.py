@@ -1,7 +1,7 @@
 import logging
 from datetime import datetime
 
-from app.api import routes
+from app.api import routes, stats
 from config import settings
 from dotenv import load_dotenv
 from fastapi import FastAPI
@@ -41,7 +41,7 @@ async def root():
 async def health_check():
     return {
         "status": "healthy",
-        "service": "backend",
+        "service": "document-service",
         "version": settings.APP_VERSION,
         "database": "not_applicable",
         "timestamp": datetime.utcnow().isoformat(),
@@ -63,3 +63,4 @@ async def team_info():
 
 # Register routers
 app.include_router(routes.router)
+app.include_router(stats.router)
