@@ -1,6 +1,6 @@
 """Tests for circuit breaker on processing routes (Modul 13)."""
 
-from app.reliability.circuit_breaker import CircuitBreaker, processing_circuit
+from app.reliability.circuit_breaker import CircuitBreaker
 
 
 def test_processing_returns_503_when_circuit_forced_open(client, monkeypatch):
