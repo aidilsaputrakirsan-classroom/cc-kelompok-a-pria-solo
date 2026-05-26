@@ -1026,7 +1026,20 @@ document.addEventListener("DOMContentLoaded", function () {
                 } catch (error) {
                     console.error("Upload error:", error);
                     hideLoading();
-                    showErrorModal("Terjadi kesalahan: " + error.message);
+                    const isUnavailable =
+                        error.message &&
+                        (error.message.indexOf("temporarily unavailable") !== -1 ||
+                            error.message.indexOf("Service temporarily") !== -1);
+                    if (isUnavailable && window.PriaGateway && typeof window.PriaGateway.promptRetry === "function") {
+                        showErrorModal(error.message + " Gunakan tombol Retry di banner atas, atau coba lagi.");
+                        if (window.PriaServiceHealth) {
+                            window.PriaServiceHealth.onRetry = function () {
+                                document.getElementById("uploadBtnAdv")?.click();
+                            };
+                        }
+                    } else {
+                        showErrorModal("Terjadi kesalahan: " + error.message);
+                    }
                 }
             })();
         });

@@ -134,6 +134,54 @@ jobs:
           docker images | grep pria-solo || true
 
   # ================================
+  # Modul 13 — Integration tests (full Compose stack)
+  # ================================
+  integration-test:
+    name: 🔗 Integration Tests
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+    needs: [test-backend, test-frontend]
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Prepare Compose env files
+        run: |
+          cp backend/.env.docker.example backend/.env.docker
+          cp frontend/.env.docker.example frontend/.env.docker
+
+      - name: Start all services
+        run: docker compose up -d --build
+
+      - name: Wait for gateway and document-service
+        run: |
+          echo "Waiting for services..."
+          for i in $(seq 1 40); do
+            if curl -sf http://localhost:8080/health && curl -sf http://localhost:8080/api/python/health; then
+              echo "Services ready."
+              exit 0
+            fi
+            sleep 5
+          done
+          echo "Timeout waiting for services"
+          docker compose ps
+          docker compose logs --tail=50
+          exit 1
+
+      - name: Run Laravel migrations
+        run: docker compose exec -T frontend php artisan migrate --force
+
+      - name: Run integration tests
+        run: |
+          pip install -r requirements-integration.txt
+          pytest tests/integration/ -v --tb=short
+
+      - name: Stop services
+        if: always()
+        run: docker compose down -v
+
+  # ================================
   # Modul 11 — CD: Railway + health + deployment summary
   # ================================
   deploy:
@@ -247,14 +295,15 @@ jobs:
     name: 💬 CI failure notice
     runs-on: ubuntu-latest
     timeout-minutes: 10
-    needs: [lint, test-backend, test-frontend, build-docker]
+    needs: [lint, test-backend, test-frontend, build-docker, integration-test]
     if: >
       always() &&
       github.event_name == 'pull_request' &&
       (needs.lint.result == 'failure' ||
        needs.test-backend.result == 'failure' ||
        needs.test-frontend.result == 'failure' ||
-       needs.build-docker.result == 'failure')
+       needs.build-docker.result == 'failure' ||
+       needs.integration-test.result == 'failure')
 
     permissions:
       contents: read

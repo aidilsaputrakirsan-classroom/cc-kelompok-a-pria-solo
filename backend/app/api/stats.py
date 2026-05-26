@@ -11,7 +11,9 @@ from pydantic import BaseModel
 
 router = APIRouter(tags=["stats"])
 
-TEMP_STORAGE = Path(os.getenv("TEMP_STORAGE", "./temp"))
+
+def _temp_storage() -> Path:
+    return Path(os.getenv("TEMP_STORAGE", "./temp"))
 
 
 class DocumentStatsResponse(BaseModel):
@@ -23,10 +25,11 @@ class DocumentStatsResponse(BaseModel):
 
 
 def _collect_temp_stats() -> tuple[int, int, int, int | None, int | None]:
-    if not TEMP_STORAGE.is_dir():
+    temp_storage = _temp_storage()
+    if not temp_storage.is_dir():
         return 0, 0, 0, None, None
 
-    ticket_dirs = [p for p in TEMP_STORAGE.iterdir() if p.is_dir()]
+    ticket_dirs = [p for p in temp_storage.iterdir() if p.is_dir()]
     total_files = 0
     total_size = 0
     sizes: list[int] = []

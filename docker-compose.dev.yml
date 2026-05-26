@@ -1,8 +1,15 @@
-# Development overrides — hot reload (Modul 12 bonus)
+# Development overrides — hot reload (Modul 12–13)
 # Usage: docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build
+# Or: make up-dev
 
 services:
   document-service:
     volumes:
       - ./backend:/app
     command: uvicorn app.main:app --host 0.0.0.0 --port 8001 --reload
+    environment:
+      LOG_LEVEL: DEBUG
+
+  frontend:
+    environment:
+      APP_DEBUG: "true"

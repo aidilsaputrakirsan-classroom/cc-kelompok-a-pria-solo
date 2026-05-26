@@ -5,10 +5,12 @@ def test_health(client):
     response = client.get("/health")
     assert response.status_code == 200
     data = response.json()
-    assert data["status"] == "healthy"
+    assert data["status"] in ("healthy", "degraded")
     assert data["service"] == "document-service"
     assert data["database"] == "not_applicable"
     assert "version" in data
+    assert "dependencies" in data
+    assert "document-processing" in data["dependencies"]
 
 
 def test_root(client):
