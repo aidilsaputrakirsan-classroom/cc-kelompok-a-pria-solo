@@ -1,7 +1,8 @@
 import logging
 from datetime import datetime
 
-from app.api import routes, stats
+from app.api import public_info, routes, stats
+from app.reliability.circuit_breaker import processing_circuit
 from config import settings
 from dotenv import load_dotenv
 from fastapi import FastAPI
@@ -39,12 +40,21 @@ async def root():
 
 @app.get("/health")
 async def health_check():
+    cb_status = processing_circuit.get_status()
+    overall = "healthy" if cb_status["state"] == "CLOSED" else "degraded"
+
     return {
-        "status": "healthy",
+        "status": overall,
         "service": "document-service",
         "version": settings.APP_VERSION,
         "database": "not_applicable",
         "timestamp": datetime.utcnow().isoformat(),
+        "dependencies": {
+            "document-processing": {
+                "status": "available" if cb_status["state"] == "CLOSED" else "unavailable",
+                "circuit_breaker": cb_status,
+            },
+        },
     }
 
 
@@ -64,3 +74,4 @@ async def team_info():
 # Register routers
 app.include_router(routes.router)
 app.include_router(stats.router)
+app.include_router(public_info.router)

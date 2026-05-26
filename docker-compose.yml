@@ -18,6 +18,13 @@ services:
     image: mysql:8.0
     container_name: pria-solo-db
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 512M
+        reservations:
+          memory: 256M
     environment:
       MYSQL_ROOT_PASSWORD: root123
       MYSQL_DATABASE: cloudapp
@@ -42,6 +49,13 @@ services:
       dockerfile: Dockerfile
     container_name: pria-solo-document-service
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "1.0"
+          memory: 1G
+        reservations:
+          memory: 512M
     env_file:
       - ./backend/.env.docker
     environment:
@@ -68,6 +82,13 @@ services:
       dockerfile: Dockerfile
     container_name: pria-solo-frontend
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "0.5"
+          memory: 512M
+        reservations:
+          memory: 256M
     env_file:
       - ./frontend/.env.docker
     environment:
@@ -89,6 +110,13 @@ services:
     image: nginx:alpine
     container_name: pria-solo-gateway
     restart: unless-stopped
+    deploy:
+      resources:
+        limits:
+          cpus: "0.25"
+          memory: 128M
+        reservations:
+          memory: 64M
     ports:
       - "8080:80"
     volumes:

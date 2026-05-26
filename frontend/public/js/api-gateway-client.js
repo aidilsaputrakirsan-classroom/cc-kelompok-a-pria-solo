@@ -45,9 +45,25 @@
         return response;
     }
 
+    /**
+     * Show a simple retry prompt for 503/504 (Modul 13).
+     * @param {string} message
+     * @param {function} retryFn
+     */
+    function promptRetry(message, retryFn) {
+        const msg =
+            message ||
+            DEFAULT_UNAVAILABLE +
+                "\n\nClick OK to retry, or Cancel to dismiss.";
+        if (typeof retryFn === "function" && global.confirm(msg + "\n\nRetry now?")) {
+            retryFn();
+        }
+    }
+
     global.PriaGateway = {
         fetch: gatewayFetch,
         unavailableMessage: DEFAULT_UNAVAILABLE,
+        promptRetry: promptRetry,
         setBaseUrl: function (url) {
             global.PRIA_GATEWAY_BASE_URL = url;
         },

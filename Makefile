@@ -17,7 +17,7 @@ CONTAINER_NAME ?= pria-solo-backend
 .PHONY: up down build logs logs-backend logs-document ps clean restart shell-backend shell-document shell-db migrate up-dev
 .PHONY: compose-images compose-tag compose-tag-latest compose-push compose-push-latest image-sizes
 .PHONY: backend-image backend-run backend-stop backend-logs backend-health backend-clean backend-tag backend-push backend-pull
-.PHONY: lint test pr-check
+.PHONY: lint test integration-test pr-check
 
 # ----- Docker Compose (tugas terstruktur Modul 7) -----
 
@@ -133,5 +133,10 @@ test:
 	@echo "==> Run backend pytest (placeholder)"
 	docker compose exec document-service sh -lc "pytest -q"
 
+integration-test:
+	@echo "==> Integration tests (requires: docker compose up -d)"
+	pip install -q -r requirements-integration.txt
+	pytest tests/integration/ -v
+
 pr-check: build lint test
-	@echo "✅ PR check completed"
+	@echo "✅ PR check completed (run 'make integration-test' for Modul 13 cross-service tests)"

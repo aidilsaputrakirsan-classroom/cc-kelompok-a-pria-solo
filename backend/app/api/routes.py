@@ -7,6 +7,8 @@ from pathlib import Path
 from typing import List
 
 from app.orchestrators.document_extraction_orchestrator import run_document_extraction
+from app.reliability.circuit_breaker import processing_circuit
+from app.reliability.guards import require_processing_available
 from app.orchestrators.unified_review_orchestrator import run_unified_review_orchestrator
 from app.schemas.route_inputs import (
     GroundTruthJsonField,
@@ -37,6 +39,8 @@ async def document_information_extraction(
         ticket: str = Form(...),
         files: List[UploadFile] = File(...)
 ):
+    require_processing_available()
+
     # 1. Validasi ticket (Pydantic)
     try:
         ticket = TicketField.model_validate({"ticket": ticket}).ticket
@@ -147,6 +151,8 @@ async def document_information_extraction(
             logger.error(f"General error during cleanup for ticket {ticket}: {cleanup_error}")
         # ---------------------------------------------------------
 
+        processing_circuit.record_success()
+
         # 7. Return Response ke User
         return {
             "status": extraction_result.get("status", "completed"),
@@ -162,6 +168,7 @@ async def document_information_extraction(
             logger.info(f"Storage cleaned up after client error for ticket {ticket}")
         raise
     except Exception as e:
+        processing_circuit.record_failure()
         # Jika terjadi Error FATAL (sebelum return), hapus satu folder tiket
         if ticket_storage.exists():
             shutil.rmtree(ticket_storage)
@@ -181,6 +188,8 @@ async def validate_review(
         ticket: str = Form(...),
         ground_truth: str = Form(...)
 ):
+    require_processing_available()
+
     try:
         ticket = TicketField.model_validate({"ticket": ticket}).ticket
     except ValidationError as e:
@@ -234,6 +243,8 @@ async def validate_review(
             ticket_storage=ticket_storage
         )
 
+        processing_circuit.record_success()
+
         return {
             "ticket": ticket,
             "status": "completed",
@@ -241,6 +252,7 @@ async def validate_review(
         }
 
     except Exception as e:
+        processing_circuit.record_failure()
         import traceback
         traceback.print_exc()
 

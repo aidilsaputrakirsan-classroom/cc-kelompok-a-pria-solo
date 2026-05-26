@@ -82,6 +82,8 @@
         @yield('content')
     </main>
 @else
+    @include('components.service-degraded-banner')
+
     {{-- Halaman dengan container --}}
     <main id="advance-review-main-content" class="advance-review-main-content main-content">
         <div class="mx-6">
@@ -94,8 +96,12 @@
 <!-- Bootstrap JS Bundle (with Popper) -->
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
 
-{{-- Modul 12: 503 handling untuk layanan downstream --}}
+{{-- Modul 12/13: gateway client + degraded service banner --}}
 <script src="{{ asset('js/api-gateway-client.js') }}"></script>
+<script>
+    window.PRIA_GATEWAY_BASE_URL = window.PRIA_GATEWAY_BASE_URL || "{{ rtrim(config('app.url'), '/') }}";
+</script>
+<script src="{{ asset('js/service-health-banner.js') }}"></script>
 
 @stack('scripts')
 

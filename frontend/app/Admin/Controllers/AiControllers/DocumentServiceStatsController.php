@@ -3,33 +3,30 @@
 namespace App\Admin\Controllers\AiControllers;
 
 use App\Http\Controllers\Controller;
-use GuzzleHttp\Client;
-use GuzzleHttp\Exception\GuzzleException;
+use App\Services\DocumentServiceClient;
 use Illuminate\Http\JsonResponse;
 
 /**
- * Proxy ke FastAPI GET /stats — hanya untuk admin yang sudah login (OpenAdmin).
+ * Proxy ke FastAPI GET /stats — graceful degradation saat document-service down (Modul 13).
  */
 class DocumentServiceStatsController extends Controller
 {
+    public function __construct(
+        private readonly DocumentServiceClient $client = new DocumentServiceClient(),
+    ) {
+    }
+
     public function stats(): JsonResponse
     {
-        $base = rtrim((string) env('URL_VM_PYTHON', 'http://127.0.0.1:8001'), '/');
-        $url = $base.'/stats';
+        $result = $this->client->getStats();
 
-        try {
-            $client = new Client(['timeout' => (int) env('BACKEND_TIMEOUT', 30)]);
-            $response = $client->get($url);
-            $body = json_decode((string) $response->getBody(), true);
-
-            return response()->json($body ?? [], $response->getStatusCode());
-        } catch (GuzzleException $e) {
-            $status = method_exists($e, 'getCode') && $e->getCode() === 504 ? 504 : 503;
-
-            return response()->json([
-                'error' => 'Service temporarily unavailable',
-                'detail' => $e->getMessage(),
-            ], $status >= 400 ? $status : 503);
+        if ($result['ok'] && $result['body'] !== null) {
+            return response()->json($result['body'], $result['status']);
         }
+
+        return response()->json(
+            $this->client->degradedStatsPayload(),
+            200
+        );
     }
 }

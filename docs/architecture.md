@@ -1,6 +1,6 @@
 # Arsitektur Microservices — PRIA Solo
 
-Modul 12 — stack tim: **Laravel + OpenAdmin** (web & **autentikasi**) + **FastAPI :8001** (document API) + **Nginx gateway**.
+Modul 12–13 — stack tim: **Laravel + OpenAdmin** (web & **autentikasi**) + **FastAPI :8001** (document API) + **Nginx gateway** + **reliability patterns**.
 
 ## Diagram
 
@@ -10,8 +10,27 @@ flowchart TD
     GW -->|"/"| WEB["Laravel :8000"]
     GW -->|"/api/python/*"| DOC["Document Service :8001"]
     WEB --> MYSQL[("cloudapp MySQL")]
-    WEB -.->|"URL_VM_PYTHON server-side"| DOC
+    WEB -.->|"URL_VM_PYTHON + retry + CB"| DOC
 ```
+
+## Reliability (Modul 13)
+
+```mermaid
+flowchart TD
+    REQ["Request ke document-service"] --> CB{"Circuit breaker?"}
+    CB -->|OPEN| FAST["503 fail-fast"]
+    CB -->|CLOSED| PROC["POST /review, /information-extraction"]
+    CB -->|always OK| READ["GET /stats, /public, /health"]
+    PROC -->|success| OK["record_success"]
+    PROC -->|failure x5| OPEN["OPEN 30s cooldown"]
+```
+
+| Pola | Lokasi | Parameter default |
+|------|--------|-------------------|
+| Retry | `frontend/app/Services/DocumentServiceClient.php` | 3×, backoff 0.5s / 1s / 2s |
+| Circuit breaker | `backend/app/reliability/circuit_breaker.py` | threshold 5, cooldown 30s |
+| Graceful degradation | `/stats`, `/public` tanpa auth; processing → 503 saat OPEN | Lihat [reliability-testing.md](reliability-testing.md) |
+| Rate limit | `services/gateway/nginx.conf` | 20 r/s, burst 40 |
 
 ## Autentikasi
 
@@ -39,10 +58,11 @@ Tidak ada service auth terpisah dan tidak ada duplikasi model user di Python.
 
 | Method | Path | Keterangan |
 |--------|------|------------|
-| GET | `/health` | Healthcheck |
-| GET | `/stats` | Metrik `TEMP_STORAGE` |
-| POST | `/information-extraction` | Dipanggil Laravel |
-| POST | `/review` | Dipanggil Laravel |
+| GET | `/health` | Healthcheck + dependency circuit breaker |
+| GET | `/public` | Info operasional publik (Modul 13) |
+| GET | `/stats` | Metrik `TEMP_STORAGE` (tetap saat degraded) |
+| POST | `/information-extraction` | Dipanggil Laravel; 503 jika circuit OPEN |
+| POST | `/review` | Dipanggil Laravel; 503 jika circuit OPEN |
 
 Gateway: `http://localhost:8080/api/python/...`
 
@@ -50,7 +70,8 @@ Gateway: `http://localhost:8080/api/python/...`
 
 | Method | Path (prefix admin) | Keterangan |
 |--------|---------------------|------------|
-| GET | `{admin}/api/document-stats` | Proxy ke FastAPI `/stats` |
+| GET | `{admin}/api/document-stats` | Proxy ke FastAPI `/stats` (degraded payload jika down) |
+| GET | `{admin}/api/document-public` | Proxy ke FastAPI `/public` |
 
 Contoh: jika prefix admin adalah `admin`, URL  
 `http://localhost:8080/admin/api/document-stats` (setelah login OpenAdmin).
