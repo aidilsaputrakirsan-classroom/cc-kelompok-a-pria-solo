@@ -60,6 +60,14 @@ services:
       - ./backend/.env.docker
     environment:
       CORS_ORIGINS: "http://localhost:8080,http://localhost:8000"
+      SERVICE_NAME: document-service
+      LOG_LEVEL: INFO
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+        tag: document-service
     ports:
       - "8001:8001"
     networks:
@@ -94,6 +102,15 @@ services:
     environment:
       URL_VM_PYTHON: http://gateway/api/python
       APP_URL: http://localhost:8080
+      LOG_CHANNEL: json_stdout
+      LOG_STACK_CHANNEL: json_stdout
+      LOG_LEVEL: info
+    logging:
+      driver: json-file
+      options:
+        max-size: "10m"
+        max-file: "3"
+        tag: frontend
     networks:
       - cloudnet
     depends_on:

@@ -3,6 +3,9 @@ from datetime import datetime
 
 from app.api import public_info, routes, stats
 from app.reliability.circuit_breaker import processing_circuit
+from app.reliability.logging_config import setup_logging
+from app.reliability.logging_middleware import RequestLoggingMiddleware
+from app.reliability.metrics import metrics
 from config import settings
 from dotenv import load_dotenv
 from fastapi import FastAPI
@@ -10,9 +13,8 @@ from fastapi.middleware.cors import CORSMiddleware
 
 load_dotenv()
 
-_log_level_name = str(settings.LOG_LEVEL).upper()
-_log_level = getattr(logging, _log_level_name, logging.INFO)
-logging.basicConfig(level=_log_level, force=True)
+setup_logging()
+logger = logging.getLogger(__name__)
 
 app = FastAPI(
     title="Document Validator API",
@@ -30,6 +32,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.add_middleware(RequestLoggingMiddleware)
 
 
 # Root & healthcheck
@@ -68,6 +72,15 @@ async def team_info():
             {"name": "Dyno Fadillah Ramadhani", "nim": "10231033", "role": "Lead DevOps"},
             {"name": "Dyno Fadillah Ramadhani", "nim": "10231033", "role": "Lead QA & Docs"},
         ],
+    }
+
+
+@app.get("/metrics")
+def get_metrics():
+    """Application metrics for monitoring (Modul 14)."""
+    return {
+        "service": "document-service",
+        **metrics.get_metrics(),
     }
 
 

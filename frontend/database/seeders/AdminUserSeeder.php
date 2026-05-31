@@ -299,6 +299,16 @@ class AdminUserSeeder extends Seeder
             ]
         );
 
+        $statusMenu = Menu::firstOrCreate(
+            ['uri' => 'system-status'],
+            [
+                'parent_id' => 0,
+                'order' => 8,
+                'title' => 'System Status',
+                'icon' => 'icon-heartbeat',
+            ]
+        );
+
         // Assign all menus to administrator role (and optionally all roles)
         if (isset($roles['administrator'])) {
             $adminRole = $roles['administrator'];
@@ -312,6 +322,7 @@ class AdminUserSeeder extends Seeder
                 $permissionsMenu->id,
                 $menuMenu->id,
                 $logsMenu->id,
+                $statusMenu->id,
             ];
 
             $adminRole->menus()->sync($menuIds);

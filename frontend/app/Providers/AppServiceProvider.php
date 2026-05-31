@@ -2,6 +2,7 @@
 
 namespace App\Providers;
 
+use App\Services\RequestMetrics;
 use Illuminate\Support\ServiceProvider;
 use Illuminate\Database\Eloquent\Relations\Relation;
 
@@ -14,7 +15,7 @@ class AppServiceProvider extends ServiceProvider
      */
     public function register()
     {
-        //
+        $this->app->singleton(RequestMetrics::class, fn () => new RequestMetrics());
     }
 
     /**

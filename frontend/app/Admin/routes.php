@@ -30,6 +30,11 @@ Route::group([
 	// 4. API Helpers (Dropdown & Alamat)
 	$router->get('api/company-address', 'AutoDraftingController@getCompanyAddress')->name('api.company.address');
 
+	// Modul 14 — system status dashboard
+	$router->get('system-status', function () {
+		return redirect('/status');
+	})->name('system.status');
+
 	// Modul 12/13 — document-service proxies (auth: middleware OpenAdmin `admin`)
 	$router->get('api/document-stats', 'AiControllers\DocumentServiceStatsController@stats')->name('api.document.stats');
 	$router->get('api/document-public', 'AiControllers\DocumentServicePublicController@publicInfo')->name('api.document.public');
