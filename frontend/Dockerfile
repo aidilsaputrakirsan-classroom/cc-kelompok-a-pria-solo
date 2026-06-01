@@ -33,8 +33,8 @@ FROM php:8.2-fpm-alpine
 
 WORKDIR /app
 
-# Install only runtime dependencies
-RUN apk add --no-cache curl freetype-dev libjpeg-turbo-dev libpng-dev nginx \
+# Install only runtime dependencies (su-exec: drop root after fixing storage perms)
+RUN apk add --no-cache curl freetype-dev libjpeg-turbo-dev libpng-dev nginx su-exec \
     && docker-php-ext-configure gd --with-freetype --with-jpeg \
     && docker-php-ext-install gd pdo pdo_mysql opcache
 
@@ -44,18 +44,27 @@ COPY --from=builder /app /app
 # Raise PHP upload limits (Railway default post_max_size is 8M)
 COPY php/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
 
+COPY scripts/docker-entrypoint.sh /usr/local/bin/docker-entrypoint.sh
+
 # Production optimization: clean up and set permissions
 RUN rm -rf /app/tests /app/*.md /app/.git* /app/.vscode /app/.idea \
     && find /app/storage -type f -delete 2>/dev/null || true \
     && find /app/bootstrap/cache -type f -name "*.php" -delete 2>/dev/null || true \
     && addgroup -g 1000 appgroup \
     && adduser -D -u 1000 -G appgroup appuser \
-    && mkdir -p /app/storage/framework/cache /app/storage/framework/sessions /app/storage/framework/views /app/bootstrap/cache \
-    && chown -R appuser:appgroup /app
-
-USER appuser
+    && mkdir -p \
+        /app/storage/logs \
+        /app/storage/framework/cache \
+        /app/storage/framework/sessions \
+        /app/storage/framework/views \
+        /app/storage/app/public \
+        /app/bootstrap/cache \
+    && sed -i 's/\r$//' /usr/local/bin/docker-entrypoint.sh \
+    && chmod +x /usr/local/bin/docker-entrypoint.sh \
+    && chown -R appuser:appgroup /app/storage /app/bootstrap/cache \
+    && chmod -R ug+rwx /app/storage /app/bootstrap/cache
 
 EXPOSE 8000
 
-# Use artisan serve for simplicity (in production, use php-fpm with nginx)
+ENTRYPOINT ["docker-entrypoint.sh"]
 CMD ["php", "artisan", "serve", "--host=0.0.0.0", "--port=8000"]

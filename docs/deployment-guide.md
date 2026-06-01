@@ -70,6 +70,7 @@ Setelah rollback, jalankan smoke test di production (lihat [production-test.md](
 | `railway up` tidak tahu project | Set secret `RAILWAY_PROJECT_ID`. |
 | Health check gagal | Pastikan `BACKEND_PRODUCTION_URL` benar dan `/health` mengembalikan HTTP 200; cek log service backend di Railway. |
 | CORS di browser | Pastikan `CORS_ORIGINS` / `ALLOWED_ORIGINS` backend memuat origin frontend production. |
+| Upload 500, `laravel.log` permission denied | Frontend image memakai `scripts/docker-entrypoint.sh` agar `storage/` writable; redeploy frontend. Jika masih gagal, cek volume Railway di `/app/storage`. |
 
 ## 6. URL production (tim pria-solo)
 
