@@ -75,7 +75,7 @@ class ProcessAdvanceUploadJob implements ShouldQueue
             }
 
             // Send to FastAPI for information extraction
-            $client = new Client(['timeout' => 300]); // 5 minutes for background job
+            $client = new Client(['timeout' => 2400]); // 60 minutes for background job
             $pythonApiUrl = env('URL_VM_PYTHON');
             
             Log::info('Sending files to FastAPI', [
