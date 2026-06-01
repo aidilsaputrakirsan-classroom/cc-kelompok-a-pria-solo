@@ -41,6 +41,9 @@ RUN apk add --no-cache curl freetype-dev libjpeg-turbo-dev libpng-dev nginx \
 # Copy only necessary files from builder
 COPY --from=builder /app /app
 
+# Raise PHP upload limits (Railway default post_max_size is 8M)
+COPY php/uploads.ini /usr/local/etc/php/conf.d/uploads.ini
+
 # Production optimization: clean up and set permissions
 RUN rm -rf /app/tests /app/*.md /app/.git* /app/.vscode /app/.idea \
     && find /app/storage -type f -delete 2>/dev/null || true \
