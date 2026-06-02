@@ -14,7 +14,7 @@ BACKEND_REMOTE_LATEST := $(DOCKERHUB_USERNAME)/$(BACKEND_IMAGE_NAME):latest
 FRONTEND_REMOTE_LATEST := $(DOCKERHUB_USERNAME)/$(FRONTEND_IMAGE_NAME):latest
 CONTAINER_NAME ?= pria-solo-backend
 
-.PHONY: up down build logs logs-backend logs-document ps clean restart shell-backend shell-document shell-db migrate up-dev
+.PHONY: up down build logs logs-backend logs-document ps clean restart shell-backend shell-document shell-db migrate up-dev dev prod status logs-trace
 .PHONY: compose-images compose-tag compose-tag-latest compose-push compose-push-latest image-sizes
 .PHONY: backend-image backend-run backend-stop backend-logs backend-health backend-clean backend-tag backend-push backend-pull
 .PHONY: lint test integration-test pr-check
@@ -46,6 +46,27 @@ restart:
 
 up-dev:
 	docker compose -f docker-compose.yml -f docker-compose.dev.yml up --build -d
+
+dev: up-dev
+
+prod:
+	docker compose -f docker-compose.yml -f docker-compose.prod.yml up -d --build
+
+status:
+	@echo "=== Gateway ==="
+	@curl -sf http://localhost:8080/health | python -m json.tool || echo "Gateway unreachable"
+	@echo ""
+	@echo "=== Document Service ==="
+	@curl -sf http://localhost:8080/api/python/health | python -m json.tool || echo "Document service unreachable"
+	@echo ""
+	@echo "=== Document Metrics ==="
+	@curl -sf http://localhost:8080/api/python/metrics | python -m json.tool || echo "Metrics unreachable"
+	@echo ""
+	@echo "=== Frontend ==="
+	@curl -sf http://localhost:8080/frontend/health | python -m json.tool || echo "Frontend unreachable"
+
+logs-trace:
+	@./scripts/logs.sh trace $(ID)
 
 clean:
 	docker compose down -v

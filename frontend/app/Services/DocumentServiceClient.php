@@ -62,10 +62,13 @@ class DocumentServiceClient
 
         $url = $this->baseUrl().$path;
         $lastError = null;
+        $headers = $this->requestHeaders();
 
         for ($attempt = 1; $attempt <= self::MAX_RETRIES; $attempt++) {
             try {
-                $response = Http::timeout($this->timeoutSeconds())->get($url);
+                $response = Http::timeout($this->timeoutSeconds())
+                    ->withHeaders($headers)
+                    ->get($url);
 
                 if ($response->successful()) {
                     $this->circuit->recordSuccess();
@@ -83,6 +86,8 @@ class DocumentServiceClient
                         'path' => $path,
                         'status' => $response->status(),
                         'attempt' => $attempt,
+                        'correlation_id' => $headers['X-Correlation-ID'] ?? null,
+                        'service' => 'frontend',
                     ]);
                     usleep(self::BASE_DELAY_MS * (2 ** ($attempt - 1)) * 1000);
 
@@ -106,6 +111,8 @@ class DocumentServiceClient
                     'path' => $path,
                     'attempt' => $attempt,
                     'message' => $lastError,
+                    'correlation_id' => $headers['X-Correlation-ID'] ?? null,
+                    'service' => 'frontend',
                 ]);
                 if ($attempt < self::MAX_RETRIES) {
                     usleep(self::BASE_DELAY_MS * (2 ** ($attempt - 1)) * 1000);
@@ -153,5 +160,26 @@ class DocumentServiceClient
     public function circuitBreaker(): CircuitBreaker
     {
         return $this->circuit;
+    }
+
+    /** @return array<string, string> */
+    private function requestHeaders(): array
+    {
+        $headers = [];
+        if (app()->runningInConsole()) {
+            return $headers;
+        }
+
+        $request = request();
+        if ($request === null) {
+            return $headers;
+        }
+
+        $correlationId = $request->attributes->get('correlation_id');
+        if ($correlationId) {
+            $headers['X-Correlation-ID'] = (string) $correlationId;
+        }
+
+        return $headers;
     }
 }
