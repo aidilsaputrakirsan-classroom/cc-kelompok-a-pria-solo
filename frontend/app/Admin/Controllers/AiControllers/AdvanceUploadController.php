@@ -187,7 +187,7 @@ class AdvanceUploadController extends Controller
                 'message' => 'File berhasil diunggah. Proses ekstraksi informasi sedang berlangsung di background.',
                 'ticket' => $ticketNumber,
                 'company_id' => $companyId,
-                'company_name' => $company->nama_perusahaan,
+                'company_name' => $company->name,
                 'files_count' => count($fileNames),
                 'status' => 'processing'
             ], 202);

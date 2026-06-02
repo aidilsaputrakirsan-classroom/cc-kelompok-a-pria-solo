@@ -85,6 +85,40 @@ PHPUnit memakai SQLite in-memory untuk pengujian (`phpunit.xml`), sehingga tidak
 
 ---
 
+## Skenario black-box (Modul 10)
+
+Tabel lengkap 50 skenario (Frontend + Backend) ada di [`black-box-test-scenarios.md`](black-box-test-scenarios.md).
+
+Jalankan pengujian otomatis dan perbarui kolom **Status** di dokumen tersebut:
+
+```bash
+# Pastikan MySQL (frontend/.env) dan layanan berjalan bila menguji integrasi penuh
+cd backend && .venv/Scripts/python -m uvicorn app.main:app --host 127.0.0.1 --port 8001
+cd frontend && php artisan serve --host=127.0.0.1 --port=8000
+
+# Dari root repo (memuat backend/.env dan frontend/.env)
+# PDF tiket: docs/202111-DGS-339/ (nama folder = nomor tiket)
+# Pastikan Laravel (8000), FastAPI (8001), dan MySQL Laragon aktif.
+
+python scripts/run-black-box-scenarios.py
+
+# Lebih cepat jika batch 18 PDF sudah pernah diuji:
+BLACKBOX_SKIP_BATCH_OCR=1 python scripts/run-black-box-scenarios.py
+
+# Tiket lain:
+# BLACKBOX_TICKET=202111-DGS-OTHER python scripts/run-black-box-scenarios.py
+```
+
+Runner menjalankan **frontend terlebih dahulu**, lalu API backend (OCR batch di akhir) agar Laravel tidak timeout saat OCR berjalan lama.
+
+Tes PHPUnit tambahan (jika `pdo_sqlite` tersedia di PHP CLI):
+
+```bash
+cd frontend && php artisan test --filter=BlackBoxScenariosTest
+```
+
+---
+
 ## Menambah tes baru
 
 ### Backend

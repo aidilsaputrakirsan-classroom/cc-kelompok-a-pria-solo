@@ -1,0 +1,276 @@
+{
+  "extraction_results": {
+    "P7": {
+      "text_content": "<<<[P7]-HALAMAN-1>>> Dokumen uji black-box OCR administrasi. Konten teks minimal untuk validasi ekstraksi.",
+      "paragraphs_data": [
+        {
+          "paragraph_id": 0,
+          "page": 1,
+          "content": "Dokumen uji black-box OCR administrasi. Konten teks minimal untuk validasi ekstraksi.",
+          "bounding_region": [
+            0.9837,
+            0.8498,
+            7.4351,
+            0.8498,
+            7.4351,
+            1.0408,
+            0.9837,
+            1.0408
+          ],
+          "words": [
+            {
+              "word": "Dokumen",
+              "rectangle": [
+                0.9879,
+                0.8541,
+                0.7170000000000001,
+                0.19020000000000004
+              ],
+              "confidence": 0.998
+            },
+            {
+              "word": "uji",
+              "rectangle": [
+                1.7646,
+                0.8536,
+                0.1524000000000001,
+                0.18769999999999987
+              ],
+              "confidence": 0.998
+            },
+            {
+              "word": "black-box",
+              "rectangle": [
+                1.9767,
+                0.8525,
+                0.708,
+                0.18799999999999994
+              ],
+              "confidence": 0.995
+            },
+            {
+              "word": "OCR",
+              "rectangle": [
+                2.7325,
+                0.852,
+                0.3705000000000003,
+                0.18600000000000005
+              ],
+              "confidence": 0.995
+            },
+            {
+              "word": "administrasi.",
+              "rectangle": [
+                3.1507,
+                0.8516,
+                0.9201999999999999,
+                0.18509999999999993
+              ],
+              "confidence": 0.993
+            },
+            {
+              "word": "Konten",
+              "rectangle": [
+                4.1336,
+                0.8516,
+                0.5167999999999999,
+                0.18269999999999997
+              ],
+              "confidence": 0.999
+            },
+            {
+              "word": "teks",
+              "rectangle": [
+                4.7012,
+                0.8517,
+                0.2927999999999997,
+                0.1813999999999999
+              ],
+              "confidence": 0.992
+            },
+            {
+              "word": "minimal",
+              "rectangle": [
+                5.0268,
+                0.8519,
+                0.5945,
+                0.18079999999999996
+              ],
+              "confidence": 0.996
+            },
+            {
+              "word": "untuk",
+              "rectangle": [
+                5.681,
+                0.8526,
+                0.40639999999999965,
+                0.17920000000000003
+              ],
+              "confidence": 0.998
+            },
+            {
+              "word": "validasi",
+              "rectangle": [
+                6.1262,
+                0.8533,
+                0.5526999999999997,
+                0.17810000000000015
+              ],
+              "confidence": 0.996
+            },
+            {
+              "word": "ekstraksi.",
+              "rectangle": [
+                6.7356,
+                0.8544,
+                0.7042999999999999,
+                0.17659999999999987
+              ],
+              "confidence": 0.994
+            }
+          ]
+        }
+      ],
+      "words_data": [
+        {
+          "page": 1,
+          "word": "Dokumen",
+          "rectangle": [
+            0.9879,
+            0.8541,
+            0.7170000000000001,
+            0.19020000000000004
+          ],
+          "confidence": 0.998,
+          "paragraph_id": 0
+        },
+        {
+          "page": 1,
+          "word": "uji",
+          "rectangle": [
+            1.7646,
+            0.8536,
+            0.1524000000000001,
+            0.18769999999999987
+          ],
+          "confidence": 0.998,
+          "paragraph_id": 0
+        },
+        {
+          "page": 1,
+          "word": "black-box",
+          "rectangle": [
+            1.9767,
+            0.8525,
+            0.708,
+            0.18799999999999994
+          ],
+          "confidence": 0.995,
+          "paragraph_id": 0
+        },
+        {
+          "page": 1,
+          "word": "OCR",
+          "rectangle": [
+            2.7325,
+            0.852,
+            0.3705000000000003,
+            0.18600000000000005
+          ],
+          "confidence": 0.995,
+          "paragraph_id": 0
+        },
+        {
+          "page": 1,
+          "word": "administrasi.",
+          "rectangle": [
+            3.1507,
+            0.8516,
+            0.9201999999999999,
+            0.18509999999999993
+          ],
+          "confidence": 0.993,
+          "paragraph_id": 0
+        },
+        {
+          "page": 1,
+          "word": "Konten",
+          "rectangle": [
+            4.1336,
+            0.8516,
+            0.5167999999999999,
+            0.18269999999999997
+          ],
+          "confidence": 0.999,
+          "paragraph_id": 0
+        },
+        {
+          "page": 1,
+          "word": "teks",
+          "rectangle": [
+            4.7012,
+            0.8517,
+            0.2927999999999997,
+            0.1813999999999999
+          ],
+          "confidence": 0.992,
+          "paragraph_id": 0
+        },
+        {
+          "page": 1,
+          "word": "minimal",
+          "rectangle": [
+            5.0268,
+            0.8519,
+            0.5945,
+            0.18079999999999996
+          ],
+          "confidence": 0.996,
+          "paragraph_id": 0
+        },
+        {
+          "page": 1,
+          "word": "untuk",
+          "rectangle": [
+            5.681,
+            0.8526,
+            0.40639999999999965,
+            0.17920000000000003
+          ],
+          "confidence": 0.998,
+          "paragraph_id": 0
+        },
+        {
+          "page": 1,
+          "word": "validasi",
+          "rectangle": [
+            6.1262,
+            0.8533,
+            0.5526999999999997,
+            0.17810000000000015
+          ],
+          "confidence": 0.996,
+          "paragraph_id": 0
+        },
+        {
+          "page": 1,
+          "word": "ekstraksi.",
+          "rectangle": [
+            6.7356,
+            0.8544,
+            0.7042999999999999,
+            0.17659999999999987
+          ],
+          "confidence": 0.994,
+          "paragraph_id": 0
+        }
+      ]
+    }
+  },
+  "statistics": {
+    "total": 1,
+    "success": 1,
+    "failed": 0,
+    "failed_docs": []
+  }
+}

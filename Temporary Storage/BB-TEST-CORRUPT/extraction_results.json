@@ -1,0 +1,11 @@
+{
+  "extraction_results": {},
+  "statistics": {
+    "total": 1,
+    "success": 0,
+    "failed": 1,
+    "failed_docs": [
+      "P7"
+    ]
+  }
+}
