@@ -1,0 +1,3975 @@
+00010 SDAF-0522-5728-TR6/TLKMST 1 PKT 27.000.000 27.000.000 IDR 31.12.2025
+/BKLBR/OTC
+00020 SDAF-0522-5728-TR6/TLKMST 1 PKT 3.933.678 3.933.678 IDR 31.12.2025
+/BKLBR/MEI22
+00030 SDAF-0522-5728-TR6/TLKMST 1 PKT 17.420.574 17.420.574 IDR 31.12.2025
+/BKLBR/JUN22
+00040 SDAF-0522-5728-TR6/TLKMST 1 PKT 17.420.574 17.420.574 IDR 31.12.2025
+/BKLBR/JUL22
+00050 SDAF-0522-5728-TR6/TLKMST 1 PKT 17.420.574 17.420.574 IDR 31.12.2025
+/BKLBR/AGS22
+00060 SDAF-0522-5728-TR6/TLKMST 1 PKT 17.420.574 17.420.574 IDR 31.12.2025
+/BKLBR/SEP22
+00070 SDAF-0522-5728-TR6/TLKMST 1 PKT 17.420.574 17.420.574 IDR 31.12.2025
+/BKLBR/OKT22
+00080 SDAF-0522-5728-TR6/TLKMST 1 PKT 17.420.574 17.420.574 IDR 31.12.2025
+/BKLBR/NOV22
+00090 SDAF-0522-5728-TR6/TLKMST 1 PKT 17.420.574 17.420.574 IDR 31.12.2025
+/BKLBR/DES22
+BALIKPAPAN, 01.08.2025
+Mgr Sol&Offering
+Harisuddin Hakim
+NIK. 890085
+PT Telkom
+RSO Regional 4
+RSO Regional 4
+PURCHASE REQUISITION
+Nomor : 10426576
+ Printed from SAP by 970300, 01.08.2025 08:15:27
+ITEM URAIAN QUANTITY UNIT NET PRICE TOT. VALUE CURR DLVR.DATE
+00100 SDAF-0522-5728-TR6/TLKMST 1 PKT 17.420.574 17.420.574 IDR 31.12.2025
+/BKLBR/JAN23
+00110 SDAF-0522-5728-TR6/TLKMST 1 PKT 17.420.574 17.420.574 IDR 31.12.2025
+/BKLBR/FEB23
+00120 SDAF-0522-5728-TR6/TLKMST 1 PKT 13.486.896 13.486.896 IDR 31.12.2025
+/BKLBR/APR23
+00130 SDAF-0522-5728-TR6/TLKMST 1 PKT 17.420.574 17.420.574 IDR 31.12.2025
+/BKLBR/MAR23
+BALIKPAPAN, 01.08.2025
+Mgr Sol&Offering
+Harisuddin Hakim
+NIK. 890085
+PT Telkom
+RSO Regional 4
+RSO Regional 4
+PURCHASE REQUISITION
+Nomor : 10426576
+ Printed from SAP by 970300, 01.08.2025 08:15:27
+ITEM URAIAN QUANTITY UNIT NET PRICE TOT. VALUE CURR DLVR.DATE
+TOTAL 218.626.314 IDR
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500537580 No. Kontrak/SP : K.TEL. 5728/HK.810/TR6-R600/2022
+Tgl. Create : 17.02.2025 Tgl Kontrak/SP : 24.05.2022
+Currency : IDR
+VENDOR INFORMATION
+99000091
+PT. TELKOM SATELIT INDONESIA
+GEDUNG TELKOM LANDMARK TOWER 2
+JAKARTA SELATAN
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-0522-5728-TR6/TLKMST/BKLBR/OTC
+WBS ID : 34466487165/2307-78540
+1 PKT 27.000.000 27.000.000 27.000.000 31.12.2025
+Printed from SAP by 930232, 17.02.2025 14:52:08
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+27.000.000
+0
+27.000.000
+IDR
+IDR
+IDR
+BALIKPAPAN, 17.02.2025
+PT Telkom
+Harisuddin Hakim
+Mgr Sol&Offering
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500537581 No. Kontrak/SP : K.TEL. 5728/HK.810/TR6-R600/2022
+Tgl. Create : 17.02.2025 Tgl Kontrak/SP : 24.05.2022
+Currency : IDR
+VENDOR INFORMATION
+99000091
+PT. TELKOM SATELIT INDONESIA
+GEDUNG TELKOM LANDMARK TOWER 2
+JAKARTA SELATAN
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-0522-5728-TR6/TLKMST/BKLBR/MEI22
+WBS ID : 34466487165/2307-78540
+1 PKT 3.933.678 3.933.678 3.933.678 31.12.2025
+Printed from SAP by 930232, 17.02.2025 14:55:37
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+3.933.678
+0
+3.933.678
+IDR
+IDR
+IDR
+BALIKPAPAN, 17.02.2025
+PT Telkom
+Harisuddin Hakim
+Mgr Sol&Offering
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500537582 No. Kontrak/SP : K.TEL. 5728/HK.810/TR6-R600/2022
+Tgl. Create : 17.02.2025 Tgl Kontrak/SP : 24.05.2022
+Currency : IDR
+VENDOR INFORMATION
+99000091
+PT. TELKOM SATELIT INDONESIA
+GEDUNG TELKOM LANDMARK TOWER 2
+JAKARTA SELATAN
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-0522-5728-TR6/TLKMST/BKLBR/JUN22
+WBS ID : 34466487165/2307-78540
+1 PKT 17.420.574 17.420.574 17.420.574 31.12.2025
+Printed from SAP by 930232, 17.02.2025 14:55:53
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+17.420.574
+0
+17.420.574
+IDR
+IDR
+IDR
+BALIKPAPAN, 17.02.2025
+PT Telkom
+Harisuddin Hakim
+Mgr Sol&Offering
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500537583 No. Kontrak/SP : K.TEL. 5728/HK.810/TR6-R600/2022
+Tgl. Create : 17.02.2025 Tgl Kontrak/SP : 24.05.2022
+Currency : IDR
+VENDOR INFORMATION
+99000091
+PT. TELKOM SATELIT INDONESIA
+GEDUNG TELKOM LANDMARK TOWER 2
+JAKARTA SELATAN
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-0522-5728-TR6/TLKMST/BKLBR/JUL22
+WBS ID : 34466487165/2307-78540
+1 PKT 17.420.574 17.420.574 17.420.574 31.12.2025
+Printed from SAP by 930232, 17.02.2025 14:57:37
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+17.420.574
+0
+17.420.574
+IDR
+IDR
+IDR
+BALIKPAPAN, 17.02.2025
+PT Telkom
+Harisuddin Hakim
+Mgr Sol&Offering
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500537584 No. Kontrak/SP : K.TEL. 5728/HK.810/TR6-R600/2022
+Tgl. Create : 17.02.2025 Tgl Kontrak/SP : 24.05.2022
+Currency : IDR
+VENDOR INFORMATION
+99000091
+PT. TELKOM SATELIT INDONESIA
+GEDUNG TELKOM LANDMARK TOWER 2
+JAKARTA SELATAN
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-0522-5728-TR6/TLKMST/BKLBR/AGS22
+WBS ID : 34466487165/2307-78540
+1 PKT 17.420.574 17.420.574 17.420.574 31.12.2025
+Printed from SAP by 930232, 17.02.2025 14:58:08
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+17.420.574
+0
+17.420.574
+IDR
+IDR
+IDR
+BALIKPAPAN, 17.02.2025
+PT Telkom
+Harisuddin Hakim
+Mgr Sol&Offering
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500537585 No. Kontrak/SP : K.TEL. 5728/HK.810/TR6-R600/2022
+Tgl. Create : 17.02.2025 Tgl Kontrak/SP : 24.05.2022
+Currency : IDR
+VENDOR INFORMATION
+99000091
+PT. TELKOM SATELIT INDONESIA
+GEDUNG TELKOM LANDMARK TOWER 2
+JAKARTA SELATAN
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-0522-5728-TR6/TLKMST/BKLBR/SEP22
+WBS ID : 34466487165/2307-78540
+1 PKT 17.420.574 17.420.574 17.420.574 31.12.2025
+Printed from SAP by 930232, 17.02.2025 14:58:25
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+17.420.574
+0
+17.420.574
+IDR
+IDR
+IDR
+BALIKPAPAN, 17.02.2025
+PT Telkom
+Harisuddin Hakim
+Mgr Sol&Offering
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500537586 No. Kontrak/SP : K.TEL. 5728/HK.810/TR6-R600/2022
+Tgl. Create : 17.02.2025 Tgl Kontrak/SP : 24.05.2022
+Currency : IDR
+VENDOR INFORMATION
+99000091
+PT. TELKOM SATELIT INDONESIA
+GEDUNG TELKOM LANDMARK TOWER 2
+JAKARTA SELATAN
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-0522-5728-TR6/TLKMST/BKLBR/OKT22
+WBS ID : 34466487165/2307-78540
+1 PKT 17.420.574 17.420.574 17.420.574 31.12.2025
+Printed from SAP by 930232, 17.02.2025 14:58:38
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+17.420.574
+0
+17.420.574
+IDR
+IDR
+IDR
+BALIKPAPAN, 17.02.2025
+PT Telkom
+Harisuddin Hakim
+Mgr Sol&Offering
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500537587 No. Kontrak/SP : K.TEL. 5728/HK.810/TR6-R600/2022
+Tgl. Create : 17.02.2025 Tgl Kontrak/SP : 24.05.2022
+Currency : IDR
+VENDOR INFORMATION
+99000091
+PT. TELKOM SATELIT INDONESIA
+GEDUNG TELKOM LANDMARK TOWER 2
+JAKARTA SELATAN
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-0522-5728-TR6/TLKMST/BKLBR/NOV22
+WBS ID : 34466487165/2307-78540
+1 PKT 17.420.574 17.420.574 17.420.574 31.12.2025
+Printed from SAP by 930232, 17.02.2025 14:58:51
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+17.420.574
+0
+17.420.574
+IDR
+IDR
+IDR
+BALIKPAPAN, 17.02.2025
+PT Telkom
+Harisuddin Hakim
+Mgr Sol&Offering
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500537588 No. Kontrak/SP : K.TEL. 5728/HK.810/TR6-R600/2022
+Tgl. Create : 17.02.2025 Tgl Kontrak/SP : 24.05.2022
+Currency : IDR
+VENDOR INFORMATION
+99000091
+PT. TELKOM SATELIT INDONESIA
+GEDUNG TELKOM LANDMARK TOWER 2
+JAKARTA SELATAN
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-0522-5728-TR6/TLKMST/BKLBR/DES22
+WBS ID : 34466487165/2307-78540
+1 PKT 17.420.574 17.420.574 17.420.574 31.12.2025
+Printed from SAP by 930232, 17.02.2025 14:59:40
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+17.420.574
+0
+17.420.574
+IDR
+IDR
+IDR
+BALIKPAPAN, 17.02.2025
+PT Telkom
+Harisuddin Hakim
+Mgr Sol&Offering
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500537589 No. Kontrak/SP : K.TEL. 5728/HK.810/TR6-R600/2022
+Tgl. Create : 17.02.2025 Tgl Kontrak/SP : 24.05.2022
+Currency : IDR
+VENDOR INFORMATION
+99000091
+PT. TELKOM SATELIT INDONESIA
+GEDUNG TELKOM LANDMARK TOWER 2
+JAKARTA SELATAN
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-0522-5728-TR6/TLKMST/BKLBR/JAN23
+WBS ID : 34466487165/2307-78540
+1 PKT 17.420.574 17.420.574 17.420.574 31.12.2025
+Printed from SAP by 930232, 17.02.2025 14:59:51
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+17.420.574
+0
+17.420.574
+IDR
+IDR
+IDR
+BALIKPAPAN, 17.02.2025
+PT Telkom
+Harisuddin Hakim
+Mgr Sol&Offering
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500537590 No. Kontrak/SP : K.TEL. 5728/HK.810/TR6-R600/2022
+Tgl. Create : 17.02.2025 Tgl Kontrak/SP : 24.05.2022
+Currency : IDR
+VENDOR INFORMATION
+99000091
+PT. TELKOM SATELIT INDONESIA
+GEDUNG TELKOM LANDMARK TOWER 2
+JAKARTA SELATAN
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-0522-5728-TR6/TLKMST/BKLBR/FEB23
+WBS ID : 34466487165/2307-78540
+1 PKT 17.420.574 17.420.574 17.420.574 31.12.2025
+Printed from SAP by 930232, 17.02.2025 15:00:04
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+17.420.574
+0
+17.420.574
+IDR
+IDR
+IDR
+BALIKPAPAN, 17.02.2025
+PT Telkom
+Harisuddin Hakim
+Mgr Sol&Offering
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500537591 No. Kontrak/SP : K.TEL. 5728/HK.810/TR6-R600/2022
+Tgl. Create : 17.02.2025 Tgl Kontrak/SP : 24.05.2022
+Currency : IDR
+VENDOR INFORMATION
+99000091
+PT. TELKOM SATELIT INDONESIA
+GEDUNG TELKOM LANDMARK TOWER 2
+JAKARTA SELATAN
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-0522-5728-TR6/TLKMST/BKLBR/MAR23
+WBS ID : 34466487165/2307-78540
+1 PKT 13.486.896 13.486.896 13.486.896 31.12.2025
+Printed from SAP by 930232, 17.02.2025 15:00:16
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+13.486.896
+0
+13.486.896
+IDR
+IDR
+IDR
+BALIKPAPAN, 17.02.2025
+PT Telkom
+Harisuddin Hakim
+Mgr Sol&Offering
+NIK. 890085
+Goods Receipt Notes (GRN)
+Vendor
+PEMBERI
+ : 99000091 PT. TELKOMSATELIT INDONESIA
+Nomor GRN : 5000942266
+Plant
+PENERIMA:
+: SDAF RSO Regionał 4
+Storage Location
+GRN ke
+Tanggal GRN :
+:1
+ 04.03.2025 : Ref.PO/SPK/Kontrak: 4500537580
+Delivery Date Volume
+No. Item-ID
+Urut Material
+NamaMaterial Sesuai Sesuai Satuan Kontrak/ Sesuai Dapat Ditolak Sisa Kontrak/PО DPB Harga Jumlah SPK/PO Jumlah DPB Diterima Satuan Harga Denda SDAF-0522-5728-TR6/TLKMST/BKLBR/OTO 31.12.2025 0 1 27.000.000 27.000.000 0
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor: Menyetujui :
+ERNIPURWANTI DEWI
+NIK: 730535
+TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+Regional 4 : Jl. MT Haryono Telp. Fax. Balikpapan,
+Total sebelum PPN: 27.000.000 이
+Penyimpan : Penguji:
+fua
+RIZA LATUL HUSNA
+NIK: 970235
+1
+NIK:
+2.
+NIK:
+3.
+NIK:
+Hal 1/ 1
+Vendor:
+PEMBERI
+ 99000091 PT. ТELKOM SATELIT INDONESIA
+Storage
+Plant
+PENERIМА:
+ Location
+No. Item-ID
+Urut Material
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000942267
+: SDAF RSO Regional4 GRNke Tanggal GRN ::1 04.03.2025
+Ref.PO/SPK/Kontrak: 4500537581
+Delivery Date Volume
+Nama Material Sesuai Sesuai Satuan Kontrak/ Sesuai Dapat Ditolak Sisa Kontrak/PO Harga DPB Jumlah SPK/PO Jumlah DPB Diterima Satuan Harga Denda SDAF-0522-5728-TR6/TLKMST/BKLBR/ME22 31.12.2025 1 이 1 0 0 3.933.678 3.933.678 0
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya seşuai faktur pajak
+Rekanan/Vendor:
+T. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+SO Regional 4 : Jl. MT Haryono Telp.
+Menyetujui :
+ERNI
+Boma
+ PURWANTI DEWI
+NIK: 730535
+Fax. Balikpapan,
+Total sebelum PPN: 3.933.678
+Penyimpan: Penguji:
+Riul
+RIZA LATUL HUSNA
+NIK: 970235
+1
+NIK:
+2
+NIK:
+3.
+NIK:
+Hal 1/ 1
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000942268
+Vendor:
+PEMBERI
+99000091 PT. TELKOM SATELIT INDONESIA
+PENERIМА : GRN ke :1 Plant : SDAF RSO Regionał 4 Tanggal GRN : 04.03.2025 Storage Location Ref.PO/SPK/Kontrak : 4500537582
+Delivery Date Volume
+No. Item-ID
+Urut Material
+NamaMaterial Sesuai Sesuai Satuan Kontrak/ Sesuai Dapat Ditolak Sisa Harga Jumlah Jumlah Kontrak/PО DPB SPK/PO DPB Diterima Satuan Harga Denda SDAF-0522-5728-TR6/TLKMST/BKLBR/JUN22 31.12.2025 이 1 0 0 17.420.574 17.420.574
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya seşuai faktur pajak
+Rekanan/Vendor : Menyetujui :
+Jurwn
+ERNI PURWANTI DEWI
+NIK: 730535
+. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+Regional 4 : J1. MT Haryono Telp. Fax. Balikpapan,
+Total sebelum PPN: 17.420.574 0
+Penyimpan: Penguji:
+Ruel
+RIZA LATUL HUSNA
+NIK: 970235
+1.
+NIK:
+2.
+NIK:
+3.
+NIK:
+Hal 1/ 1
+Vendor:
+PEMBERI
+ 99000091 PT. TELKOM SATELIT INDONESIA
+Storage
+Plant
+PENERIМА:
+ Location
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000942269
+: SDAF RSO Regional4
+GRN ke
+Tanggal GRN
+: 1
+: 04.03.2025
+Ref.PO/SPK/Kontrak: 4500537583
+Delivery Date Volume
+No. Item-ID NamaMaterial
+Urut Material Sesuai Kontrak/РО Sesuai Satuan Kontrak/ Sesuai Dapat Ditolak Sisa Harga Jumlah Jumlah DPB SPK/PO DPB Diterima Satuan Harga Denda
+SDAF-0522-5728-TR6/TLKMST/BKLBR/JUL22 31.12.2025 0 0 0 17.420.574 17.420.574 0
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor : Menyetujui :
+ERNI
+Ss
+PURWANTI DEWI
+NIK: 730535
+T. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+so Regional 4 : J1. MT Haryono Telp. Fax. Balikpapan,
+Total sebelum PPN: 17.420.574
+Penyimpan : Penguji:
+Ru
+RIZALATUL HUSNA
+NIK: 970235
+1.
+NIK:
+2.
+NIK:
+3.
+NIK:
+Hal 1/ 1
+Vendor:
+PEMBERI
+ 99000091 PT. TELKOM SATELIT INDONESIA
+Storage
+Plant
+PENERIMA:
+ Location
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000942270
+: SDAF RSO Regional 4
+GRN ke
+Tanggal GRN :
+:1
+04.03.2025
+Ref.PO/SPK/Kontrak: 4500537584
+Delivery Date Volume
+No. Item-ID NamaMaterial Sesuai Sesuai Satuan Kontrak/ Sesuai Urut Dapat Material Ditolak Sisa Harga Jumlah Jumlah Kontrak/РО DPB SPK/PO DPB Diterima Satuan Harga Denda
+SDAF-0522-5728-TR6/TLKMST/BKLBR/AGS22 31.12.2025 이 0 0 17.420.574 17.420.574
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya seşuai faktur pajak
+Rekanan/Vendor: Menyetujui :
+ ERNI
+Sr
+PURWANTI DEWI
+NIK: 730535
+Penyimpan :
+Ru
+RIZA LATUL HUSNA
+NIK: 970235
+T. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+so Regional 4 : J1. MT Haryono Telp. Fаx. Balikpapan,
+Total sebelum PPN: 17.420.574
+Penguji:
+1.
+NIK:
+2.
+NIK:
+3.
+NIK:
+Hal 1/ 1
+Vendor:
+PEMBERI
+ 99000091 PT. TELKOMSATELIT INDONESIA
+Storage
+Plant
+PENERIMА:
+ Location
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000942271 GRN ke :1
+: SDAF RSO Regional4 Tanggal GRN : 04.03.2025
+Ref.PO/SPK/Kontrak: 4500537585
+Delivery Date Volume
+No. Item-ID
+Urut Material
+Nama Material Sesuai Sesuai Satuan Kontrak/ Sesuai Dapat Ditolak Sisa Harga Jumlah Jumlah Kontrak/PO DPB SPK/PO DPB Diterima Satuan Harga Denda SDAF-0522-5728-TR6/TLKMST/BKLBR/SEP22 31.12.2025 0 0 0 17.420.574 17.420.574 이
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor:
+Hrw
+Menyetujui:
+ERNIPURWANTI DEWI
+NIK: 730535
+I. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4 So Regional 4: J1. MT Haryono Telp. Fax. Balikpapan,
+Total sebelum PPN: 17.420.574 0
+Penyimpan: Penguji:
+Riwd
+RIZA LATUL HUSNA
+NIK: 970235
+1
+NIK:
+2.
+NIK:
+3.
+NIK:
+Hal 1/ 1
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000942322
+Vendor:
+PEMBERI
+99000091 PT. TELKOM SATELIT INDONESIA Plant
+PENERIMA: GRN ke :1
+: SDAF RSO Regional 4 Tanggal GRN :04.03.2025 Storage Location: Ref.PO/SPK/Kontrak : 4500537586
+Delivery Date Volume
+No. Item-ID Nama Material Sesuai Sesuai Satuan Kontrak/ Sesuai Urut Material Dapat Ditolak Sisa Harga Jumlah Jumlah Kontrak/PО DPB SPK/PO DPB Diterima Satuan Harga Denda
+SDAF-0522-5728-TR6/TLKMST/BKLBR/OKT22 31.12.2025 1 0 1 0 0 17.420.574 17.420.574
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor : Menyetujui :
+ERNI
+drsn
+ PURWANTI DEWI
+NIK: 730535
+T. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4 so Regional 4 : Jl. MT Haryono Telp. Fax. Balikpapan,
+Penyimpan :
+Reul
+RIZA LATUL HUSNA
+NIK: 970235
+Total sebelum PPN: 17.420.574
+Penguji:
+1.
+NIK:
+2.
+NIK:
+3.
+NIK:
+Hal 1/ 1
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000942323 PEMBERI PENERIMА:
+Vendor: 99000091 PT. TELKOM SATELIT INDONESIA Plant : SDAF RSO Regional 4 GRN ke Tanggal GRN ::1 04.03.2025 Storage Location Ref.PO/SPK/Kontrak: 4500537587
+Delivery Date Volume
+No. Item-ID
+Urut Material
+Nama Material Sesuai Sesuai Satuan Kontrak/ Sesuai Dapat Ditolak Sisa Harga Jumlah Jumlah Kontrak/PO DPB SPK/PO DPB Diterima Satuan Harga Denda
+SDAF-0522-5728-TR6/TLKMST/BKLBR/NO22 31.12.2025 0 이 17.420.574 17.420.574 0
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya seşuai faktur pajak
+Rekanan/Vendor : Menyetujui :
+ERNI
+Jn
+ PURWANTIDEWI
+NIK: 730535
+Penyimpan :
+Rue
+RIZA LATUL HUSNA
+NIK: 970235
+T. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+so Regional 4 : Jl. MT Haryono Telp. Fax. Balikpapan,
+Total sebelum PPN: 17.420.574
+Penguji:
+1.
+NIK:
+2.
+NIK:
+3
+NIK: Hal 1/ 1
+Vendor:
+PEMBERI
+ 99000091 PT. TELKOM SATELIT INDONESIA
+No. Item-ID
+Urut Material
+1
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000942324 PENERIMA : GRN ke : 1 Plant : SDAF RSO Regional4 Tanggal GRN : 04.03.2025 Storage Location Ref.PO/SPK/Kontrak: 4500537588
+Delivery Date Volume
+Nama Material Sesuai Sesuai Satuan Kontrak/ Sesuai Dapat Ditolak Sisa Harga Jumlah Jumlah Kontrak/РО DPB SPK/PO DPB Diterima Satuan Harga Denda
+SDAF-0522-5728-TR6/TLKMST/BKLBR/DES22 31.12.2025 이 이 17.420.574 17.420.574
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor : Menyetujui :
+Jsm
+ERNI PURWANTI DEWI
+NIK: 730535
+T. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+ESO Regional 4: Jl. MT Haryono Telp. Fax. Balikpapan,
+Total sebelum PPN: 17.420.574
+Penyimpan: Penguji:
+Reual
+RIZA LATUL HUSNA
+NIK: 970235
+1.
+NIK:
+2.
+NIK:
+3.
+NIK:
+Hal 1/ 1
+0
+Vendor:
+PEMBERI
+ 99000091 PT. TELKOM SATELIT INDONESIA
+PENERIMA :
+Storage
+Plant
+ Location
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000942325
+ : SDAF RSO Regional 4
+GRN ke
+Tanggal GRN :
+:1
+ 04.03.2025
+Ref.PO/SPK/Kontrak: 4500537589
+Delivery Date Volume
+No. Item-ID Nama Material Sesuai Sesuai Satuan Kontrak/ Sesuai Urut Material Dapat Ditolak Sisa Harga Jumlah Kontrak/PО Jumlah DPB SPK/PO DPB Diterima Satuan Harga Denda
+1 SDAF-0522-5728-TR6/TLKMST/BKLBR/JAN23 31.12.2025 0 0 0 17.420.574 17.420.574 이
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor: Menyetujui :
+Jarnn
+ERNIPURWANTI DEWI
+NIK: 730535
+T. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4 SO Regional 4 : Jl. MT Haryono Telp. Fax. Balikpapan,
+Penyimpan :
+Re
+RIZA LATUL HUSNA
+NIK: 970235
+Total sebelum PPN: 17.420.574 0
+Penguji:
+1.
+NIK:
+2.
+NIK:
+3.
+NIK:
+Hal 1/ 1
+so
+Vendor:
+PEMBERI
+ 99000091 PT. TELKOM SATELIT INDONESIA
+Storage
+Plant
+PENERIMA:
+ Location
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000942326
+GRN ke :1
+: SDAF RSO Regional 4 Tanggal GRN : 04.03.2025
+Ref.PO/SPK/Kontrak: 4500537590
+Delivery Date Volume
+No. Item-ID Nama Material Sesuai Sesuai Satuan Kontrak/ Urut Material Kontrak/РО DPB SPK/PO Sesuai DPB Dapat Ditolak Sisa Harga Jumlah Jumlah Diterima Satuan Harga Denda
+1 SDAF-0522-5728-TR6/TLKMST/BKLBR/FEB23 31.12.2025 0 0 이 17.420.574 17.420.574
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor:
+TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+Regional 4 : Jl. MT Haryono Telp.
+Menyetujui :
+ERNI
+drwntes
+PURWANTI DEWI
+NIK: 730535
+Fax. Balikpapan,
+Penyimpan :
+Ruld
+RIZA LATUL HUSNA
+NIK: 970235
+Total sebelum PPN: 17.420.574
+Penguji:
+1.
+NIK:
+2.
+NIK:
+3.
+NIK:
+Hal 1/ 1
+0
+Goods Receipt Notes (GRN)
+Nomor GRN
+Vendor:
+PEMBERI
+ 99000091 PT. TELKOM SATELITINDONESIA
+: 5000942327
+Plant
+PENERIMA:
+: SDAF RSO Regionał 4 GRN ke Tanggal GRN ::1 04.03.2025 Storage Location Ref.PO/SPK/Kontrak: 4500537591
+Delivery Date Volume
+No. Item-ID
+Urut Material Nama Material Sesuai Sesuai Satuan Kontrak/ Sesuai Dapat Ditolak Sisa Kontrak/PО Harga Jumlah DPB Jumlah SPK/PO DPB Diterima Satuan Harga Denda SDAF-0522-5728-TR6/TLKMST/BKLBR/MAR23 31.12.2025 1 0 1 0 0 13.486.896 13.486.896 0
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya seşuai faktur pajak
+Rekanan/Vendor: Total sebelum PPN: 13.486.899 Menyetujui : Penyimpan : Penguji:
+nante
+ERNI PURWANTI DEWI
+Balikpapan,
+Rul
+RIZA LATUL HUSNA
+NIK: 970235
+1.
+NIK:
+2.
+NIK:
+3.
+NIK:
+Hal 1/1
+NIK: 730535
+TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+Regional 4 : J1. MT Haryono Telp. Fax.
+kumen
+rus
+uai
+uai
+Is
+uai
+ai
+ai
+Kesesuaian antar Do
+Lurus/Tidak Lur
+Sesuai /Tidak Ses
+Sesuai /Tidak Ses
+Sesuai /Tidak Sest
+Lurus/Tidak Luru
+Sesuai/ Tidak Sesu
+Sesuai /Tidak Sesu
+Sesuai /Tidak Sesu
+Sesuai/Tidak Sesu
+Sesuai /Tidak Sesua
+Sesuai /Tidak Sesua
+Sesuai /Tidak Sesua
+Sesuai /Tidak Sesua
+Sesuai /Tidak Sesua
+Sesuai /Tidak Sesua
+Sesuai /Tidak Sesuai
+Sesuai /Tidak Sesuai
+Sesuai /Tidak Sesuai
+Sesuai /Tidak Sesuai
+Sesuai /Tidak Sesuai
+Sesuai /Tidak Sesuai
+Sesuai/Tidak Sesuai
+e Letter/Surat Pasal
+AN
+0.)
+ BARAT
+ratkan
+ratkan
+ratkan
+ratkan
+ratkan
+ratkan
+atkan
+Cter/Surat Kuasa
+Kontrak*/Amd./Side
+Kuasa
+(tidak perlu diisi)
+ihat Informasi butir 1
+R ES WITEL KALIMANT
+GM SALES REGIONAL
+Ada/Tidak
+626.314,-
+(tidak perlu diisi)
+hat Informasi butir 5.
+atkan/Tidak Dipersya
+atkan/Tidak Dipersya
+atkan/Tidak Dipersya
+atkan/Tidak Dipersya
+atkan/Tidak Dipersya
+tkan/Tidak Dipersyan
+atkan/Tidak Dipersyar
+ntrak*/Amd./Side Let
+Informasi
+pm)
+om
+D
+MANAGE
+(E
+Rp 218
+(li
+Dipers persya
+Dipersyar
+Dipersyar
+Dipersyar
+Dipersyar
+Dipersyar
+Dipersya ersyara
+Pasal Terkait
+Ko
+e of Work Kontrak
+gal Target Delivery
+t Penandatangan BAPE
+ndatangan Pihak Telkc
+ndatangan Pihak Mitr
+ndatangan BAST (Telko
+ndatangan BAST (Mitra
+of
+ontrak/Termin
+0/SP/P8
+Work Kontrak
+Waktu Kontrak
+PL
+n Usage
+elasan/Ba Kronologis/.
+2 of 3
+LIMANTAN
+E & NEW
+12. Scop
+13.
+Pejaba
+Tang
+1. Pena
+II. Pena
+14.1. Pena
+MANTAN II. Pena
+04/2022
+AL
+15. KL/W
+2022 16. Nilai K
+17. Scope
+18. Jangka
+19. BASO
+20. BAPL/LF
+21. BAPP
+22. BA Reko
+23. NPK
+24. BA Penje
+25....
+Page
+Informasi
+25 MEI 2022
+MANAGER ESWITEL KA
+BARAT
+MANAGER SD MANAG
+SERVICE
+100%
+Ada/Tidak
+Der 2021
+25 MEI 2022
+Ada /Tidak
+AGER ES WITEL KAL
+BARAT
+GM SALES REGION.
+L.5767/LG.320/TR6-R6
+036/RCS-BASTTSAT/Z
+KE/WO/SP/P8
+Rp 218.626.314,-
+Ada/Tidak
+Ada/Tidak
+Ada/Tidak
+Ada/Tidak
+Ada/Tidak
+Ada/Tidak
+Ada /Tidak
+Ada/Tidak
+Ada/Tidak
+umen Pendukung
+ama jabatan)
+a jabatan)
+M
+Sit setelah tanggal 2 6 Desemь
+n denda)
+majabatan)
+jabatan)
+ajabatan)
+jangan)
+abatan)
+TEL
+MA
+Dok
+Isi Dokumen
+-angan Telkom (diisi nd
+angan Mitra (diisi nam
+Scope
+ess
+ of Work
+rkan BARD untuk P8 yang tert
+terdapat pembebasa
+Eangan Pihak Telkom
+tangan Pihak Mitra
+gan Telkom (diisi nan
+gan Mitra (diisi naта
+tra
+lkom
+epada
+an yang terdeliver**
+Cope of Work (jika ado
+Layanan
+gan Telkom (diisi nam
+gan Mitra (diisi nama
+tagihanpertama perpar
+bila ada)
+an Pekerjaan
+ge
+BA Kronologis/...
+Dok.
+Jenis
+BARD
+BAST) BA Progress Pekerjaan/BAPB
+*jika BA >1, dirincikon di lembar terpisah. BAPLA
+a. Tanggal
+b. Penandat
+c. Penandata
+d. Nilai Progr
+e. Lampiran/
+Wajib melamp
+a.
+BAPD
+Tanggal
+ (Jike
+I. Penandat
+II. Penanda
+b. Penandatar
+c. Penandatan
+d. No. BAST Te
+e. No. BAST Mi
+f. Menunjuk Ke
+g. Nilai Pekerja
+h. Lampiran/Sc
+a. Tanggal Aktif
+b. Penandatang
+c. Penandatang
+d. BAPL(n-1) (u
+Skumen Lain-lain (apal
+Persyaratan Pembayaran
+a. BASO
+b. BAPL/LPL
+c. BA Penyelesai
+d. BARekon Usa
+e. NPK
+f. BA Penjelasan
+8...
+Kumen
+ai
+ai
+ai
+ai
+Kesesuaian antar Dol
+Sesuai /Tidak Sest
+Sesuai /Tidak Sesu
+Sesuai /Tidak Sesur
+Sesuai /Tidak Sesu
+Sesuai /Tidak Sesu
+Sesuai /Tidak Sesu
+Sesuai /Tidak Sesua
+Sesuai /Tidak Sesua
+Sesuai /Tidak Sesua
+Letter/Surat Pasal
+ang berlaku.
+Eer/Surat Kuasa
+Kontrak*/Amd./Side
+Kuasa
+ihat Informasi butir 5
+(tidak perlu diisi)
+ihat Informasi butir 5.
+an Kebijakan Internal Telkom
+trak*/Amd./Side Lett
+Informasi
+itra)
+Rp...
+er pada ketentuan Kontrak da
+Pasal Terkait
+Kon
+ndatangan Kontrak (M
+aWaktu Kontrak
+r KB pada P8
+Kontrak
+Waktu Kontrak
+disebutkan di checklist meref
+ak: KL/WO/SP/P8
+m PPN
+3 of 3
+26. Pena
+27. Jangk.
+28. Nomo
+29. Nilai
+30. Jangka
+Dokumen
+NOTE:
+ yang
+*) Definisi Kontr
+**) Nilai
+Page
+sebelu
+Rp...
+Informasi
+s/d
+KL/WO/SP
+Rp...
+s/d
+... bulan
+Ada/Tidak
+atan Verifikasi)
+men Pendukung
+tentuan Corporate
+adatangan Kontrak
+ersangkutan**
+dling)
+return di lembar Cato
+Doku
+aminan
+Isi Dokumen
+baga penerbit sesuai ke
+nti
+erlaku
+Jaminan: Mitra Penar
+Lan
+KL/WO/SP
+ktu
+dum
+Induk
+ Terakhir
+ayanan KB untuk KL be
+(jika
+tu
+ nilai KB bersifat Bun
+YA (lihat keterangan
+TIDAK
+Paraf:
+Paraf:
+Paraf:
+Dok.
+Jenis
+Jaminan/Surat Pengganti Jaminan
+Pelaksanaan/Pemerliharaana. Penerbit Ja - Jaminan: Len Finance yang b -Surat Pengga b. Nilai Jamir c. JangkaWal
+d. Menunjuk
+Kontrak Berlangganar
+Kontrak Berlangganan
+Induk
+a. No KB Ader
+b. Nilai item
+c. Jangka Wak
+e. BASplitting
+PIC
+Return
+ Mitra
+PIC
+Verifikator
+Tanggal
+ BUD/SDA
+PIC
+Verifikator
+Tanggal
+FCBP02
+Verifikator
+Tanggal
+NAMA NA
+CC:
+NAMA MITRA:
+NO KL/SP /WO:
+TAGIHAN:
+NO
+BANK KALBAR
+NOTA PERHITUNGAN KEUANGAN (NPK) HAK MITRA
+PT. TELKOM SATELIT INDONESIA
+K.TEL.5728/HK.810/TR6-R600/2022
+Oktober 2023 (OTC & Usage Mei 2022 - April 2023)
+URAIAN
+Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M untuk Bank Kalbar
+• Akun: 4808437
+SID: 1763263404
+PERIODE NILAI
+Invoice Oktober 2023
+Usage: Osage. •OTC
+• Mei 2022 (Prorate 7 Hari)
+• Juni 2022
+Juli 2022
+Agustus 2022
+September 2022
+Oktober 2022
+Rp 1,000,000
+Rp 252,000
+Rp 1,116,000 1,110,0o
+Rp 1,116,000 кр 1,110,ooo
+Rp 1,116,000
+Rp 1,116,000|
+Rp 1,116,000 November 202 Rp 1,116,000 Desember 2022 Rp 1,116,000
+• Januari 2023 Rp 1,116,000 •Februari 2023 Rp 1,116,000
+• Maret 2023 Rp 1,116,000
+• April 2023 (Sisa Nilai Kontrak) Rp 864,000
+• SID: 1764886852 Invoice Oktober 2023
+Usage :
+•OTC Rp 1,000,000
+• Mei 2022 (Prorate 7 Hari)
+• Juni 2022
+• Juli 2022
+• Agustus 2022
+000'zc7 dyRp 252,000
+Rp 1,116,000 кр
+Rp 1,116,000
+Rp 1,116,000
+• September 2022
+• Oktober 2022
+• November 2022
+a2022
+• Desember 2022
+• Januari 2023
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000
+77072 reomeseD Rp 1,116,000
+3207 anic Rp 1,116,000
+Februari 2023 Februari 2023 Rp 1,116,000
+Maret 2023 Rp 1,116,000
+• April 2023 (Sisa Nilai Kontrak) Rp 864,000
+SID: 1764886941 Invoice Oktober 2023
+Usage:
+OTC Rp 1,000,000
+• Mei 2022 (Prorate 7 Hari) Rp 252,000 Juni 2022 Rp 1,116,000 Juli 2022 Rp 1,116,000 Agustus 20227207 eniengse Rp 1,116.000 р 1,110,000
+770Z rebotkO
+September 2022 September 202
+Oktober 2022 Rp 1,116,000 Rp 1,116,000 November 2022 Rp 1,116,000 Desember 2022 Rp 1,116,000 Januari 2023
+• Februari 2023 Rp 1,116,000 Rp 1,116,000
+• Maret 2023 Rp 1,116,000
+• April 2023 (Sisa Nilai Kontrak)
+• SID : 1764886615 Rp 864,000 Invoice Oktober 2023
+Usage :
+•OTC
+• Mei 2022 (Prorate 7 Hari)
+• Juni 2022
+Juli 20227707 c.
+Rp 1,000,000
+Kp 252,000 Rp
+Kp 1,116,000 Rp 1,116,000 Rp 1,116,000
+• Agustus 2022
+|• September 2022
+• Oktober 2022
+• November 2022
+• Desember 2022
+• Januari 2023
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000 Februari 2023 Rp 1,116,000
+• Maret 2023 Rp 1,116,000
+• April 2023 (Sisa Nilai Kontrak) SID: 1764886998 Rp 864,000 Invoice Oktober 2023
+Usage:
+• OTC
+• Mei 2022 (Prorate 7 Hari)
+• Juni 2022
+u 2022
+• Juli 2022
+• Agustus 2022
+Rp 1,000,000
+Rp 252,000
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000
+• September 2022
+Oktober 2022
+• November 2022
+• Desember 2022
+• Januari 2023
+• Februari 2023
+• Maret 2023
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000 Ro11160ol |• April 2023 (Sisa Nilai Kontrak) Rp 864,000
+• SID: 1763263673679
+SID: 1764887217
+Invoice Oktober 2023
+Usage:
+OTC Rp 1,000,000
+7702 Jt Mei 2022 (Prorate 7 Hari) Rp 252,000 Juni 20227792 c кр 1,110,000 Rp 1,116,000 Juli 20227707 une Rp 1,116,000 кр 1,116,0001 Agustus 2022 Agustus 2022
+September 2022
+Oktober 2022
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000
+• November 2022 Rp 1,116,000 Desember 2022 Rp 1,116,000
+• Januari 2023 Rp 1,116,000 Februari 2023 Rp 1,116,000 Maret 2023 Rp 1,116,000
+• April 2023 (Sisa Nilai Kontrak) Rp 864,000 Invoice Oktober 2023
+Usage: Osage.
+OTC
+• Mei 2022 (Prorate 7 Hari)
+• Junı 2022 Juni 2022
+|• Julı 2022
+Agustus 2022
+Rp 1,000,000
+Rp 252,000|
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000| •September 2022
+• Oktober 2022
+November 2022
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000
+• Desember 2022 Rp 1,116,000 Januari 2023 Rp 1,116,000 Februari 2023 Rp 1,116,000 116.000l Maret 2023 Rp 1,116,000
+• April 2023 (Sisa Nilai Kontrak) SID: 1763263651 Rp 864,000 Invoice Oktober 2023
+Usage: Usage
+• OTC Rp 1,000,000
+• Mei 2022 (Prorate 7 Hari) Rp 252,000
+• Juni 2022 Rp 1,116,000
+• Juli 2022 Rp 1,116,000
+• Agustus 2022 Rp 1,116,000
+• September 2022
+• Oktober 2022
+• November 2022
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000 Desember 2022
+• Januari 201 2023 Rp 1,116,000 Rp 1,116,000
+• Februari 2023 Rp 1,116,000 Maret 2023 Rp 1,116,000
+• April 2023 (Sisa Nilai Kontrak) Rp 864,000
+SID: 1763263734 Invoice Oktober 2023
+Usage:
+•OTC Rp 1,000,000
+• Mei 2022 (Prorate 7 Hari) Rp 252,000 Juni 2022 Rp 1,116,000 Juli 2022 Rp 1,116,000 Agustus 20227707 suisug Rp 1,116,000
+September 202 September 2022 кр 1,110'00o Rp 1,116,000 кр 1,116,000 Oktober 2022 Oktober 2022
+November 2022
+• Desember 2022
+• Januari 2023
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000
+• Februari 2023 Rp 1,116,000
+• Maret 2023 Rp 1,116,000
+•SID 1764887077
+• April 2023 (Sisa Nilai Kontrak) Rp 864,000 Invoice Oktober 2023
+Usage:
+oTo •OTC Rp 1,000,000 Mei 2022 (Prorate 7 Hari) 7702 tst- Rp 252,000
+• Juni 20227702 1ne
+Juli 2022
+• Agustus 2022
+Kр 1,116,0oo Rp 1,116,000 Rp 1,116,000
+Rp 1,116,000
+• September 2022
+• Oktober 2022
+•November2022
+• Desember 2022
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000
+• Januari 2023 Rp 1,116,000 Februari 2023 Rp 1,116,000 Maret 2023 Rp 1,116,000
+• SID: 17648887550
+• April 2023 (Sisa Nilai Kontrak) Rp 864,000 Invoice Oktober 2023
+Usage:
+•OTC
+2202
+• Mei 2022 (Prorate 7 Hari)
+• Juni 2022 • Juni 2022
+• Juli 2022
+Rp 1,000,000 Np 1,000,00oT
+RP 252,000 Rp 252,000
+Rp 1,116.000 Kр 1,116,000
+Rp 1,116,000 Agustus 2022
+• September 2022
+•Oktober 2022
+• November 2022
+• Desember 2022
+Rp 1,116,000
+Rp 1,116,000
+Rp 1,116,000|
+Rp 1,116,000
+Rp 1,116,000
+• Januari 2023 Rp 1,116.000
+• Februari 2023 Rp 1,116,000 •Maret 2023 Rp 1,116,000 |• April 2023 (Sisa Nilai Kontrak) Rp 864,000
+SID: 1763263574 Invoice Oktober 2023
+Usage:
+OTC
+Rp 1,000,000
+•Mei 2022 (Prorate 7 Hari) Rp 252,000 Juni 2022 0zzdx Rp 1,116,000 Juli 2022
+p 1,116,00oT Rp 1,116,000 Agustus 2022 кр 1,116,0o 7707 eniongse Rp 1,116,000 September 2022 September 202
+Oktober 2022 Oktober 2022 Rp 1,116,000 Rp 1,116,000 November 2022 Rp 1,116,000 Desember 2022 Rp 1,116,000 Januari 2023 Rp 1,116,000
+• Februari 2023 Rp 1,116,000
+• Maret 2023 Rp 1,116,000
+• April 2023 (Sisa Nilai Kontrak) • SID : 1764887795 Rp 864,000 Invoice Oktober 2023
+Usage:
+•OTC Rp 7,500,000
+7702
+• Mei 2022 (Prorate 7 Hari) Rp 7,500,00o Rp 454,839 Кр 454,839
+• Juni 2022 Rp 2,014,287 Juli 2022770z uc Rp 2,014,287
+• Agustus 2022
+• Agustus 2022
+• September 2022
+• Oktober 2022
+Rp 2,014,287
+Rp 2,014,287
+Rp 2,014,287 November 2022 Rp 2,014,287 Desember 2022 Rp 2,014,287
+• Januari 2023 Rp 2,014,287 Februari 2023 Rp 2,014,287 Maret 2023 Rp 2,014.287 April 2023 (Sisa Nilai Kontrak)
+• SID: 17644887757 Rp 1,559,448 Invoice Oktober 2023
+Usage:
+•оTс Rp 7,500,000|
+7707
+• Mei 2022 (Prorate 7 Hari) Rp 454,839
+• Juni 2022 Rp 2,014,287 •
+• Juli 2022 Rp 2,014,287
+• Agustus 2022 Rp 2,014,287
+• September 2022
+• Oktober 2022
+• November 2022
+Desember 2022
+Rp 2,014,287
+Rp 2,014.287
+Rp 2,014,287
+Rp 2,014,287
+TOTAL HAK MITRA Keterangan
+-Nilai Total Hak Mitra belum termasuk PPN yang berlaku
+SM REGIONAL SOLUTION & OPERATION
+BUDHI SUPRIYONO
+NIK. 800075
+Januari 2023
+Februari 2023
+Maret 2023
+April 2023 (Sisa Nilai Kontrak)
+Rp 2,014,287
+Rp 2,014,287
+Rp 2,014,287 sp 2,014,201
+Rp 1,559,448
+Rp 218,626,314
+Balikpapan, 25 November 2025
+MANAGER BIDDING
+MANAGEMENT EMEN & BUSINESS
+SUPPORT
+YESRU MARDANIATI
+NIK. 850057
+Yang bertanda tangan dibawah ini:
+Nama: Hariyadi
+NIK: 800031
+SURAT PERNYATAAN PEMBAYARAN PELANGGAN TELKOM
+Menyatakan bahwa Pelanggan Telkom di bawah ini telah melakukan melakukan pembayaran ke Telkom dengan rincian sebagai berikut:
+Nama CC
+Account Tagihan Usage UiS Usage Tanggal Flagging umlah Flagging Potongan Pajak Payrment ID No Rek Mandiri
+202310 202309 1763263404 20231026 9,016.633 M1123101100078
+702310 202309 1763263679 20231119 19.470.968 M1121102800012
+202310 202309 1764886852 20231119 19,470,968 M1121102800012
+202310 202309 7648869 1764886941 2023111119 427,064 M1121102102800012
+202310 202309 1764886998 0231119 19,470,968 5,470,508 M112121102800012 202310 202309 764887 20231119 19,470,968 M112121102800012
+202310 202309 1763263574 20231119 111 19,470.968 M11211 21120100013
+202310 202309 1763263651 20231119 19,470,968 M112121120100013
+20231 202310 202309 202309 17648866 20231119 16,491,319 M112121120100013 202310 202309 1763263404 20231119 0,454,335 202305 2025715 ,454,555 M1121092900017 M 202310 202309 1764886941 20231119 19,043,904 M1121092900017
+202310 202309 1763263734 20231119 19.470.968 M1121121500042
+202310 202309 1764886615 20231119 2,979,649 M1121121500042 121121500
+202310 202310 202309 1764887077 20231119 19,470,958 M1121121500042
+202310 202309 1764887550 O231119 19,470,968 M1121121500042
+202310 202309 1763253404 20231026 1.000.000 M1123101100078 BANK KALBAR 480843437 202310 202309 1763263574 20231026 1,000.000 M1123101100078 149004 0045678911
+202310 202310 202309 1763263651 20231026 1,000,000 M1123101100078
+202310 202309 1763263679 20231026 L000,000 M1123101100078
+202310 202309 1763263734 20231026 000,000 M1123101100078
+202310 202309 1764886615 20231026 0221025 000,000 M1123101100078
+202310 202309 1764886852 20231026 1,000,000 M1123101100078
+202310 202310 20230 202309 1764886941 1764886941 70231026 231026 T,000,000 L.000.000 M1123101100078
+202310 202309 1764886998 20231026 L,000,000 M1123101100078 MIIZST01100078
+202310 2023 1764887077 20231076 L.000.000 M1123101100078
+202310 202309 1764887217 20231026 1,000,000 M1123101100078
+202310 202309 1764887550 20231026 1,000,000 M1123101100078
+202310 202310 202309 8849/1 605707 20231119 2025If1S 31,659,934 S1,659,934 M1121090700055
+202310 202309 1764887757 20231119 3.483.541 M1121092900017
+202310 310 202309 1764887795 20231119 35.143.475ELA LAS C M1121092900017
+202310 202309 1764887757 20231119 7,500,000 M1121092900017
+202310 202309 1764887795 20231119 7,500,000 M1121092900017
+Jumlah Rp 330,938,566666 Rp
+SM Shared Service & General Support Regional IV
+Fevli
+Septiana Rahmayanti
+NIK: 810033
+Balikpapan, 25 November 2025
+Mana anager Billing & Payment Collection Regional IV
+Harivadi
+NIK. 800031
+LAMPIRAN SP3 - RINCIAN PEMBAYARAN LAYANAN
+NAMA CС:
+NO AKUN:
+TAGIHAN:
+BANK KALBAR
+4808437
+OKTOBER 2023
+NO URAIAN TAGIHAN
+OKTOBER 2023
+TAGIHAN TELKOM
+1763263404 Telkomsat Biaya Instalasi MCS
+1764886852 Telkomsat Biaya Instalasi MCS
+1764886941 Telkomsat Biaya Instalasi MCS
+1764886615 Te!komsat Biaya Instalasi MCS
+1764886998 Telkomsat Biaya Instalasi MCS
+1763263679 Telkomsat Biaya Instalasi MCS
+1764887217 Telkomsat Biaya Instalasi MCS
+1763263651 Telkomsat Biaya Instalasi MCS
+1763263734 Telkomsat Biaya Instalasi MCS
+1764887077 Telkomsat Biaya Instalasi MCS
+1764887550 Telkomsat Biaya Instalasi MCS
+1763263574 Telkomsat Biaya Instalasi MCS
+1764887795 Biaya Instalasi VSAT IP
+1764887757 Biaya Instalasi VSAT IP
+CPE Lainnya
+Connectivity Lainnya
+Rp 20,470,968
+Rp 20,470,968
+Rp 20,470,968
+Rp 20,470,968
+Rp 20,470,968
+Rp 20,470,968
+Rp 20,470,968
+Rp 20,470,968
+Rp 20,470,968
+Rp 20,470,968
+Rp 20,470,968
+Rp 20,470,968
+Rp 42,643,475
+Rp 42,643,475
+Rp 123,025,908
+Rp 303,228,545
+PPN Rp 83,181,060
+PEMBAYARAN
+POTONGAN
+•PPN
+PPH
+Biaya Bank
+JUMLAH POTONGAN
+JUMLAH YANG SEHARUSNYA DIBAYAR OLEН СС Rp
+JUMLAH FLAGGING Rp
+840,374,079
+840,374,079
+TANGGAL FLAGGING 20231026
+20231119
+RINCIAN LAYANAN
+Telkomsat MCS - One Time Charge
+MCS Sewa Layanan - Monthly Recurring Charges
+Biaya Instalasi VSAT IP- One Time Charge
+Telkomsat VSAT-IP - Monthly Recurring Charges
+Balikpapan, 25 November 2025
+Manager Billing & Payment Collection Regional IV
+Hariyadi
+NIK. 800031
+Jakarta,
+No. SL. : 0255/D4.300/KU400/TSAT/09.2025
+Lampiran : Satu Berkas Invoice
+Perihal : Permohonan Pembayaran Invoice
+Kepada Yth.,
+PT. Telkom Indonesia (PERSERO) Tbk.
+Mgr Partner Invoicing & SDA Support
+Unit Regional Solution & Operation Kantor
+PT. Telkom Regional IV Kalimantan Lantai 2,5
+JI. MT. Haryono. No. 169, Damai, Balikpapan Tengah, Balikpapan, 76114
+Kami atas nama PT. Telkom Satelit Indonesia (TELKOMSAT) mengucapkan terima kasih atas kerjasama yang
+telah berjalan dengan baik, semoga kerjasama ini dapat berjalan lancar dan lebih baik lagi.
+Melalui surat ini, mohon TELKOM dapat melakukan pembayaran atas Invoice kami sebagai berikut :
+1. Nomor Invoice :
+2. Project :
+3. Periode :
+4. WO/KL/SP/SA : K.TEL.5728/HK.810/TR6-R600/2022
+5. Tanggal Invoice :
+6. Nominal Invoice : Rp.
+Pembayaran melalui rekening Bank :
+BANK MANDIRI
+Cabang Cibubur - Cileungsi
+Rekening Rupiah : 1290 0056 1300 1
+Atas Nama : PT. Telkom Satelit Indonesia
+Demikian kami sampaikan, atas perhatian dan kerjasamanya diucapkan terima kasih.
+Hormat kami,
+PT. TELKOM SATELIT INDONESIA
+Achmad Fadillah
+PJ AVP Billing & Collection
+00/00/0000
+2509BKL01
+Penyediaan 2 Lokasi V1-VSAT IP & 12 Lokasi M2M untuk Bank Kalbar
+00/00/0000
+ 213,204,224
+Dua Ratus Tiga belas Juta Dua Ratus Empat Ribu Dua Ratus Dua Puluh Empat
+Rupiah
+Instalasi & 25 Mei 2022 sd 24 April 2023
+Faktur Pajak
+Proforma
+Nama : TELKOM INDONESIA (PERSERO) TBK
+Alamat : JL JAPATI NO.1, RT000/RW000, SADANG SERANG, COBLONG, KOTA BANDUNG, JAWA BARAT, 40133
+NPWP : 0010000131093000
+NIK : -
+Nomor Paspor : -
+Identitas Lain : -
+Email :
+Pembeli Barang Kena Pajak / Penerima Jasa Kena Pajak
+Nama : PT. Telkom Satelit Indonesia
+Alamat : GEDUNG TELKOM LANDMARK TOWER 2 LANTAI 21, JL JEND GATOT SUBROTO KAVELING 52 , JAKARTA
+SELATAN
+NPWP : 0010611200093000
+Pengusaha Kena Pajak
+Kode dan Nomor Seri Faktur Pajak :
+No Kode
+Barang/Jasa Nama Barang Kena Pajak / Jasa Kena Pajak
+Harga Jual / Penggantian / Uang Muka /
+Termin (Rp)
+1 170000
+Penyediaan 2 Lokasi V1-VSAT IP & 12 Lokasi M2M untuk Bank Kalbar
+ Rp 192.075.877,00 x 1 Lainnya
+ Potongan Harga = Rp 0,00
+ PPnBM (0%) = Rp 0,00
+192.075.877,00
+Harga Jual / Penggantian / Uang Muka / Termin 192.075.877,00
+Dikurangi Potongan Harga 0,00
+Dikurangi Uang Muka yang telah diterima
+Dasar Pengenaan Pajak 176.069.554,00
+Jumlah PPN (Pajak Pertambahan Nilai) 21.128.346,00
+Jumlah PPnBM (Pajak Penjualan atas Barang Mewah) 0,00
+, 29112025
+2511BKL01_Bank Kalbar_T-SDA
+Sesuai dengan ketentuan yang berlaku, Direktorat Jenderal Pajak mengatur bahwa Faktur Pajak ini telah ditandatangani secara elektronik sehingga
+tidak diperlukan tanda tangan basah pada Faktur Pajak ini.
+PEMBERITAHUAN: Faktur Pajak ini telah dilaporkan ke Direktorat Jenderal Pajak dan telah memperoleh persetujuan sesuai dengan
+ketentuan peraturan perpajakan yang berlaku. PERINGATAN: PKP yang menerbitkan Faktur Pajak yang tidak sesuai dengan keadaan
+yang sebenarnya dan/atau sesungguhnya sebagaimana dimaksud Pasal 13 ayat (9) UU PPN dikenai sanksi sesuai dengan Pasal 14 ayat
+(4) UU KUP
+1 dari 1
+telkomsat
+Tekom Inaonesa
+BERITA ACARA SERAH TERIMA
+Nomor: TEL.5767/LG.320/TR6-R604/2022
+Nomor: 036/RCS-BASTTSAT/2022
+Telkom
+Indonesia
+the world in your hand
+Pekerjaan: Work Order Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M untuk Bank Kalbar
+No. WO : K.TEL.5728/HK.810/TR6-R600/2022 tanggal 24 Mei 2022
+Nilai WO : Rp 218.626.314 (belum termasuk PPN)
+Pelaksana : PT Telkom Satelit Indonesia
+Pada hari ini Rabu tanggal Dua Puluh Lima bulan Mei tahun Dua Ribu Dua Puluh Dua
+(25-05-2022), yang bertanda tangan dibawah ini:
+Nama : Zigroseno Aswin Wardhana
+Jabatan : GM Sales Regional
+Alamat : PT Telkom Satelit Indonesia
+Telkom Landmark Tower It.21 JI. Gatot Subroto Kav 52 Jakarta 12710
+Dalam hal ini mewakili PТ TELKOM SATELIT INDONESIA selanjutnya disebut sebagai PIHAK PERTAMА.
+Nama : Dwi Hariyanto
+Jabatan : Manager ES Witel Kalimantan Barat
+Alamat : PT Telkom Indonesia (Persero), Tbk
+Jl. Teuku Umar No.2, Darat Sekip, Pontianak Kota, Kota Pontianak
+Dalam hal ini mewakili PT TELKOM INDONESIA (PERSERO) Tbk selanjutnya disebut sebagai PIHАК KEDUA.
+Berdasarkan :
+1. Work Order Tentang Work Order Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M untuk Bank
+Kalbar Nomor : K.TEL.5728/HK.810/TR6-R600/2022 Tanggal, 24 Mei 2022:
+2. Berita Acara Uji Terima (BAUT) tanggal 25 Mei 2022 untuk Work Order Penyediaan 2 Lokasi
+VSAT IP & 12 Lokasi M2M untuk Bank Kalbar yang menyatakan layanan diterima dan berfungsi
+dengan baik sejak Tanggal 25 Mei 2022 (terlampir).
+Menyatakan:
+1. PIHAK PERTAMA menyerahkan hasil pekerjaan sesuai dengan Work Order Nomor :
+K.TEL.5728/HK.810/TR6-R600/2022 Tanggal, 24 Mei 2022 kepada PIHAK KEDUA;
+2. PIHAK KEDUA menyatakan menerima hasil Work Order Penyediaan 2 Lokasi VSAT IP & 12
+Lokasi M2M untuk Bank Kalbar dengan baik sesuai dengan Berita Acara Uji Terima tanggal 25 Mei 2022:
+3. PIHAK PERTAMA berhak mendapatkan pembayaran atas pekerjaan tersebut diatas sesuai
+dengan persyaratan yang ditetapkan dalam Work Order.
+Demikian Berita Acara Serah Terima ini dibuat dalam rangkap 3 (tiga) asli dan masing-masing
+ditandatangani oleh kedua belah pihak dengan dibubuhi materai silang serta mempunyai kekuatan
+hukum yang sama, untuk dipergunakan sebagaimana mestinya.
+PT TELKOM SATELIT INDONESIA PT. TELKOM INDONESIA (PERSERO) Tbk SEPULUH RIBU RUP
+METERAI AKОrns
+TEMREL
+77DE9AKX512292753
+Zigroseno Aswin Wardhana
+GM Sales Regional
+dolesia
+Dwi Hariyanto
+Manager ES Witel Kalimantan Barat
+telkomsat Telkom
+Indonesia
+the world in your hand
+Pekerjaan
+LAMPIRAN BERITA ACARA SERAH TERIMA
+Nomor: TEL.5767/LG.320/TR6-R604/2022
+Nomor: 036/RCS-BASTTSAT/2022
+Work Order Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M untuk Bank Kalbar No. WO : K.TEL.5728/HK.810/TR6-R600/2022 tanggal 24 Mei 2022 Nilai WO Rp 218.626.314 (belum termasuk PPN) Pelaksana: PT Telkom Satelit Indonesia
+Rincian Layanan Spesifikasi Layanan Volume dan Harga
+REVENUE SHARING
+TELKOM TELKOMSAT
+Masa
+No Layanan Lokas Alamar Satuan On Sewa Blaya Sewa (7 Blaya one tme charge Blaya Sewo (90
+(oin
+Harga
+Satuan
+Harga
+Perbulan
+Total Harga
+Satuan
+Harga
+Satuan Tota Harga
+Satuan
+Harga
+Satuan Total
+dibulatkan dibulatkan
+1 M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP
+Sentebang
+JIn. Klenteng
+No 1
+Unit 1 84,000 924.000 1,000.000 1,116,000 12.276,000 11 84.000 1.000,000 1.000.000 1.116.000
+2 M2M 1 GB
+Dual SIM BPD Kalbar
+KCP Seponti
+Jln. Rohadi
+Oesman
+84,000 84,000 924.000 1,000.000 1.000,000 1.000,000 Unit 1.116,000 1.116.000 12.276.000 1 11
+M2M 1 GB Jln. 84,000 84.000 924,000 1.000.000 1.000,000 1.000,000 1.116,000 1,116.000 12.276,000 Dual SIM
+3
+BPD Kalbar
+KCP Teluk
+Pakedai
+Pematang
+Mas Desa
+Teluk
+11
+Unit 1
+Pakeda
+4
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP Manis
+Mata
+Desa Rat 84.000 84,000 924,000 1,000,000 1,000,000 1.000,000 1,116,000 1.116.000 12.276.000 Elok Kab. Unit 1 11
+Ketapano
+M2M 1 GB BPD Kalbar Desa 84.000 84.000 924.000 1.000.000 1.000.000 1.000.000 1,116,000 1.116.000 12.276.000 5 Dual SIM KCP
+Tumbang
+Ti
+Tumbang Titi
+Keс.
+Tumbang Titi
+11 Unit
+6
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP Bunut
+Hilir
+Putusibau 84.000 84,000 924.000 1,000.000 1.000,000 1.000,000 1,116,000 1.116.000 12,276,000 Unit 11
+telkomsat
+ekom indones
+Telkom
+Indonesia
+the worid in your hand
+M2M 1 GB
+Dual SIM 7
+BPD Kalbar
+KCP Nanga
+Taman
+Jln. Nanga
+Taman
+84,000 84,000 924,000 1,000,000 1.000,000 1.000.000 1,116,000 1,116,000 12,276,000 Unit 11
+8
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP
+Serawai
+Jln. Serawai 84.000 84,000 924,000 1,000,000 1.000.000 1,000,000 1,116,000 1,116,000 12,276,000 Unit 1 11
+9
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP
+Semitau
+Jln. Semitau 84,000 84,000 924,000 1,000,000 1,000,000 1,000,000 1,116,000 1,116,000 12,276,000 Unit 1 11
+10
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP JIn.Jongkong 84,000 84,000 924,000 1,000,000 1.000,000 1,000,000 1,116,000 1,116,000 12,276,000 Unit 1 11
+Jongkong
+11
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP
+Belitang
+JIn. Belitang 84,000 84,000 924,000 1.000,000 1,000,000 1,000,000 1.116,000 1,116,000 12,276,000 Unit 1 11
+12
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP
+Karangan
+وال
+Karangan
+84.000 84.000 924,000 1.000,000 1,000,000 1.000.000 1,116,000 1,116,000 12,276,000 Unit 1 11
+13 VSAT IP
+64 Kbps
+BPD Kalbar
+KCP Nanga
+Mau
+JIn. Nanga
+Mau
+151.61 151.613 1.667.743 7.500,000 7.500,000 7.500.000 2.014.287 2,014,287 22,157,157 Unit 11 3
+1414 VSAT IP
+64 Kbps
+BPD Kalbar
+KCP Kota
+Baru
+JIn. Kora
+Baru
+Nangapinoh
+11
+151.61
+3
+151.613 1.667.743 7.500.000 7,500,000 7,500,000 2,014,287 2,014,287 22,157,157
+Unit 1
+Nangapinoh
+SUB TOTAL (Sebelum PPN 11%)
+TOTAL (Sebelum PPN 11%)
+1,311,226 14.423.486 27,000,000 17,420,574 191,626,314
+14,423,486 218,626,314
+Keterangan:
+1. Harga sudah termasuk PPH dan pajak-pajak lainnya akan tetapi belum termasuk PPN 2. Lokasi Instalasi: BKD KALBAR KСР
+PT TELKOM SATELIT INDONESIA PT. TELKOM INDONESIA (PERSERO) Tbk
+sat
+by TelkomIndoni
+Zigroseno Aswin Wardhana
+GM Sales Regional
+Te
+Inuonesia Dwi Harivanto
+Manager ES Witel Kalimantan Barat
+telkomsat
+Pokam indonesia
+Telkom
+Indonesia
+the world in your hand
+Pekerjaan
+No. WO
+Pelaksana
+BERITA ACARA UJI TERIMA (BAUT)
+: Work Order Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M untuk Bank Kalbar
+: K.TEL.5728/HK.810/TR6-R600/2022 tanggal 24 Mei 2022
+: PT Telkom Satelit Indonesia
+Pada hari ini Rabu tanggal Dua Puluh Lima bulan Mei tahun Dua Ribu Dua Puluh Dua
+(25-05-2022), telah dilaksanakan Uji Terima Barang dan Jasa sesuai dengan Work Order Nomor: K.TEL.5728/HK.810/TR6-R600/2022, Tanggal, 24 Mei 2022, tentang Work Order Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M untuk Bank Kalbar, dengan rincian sebagai berikut:
+Nama Gusfrian Imbar
+Jabatan Manager Service Delivery
+Alamat PT Telkom Satelit Indonesia
+Telkom Landmark Tower It.21 Jl. Gatot Subroto Kav 52 Jakarta 12710
+Bertindak untuk dan atas nama PT TELKOM SATELIT INDONESIA selanjutnya disebut sebagai PIHAK PERTAMA.
+Nama Dwi Hariyanto
+Jabatan Manager ES Witel Kalimantan Barat
+Alamat : PT Telkom Indonesia (Persero), Tbk
+Jl. Teuku Umar No.2, Darat Sekip, Pontianak Kota, Kota Pontianak
+Bertindak untuk dan atas nama PT. TELKOM INDONESIA (PERSERO) Tbk selanjutnya disebut sebagai PIHAK KEDUA.
+Work Order Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M untuk Bank Kalbar yang meliputi pengujian
+dan pemeriksaan fisik (terlampir) pekerjaan dinyatakan:
+DITERIMA
+Progress Pekerjaan: 100%
+Demikian Berita Acara Uji Terima ini dibuat dalam rangkap 3 (tiga) asli dan masing-masing
+ditandatangani oleh kedua belah pihak untuk dipergunakan sebagaimana mestinya.
+PT TELKOM SATELIT INDONESIA
+Gu Sat
+Gusfrian Imbar
+Manager Service Delivery
+PT. TELKOM INDONESIA (PERSERO) Tbk
+Telko
+Indonesia
+Dwi Harivanto
+Manager ES Witel Kalimantan Barat
+telkomsat
+TekomIndonesia
+LAMPIRAN BERITA ACARA UJI TERIMA
+Telkom
+Indonesia
+the worid in your hand
+Pekerjaan: Work Order Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M untuk Bank Kalbar No. WO K.TEL.5728/HK.810/TR6-R600/2022 tanggal 24 Mei 2022 Pelaksana : PT Telkom Satelit Indonesia
+Pada hari ini Rabu tanggal Dua Puluh Lima bulan Mei tahun Dua Ribu Dua Puluh Dua
+(25-05-2022), telah dilaksanakan Uji Terima yang meliputi pengujian dan pemeriksaan Fisik dan
+Fungsi Perangkat untuk tentang Work Order Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M
+untuk Bank Kalbar, dengan rincian sebagai berikut:
+RINCIAN SPESIFIKASI LAYANAN, LOKASI, VOLUME DAN DATA ORDER
+No Layanan Lokasi Alamat Satuan Qty
+Masa
+Sewa
+(Bln)
+Serial
+Number /SN
+No Order/
+SID/Tgl
+Aktivasi
+Status
+1. M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP
+Sentebang
+JIn. Klenteng No. 1 Unit 1
+11 01870619045659
+1-35434157791/
+1763263404/ 25
+Mei 2022
+OK
+2
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP
+Jln. Rahadi
+Oesman Unit 1 11 01870619045664
+Seponti
+1-35434158197/
+1764886852/25
+Mei 2022
+OK
+3
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP Teluk
+Pakedai
+Jin. Pematang Mas
+Desa Teluk
+Pakedai
+Unit 1
+11 01870619075526
+1-35436309603/
+1764886941/25
+Mei 2022
+OK
+4
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP Manis
+Mata
+Desa Rat Elok
+Kab. Ketapang Unit 1
+11 01870619045670
+1-35434157348/
+1764886615/25
+Mei 2022
+OK
+5
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP
+Tumbang
+Desa Tumbang Titi
+Kec. Tumbang Titi Unit 1
+11 01870619075347
+1-35437284089/
+1764886998/25
+Mei 2022
+OK
+Titi
+6
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP Bunut
+Hilir
+Putusibau
+Unit 1
+11 01870619045666
+1-35437873119/
+1763263679/25
+Mei 2022
+OK
+7
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP Nanga
+Taman
+JIn. Nanga Taman Unit 1 11 01870619045585 1-35437872307/
+1764887217/25
+Mei 2022
+OK
+8
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP
+Serawai
+Jln. Serawai
+Unit 1
+11 01870619045583
+1-35437872713/
+1763263651/25
+Mei 2022
+OK
+telkomsat
+Tekom Inasnesia
+Telkom
+Indonesia
+the world in your hand
+9
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP
+Semitau
+Jln. Semitau
+Unit 1
+11 01870619075321
+1-35437985961/
+1763263734/25
+Mei 2022
+OK
+10 M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP
+Jongkong
+Jln. Jongkong Unit 1
+11 01870619045667
+1-35437763495/
+1764887077/25
+Mei 2022
+OK
+11 M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP
+Belitang
+JIn Belitang Unit 1
+11 01870619075345
+1-35437985540/
+1764887550/25
+Mei 2022
+OK
+12 M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP
+Karangan
+Jln. Karangan Unit 1
+11 01870619075335
+1-35437763901/
+1763263574/25
+Mei 2022
+OK
+13 VSAT IP
+64 Kbps
+BPD Kalbar
+KCP Nanga
+Mau
+Jin. Nanga Mau Unit 1
+11 XdaFCM0000000
+0012M
+1-35438131610/
+1764887795/25
+Mei 2022
+OK
+14
+VSAT IP
+64 Kbps
+BPD Kalbar
+KCP Kota
+Baru
+Jln. Kora Baru
+Nangapinoh Unit 1
+11 XDAS9M0000000
+03795
+1-35437986181/
+1764887757/25
+Mei 2022
+OK
+Nangapinoh
+Demikian Dokumen ini dibuat sesuai dengan keadaan yang sebenarnya serta dapat digunakan sebagaimana mestinya.
+PT TELKOM SATELIT INDONESIA
+nsat Gut sa
+Gusfrian Imbar
+Manager Service Delivery
+PT. TELKOM INDONESIA (PERSERO) Tbk
+Intionesia
+Dwi Hariyanto
+Manager ES Witel Kalimantan Barat
+telkomsat
+Telkom
+Indonesia
+the world in your hand
+BERITA ACARA REKONSILIASI DELIVERY (BARD)
+: Work Order Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M untuk Bank Kalbar
+: K.TEL.5728/HK.810/TR6-R600/2022 tanggal 24 Mei 2022
+Pekerjaan
+No. WO
+Nilai WO : Rp 218.626.314 (belum termasuk PPN)
+Pelaksana : PT Telkom Satelit Indonesia
+Pada hari ini Rabu tanggal Dua Puluh Lima bulan Mei tahun Dua Ribu Dua Puluh Dua (25-05-2022), telah selesai dilakukan rekonsiliasi terhadap pekerjaan Work Order Penyediaan Lokasi VSAT IP & 12 Lokasi M2M untuk Bank Kalbar, kami yang bertanda tangan dibawah ini:
+2
+Nama : Gusfrian Imbar
+Jabatan : Manager SD Manage & Service
+Bertindak untuk dan atas nama PT TELKOM SATELIT INDONESIA selanjutnya disebut sebagai PIHAK PERTAMА.
+Nama : Dwi Hariyanto
+Jabatan : Manager ES Witel Kalimantan Barat
+Bertindak untuk dan atas nama PT TELKOM INDONESIA (PERSERO) Tbk selanjutnya disebut sebagai PIHAK KEDUA.
+Dengan ini menerangkan bahwa:
+1. PIHAK PERTAMA dan PIHAK KEDUA dengan ini menyepakati bahwa Progress
+pekerjaan Work Order Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M untuk Bank Kalbar
+telah mencapai 100% sesuai dengan Berita Acara Uji Terima tanggal 25-05-2022
+2. Berdasarkan ketentuan yang tercantum dalam WO, progres hasil rekonsiliasi di atas
+setara dengan harga pekerjaan sebesar Rp. 218.626.314,- (Dua Ratus Delapan
+Belas Juta Enam Ratus Dua Puluh Enam Ribu Tiga Ratus Empat Belas Rupiah), dengan rincian per bulan sebesar maksimal Rp. 17.420.574,- (Tujuh Belas Juta
+Empat Ratus Dua Puluh Ribu Lima Ratus Tujuh Puluh Empat Rupiah) untuk
+layanan selama 11 (Sebelas) bulan dan Rp. 27.000.000,- (Dua Puluh Tujuh Juta
+3. Rupiah) untuk One Time Charge, harga tersebut belum termasuk PPN;
+Progres hasil rekonsiliasi di atas telah sesuai dengan ketentuan yang tertera dalam wo nomor: K.TEL.5728/HK.810/TR6-R600/2022, tanggal 24 Mei 2022
+PT TELKOM SATELIT INDONESIA
+Jakarta, 25 Mei 2022
+PT. TELKOM INDONESIA (PERSERO) Tbk
+msat Gut
+Gusfrian Imbar
+Manager Sd Manage & New Service
+donesia Dwi Harlyanto
+Manager ES Witel Kalimantan Barat
+telkomsat
+Telkom
+Indonesia
+world in your hand
+Pekerjaan
+LAMPIRAN BERITA ACARA REKONSILIASI DELIVERY
+: Work Order Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M untuk Bank Kalbar
+No. WO : K.TEL.5728/HK.810/TR6-R600/2022 tanggal 24 Mei 2022
+1. Hasil Rekonsiliasi Perhitungan Penyelesaian Progress Pekerjaan
+No Lokasi Layanan Jumlah Satuan Tanggal Aktif
+Progress
+Pekerjaan
+(%)
+BPD Kalbar KCP Sentebang 1 100% 1 Unit 25 Mei 2022 M2M 1 GB Dual SIM
+BPD Kalbar KCP Seponti 2 1 Unit M2M 1 GB Dual SIM 25 Mei 2022 100%
+3
+BPD Kalbar KCP Teluk
+Pakedai 1 Unit 25 Mei 2022 100% M2M 1 GB Dual SIM
+4
+BPD Kalbar KCP Manis
+Mata 1 Unit 25 Mei 2022 100% M2M 1 GB Dual SIM
+5
+BPD Kalbar KCP Tumbang
+Titi 1 Unit 25 Mei 2022 M2M 1 GB Dual SIM 100%
+BPD Kalbar KCP Bunut Hilir 6 1 Unit 25 Mei 2022 M2M 1 GB Dual SIM 100%
+7
+BPD Kalbar KCP Nanga
+Taman 1 Unit 25 Mei 2022 100% M2M 1 GB Dual SIM
+BPD Kalbar KCP Serawai 8 1 Unit 25 Mei 2022 100% M2M 1 GB Dual SIM
+BPD Kalbar KCP Semitau 9 1 Unit 25 Mei 2022 100% M2M 1 GB Dual SIM
+10 BPD Kalbar KCP Jongkong 1 Unit 25 Mei 2022 100% M2M 1 GB Dual SIM
+BPD Kalbar KCP Belitang 11 1 Unit 25 Mei 2022 100% M2M 1 GB Dual SIM
+BPD Kalbar KCP Karangan 12 1 Unit 25 Mei 2022 M2M 1 GB Dual SIM 100%
+13 BPD Kalbar KCP Nanga
+Mau 1 Unit 25 Mei 2022 100% VSAT IP 64 Kbps
+14 BPD Kalbar KCP Kota Baru
+Nangapinoh 1 Unit 25 Mei 2022 VSAT IP 64 Kbps 100%
+ace for everyone telkomsat
+2. Hasil Rekonsiliasi Perhitungan Nilai Progress Pekerjaan
+Telkom
+Indonesia
+the world inyour hand
+REVENUE SHAR NG
+TELKOM TELKOMSAT
+Mosa
+N Layanan Lokas Alamat Satuan Sewa Blaya Sewa (7 Blaya one time tharge Blaya Sewa (90%
+nוס
+Harga
+Satuan
+Harga
+Perbulan Total Hargo
+Satuan
+Harga
+Satuan
+dioulatkan
+Total Harga
+Satuan
+Harga
+Satuan Tota
+dibulatkan
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCР
+Sentebang
+Jln. Klenteng
+No 1
+Unit 1 84,000 924,000 1,000,000 1.116,000 12,276,000 11
+2 M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP Seponti
+Jin. Rohad
+Oesman
+84.000
+84,000
+84,000
+1.000.000 1.000.000 1,116,000
+924,000 1,000,000 1,000,000 1,000.000 1,116.000 1.116.000 Unit 1 12,276,000 11
+M2M 1 GB
+Dual SIM
+84.000 84.000 924.000 1,000,000 1.000.000 1,000.000 1,116,000 1.116,000 12,276,000
+3
+BPD Kalbar
+KCP Teluk
+Pakedai
+Pematang
+Mas Desa
+Telik
+11
+Unit 1
+Pakeda
+4
+M2M 1 GB
+Dual SIM
+BPD Kalbar Desa Rat 84,000 84.000 924.000 1,000,000 1.000,000 1.000.000 1,116.000 1,116,000 12.276,000 KCP Manis
+Mata
+Elok Kab.
+Ketanano
+Unit 1 11
+5
+M2M 1GB
+Dual SIM
+BPD Kalbar
+KCP
+Tumbang
+Titi
+Desa
+Tumbang Tit
+Keс.
+Tumbang Titi
+84,000 84,000 924.000 1.000.000 1.000.000 1.000.000 1.116,000 1.116,000 12.276.000
+Unit 1 11
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP Bunut
+Putusibau 84,000 84.000 924.000 1,000,000 1.000,000 1.000.000 1.116.000 1.116,000 12.276,000 Unit 1 11
+Hiir
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP Nanga
+Jin. Nanga
+Taman 84,000 84.000 924.000 1.000.000 1.000.000 1,000,000 1,116.000 1.116,000 12.276,000 Unit 1 11
+Taman
+8
+M2M 1 GB
+Dual SIM
+BPD Kalbar
+KCP
+Jln. Serawai 84.000 84.000 924.000 1.000,000 1,000,000 1,000,000 1,116,000 1,116,000 12,276,000 Unit 1 11
+Serawai
+M2M 1 GB BPD Kalbar Jin. Semitau 84,000 84.000 924.000 1,000,000 1.000,000 1,000,000 1.116,000 1,116,000 12.276,000 Dual SIM KCP
+Semitau
+Unit 1 11
+M2M1 GRB
+10 Dual SIM
+BPD Kalbar Jln.Jongkong 84.000 84.000 924,000 1,000,000 1.000.000 1,000.000 1.116,000 1.116.000 12,276,000 KCP
+Jongkong
+Unit 1 11
+M2M 1 GB
+11 Dual SIM
+BPD Kalbar JIn. Belitang 84.000 84,000 924.000 1.000.000 1.000,000 1.000,000 1.116.000 КСР
+Belitang
+1.116.000 12,276,000 Unit 1 11
+M2M 1 GB
+12 Dual SIM
+Karangan
+BPD Kalbar
+KCP
+Jln. 84.000 84,000 924.000 1.000,000 1.000.000 1,000,000 1,116,000 1,116,000 12.276.000 Karangan Unit 1 11
+13 VSAT IP
+64 Kbps
+BPD Kalbar
+KCP Nanga
+Jln. Nanga
+Mau
+151.61 151,613 1.667,743 7,500,000 7.500.000 7.500.000 2.014.287 2,014.287 22.157.157 Unit 11 3 Mau
+BPD Kalbar Jin. Kora 151.61 151,613 1.667,743 7,500,000 7,500,000 7.500,000 2,014.287 2,014.287
+14 VSAT IP
+64 Kbps
+KCP Kota
+Baru
+Baru
+Nangapinoh
+22.157.157
+Unit 11 3
+1
+Nangapinoh
+SUB TOTAL (Sebelum PPN 11%) 1,311,226 14,423,486 27,000.000 17,420.574 191,626,314 TOTAL (Sebeium PPN 11%) 14,423,486 218,626,314
+ce for everyone telkomsat Telkom
+Indonesia
+the world in your hand
+3. Progress pekerjaan telah mencapai 100% dan sesuai dengan ketentuan yang telah tertera dalam Work Order setara harga pekerjaan sebesar Rp. 218.626.314,- (Dua Ratus Delapan Belas Juta Enam Ratus Dua Puluh Enam Ribu Tiga Ratus Empat Belas Rupiah), dengan rincian per bulan sebesar maksimal Rp. 17.420.574,- (Tujuh Belas Juta Empat Ratus Dua Puluh Ribu
+Lima Ratus Tujuh Puluh Empat Rupiah) untuk layanan selama 11 (Sebelas) bulan dan Rp. 27.000.000,- (Dua Puluh Tujuh Juta Rupiah) untuk One Time Charge, harga tersebut belum termasuk PPN.
+PT TELKOM SATELIT INDONESIA
+Jakarta, 25 Mei 2022
+PT. TELKOM INDONESIA (PERSERO) Tbk
+BCust got Me
+Gusfrian Imbar
+Manager Sd Manage & New Service
+Telk
+Indonesia
+Dwi Hariyanto
+Manager ES Witel Kalimantan Barat
+telkomsat
+Telkom
+Indonesia Berita Acara Performansi Layanan Nomor: TEL.12681/YN.000/TR4-R403/2024
+tangan
+Pada hari
+ di
+
+bawah
+ini, Hari
+ ini
+ Selasa,
+ :
+ Tanggal Tiga Bulan Desember Tahun Dua Ribu Dua Puluh Empat (03/12/2024) yang bertanda
+Nama
+Jabatan
+: Deddy Priyo Riyanto
+: Manager Sevice Level & Assurance Management
+Dalam hal ini berdasarkan kewenangannya bertindak untuk dan atas nama TELKOMSAT (PT Telkom Satelit Indonesia), selanjutnya disebut sebagai Pihak Pertama; dan
+Nama
+Jabatan
+: Erni Purwanti Dewi
+: Manager Project Management
+selanjutnya
+Dalam hal ini berdasarkan kewenangannya bertindak untuk dan atas nama PT Telkom Indonesia (Persero) Tbk, disebut sebagai Pihak Kedua
+Pihak Pertama dan Pihak Kedua secara bersama-sama disebut sebagai Para Pihak.
+Bahwa dengan ini telah disepakati bahwa TELKOMSAT (PT Telkom Satelit Indonesia) dan PT. Telkom Indonesia (Persero) Tbk telah melakukan pemeriksaan terhadap performansi layanan berdasarkan:
+NO ITEM
+1 Nama Pekerjaan
+2 Nomor Kontrak
+3 Nomor BAST
+4 Nilai Kontrak
+5 Periode Kontrak
+6 Periode Layanan
+7 Mitra Pelaksana
+8
+Nama Pelanggan
+9 Dokumen Pendukung
+NILAI
+Work Order Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M untuk Bank Kalbar K.TEL.5728/HK.810/TR6-R600/2022-24 Mei 2022
+TEL.5767/LG.320/TR6-R604/2022 - 25 Mei 2022
+Harga Pekerjaan sebesar Rp.218.626.314,- (Dua Ratus Delapan Belas Juta Enam Ratus Dua Puluh Enam Ribu Tiga Ratus Empat Belas Rupiah) dengan rincian perbulan sebesar maksimal Rp.17.420.574 (Tujuh Belas Juta Empat Ratus Dua Puluh Ribu Lima Ratus Tujuh Puluh Empat Rupiah), untuk layanan selama 11 (sebelas) bulan dan Rp. 27.000.000,- untuk One Time Charge (Pembayaran OTC sudah dibayarkan oleh Telkom ke Telkomsat), Harga tersebut belum termasuk PPN, namun sudah termasuk pajak-pajak lainnya.
+Jangka Waktu Kontrak: 25 Mei 2022 s.d 24 April 2023 Jangka Waktu Layanan: 25 Mei 2022 s.d 24 April 2023
+25 Mei 2022 s.d 24 April 2023
+TELKOMSAT (PT Telkom Satelit Indonesia)
+BANK KALBAR
+Berita Acara Kronologis - 24 Oktober 2024
+Lampiran berita acara performansi layanan periode 25 Mei 2022 s.d 24 April 2023
+Demikian Berita Acara Performansi Layanan ini dibuat untuk dipergunakan sebagaimana mestinya.
+TELKOMSAT (PT Telkom Satelit Indonesia)
+A
+Deddy Priyo Riyanto
+Manager Sevice Level & Assurance Management
+PT Telkom Indonesia (Persero) Tbk
+Jhwmeg
+Erni Purwanti Dewi
+Manager Project Management
+telkomsat
+Telkom
+Indonesia
+Nama Pekerjaan
+Nomor WO
+Tanggal WO
+Periode Kontrak
+Nama Pelanggan
+LAMPIRAN
+BERITA ACARA PERFORMANSI LAYANAN
+Work Order Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M untuk Bank Kalbar
+: K.TEL.5728/HK.810/TR6-R600/2022
+: 24 Mei 2022
+: 25 Mei 2022 s.d 24 April 2023
+: BANK KALBAR
+No Periode
+Tagihan AO SID Lokasi Layanan Layanan SLG
+(%)
+AV
+(%)
+Tanggal
+FBC/Milestone Ket Estimasi Nilai MRC
+(Rp)
+1-35437985540 1764887550 Bank Kalbar - KCP Belitang M2M Kuota 1
+GB Dual SIM 99 FBC: 30 100
+1-35434158197 1764886852 BANK KALBAR Capem
+Seponti
+1-35437872307 1764887217 Bank Kalbar - KCP Nanga
+Taman
+M2M Kuota 1
+GB Dual SIM
+M2M Kuota 1
+99 100
+September 2023
+FBC: 30
+September 2023
+Aktif
+Aktif
+99 100 GB Dual SIM
+FBC:30
+September 2023 Aktif
+1-35437284089 1764886998 BANK KALBAR CAPEM
+TUMBANG TITI KTР M2M Kuota 1
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif
+1-35437872713 1763263651 Bank Kalbar - KCP Serawai
+1-35437763901 1763263574 Bank Kalbar - KCP Karangan
+M2M Kuota 1
+GB Dual SIM
+M2M Kuota 1
+MzMi Kuota 1
+GB Dual SIM
+99 100
+99 100
+FBC:30
+September 2023
+FBC:30
+Aktif
+Aktif September 2023 1-35434157348 1764886615
+1 Mei 2022
+BANK KALBAR CAPЕМ
+MANIS MATА
+1-35437763495 1764887077 Bank Kalbar - KCP Jongkong
+M2M Kuota 1
+GB Dual SIM
+VSAT IP 64
+99 100 FBC:30
+September 2023 Aktif
+99 FBC:30 100 Kbps Aktif
+1-35436309603 1764886941 BPD KALBAR KCP TELUK
+PAKEDAI
+VSAT IP 64
+Kbps bs
+September 2023
+FBC: 30_
+Nilai Prorate Mei 2022
+Nilai Harian = Rp
+561954*7 = Rp
+3.933.678 99 100 September 2023 Aktif
+1-35437985961 1763263734 Bank Kalbar - KC Semitau M2M Kuota 1
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif
+1-35434157791 1763263404 BANK KALBAR Capem
+Sentebang M2M Kuota 1 99 100 GB Dual SIM FBC: 30
+September 2023 Aktif
+1-35437873119 1763263679 BPD capem bunut hilir
+putussibau
+M2M Kuota 1
+GB Dual SIM 99 100 FBC:30 Aktif September 2023
+1-35437986181 1764887757 BANK KALBAR KCP KOTА
+BARU NANGAPINOH M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif
+1-35438131610 1764887795 BANK KALBAR KCP NANGA
+MAU
+M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+Son September 2023 Aktif
+Total Tagihan Periode Mel 2022 Rp3,933,678
+14
+Keterangan SID
+Jumlah SID
+Jumlah SID sudah FBC
+Jumlah SID terlambat FBC 14
+1-35437985540 1764887550 Bank Kalbar - KCP Belitang M2M Kuota 1 99 FBC: 30 100
+1-35434158197 1764886852 BANK KALBAR Capem
+Seponti
+GB Dual SIM
+M2M Kuota 1
+GB Dual SIM
+Aktif September 2023 Rp1,116,000
+99 100 FBC: 30
+September 2023 Aktif Rp1,116,000
+1-35437872307 1764887217 Bank Kalbar KCP Nanga Taman M2M Kuota 1
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif Rp1,116,000
+1-35437284089 1764886998 BANK KALBAR CAPEM
+TUMBANG TITI KTP
+M2M Kuota 1
+GB Dual SIM 99 FBC: 30 100 Aktif September 2023 Rp1,116,000
+1-35437872713 1763263651 Bank Kalbar - KCP Serawai
+1-35437763901 1763263574 Bank Kalbar KCP Karangan
+M2M Kuota 1
+GB Dual SIM
+M2M Kuota 1
+99 100 FBC:30 Aktif September 2023 Rp1,116,000
+99 100 FBC:30 2 Juni 2022 GB Dual SIM Aktif September 2023 Rp1,116,000
+1-35434157348 1764886615 BANK KALBAR CAPEМ
+MANIS MATA M2M Kuota 1 99 100 GB Dual SIM FBC: 30
+September 2023 Aktif Rp1,116,000
+1-35437763495 1764887077 Bank Kalbar - KCP Jongkong VSAT IP 64 99 FBC: 30 100 Kbps
+1-35436309603 1764886941 BPD KALBAR KCP TELUK
+PAKEDAI VSAT IP 64
+Kbps 99 100
+September 2023
+FBC:30
+September 2023
+Aktif Rp2,014,287
+Aktif Rp2,014,287
+1-35437985961 1763263734 Bank Kalbar - KC Semitau M2M Kuota 1
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif Rp1,116,000
+1-35434157791 1763263404 BANK KALBAR Capem
+Sentebang
+M2M Kuota 1
+GB Dual SIM 99 100
+1-35437873119 1763263679 BPD capem bunut hilir
+putussibau
+M2M Kuota 1
+GB Dual SIM 99 100
+FBC:30
+September 2023
+FBC:30
+Aktif Rp1,116,000
+Aktif September 2023 Rp1,116,000
+Nilai Penalti
+(Rp)
+1-35437986181 1764887757 BANK KALBAR KCP KOTA
+BARU NANGAPINOH M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif Rp1,116,000 1-35438131610 1764887795 BANK KALBAR KCP NANGA
+MAU M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif Rp1,116,000
+Total Tagihan Periode Juni 2022 Rp17,420,574
+Jumlah SID 14
+Keterangan SID Jumlah SID sudah FBC 이
+Jumlah SID terlambat FBC 14 1-35437985540 1764887550 Bank Kalbar - KCP Belitang M2M Kuota 1
+GB Dual SIM 99 100
+1-35434158197 1764886852 BANK KALBAR Capem Seponti M2M Kuota 1 99 100
+FBC: 30
+September 2023
+FBC:30
+Aktif Rp1,116,000
+GB Dual SIM Aktif September 2023 Rp1,116,000 1-35437872307 1764887217 Bank Kalbar - KCP Nanga
+Taman M2M Kuota 1 GB Dual SIM 99 100 FBC:30
+September 2023 Aktif Rp1,116,000 1-35437284089 1764886998 BANK KALBAR CAPEM
+TUMBANG TITI KTР M2M Kuota 1
+GB Dual SIM 99 100
+1-35437872713 1763263651 Bank Kalbar - KCP Serawai M2M Kuota 1
+GB Dual SIM 99
+FBC:30
+September 2023
+FBC: 30
+Aktif Rp1,116,000
+100 September 2023 Aktif Rp1,116,000 1-35437763901 1763263574 Bank Kalbar - KCP Karangan M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif Rp1,116,000 1-35434157348 1764886615 3 Juli 2022
+BANK KALBAR CAPEМ
+MANIS MATА M2M Kuota 1
+99 GB Dual SIM 100 FBC: 30 September 2023 Aktif Rp1,116,000 1-35437763495 1764887077 Bank Kalbar - KCP Jongkong
+1-35436309603 1764886941 BPD KALBAR KCP TELUK
+PAKEDAL
+VSAT IP 64
+Kbps
+VSAT IP 64
+99 100 FBC: 30
+September 2023 Aktif Rp2,014,287
+99 100 Kbps FBC:30
+September 2023 Aktif Rp2,014,287 1-35437985961 1763263734 Bank Kalbar - KC Semitau M2M Kuota 1 99 100 FBC: 30 GB Dual SIM Aktif September 2023 Rp1,116,000
+1-35434157791 1763263404 BANK KALBAR Capem M2M Kuota 1
+Sentebang
+1-35437873119 1763263679 BPD capem bunut hilir
+putussibau
+GB Dual SIM
+M2M Kuota 1
+GB Dual SIM
+99 100
+99 100
+FBC:30
+September 2023
+FBC:30
+Aktif Rp1.116,000
+Aktif September 2023 Rp1,116,000
+1-35437986181 1764887757 BANK KALBAR KCР КОТА
+BARU NANGAPINOH M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif Rp1,116,000
+1-35438131610 1764887795 BANK KALBAR KCP NANGA
+MAU M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif Rp1.116.000
+Total Tagihan Periode Juli 2022 Rp17,420,574
+Keterangan SID
+Jumlah SID
+Jumlah SID sudah FBC
+14
+이
+Jumlah SID terlambat FBC 14
+1-35437985540 1764887550 Bank Kalbar - KCP Belitang
+1-35434158197 1764886852 BANK KALBAR Capem
+Seponti
+M2M Kuota 1
+GB Dual SIM
+M2M Kuota 1
+99 100 FBC: 30
+September 2023 Aktif Rp1,116,000
+99 GB Dual SIM 100 FBC:30
+September 2023 Aktif Rp1.116.000
+1-35437872307 1764887217
+1-35437284089 1764886998
+Bank Kalbar - KCP Nanga
+Taman
+BANK KALBAR CAPEМ
+M2M Kuota 1
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif Rp1,116,000
+M2M Kuota 1
+TUMBANG TITI KTP 99 100 FBC:30
+GB Dual SIМ Aktif September 2023 Rp1,116,000
+1-35437872713 1763263651 Bank Kalbar - KCP Serawai M2M Kuota 1
+GB Dual SIM 99 100 FBC:30 Aktif
+1-35437763901 1763263574 Bank Kalbar - KCP Karangan M2M Kuota 1 MzMi
+GB Dual SIM 99 100
+September 2023
+FBC:30
+Rp1.116.000
+September 2023 Aktif Rp1,116,000
+1-35434157348 1764886615 4 Agustus 2022
+BANK KALBAR CAPЕМ
+MANIS MATA
+M2M Kuota 1 وو 100 FBC: 30 GB Dual SIM Aktif September 2023 Rp1.116.000
+1-35437763495 1764887077 Bank Kalbar - KCP Jongkong
+1-35436309603 1764886941 BPD KALBAR KCP TELUK
+PAKEDAI
+VSAT IP 64
+Kbps
+VSAT IP 64
+99 100 FBC:30
+September 2023 Aktif Rp2,014,287
+ga 100 Kbps
+FBC:30
+September 2023 Aktif Rp2,014,287
+1-35437985961 1763263734 Bank Kalbar - KC Semitau M2M Kuota 1
+GB Dual SIM 99 FBC: 30 100 Aktif September 2023 Rp1,116,000
+1-35434157791 1763263404 BANK KALBAR Capem M2M Kuota 1
+1-35437873119 1763263679
+Sentebang
+BPD capem bunut hilir
+putussibau
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif Rp1,116,000
+M2M Kuota1
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif Rp1,116,000
+1-35437986181 1764887757 BANK KALBAR KCР КОТА
+BARU NANGAPINOH M2M Kuota 1
+GB Dual SIM 99 100 FBC:30 Aktif September 2023 Rp1,116,000
+1-35438131610 1764887795 BANK KALBAR KCP NANGA M2M Kuota 1
+MAU GB Dual SIM 99 100 FBC:30 Aktif September 2023 Rp1,116,000
+Total Tagihan Periode Agustus 2022 Rp17,420,574
+Keterangan SID
+Jumlah SID
+Jumlah SID sudah FBC
+Jumlah SID terlambat FBC
+14
+0
+14
+5 Sep-22 1-35437985540 1764887550 Bank Kalbar - KCP Belitang M2M Kuota 1
+99 100
+1-35434158197 1764886852 BANK KALBAR Capem
+Seponti
+GB Dual SIM
+M2M Kuota 1
+99
+FBC: 30
+September 2023
+FBC: 30
+Aktif Rp1,116,000
+GB Dual SIM 100 Aktif September 2023 Rp1,116,000
+1-35437872307 1764887217 Bank Kalbar - KCP Nanga
+Taman M2M Kuota 1
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif Rp1,116,000
+1-35437284089 1764886998 BANK KALBAR CAPEM
+TUMBANG TITI KTР
+M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif Rp1,116,000
+1-35437872713 1763263651 Bank Kalbar - KCP Serawai M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif Rp1,116,000 1-35437763901 1763263574 Bank Kalbar - KCP Karangan M2M Kuota 1
+GB Dual SIM 99 100
+1-35434157348 1764886615 BANK KALBAR CAPEM
+MANIS MAТА
+FBC:30
+September 2023 Aktif Rp1,116,000
+M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+1-35437763495 1764887077 Bank Kalbar - KCP Jongkong VSAT IP 64 99 100 Kbps
+1-35436309603 1764886941 BPD KALBAR KCP TELUK PAKEDAI
+September 2023
+FBC:30
+September 2023
+Aktif Rp1,116,000
+Aktif Rp2,014,287
+VSAT IP 64 99 100 Kbps FBC:30
+September 2023 Aktif Rp2,014,287
+1-35437985961 1763263734 Bank Kalbar - KC Semitau M2M Kuota 99 100 FBC:30 GB Dual SIM
+1-35434157791 1763263404 BANK KALBAR Capem
+Sentebang
+1-35437873119 1763263679 BPD capem bunut hilir
+putussibau
+M2M Kuota 1
+GB Dual SIM
+M2M Kuota 1
+99 100
+September 2023
+FBC:30
+Aktif Rp1,116,000
+GB Dual SIM 99 100
+September 2023
+FBC: 30
+Aktif Rp1,116,000
+September 2023 Aktif Rp1,116,000
+1-35437986181 1764887757 BANK KALBAR KCP KOTA
+BARU NANGAPINOH M2M Kuota 1
+GB Dual SIM 99 100
+1-35438131610 1764887795 BANK KALBAR KCP NANGA
+MAU
+FBC: 30
+September 2023 Aktif Rp1,116,000
+M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif Rp1,116,000
+Total Tagihan Periode September 2022 Rp17,420,574
+Keterangan SID
+Jumlah SID
+Jumlah SID sudah FBC
+14
+이
+Jumlah SID terlambat FBC 14
+1-35437985540 1764887550 Bank Kalbar - KCP Belitang M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif Rp1.116.000
+1-35434158197 1764886852 BANK KALBAR Capem
+Seponti M2M Kuota 1
+99 100 GB Dual SIM
+FBC:30
+September 2023 Aktif Rp1,116,000
+1-35437872307 1764887217 Bank Kalbar - KCP Nanga Taman M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30 Aktif September 2023 Rp1,116,000
+1-35437284089 1764886998 BANK KALBAR CAPЕМ
+TUMBANG TITI KTP
+M2M Kuota 1
+99 100 FBC:30 GB Dual SIM Aktif September 2023 Rp1,116,000
+1-35437872713 1763263651 Bank Kalbar - KCP Serawai M2M Kuota 1
+99 100 FBC:30_ GB Dual SIM Aktif September 2023 Rp1,116,000
+1-35437763901 1763263574 Bank Kalbar - KCP Karangan M2M Kuota 1 FBC: 30 GB Dual SIM 99 100 September 2023 Aktif Rp1,116,000
+1-35434157348 1764886615
+6 Oktober 2022
+BANK KALBAR CAPEM
+MANIS MАTА M2M Kuota 1 99 GB Dual SIM 100 FBC: 30 Aktif September 2023 Rp1,116,000
+1-35437763495 1764887077 Bank Kalbar - KCP Jongkong VSAT IP 64
+Kbps 99 100 FBC:30
+September 2023 Aktif Rp2,014,287
+1-35436309603 1764886941 BPD KALBAR KCP TELUK
+PAKEDAL
+VSAT IP 64 99 100 Kbps
+FBC:30
+September 2023 Aktif Rp2,014,287
+1-35437985961 1763263734 Bank Kalbar KC Semitau M2M Kuota 1
+GB Dual SIM 99 100 FBC:30 Aktif
+1-35434157791 1763263404 BANK KALBAR Capem
+Sentebang
+1-35437873119 1763263679 BPD capem bunut hilir
+putussibau
+M2M Kuota 1
+GB Dual SIM
+M2M Kuota 1
+99
+September 2023
+FBC:30
+Rp1,116.000
+100 September 2023 Aktif Rp1,116,000
+99 100 FBC:30 GB Dual SIM Aktif September 2023 Rp1,116,000
+1-35437986181 1764887757 BANK KALBAR ALB KСРC КОТА
+BARU NANGAPINOН M2M Kuota 1 99 100 GB Dual SIM
+FBC:30
+September 2023 Aktif Rp1,116,000
+1-35438131610 1764887795 BANK KALBAR KCP NANGA
+MAU
+M2M Kuota 1 99 GB Dual SIM 100 FBC:30
+September 2023 Aktif Rp1,116,000
+Total Tagihan Periode Oktober 2022 Rp17,420,574
+Jumlah SID 14
+Keterangan SID Jumlah SID sudah FBC 0
+Jumlah SID terlambat FBс 14
+Nov-23 1-35437985540 1764887550 Bank Kalbar - KCP Belitang
+1-35434158197 1764886852 BANK KALBAR Capem Seponti
+M2M Kuota 1
+GB Dual SIM
+M2M Kuota 1
+99 100 FBC:30
+September 20 Aktif Rp1,116,000
+99 FBC: 30 100 GB Dual SIM Aktif September 2023 Rp1,116,000
+1-35437872307 1764887217 Bank Kalbar - KCP Nanga
+Taman
+M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif Rp1,116,000
+1-35437284089 1764886998 BANK KALBAR CAPЕМ
+TUMBANG TITI KTP
+M2M Kuota 1
+99 100
+1-35437872713 1763263651 Bank Kalbar - KCP Serawai
+GB Dual SIM
+M2M Kuota 1
+GB Dual SIM
+FBC: 30
+September 2023 Aktif Rp1,116,000
+99 100 FBC: 30 Aktif
+1-35437763901 1763263574 Bank Kalbar - KCP Karangan M2M Kuota 1
+GB Dual SIM 99 100
+September 2023
+FBC: 30
+Rp1,116,000
+Aktif
+1-35434157348 1764886615 BANK KALBAR CAPEM
+MANIS MATA
+M2M Kuota 1
+99 100
+September 2023
+FBC: 30
+Rp1,116,000
+GB Dual SIM September 2023 Aktif Rp1,116,000
+1-35437763495 1764887077 Bank Kalbar - KCP Jongkong
+1-35436309603 1764886941 BPD KALBAR KCP TELUK
+PAKEDAI
+VSAT IP 64
+☐ Kbps
+VSAT IP 64
+99 100 FBC: 30
+September 2023 Aktif Rp2,014,287
+99 100 Kbps FBC: 30
+September 2023 Aktif Rp2,014,287
+1-35437985961 1763263734 Bank Kalbar - KC Semitau M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif Rp1,116,000
+1-35434157791 1763263404 BANK KALBAR Capem
+Sentebang M2M Kuota 1
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif Rp1,116,000
+1-35437873119 1763263679 BPD capem bunut hilir
+putussibau
+M2M Kuota 1 Mziv Ruota GB Dual SIM 99 100 FBC: 30 Aktif
+1-35437986181 1764887757 BANK KALBAR KCP КОТА
+BARU NANGAPINOH
+M2M Kuota 1
+GB Dual SIM 99 100
+September 2023
+FBC:30
+September 2023
+Rp1,116,000
+Aktif Rp1,116,000
+1-35438131610 1764887795 BANK KALBAR KCP NANGA
+MAU
+M2M Kuota 1 FBC: 30 GB Dual SIM 99 100 September 2023 Aktif Rp1,116,000
+Total Tagihan Periode November 2022 Rp17,420,574
+Jumlah SID 14
+Keterangan SID Jumlah SID sudah FBC 0
+Jumlah SID terlambat FBC 14 1-35437985540 1764887550 Bank Kalbar - KCP Belitang M2M Kuota
+GB Dual SIM 99 FBC: 30 100 Aktif September 2023 Rp1,116,000 1-35434158197 1764886852 BANK KALBAR Capem
+Seponti M2M Kuota 1
+GB Dual SIM 99 FBC: 30 100 September 2023 Aktif Rp1,116,000 1-35437872307 1764887217 Bank Kalbar KCP Nanga Taman M2M Kuota 1
+GB Dual SIM 99 100
+1-35437284089 1764886998 BANK KALBAR CAPEM TUMBANG TITI KTP M2M Kuota 1
+99
+FBC: 30
+September 2023
+FBC:30
+Aktif Rp1,116,000
+GB Dual SIM 100 September 2023 Aktif Rp1,116,000 1-35437872713 1763263651 Bank Kalbar - KCP Serawai M2M Kuota 1
+GB Dual SIM 99 100 ☐ FBC:30
+September 2023 Aktif Rp1,116,000 1-35437763901 1763263574 Bank Kalbar - KCP Karangan M2M Kuota 1 99 GB Dual SIM 100 FBC: 30
+8 Desember
+2022
+1-35434157348 1764886615 BANK KALBAR CAPEМ
+MANIS MATА M2M Kuota 1
+GB Dual SIM 99 100
+September 2023
+FBC:30
+Aktif Rp1,116.000
+September 2023 Aktif Rp1,116,000 1-35437763495 1764887077 Bank Kalbar - KCP Jongkong VSAT IP 64 99 Kbps 100 FBC: 30
+1-35436309603 1764886941 BPD KALBAR KCP TELUK
+PAKEDAI VSAT IP 64
+Kbps 99 100
+September 2023
+FBC: 30
+September 2023
+Aktif Rp2,014,287
+Aktif Rp2,014,287 1-35437985961 1763263734 Bank Kalbar - KC Semitau M2M Kuota 1
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif Rp1,116,000
+1-35434157791 1763263404
+1-35437873119 1763263679
+BANK KALBAR Capem
+Sentebang
+BPD capem bunut hilir
+M2M Kuota 1
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif Rp1,116,000
+M2M Kuota 1 FBC:30 putussibau 99
+1-35437986181 1764887757 BANK KALBAR KCP КОТА
+BARU NANGAPINOH
+GB Dual SIм
+M2M Kuota1 เลา GB Dual SIM
+100 Aktif
+99
+September 2023
+FBC:30
+Rp1,116,000
+100 Aktif
+1-35438131610 1764887795 BANK KALBAR KCP NANGA
+MAU M2M Kuota 1
+GB Dual SIM 99
+September 2023
+FBC:30
+Rp1,116,000
+100 Aktif September 2023 Rp1,116,000
+Total Tagihan Periode Desember 2022 Rp17,420,574
+Jumlah SID 14
+Keterangan SID Jumlah SID sudah FBC 0
+Jumlah SID terlambat FBC 14
+1-35437985540 1764887550 Bank Kalbar - KCP Belitang M2M Kuota 1
+GB Dual SIM 99 FBC: 30 100 September 2023 Aktif Rp1,116,000
+1-35434158197 1764886852
+1-35437872307 1764887217
+BANK KALBAR Capem
+Seponti
+Bank Kalbar - KCP Nanga
+M2M Kuota 1
+GB Dual SIM
+M2M Kuota 1
+99 100 FBC:30
+September 2023 Aktif Rp1,116,000
+Taman 99 100 GB Dual SIM FBC:30
+September 2023 Aktif Rp1,116,000
+1-35437284089 1764886998 BANK KALBAR CAPЕМ
+TUMBANG TITI KTP M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif Rp1,116,000
+1-35437872713 1763263651 Bank Kalbar - KCP Serawai M2M Kuota 1
+99 100 GB Dual SIM
+FBC:30
+September 2023 Aktif Rp1,116,000
+1-35437763901 1763263574 Bank Kalbar - KCP Karangan M2M Kuota 1 FBC: 30 99 100 GB Dual SIM Aktif
+1-35434157348 1764886615 9 Januari 2023
+BANK KALBAR CAPЕМ
+MANIS MATА
+M2M Kuota 1
+GB Dual SIM 99 100
+September 2023
+FBC:30
+Rp1,116,000
+Aktif September 2023 Rp1,116,000
+1-35437763495 1764887077 Bank Kalbar - KCP Jongkong VSAT IP 64 ga 100 FBC: 30
+1-35436309603 1764886941 BPD KALBAR KCP TELUK
+PAKEDA
+Kbps
+VSAT IP 64
+Kbps
+Aktif September 2023 Rp2,014,287
+99 100 FBC: 30
+September 2023 Aktif Rp2,014,287
+1-35437985961 1763263734 Bank Kalbar - KC Semitau M2M Kuota 1
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif Rp1,116,000
+1-35434157791 1763263404 BANK KALBAR Capem M2M Kuota 1
+1-35437873119 1763263679
+Sentebang
+BPD capem bunut hilir
+99 GB Dual SIM 100 FBC: 30
+September 2023 Aktif Rp1,116,000
+M2M Kuota 1
+99 100 putussibau GB Dual SIM
+FBC: 30
+September 2023 Aktif Rp1,116,000
+1-35437986181 1764887757 BANK KALBAR KCP KOTА
+BARU NANGAPINOH
+M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif Rp1,116,000
+1-35438131610 1764887795 BANK KALBAR KCP NANGA
+MAU MZM Kuota M2M Kuota 1
+GB Dual SIM 99 100 FBC:30 Aktif September 2023 Rp1,116,000
+Total Tagihan Periode Januari 2023 Rp17,420,574
+Keterangan SID
+Jumlah SID
+Jumlah SID sudah FBC
+14
+0
+Jumlah SID terlambat FBC 14
+1-35437985540 1764887550 Bank Kalbar - KCP Belitang M2M Kuota GRD GB Dual SIM 99 100 FBC: 30 Aktif
+1-35434158197 1764886852 BANK KALBAR Capem
+Seponti M2M Kuota 1
+99 100 GB Dual SIM
+September 2023
+FBC:30
+September 2023
+Rp1,116,000
+Aktif Rp1,116,000
+1-35437872307 1764887217 10 Februari 2023
+Bank Kalbar - KCP Nanga Taman M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30 Aktif September 2023 Rp1,116,000
+1-35437284089 1764886998 BANK KALBAR CAPEM
+TUMBANG TITI KTP
+M2M Kuota 1
+99 GB Dual SIM 100 FBC: 30
+September 2023 Aktif Rp1,116,000
+1-35437872713 1763263651 Bank Kalbar - KCP Serawai M2M Kuota 1
+99 100 GB Dual SIM FBC: 30
+September 2023 Aktif Rp1,116,000
+1-35437763901 1763263574 Bank Kalbar - KCP Karangan M2M Kuota 1
+99 100 FBC: 30
+GB Dual SIM Aktif September 2023 Rp1,116,000
+1-35434157348 1764886615 BANK KALBAR CAРЕМ
+MANIS MATА M2M Kuota
+GB Dual SIM 99 100
+1-35437763495 1764887077 Bank Kalbar - KCP Jongkong VSAT IP 64 P64
+1-35436309603 1764886941 BPD KALBAR KCP TELUK PAKEDAI
+Kbps
+VSAT IP 64
+99
+FBC: 30
+September 2023
+FBC: 30
+Aktif Rp1,116,000
+100 September 2023 Aktif Rp2,014,287
+99 100 Kbps
+1-35437985961 1763263734 Bank Kalbar - KC Semitau M2M Kuota 1
+GB Dual SIM 99 100
+FBC:30
+September 2023
+FBC: 30
+Aktif Rp2,014,287
+Aktif September 2023 Rp1,116,000
+1-35434157791 1763263404 BANK KALBAR Capem
+Sentebang M2M Kuota 1
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif Rp1,116,000
+1-35437873119 1763263679 BPD capem bunut hilir
+putussibau
+M2M Kuota 1
+GB Dual SIм 99 100 FBC: 30 Aktif
+1-35437986181 1764887757 BANK KALBAR KCP KOTА M2M Kuota 1
+BARU NANGAPINOH 99
+September 2023
+FBC: 30
+Rp1,116,000
+100 GB Dual SIM
+1-35438131610 1764887795 BANK KALBAR KCP NANGA
+MAU M2M Kuota 1
+GB Dual SIM 99 100
+September 2023
+FBC: 30
+Aktif Rp1,116,000
+September 2023 Aktif Rp1,116,000
+Total Tagihan Periode Februari 2023 Rp17,420,574
+Keterangan SID
+Jumlah SID
+Jumlah SID sudah FBC
+14
+이
+Jumlah SID terlambat FBC 14
+1-35437985540 1764887550 Bank Kalbar - KCP Belitang M2M Kuota 1
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif Rp1,116,000
+1-35434158197 1764886852 BANK KALBAR Capem Seponti
+M2M Kuota 1
+99 100 FBC:30 GB Dual SIM September 2023 Aktif Rp1,116,000
+1-35437872307 1764887217
+1-35437284089 1764886998
+Bank Kalbar - KCP Nanga
+Taman
+BANK KALBAR CAPEM
+M2M Kuota 1 99 100 GB Dual SIM
+FBC:30
+September 2023 Aktif Rp1,116,000
+M2M Kuota 1 TUMBANG TITI KTP 99 100 GB Dual SIM
+FBC:30
+September 2023 Aktif Rp1,116,000
+1-35437872713 1763263651 Bank Kalbar- KCP Serawai M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30 Aktif September 2023 Rp1,116,000
+1-35437763901 1763263574 Bank Kalbar - KCP Karangan
+1-35434157348 1764886615
+11 Maret 2023
+BANK KALBAR CAPEM
+MANIS MATA
+M2M Kuota 1
+GB Dual SIM
+M2M Kuota 1
+99 100 FBC:30
+September 2023 Aktif Rp1,116,000
+99 100 FBC:30 GB Dual SIM Aktif September 2023 Rp1,116,000
+1-35437763495 1764887077 Bank Kalbar - KCP Jongkong
+1-35436309603 1764886941 BPD KALBAR KCP TELUK
+PAKEDAI
+VSAT IP 64
+Kbps
+VSAT IP 64
+99 FBC:30 100 Aktif September 2023 Rp2,014,287
+99 100 Kbps FBC:30
+September 2023 Aktif Rp2,014,287
+1-35437985961 1763263734
+1-35434157791 1763263404
+Bank Kalbar - KC Semitau
+BANK KALBAR Capem
+M2M Kuota 1
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif Rp1,116,000
+M2M Kuota 1 99 Sentebang 100 GB Dual SIм FBC:30
+September 2023 Aktif Rp1,116,000
+1-35437873119 1763263679
+1-35437986181 1764887757
+BPD capem bunut hilir
+putussibau
+BANK KALBAR KCP KОТА
+M2M Kuota 1
+GB Dual SIM
+FBC:30 99 100 Aktif Rp1.116.000
+BARU NANGAPINOH
+1-35438131610 1764887795 BANK KALBAR KCP NANGA
+MAU
+M2M Kuota 1
+GB Dual SIM
+M2M Kuota 1
+99 100
+September 2023
+FBC:30
+September 2023 Aktif Rp1,116,000
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif Rp1,116,000
+Total Tagihan Periode Maret 2023 Rp17,420,574
+Keterangan SID
+Jumlah SID
+Jumlah SID sudah FBC
+Jumlah SID terlambat FBC
+14
+0
+14
+12 Apr-23 1-35437985540 1764887550 Bank Kalbar - KCP Belitang M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif
+1-35434158197 1764886852 BANK KALBAR Capem
+Seponti
+M2M Kuota 1
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif
+1-35437872307 1764887217
+1-35437284089 1764886998
+Bank Kalbar - KCP Nanga
+Taman
+BANK KALBAR CAPEM
+M2M Kuota 1
+GB Dual SIM
+FBC: 30 99 100 Aktif September 2023
+M2M Kuota 1
+TUMBANG TITI KTР 99 100 GB Dual SIM
+FBC: 30
+September 2023 Aktif
+1-35437872713 1763263651 Bank Kalbar - KCP Serawai M2M Kuota 1
+99 GB Dual SIM 100 FBC: 30
+September 2023 Aktif
+1-35437763901 1763263574 M2M Kuota 1
+Bank Kalbar - KCP Karangan 99 100 GB Dual SIM
+FBC: 30
+September 2023 Aktif
+1-35434157348 1764886615 BANK KALBAR CAPEМ
+MANIS MAТА
+M2M Kuota 1 FBC: 30 99 100 Aktif GB Dual SIM
+1-35437763495 1764887077 VSAT IP 64 Bank Kalbar - KCP Jongkong 99
+September 2023
+FBC:30 100
+1-35436309603 1764886941 BPD KALBAR KCP KCP TELUK
+PAKEDAI
+Kbps
+VSAT IP 64
+Aktif
+99
+September 2023
+FBC:30
+Nilai Prorate April 2023
+Nilai Harian = Rp
+561954 24 = Rp
+13.486.896
+100 Aktif
+1-35437985961 1763263734 Bank Kalbar - KC Semitau
+Kbps
+M2M Kuota 1
+GB Dual SIM
+September 2023
+99 100 FBC: 30
+September 2023 Aktif
+1-35434157791 1763263404 BANK KALBAR Capem
+Sentebang
+M2M Kuota 1
+GB Dual SIM 99 100 FBC: 30
+September 2023 Aktif
+1-35437873119 1763263679
+1-35437986181 1764887757
+BPD capem bunut hilir
+putussibau
+BANK KALBAR KCP КОТА
+M2M Kuota 1
+GB Dual SIM 99 100 FBC:30
+September 2023 Aktif
+M2M Kuota
+BARU NANGAPINOH 99 100 GB Dual SIM FBC:30
+September 2023 Aktif
+1-35438131610 1764887795 BANK KALBAR KCP NANGA
+MAU MALL M2M Kuota 1
+99 100 FBC: 30 Aktif GB Dual SIM September 2023
+Total Tagihan Periode April 2023
+Keterangan SID Jumlah SID
+Rp13,486,896
+14
+Jumlah SID sudah FBC 0
+Jumlah SID terlambat FBC 14
+TELKOMSAT (PT Telkom Satelit Indonesia)
+Deddy Priyo Riyanto Manager Sevice Level & Assurance Management
+WORK ORDER
+Nomor
+Tanggal
+Perihal
+Kepada
+Alamat
+1. Menunjuk:
+2.
+: K.TEL. 5728/HK.810/TR6-R600/2022
+: 24 Mei 2022
+Telkom
+Indonesia
+the world in your hand
+: Work Order Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M untuk Bank Kalbar
+PT TELKOM SATELIT INDONESIA
+Telkom Landmark Tower Lt.21
+JI. Jendral Gatot Subroto Kav 52, Kuningan Barat, Mampang Prapatan
+Jakarta Selatan, Indonesia 12710
+a. Amandemen V Perjanjian Kerjasama antara Perusahaan Perseroan (Persero) PT Telekomunikasi Indonesia,
+Tbk dan PT. Telkom Satelit Indonesia tentang Penyediaan Layanan Satelit dan Produk Turunannya untuk
+Corporate Customer Telkom dengan Nomor PKS.TEL.034/HK.820/SDA-A4000000/2021-316/D0.000/НК02/TSAT/04.2021 tanggal 16 April 2021.
+b. Kontrak Berlangganan antara PT. Telekomunikasi Indonesia, Tbk dengan PT. Bank Pembangunan Daerah
+Kalimantan Barat tentang Penyediaan Layanan VSAT IP Nomor: K.TEL.527/HK.820/TR6-W612/2022
+tanggal 24 Mei 2022.
+Sehubungan dengan hal tersebut, dengan ini kami menyampaikan Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M
+untuk Bank Kalbar Kepada PT Telkom Satelit Indonesia, dengan ketentuan sebagai berikut (rincian teriampir)
+a. Jenis Pekerjaan
+b. Jumlah lokasi
+C. Target Aktivasi Layanan
+d. Jangka Waktu Kontrak
+e. Harga Pekerjaan
+TELKOM
+f.
+g.
+TELKOMSAT
+: 2 Layanan VSAT IP, 12 Layanan M2M
+: 14 (Empat Belas) lokasi terlampir.
+: Maksimal 25 Mei 2022.
+: 11 Bulan sejak tanggal 25 Mei 2022 s/d 24 April 2023.
+sebesar 7% dari harga bulanan yang dibayarkan oleh Pelanggan
+Korporat kepada TELKOM atau sebesar Rp 14.423.486,- (Empat Belas
+Juta Empat Ratus Dua Puluh Tiga Ribu Empat Ratus Delapan Puluh
+Enam Rupiah), dengan rincian per bulan sebesar maksimal Rp.
+1.311.226,- untuk layanan selama 11 Dua Belas bulan. Harga tersebut
+belum termasuk PPN, namun sudah termasuk pajak - pajak lainnya.
+: sebesar 93% dari harga bulanan yang dibayarkan oleh Pelanggan
+Korporat kepada TELKOM atau sebesar Rp. 218.626.314,- (Dua Ratus
+Delapan Belas Juta Enam Ratus Dua Puluh Enam Ribu Tiga Ratus
+Empat Belas Rupiah), dengan rincian per bulan sebesar maksimal
+Rp.17.420.574,- untuk layanan selama 11 (Sebelas) bulan dan Rp.
+27.000.000,- untuk One Time Charge. Harga tersebut belum termasuk
+PPN, namun sudah termasuk pajak - pajak lainnya.
+Mekanisme pembayaran kepada Mitra dilaksanakan secara per bulan sesuai dengan prestasi pekerjaan
+yang ditunjukkan dengan Berita Acara Serah Terima (BAST) dan atau Laporan Performansi Layanan (LPL).
+Pembayaran kepada TELKOMSAT dilaksanakan setelah TELKOMSAT mengajukan Surat Tagihan kepada
+TELKOM c.q Manager Payment & Invoicing Divisi SDA, Graha Merah Putih Lt 11 JI Gatot Subroto Kav.52
+Jakarta Selatan 12710. Pembayaran kepada TELKOMSAT dilaksanakan melalui transfer ke Bank Mandiri
+KCP Cibubur dengan rekening Nomor: 129-000 5613 001 (IDR) atas nama PT TELKOM SATELIT
+INDONESIA dengan biaya transfer menjadi beban TELKOMSAT (PT Telkom Satelit Indonesia) dan dipotong
+langsung dari jumlah pembayaran.
+Service Level Guarantee (SLG): Availability minimal 99%.
+h. Denda/sanksi atas keterlambatan delivery akan dikenakan sebesar 1º/00 (satu permil) dari harga pekerjaan
+i.
+sebelum PPN untuk setiap hari keterlambatan dengan batas maksinal denda sebesar 5% (lima persen).
+(1)
+Denda/sanksi atas tidak tercapainya Service Level Guarantee (SLG), sbb:
+Apabila layanan ini mengalami gangguan sehingga tidak dapat berfungsi sebagaimana mestinya
+sesuai dengan tingkat Availability, maka untuk lokasi yang mengalami gangguan, TELKOM berhak
+memperoleh Restitusi/Ganti Rugi, dengan perhitungan sebagai berikut:
+RESTITUSI = [(A-Av) / C] x B
+A = Jumlah jam gangguan dalam bulan gangguan
+Av = ((100% - % Tingkat Availability) x Jumlah jam dalam bulan gangguan)
+B = Biaya Langganan Bulanan
+C = Jumlah jam dalam bulan Gangguan
+PT Telekomunikasi Indonesia, Tbk.
+JI. MT. Haryono No. 169, Balikpapan 76114
+DES 23041
+3.
+j.
+(2)
+(3)
+PT Telkom Satelit Indonesia memberitahukan secara tertulis kepada TELKOM besarnya Restitusi
+bersamaan dengan penyampaian tagihan. Restitusi dimaksud secara otomatis akan mengurangi
+tagihan bulan tersebut.
+Restitusi tidak berlaku apabila terjadi gangguan di luar ruas Layanan yang menjadi tanggung jawab
+PT Telkom Satelit Indonesia dan/atau terjadi gangguan yang bukan merupakan kelalaian PT Telkom
+Satelit Indonesia.
+Bertindak sebagai Penandatanganan Berita Acara Serah Terima (BAST) adalah:
+TELKOM
+Berita Acara uji Terima (BAUT) dan Berita Acara Serah Terima (BAST): Manager ES Witel
+Kalimantan Barat atau pejabat pengganti yang ditunjuk.
+PT Telkom Satelit Indonesia
+Berita Acara Uji Terima (BAUT)
+Berita Acara Serah Terima (BAST) :
+GM Sales Regional atau pejabat pengganti yang ditunjuk
+GM'Sales Regional atau pejabat pengganti yang ditunjuk
+Sehubungan dengan Work Order dimaksud dan sebagai bukti kesanggupan/kesepakatan pemenuhan layanan,
+terlampir kami sampaikan 2 (dua) lembar asli kesepakatan pemenuhan layanan selanjutnya harap saudara/i
+tandatangan dan dikembalikan kepada kami paling lambat 5 (lima) hari kerja sejak diterimanya Work Order ini.
+4. Work Order Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M-untuk Bank Kalbar ini diberlakukan sebagai Kontrak
+Layanan Sederhana.
+5. Demikian untuk pelaksanaannya, atas perhatian dan kerjasamanya disampaikan terima kasih.
+Balikpapan, 24 Mei 2022
+PT TELKOM Indonesia (Persero), Tbk. PT Telkom Satelit Indonesia
+Taloan Ineonnesia
+Taufik
+OSM Regional Enterprise, Government & Business Service
+SEPULUH RIBU RUPIAH
+nsat TEMEnesia 294D4AKX471872486
+Sugeng Sugiarto
+VP Regional & Consumer Services
+Tembusan
+1 GM Witel Kalimantan Barat
+2. Manager ES Witel Kalimantan Barat
+3. Manager Bidding Management & Support
+DES 23041
+Perihal
+Nomor
+Tanggal
+: Lampiran Work Order Penyediaan 2 Lokasi VSAT IP
+& 12 Lokasi M2M untuk Bank Kalbar
+ : K.TEL. 5728 /HK.820/TR6-R600/2022
+24 Mei 2022
+KESEPAKATAN DENGAN CC (Rp)
+Masa Sewa Biaya One Time Charge Biaya Sewa No. Layanan Lokasi Alamat Satuan Qty (bln)
+Harga per Harga Satuan Total Harga Satuan Total bulan
+M2M 1GB
+1 BPD Kalbar KCP DFDN JIn.. Klenteng No 1 Unit 1 11 1,000,000 1,000,000 1,200,000 1,200,000 13,200,000 Dual SIM Duar SiM Sentebang Sentebang
+MZM TGд M2M 1GB BPD Kalbar KCP Jln. Rahadi
+2 Unit 1 11 1,000,000 1,000,000 1,200,000 1,200,000 13,200,000 Dual SIM Dual SIM Seponti Oesman Seponti Oesman
+M2M 1GB BPD Kalbar BPD Kalbar KCP Jin. Pematang iva Jln. Pematang Mas
+3 Unit 1 11 1,000,000 1,000,000 1,200,000 1,200,000 13,200,000 Dual SIM Teluk Pakedai Desa Teluk Pakedai Desa reluk rang
+M2M 1GB BPD Kalbar KCP Desa Rat Desa Rat Elok Kab.
+4 Unit 1 11 1,000,000 1,000,000 1,200,000 1,200,000 13,200,000 Dual SIM Manis Mata Ketapang
+M2M 1GB BPD Kalbar KCP Desa Tumbang Titi
+5 Unit 1 11 1,000,000 1,000,000 1,200,000 1,200,000 13,200,000 Dual SIM Tumbang Titi Kec. Tumbang Titi
+M2M 1GB BPD Kalbar KCP
+6 Putusibau Unit 1 11 1,000,000 1,000,000 1,200,000 1,200,000 13,200,000 Dual SIM Bunut Hilir
+M2M 1GB BPD Kalbar KCP
+7 JIn. Nanga Taman. Unit 1 11 1,000,000 1,000,000 1,200,000 1,200,000 13,200,000 Dual SIM Nanga Taman
+M2M 1GB BPD Kalbar KCP
+8 Jln. Serawai Unit 1 11 1,000,000 1,000,000 1,200,000 1,200,000 13,200,000 Dual SIM Serawai
+M2M 1GB BPD Kalbar KCP
+9 JIn. Semitau Unit 1 11 1,000,000 1,000,000 1,200,000 1,200,000 13,200,000 Dual SIM Semitau
+M2M 1GB BPD Kalbar KCP
+10 Jln. Jongkong Unit 1 11 1,000,000 1,000,000 1,200,000 1,200,000 13,200,000 Dual SIM Jongkong
+M2M 1GB BPD Kalbar KCP
+11 JIn. Belitang Unit 1 11 1,000,000 1,000,000 1,200,000 1,200,000 13,200,000 Dual SIM Belitang
+M2M 1GB BPD Kalbar KCP 12 JIn. Karangan Unit 1 11 1.000.000 1,000,000 1,200,000 1,200,000 13,200,000 Dual SIM Karangan
+VSAT IP BPD Kalbar KCP 13 Jln.. Nanga Mau Unit 1 11 7.500,000 7,500,000 2,165,900 2,165,900 23.824,900 64 Kbps Nanga Mau
+VSAT IP BPD Kalbar KCP Kota Jln. Kora Baru 14 Unit 11 7,500,000 7.500.000 2.165.900 2.165.900 23,824,900 64 Kbps Baru Nangapinoh Nangapinoh
+27.000.000 18,731,800 206,049,800
+233,049,800
+SUB TOTAL (Sebelum PPN 11%)
+TOTAL (Sebelum PPN 11%)
+Balikpapan, 24 Mei 2022
+PT TELKOM Indonesia (Persero), Tbk.
+Taufik
+Hom
+hdonesia
+OSM Regional Enterprise,Government & Business Service
+PT Telkom Satelit Indonesia telkomsat Ap Speia whrto
+Sugeng Suqiarto
+VP Regional
+& Consumer Service
+DES 23041
+Perihal : Lampiran Work Order Penyediaan 2 Work Order Penyediaan 2 Lokasi VSAT IP & 12 Lokasi M2M untuk Bank Kalbar
+Nomor : K.TEL. 5728 /HK.820/TR6-R600/2022
+Tanggal : 24 Mei 2022 REVENUE SHARING (Rp)
+TELKOM TELKOMSAT Masa Biava Sewa (7%) Biaya One Time Charge Biaya Sewa (93%)
+No. Layanan Lokasi Alamat Satuan Qty Sewa (bln) Harga Harga Total Harga Harga Harga Satuar Total Satuan per bulan Satuan Harga Satuan Harga Total per bulan dibulatkan
+1
+5
+7
+M2M 1GB Dual SIM BPD Kalbar KCP Sentebang
+M2M 1GB Dual SIM BPD Kalbar KCP Seponti
+4 M2M 1GB Dual SIM BPD Kalbar KCP Manis Mata
+M2M 1GB Dual SIM |BPD Kalbar KCP Tumbang Titi
+M2M 1GB Dual SIM BPD Kalbar KCP Bunut Hilir
+M2M 1GB Dual SIM BPD Kalbar KCP Nanga Taman
+Jin. Niente Jin.. Klenteng No 1 Unit 1 11 84,000- 84.000 924,000 1,000,000 1,000,000 1,000,000 1.116,000 1,116,000 1.116.000 12.276,000
+JIn. Rahadi Oesman Unit 1 11 84,000 84,000 1.000.000 1.116,000 1,116.000 12,276,000 924,000
+3 M2M 1GB Dual SIM BPD Kalbar KCP Teluk Pakedai JIn. Pematang Mas Desa Teluk Pakeda Unit 1 84.000 924.000 1.000.000 1.000,000 1,116,000 1,116,000 12,276,000 04,0001
+Desa Rat Elok Kab. Ketapang Unit 000 48 84.000 924.000 1,000,000 1,000,000 1,116,000 1,116,000 12,276,000 12,276,000
+Desa lumbang ti Rec. Desa Tumbang Titi Kec. Tumbang Titi Unit 1 84.000 84.000 924,000 1,000,000 1,000,000 1.116,000 12,276,000 1,000,000 1,116,000
+Putusibau Unit 1 11 84,000 84,000 924.000 924,000 1.000,00 1.000,000 1.116,000 1,116,000 12,276,000 1000,0001
+KаKер JIn. Nanga Taman Unit 1 04,000 84.000 924.000 000.000 1,000,000 1.000,000 1.116,000 1,116,000 12,276,000 04,000
+8 M2M 1GB Dual SIM BPD Kalbar KCP Serawai Jln. Serawai 84.000 84,000 924.000 000.000 1,000,000 1,000,000 1,116,000 1.11,116,000 12,276,000
+M2M 1GB Dual SIM BPD KalbarKCP Semitau JIn. Semitau Unit 1 84.000 84,000 924.000 000 000.1000,000 1,000,000 1,000,000 1.116.000 12.276,000 1,110,000 Jin. Selfitan
+10 MzM G5 Dual SiM 10 M2M 1GB Dual SIM BPD Kalbar KCP Jongkong Jin. Jongkong Unit 1 11 84,000 84,000 924,000 1,000,000 1.116.000 1,116.000 15976 12,276,000 000 1,000,000 1,000,000 In Ralitan 11 M2M 1GB Dual SIM BPD Kalbar KCP Belitang Jln. Belitang Unit 84.000 924,000 1.000,000 1.000.000 1.116.000 1,116,000 12,276,000 04,000
+12 M2M 1GB Dual SIM BPD Kalbar KCP Karangan JIn. Karangan Unit 84.000 84.000 924.000 1,000,000 1,000,000 1,116,000 1.116.000 1,116,000 12,276,000 276.000
+13 VSAT IP 64 Kbps BPD HKalbar KCP Nangaanga Mau май Jln.. Nanga Mau Unit 11 151 613 151.613 1,667,743 7,500,000 7,500,000 7.500.000 7,500,000 2,014,26187 2,014.287 22.157,157 2,01,201
+14 VSAT IP 64 Kbps
+I1
+BPD Kalbar KCP Kota Baru Nangapinoh JIn. Kora Baru Nangapinoh Unit 11 151.613 151,613 1.667.743 1,667,743 7,500,000 7.500,000 7.500,000 2,014,287 2,014,287 22,157,157
+SUB TOTAL (Sebelum PPN 11%) .311,226 14.423.486 27,000,000 17,420,574 191,626,314 218,626,314 14.423.486 TOTAL (Sebelum PPN 11%)
+Balikpapan, 24 Mei 2022
+PT TELKOM indonesia (Persero), Tbk.
+remoin chesia
+Taufik
+OSM Regional Enterprise, Government & Business Service
+PT Telkom Satelit Indonesia
+elkomsat
+Cuprt byTalkom donesia
+Sugeng Sugiarto
+VP Regional & Consumer Service
+DES 23041
+Telkom
+Indonesia
+Nomor ID Pelanggan
+Customer ID Number
+Perihal Subject
+Pasang Baru New Install
+PT TELKOM INDONESIA (PERSERO) Tbk
+Divisi Enterprise Service
+KONTRAK BERLANGGANAN
+SUBSCRIPTION CONTRACT
+Penambahan Paket Upgrade
+Pengurangan Paket Downgrade
+Nomor Kontrak K.TEL. 527 /HK.820/TR6-W612/2022
+Contract Number
+Penambahan Layanan Service Addition
+Perubahan Alamat Address Change
+1. PT TELKOM INDONESIA (PERSERO) Tbk (selanjutnya disebut "TELKOM")
+Sebuah perusahaan penyedia jasa telekomunikasi, informasi, media, edutainment, dan service (TIMES) yang dibentuk
+dan didirikan berdasarkan hukum Republik Indonesia, berkedudukan di Jalan Japati Nomor 1 Bandung, Indonesia
+40133.
+A telecommunication, information, media, edutainment and service provider established and incorporated under the law of Republic
+Indonesia, having its registered office at Jalan Japati No. 1 Bandung, Indonesia 40133.
+Diwakili secara sah oleh: Duly represented by:
+Nama Name Rizky Falahudin
+Jabatan Duty
+Unit Unit
+Account Manager
+Business, Government & Enterprise Service Telkom Samarinda
+2. PELANGGAN CUSTOMER
+Identitas Perusahaan/Institusi Company/Institution Identity
+Nama Name BANK KALBAR
+Alamat Address JI Rahadi Usman No 10
+Pontianak - Kalimantan Barat
+NPWP Tax Registered Number 01.123.801.1-701.000
+Diwakili secara sah oleh: Duly represented by:
+Nama Name Arif Gunanto
+Jabatan Duty Kepala Divisi Teknologi Informasi
+3. LAYANAN SERVICES
+Rincian Layanan Detail of Services
+Biaya Charges N Layanan
+o Services
+Lokasi
+Location
+Jumlah
+Quantity
+Satuan
+Unit Instalasi
+Installation
+Bulanan
+Monthly
+1 Migrasi VSAT ke M2M 1G 12 Titik Rp. 12.000.000 Rp. 14.400.000
+2 VSAT IP
+Kalimantan
+Barat 2 Titik Rp. 15.000.000 Rp. 4.331.800
+Jumlah Rp. 27.000.000 Rp. 18.731.800
+PPN 11% Rp. 2.970.000 Rp. 2.060.498
+Rp. 29.970.000 Rp. 20.792.298 Total Biaya Berlangganan
+Mekanisme Pemenuhan CPE CPE preparation mechanism
+PELANGGAN harus menyiapkan Customer Premises Equipment (CPE) sesuai dengan spesifikasi yang ditentukan
+TELKOM sebelum proses integrasi
+The CUSTOMER shall prepare the Customer Premises Equipment (CPE) in accordance with the specification set-forth by TELKOM
+prior to the integration process.
+Apabila kolom rincian layanan di atas tidak cukup, rincian layanan akan diuraikan dalam Lampiran I yang merupakan
+satu kesatuan serta bagian yang tidak terpisahkan dengan Amandemen Kontrak Berlangganan ini. If the column for the
+detail of services is insufficient, the detail of services shall be described in Appendix I which constitutes one and inseparable part of
+this Amendment of Subscription Contract.
+4. TATA CARA PEMBAYARAN METHODS OF PAYMENT
+Pembayaran atas Biaya Layanan dilaksanakan oleh PELANGGAN kepada TELKOM secara:
+The Payment of Services Charges shall be paid by CUSTOMER to TELKOM as:
+One Time Charge (OТС)
+One Time Charge (OTC)
+Bulanan Triwulanan
+Monthly Quarterly
+Per Semester Per Termin
+Per Semester Per Termin
+TELKOM akan mengirim Official Receipt selambat-lambatnya pada tanggal 10 (sepuluh) setiap bulannya ke alamat
+kontak person PELANGGAN yang dicantumkan dalam Kontrak Berlangganan ini.
+TELKOM shall send the Official Receipt at the latest on 10th (tenth) day of the month to the address, fax or email of the
+CUSTOMER's contact person stated in this Subscription Contract.
+PELANGGAN harus melakukan pembayaran paling lambat pada tanggal 20 (dua puluh) setiap bulannya (Tanggal
+Jatuh Tempo), dengan cara transfer ke rekening TELKOM pada:
+Customer maximum by 20th (twentieth) day (Due Date), by means of transfer to TELKOM account at:
+Bank Bank Bank Mandiri
+Cabang Branch Kantor Kas TELKOM DIVRE 6
+Nomor Rekening Account Number 149.004.567.891.1
+Atas Nama Name UNIT CORPORATE CUSTOMER VI KALIMANTAN
+atau rekening yang tercantum dalam surat tagihan or account number mentioned in invoice.
+Biaya transfer ditanggung oleh PELANGGAN. Transfer fee at the expense of CUSTOMER.
+5. JANGKA WAKTU TERM
+Jangka waktu berlangganan layanan Term of subscribe
+berlaku sejak tanggal effective as of 25 Mei 2022 sampai dengan to 24 April 2023.
+Jangka waktu tersebut akan diperpanjang secara otomatis apabila PELANGGAN tidak menyampaikan pemberitahuan
+tertulis kepada TELKOM tentang pengakhiran Kontrak sekurang-kurangnya 30 (tiga puluh) hari sebelum tanggal berakhirnya kontrak.
+Effective as of link activation date as stipulated in the Minutes of Commencement and may be automatic renewals if CUSTOMER
+not send a written notification to TELKOM about Subscription Contract termination at least 30 (thirty) days before.
+6. KONTAK PERSON CONTACT PERSON
+TELKOM TELKOM
+Nama Name Rizky Falahudin
+Jabatan Duty Account Manager
+Telepon Telephone 08115552556
+Faksimili Faximile 0541-736140
+Email Email
+atau or
+Nama Name
+Telepon Telephone
+Faksimili Faximile
+Email Email
+Nama Name
+Jabatan Duty
+Telepon Telephone
+Faksimili Faximile
+Rizky.falahudin@telkom.co.id
+Telkom Digital Solution Care Centre (TDSCC)
+0-800-1-TELKOM/ 0-800-1-835566
+021-3807200
+c4@telkom.co.id
+Arif Gunanto
+PELANGGAN CUSTOMER
+Kepala Divisi Teknologi Informasi
+Email Email
+Atau or
+Nama Name Bayu Dewantoro
+Jabatan Duty Ass. Administrasi
+Telepon Telephone 085201913998
+Email Email bayudewantoro@bankkalbar.co.id
+7. LAIN-LAIN MISCELLANEOUS
+Ketentuan yang tidak disebutkan pada bagian ini dituangkan dalam Ketentuan dan Syarat-Syarat Umum dan Khusus
+yang merupakan bagian yang tidak terpisahkan dengan Kontrak ini. Other Miscellaneous terms that not completely mentioned in this part shall be described in Appendix as inseparable part ofthis Contract.
+Apabila terdapat perbedaan antara ketentuan pada bagian ini dengan Ketentuan dan Syarat-Syarat Umum maka yang
+berlaku adalah ketentuan pada bagian ini. Apabila terdapat perbedaan antara Ketentuan dan Syarat-Syarat Khusus
+dan Ketentuan dan Syarat-Syarat Umum, maka yang berlaku adalah Ketentuan dan Syarat-Syarat Khusus. If there is a
+discrepancy between the provisions of this section and the General Terms and Conditions then the provisions of this section shall
+prevail. If there is a discrepancy between the Spesific Terms and Conditions and the General Terms and Conditions, the Spesific
+Terms and Conditions shall prevail.
+Dengan menandatangani Kontrak ini, kami menyatakan bahwa seluruh data yang diberikan di sini adalah benar dan
+kami sepakat untuk mematuhi Ketentuan dan Syarat-syarat Umum dan Khusus sebagaimana terlampir yang
+merupakan satu kesatuan dan bagian yang tidak terpisahkan dengan Kontrak ini. By signing this Contract, we declare that
+all data provided herein are true and we agree to abide by the General and Spesific Terms and Conditions shall be described in
+Appendix as inseparable part ofthis Contract.
+TELKOM TELKOM
+Telko Teeo Ingenosia
+Nama Name Rizky Falahudin
+Jabatan Duty Account Manager
+Pontianak, 24 Mei 2022
+PELANGGAN CUSTOMER
+ANGUNAAN
+PT. BAN
+R PUGEMPEL
+8629058
+A
+Nana MANunanto
+hinh
+Jabatanepala Divisi Teknologi Informasi
+Telkom
+Indonesia
+PT TELKOM INDONESIA (PERSERO) Tbk
+Divisi Enterprise Service
+Nomor ID Pelanggan
+Customer ID Number
+KONTRAK BERLANGGANAN
+SUBSCRIPTION CONTRAСТ
+Nomor Kontrak
+Contract Number
+K.TEL. 527 /HK.810/TR6-W612/2022
+KETENTUAN DAN SYARAT-SYARAT UMUM
+Pasal 1
+RUANG LINGKUP
+Penyediaan Layanan oleh TELKOM untuk PELANGGAN sesuai ketentuan The provision
+yang tercantum dalam Kontrak ini.
+Pasal 2
+HAK DAN KEWAJIBAN
+1. Di samping hak yang diatur pada pasal lain Kontrak ini, hal-hal berikut
+2.
+menjadi hak dan kewajiban TELKOM:
+a. Mendapatkan ijin dan dukungan dari PELANGGAN yang
+diperlukan TELKOM dalam rangka pelaksanaan Kontrak ini.
+b. Memperoleh informasi tentang pemanfaatan Layanan
+berdasarkan Kontrak ini untuk memastikan agar tidak
+bertentangan dengan ketentuan peraturan yang berlaku.
+c. Menerima pembayaran atas Biaya Layanan dari PELANGGAN
+sesuai dengan ketentuan dalam Kontrak ini.
+d. Menjaga agar Layanan berfungsi dengan baik, sesuai dengan
+e
+ketentuan dalam Kontrak ini.
+Melakukan perbaikan terhadap Gangguan pada Layanan
+berdasarkan Kontrak ini.
+f. Memberitahukan kepada PELANGGAN setiap ada kegiatan
+pemeliharaan (maintenance) atau bilamana TELKOM akan
+melakukan tindakan lain yang dapat mengakibatkan tidak
+berfungsinya atau terganggunya Layanan berdasarkan Kontrak ini
+sekurang-kurangnya 1 (satu) hari sebelum hari pelaksanaan.
+Di samping hak yang diatur pada pasal lain Kontrak ini, hal-hal berikut
+menjadi hak dan kewajiban PELANGGAN:
+a. Mendapatkan dan memanfaatkan Layanan berdasarkan Kontrak
+ini sesuai dengan peraturan perundang-undangan yang berlaku di
+b.
+Indonesia.
+Memperoleh laporan kinerja (performance) dari Layanan
+berdasarkan Kontrak ini.
+c. Melakukan pembayaran Biaya Layanan kepada TELKOM sesuai
+ketentuan dalam Kontrak ini.
+d. Menjaga perangkat, alat, barang atau benda lain milik TELKOM
+yang merupakan perlengkapan dari Layanan yang berada di
+lokasi PELANGGAN agar layanan senantiasa dapat beroperasi
+dan berfungsi dengan baik.
+Pasal 3
+BIAYA LAYANAN DAN PAJAK
+1. Atas penyediaan Layanan berdasarkan Kontrak ini, PELANGGAN
+berkewajiban untuk melakukan pembayaran Biaya atas Layanan
+tersebut.
+2. Pembayaran Biaya Layanan dimaksud memperhitungkan prestasi yang
+dilaksanakan oleh TELKOM berdasarkan Kontrak ini (seperti: tanggal
+aktif Layanan, gangguan terhadap Layanan).
+3. Pajak-pajak yang timbul atas Kontrak ini menjadi tanggung jawab
+masing-masing Pihak berdasarkan peraturan perundang-undangan
+yang berlaku di Indonesia.
+1.
+2.
+Pasal 4
+SANKSI-SANKSI
+Apabila PELANGGAN melalaikan kewajiban pembayaran Biaya
+Layanan dan atau melewati Tanggal Jatuh Tempo sesuai ketentuan
+dalam Kontrak ini, maka PELANGGAN dikenakan sanksi denda sebesar
+1%0 (satu per mil) dari nilai tagihan per hari kalender, dengan jumlah
+denda maksimum sebesar 5% (lima persen) dari nilai tagihan, yang
+dapat diikuti dengan pengisoliran atau pencabutan Layanan.
+Apabila salah satu Pihak bermaksud memutuskan Layanan secara
+sepihak dan/atau mengundurkan diri sebelum jangka waktu Kontrak
+berakhir, maka Pihak tersebut wajib membayar kompensasi kepada
+Pihak lainnya, yang besarannya disepakati oleh Para Pihak dengan
+mempertimbangkan seluruh aspek, hak dan kewajiban serta akibat
+hukum maupun finansial yang mungkin akan diderita oleh salah satu
+Pihak atau Para Pihak sehubungan dengan pemutusan Kontrak ini.
+Pasal 5
+FORCE MAJEURE
+1. Yang dimaksud dengan Force Majeure dalam Kontrak ini adalah
+keadaan-keadaan di luar kekuasaan salah satu atau Para Pihak yang
+mengakibatkan Pihak dimaksud tidak dapat melaksanakan Kontrak ini.
+2. Keadaan Force Majeure dimaksud ayat (1) Pasal ini meliputi:
+a. Bencana alam seperti gempa bumi, angin taufan, banjir besar,
+GENERAL TERMS AND CONDITIONS
+Article 1
+SCOPE OF WORK
+of Services by TELKOM for CUSTOMER
+stipulated in this Contract.
+1.
+2.
+Article 2
+RIGHT AND OBLIGATIONS
+customers as
+Besides the rights stated in the other article of this Contract, the following
+are TELKOM rights and obligations:
+a. Obtain permission and support from the CUSTOMER required by
+b.
+TELKOM in order to implement this Contract.
+Obtain information about utilization of the Services under this
+Contract to ensure that it does not contradict with any applicable
+rules.
+c. Receiving the Services Charge from CUSTOMER as stipulated in
+this Contract.
+d. Maintain the Services as meant in this Contract in good function as
+stipulated in this Contract.
+e. Repair the Services as meant in this Contract toward interference.
+f. Announce to CUSTOMER in every maintenance activity or when
+TELKOM will do another activity which caused the Services as
+meant in this Contract interference or not function, at least 1 (one)
+day before.
+Besides rights stated in the other article of this Contract, the following are
+CUSTOMER rights and obligations:
+a. Obtain and utilize the Services according to this Contract based on
+valid legislation in Indonesia
+b. Obtain the performance report of the Services as stipulated in this
+Contract.
+c. Pay the Service Charges for providing Services to TELKOм
+accordance with the provision of this Contract
+d. Keep devices, tools, goods or other objects belonging to TELKOM
+which is the attribute of the service at the CUSTOMER's location so
+that the Services can always operate and function properly.
+Article 3
+SERVICE CHARGES AND ТAX
+1. For the provision of the Services reffered to this Contract, CUSTOMER
+2.
+3.
+1.
+2.
+has obliged to make payments of Service Charges.
+The Payment of Service Charges shall consider of TELKOM's
+performance under this Contract (such as: Service's active date, Service
+disruption).
+Taxes that emerge on this Contract are each Party responsibilities based
+on valid legislation in Indonesia.
+Article 4
+SANCTIONS
+In the event that th CUSTOMER fails to pay the Service ice Charges or exceed
+from Due Date as stipulated in this Contract, CUSTOMER in the event
+the payment made after Due Date, CUSTOMER has affected fine of
+amount 1%% (one per mil) from the invoice for every calendar days, with
+maximum 5% (five percent) from the invoices, that can be followed with
+the isolation or disconnection the Services
+If the one of the Parties decides to terminate the Contract unilaterally
+and/or resigns before the term of the Contract is completed, the Party
+shall pay a compensation to other Party, with the amount shall be agreed
+by The Parties by considering all aspects, rights and obligations as well
+as legal or financial consequences which may be suffered by a Party or
+the Parties according to this Contract termination.
+Article 5
+FORCE MAJEURE
+1. Force Majeure in this Contract means conditions that out of control of a
+Party or the Parties which caused intended Party cannot implement this
+Contract.
+2. The condition of Force Majeure as stipulated in paragraph (1) of this
+Article, such as:
+a. Disaster as like an earthquake, typhoon, fire, flood, landslide,
+3.
+kebakaran besar, tanah longsor, wabah penyakit, dan lain-lain;
+b. Pemogokan umum, huru hara, perang, sabotase,
+pemberontakan;
+dan
+c. Kerusakan atau gangguan sebagai akibat perbuatan pihak ketiga,
+putus aliran listrik umum/PLN di luar kemampuan Para Pihak untuk
+mengatasinya serta hal-hal lain sejenis yang berada di luar
+kekuasaan atau kemampuan Para Pihak.
+Dalam hal terjadi Force Majeure dimaksud ayat (2) Pasal ini, maka
+Pihak yang mengalami Force Majeure berkewajiban memberitahukan
+melalui media massa atau secara secara tertulis langsung kepada Pihak
+lainnya dalam waktu paling lambat 14 (empat belas) hari kalender sejak
+saat mulai terjadinya Force Majeure
+4. Kelalaian atau keterlambatan salah satu Pihak dalam memenuhi
+kewajiban memberitahukan dimaksud ayat (3) Pasal ini, mengakibatkan
+tidak diakuinya peristiwa dimaksud sebagai Force Majeure oleh Pihak lainnya.
+5
+1.
+Tidak dilaksanakannya sebagian atau seluruh ketentuan Kontrak ini
+oleh salah satu atau Para Pihak akibat terjadinya Force Majeure bukan
+merupakan suatu pelanggaran atas Kontrak, sehingga semua kerugian
+dan biaya yang diderita oleh salah satu Pihak sebagai akibat terjadinya
+Force Majeure bukan merupakan tanggung jawab Pihak lainnya.
+Pasal 6
+PEMUTUSAN KONTRAK
+Kontrak ini secara sah dapat diputuskan secara sepihak oleh masingmasing Pihak tanpa adanya satu ketentuan tuntutan apapun atau
+beban keuangan atau kewajiban apapun kepada pihak lainnya, apabila
+terjadi salah satu atau lebih hal-hal tersebut tersebut did bawah ini, in di samping
+hal-hal lain yang telah diatur dalam pasal-pasal lain dalam Kontrak ini,
+vaitu:
+a. Apabila salah satu dan/atau Para Pihak lalai atau secara sengaja
+tidak memenuhi sebagian atau seluruh ketentuan dalam Kontrak
+ini dan kepada Pihak yang melakukan pelanggaran/kelalaian
+tersebut telah diberikan peringatan tertulis sekurang-kurangnya 3
+(tiga) kali oleh Pihak lainnya dan tidak mempunyai itikad baik
+untuk menyelesaikan/memperbaiki kesalahannya tersebut;
+b. Apabila pemerintah menetapkan kebijakan baru sehingga Kontrak
+ini tidak mungkin dilaksanakan.
+2. Apabila pada saat Kontrak ini berakhir atau diputuskan terdapat
+3.
+kewajiban yang belum dapat diselesaikan oleh Para Pihak, maka
+ketentuan-ketentuan dalam Kontrak ini tetap berlaku sampai
+diselesaikannya hak dan kewajiban Para Pihak.
+Para Pihak sepakat untuk mengesampingkan berlakunya ketentuan
+Pasal 1266 KUHPerdata terhadap Kontrak ini, sehingga pencabutan
+Layanan / pemutusan Kontrak ini dapat dilakukan tanpa perlu terlebih
+dahulu monunggu keputusan dari Hakim.
+Pasal 7
+PENYELESAIAN PERSELISIHAN
+1. Apabila terjadi perbedaan pendapat atau
+pelaksanaan dan atau penafsiran Kontrak ini,
+Pihak akan menyelesaikan melalui musyawarah.
+3.
+4.
+5.
+1
+2
+3
+perselisihan dalam 1.
+sejauh mungkin Para
+2. Apabila musyawarah tidak mencapai kesepakatan, maka Para Pihak
+sepakat untuk menyelesaikannya melalui Badan Arbitrase Nasional
+Indonesia (BANI). Keputusan BANI bersifat final dan mengikat.
+3. Selama perselisihan masih dalam proses penyelesaian, Para Pihak
+harus tetap melaksanakan kewajiban-kewajibannya menurut
+Kontrak ini.
+2.
+3.
+b.
+epidemic, etc;
+Strike, riot, war, sabotage, and revolt;
+c. Damage or interference that caused by third party, general
+electricity/PLN damages that out of control of the Parties to recover
+and other kind of case that out of control or capacity of the Parties.
+In case Force Majeure as stipulated in paragraph (2) of this Article happened, Party who having Force Majeure have to announce by mass
+media or written directly to other Party in maximum 14 (fourteen) days
+calendar since sin such Force Majeure begin.
+Carelessness to fulfil obligation as referred in point (3) this Article, will
+caused denial of conditions as referred in point (1) this Article as Force
+Majeure.
+Not implementing a part or whole of the stipulation of this Contract by a
+Party or Parties that caused by Force Majeure is not a violation of this
+Contract hereto, so all losses and cost that suffered by a Party that
+caused by Force Majeure is not the other Party liability.
+Article 6
+CONTRACT TERMINATION
+This Contract can be terminated legally unilaterally by the Party without
+any obligation or financial charge nor any claim obligation to another
+Party, if one or more of these things below has occurs, or in or other
+matters regulated in this Contract.
+a.
+b.
+if one and/or the Parties negligent or deliberately not meet some or
+all of the provisions of this Contract and the parties who commit
+violations/negligence has been given a written warning at least 3
+(three) times by the other parties and does not have good faith to
+complete/correct the problem;
+if the government establishes a new policy that this Contract may
+not be implemented.
+In case Contract is completed or terminated with the Parties still having
+obligations to settle, the provisions in this Contract shall remain valid until
+the rights and obligations of the Parties are resolved.
+The Parties agree to waive the provision as set put in Article 1266 of
+KUHPerdata (Indonesian Civil Law) resulting the right to disconnect the
+Services or to terminate the Contract without having to await the judge decision.
+Article 7
+DISPUTE SETTLEMENT
+Should differences of opinion or disputes in the execution and or the
+interpretation of this Contract arise, the Parties agree to resolve them
+through a deliberation to reach consensus.
+In case of consensus cannot be reached, so the Parties agreed to solve
+their problems in Indonesian Arbitration Council. The Indonesian
+Arbitration Council's decision is final and binding.
+As long as still in settlement, the Parties have to remain it is obligation
+according to this Contract.
+Pasal 8
+KERAHASIAAN
+Para Pihak sepakat bahwa seluruh isi Kontrak ini harus diperlakukan
+secara rahasia. Oleh karena itu Para Pihak sepakat untuk merahasiakan
+semua data, dokumen, catatan atau informasi yang diterima oleh salah
+satu Pihak dari Pihak lainnya sehubungan dengan pelaksanaan Kontrak ini
+dan tidak akan diberitahukan kepada pihak ketiga tanpa terlebih dahulu
+mendapatkan persetujuan tertulis dari Para Pihak.
+Article 8
+NON DISCLOSURE
+The Parties agreed that contents in this Contract have to remain NonDisclosure. Therefore, the Parties have to keep hidden all data, documents,
+notes, or informations related to this Contract, that accepted from a Party and
+will not be told to the third party without written permission from the Parties.
+Pasal 9
+PENUTUP
+Article 9
+CLOSING
+1. Dalam pelaksanaan Kontrak ini selain dari yang menjadi hak dan
+kewajiban masing-masing Pihak, Para Pihak tidak akan melakukan
+pemberian berupa uang, barang, fasilitas atau pemberian dalam bentuk
+apapun kepada Pejabat atau pihak-pihak manapun atau kepada
+siapapun yang terkait dengan kedudukan atau tugasnya sebagai
+2.
+pejabat dan/atau karyawan TELKOM atau PELANGGAN.
+Apabila terjadi penambahan, pengurangan atau perubahan Layanan,
+akan dibuat secara tertulis dalam amandemen dan merupakan bagian
+yang tak terpisahkan serta mempunyai kekuatan hukum yang sama
+dengan Kontrak ini.
+3. Kontrak ini dibuat dalam dua bahasa yaitu Bahasa Indonesia dan
+Bahasa Inggris, apabila terdapat perbedaan penafsiran maka yang
+berlaku dan mengikat adalah versi yang dibuat dalam Bahasa
+Indonesia.
+4. Dalam melaksanakan Kontrak ini Para Pihak wajib untuk mentaati
+ketentuan perundang-undangan atau peraturan-peraturan yang
+dikeluarkan oleh instansi yang berwenang yang berkaitan dengan Kontrak ini.
+1
+2
+3.
+4.
+In the implementation of this Contract besides of the rights and
+obligations of each Party, The Parties will not grant any money, goods,
+facilities or grant in any form to Officials or any parties or anyone
+associated with their position or duties as an official and/or employee of TELKOM or CUSTOMER.
+In the event that necessity of addition, reduction or change of Services.
+has to be written in amendment and as inseparable part of this Contract
+and has the same legal power with this Contract.
+This Contract is written in Indonesian and English, in the event of different
+perception of the Contract, the Indonesian version shall prevail.
+In executing this Contract, the Parties are obliged to comply with the
+statutory provisions or regulations issued by the competent authority
+relating to this Contract
+KETENTUAN DAN SYARAT-SYARAT KHUSUS
+1. RINCIAN LAYANAN
+No
+No
+Layanan
+Services
+Lokasi Instalasi
+Installation Location
+Jumlah Satuan Biaya Charges
+Quantity Unit Instalasi
+Installation
+Bulanan
+Monthly
+1 MCS/M2M BPD Kalbar KCP Manis Mata 1 GB Rp. 1.000.000 Rp. 1.200.000
+2 MCS/M2M BPD Kalbar KCP Sentebang 1 GB Rp. 1.000.000 Rp. 1.200.000
+3 MCS/M2M BPD Kalbar KCP Seponti 1 GB Rp. 1.000.000 Rp. 1.200.000
+4 MCS/M2M BPD Kalbar KCP Teluk Pakedai 1 GB Rp. 1.000.000 Rp. 1.200.000
+5 MCS/M2M BPD Kalbar KCP Tumbang Titi 1 GB Rp. 1.000.000 Rp. 1.200.000
+6 MCS/M2M BPD Kalbar KCP Jongkong 1 GB Rp. 1.000.000 Rp. 1.200.000
+7 MCS/M2M BPD Kalbar KCP Karangan 1 GB Rp. 1.000.000 Rp. 1.200.000
+8 MCS/M2M BPD Kalbar KCP Nanga Taman 1 GB Rp. 1.000.000 Rp. 1.200.000
+9 MCS/M2M BPD Kalbar KCP Serawai 1 GB Rp. 1.000.000 Rp. 1.200.000
+10 MCS/M2M BPD Kalbar KCP Bunut Hilir 1 GB Rp. 1.000.000 Rp. 1.200.000
+11 MCS/M2M BPD Kalbar KCP Belitang 1 GB Rp. 1.000.000 Rp. 1.200.000
+12 MCS/M2M BPD Kalbar KCP Semitau 1 GB Rp. 1.000.000 Rp. 1.200.000
+13 VSAT IP BPD Kalbar KCP Kota Baru Nanga Pinoh 64 Kbps Rp. 7.500.000 Rp. 2.165.900
+14 VSAT IP BPD Kalbar KCP Nanga Mau 64 Kbps Rp. 7.500.000 Rp. 2.165.900
+Jumlah Rp. 27.000.000 Rp. 18.731.800
+Ppn 11% Rp. 2.970.000 Rp. 2.060.498
+Total Biaya Berlangganan Rp. 29.970.000 Rp. 20.792.298
+2. JAMINAN
+a. Service Level Guarantee
+TELKOM menjamin untuk melakukan perbaikan terhadap Layanan, setelah diterimanya laporan kerusakan atau gangguan
+dari PELANGGAN.
+TELKOM menjamin SLG sebagai berikut:
+a.Availability :99%
+b.Mean Time To Response : 2 jam
+c. Mean Time To Recovery : 48 jam
+b. Restitusi
+(Diisikan rumusan restitusi untuk Layanan)
+(1) Apabila Layanan berdasarkan Kontrak ini mengalami gangguan sehingga tidak dapat berfungsi sebagaimana mestinya
+sesuai dengan tingkat Availability, maka untuk lokasi yang mengalami gangguan, PELANGGAN berhak memperoleh
+Restitusi/Ganti rugi, dengan perhitungan sebagai berikut:
+= jumlah jam gangguan dalam bulan gangguan
+Av = [(100% - Tingkat Availability) x jumlah jam bulan gangguan]
+Restitusi = [(A-Av)/C] x B
+A
+B = Biaya Langganan Bulanan
+C
+=jumlah jam dalam bulan gangguan
+(2) TELKOM memberitahukan secara tertulis kepada PELANGGAN besarnya Restitusi bersamaan dengan penyampaian tagihan. Restitusi dimaksud secara otomatis akan mengurangi tagihan bulan tersebut.
+(3) Restitusi tidak berlaku apabila terjadi gangguan di luar ruas Layanan yang menjadi tanggung jawab TELKOM dan/atau
+terjadi gangguan yang bukan merupakan kelalaian TELKOM.
+TELKOM TELKOм
+Telkok Ineto Indonesia
+Nama Name Rizky Falahudin
+Jabatan Duty Account Manager
+PELANGGAN CUSTOMER
+NKРEMBАNGUNAN DAС
+KANTOR PUSAT a
+Na MANTANG Arif Gunanto Jabaan Duty Kepala Divisi Teknologi Informasi

@@ -1,0 +1,35 @@
+{
+  "notes": "Contoh manifest batch evaluasi OCR. Path relatif terhadap lokasi file manifest ini.",
+  "cases": [
+    {
+      "condition": "Dokumen P7 kondisi jernih (hasil cetak jelas, kontras tinggi)",
+      "doc_type": "P7",
+      "extraction_json": "../../Temporary Storage/202111-DGS-339-BATCH/extraction_results.json",
+      "ground_truth_file": "../../docs/ground-truth/P7.txt"
+    },
+    {
+      "condition": "Dokumen BAST dengan kemiringan sekitar 15 derajat",
+      "doc_type": "BAST",
+      "extraction_json": "../../Temporary Storage/202111-DGS-339-BATCH/extraction_results.json",
+      "ground_truth_file": "../../docs/ground-truth/BAST.txt"
+    },
+    {
+      "condition": "Dokumen NPK dengan noise atau bercak tinta pada area tengah",
+      "doc_type": "NPK",
+      "extraction_json": "../../Temporary Storage/202111-DGS-339-BATCH/extraction_results.json",
+      "ground_truth_file": "../../docs/ground-truth/NPK.txt"
+    },
+    {
+      "condition": "Dokumen invoice fotokopi generasi kedua dengan kontras rendah",
+      "doc_type": "INVOICE",
+      "extraction_json": "../../Temporary Storage/202111-DGS-339-BATCH/extraction_results.json",
+      "ground_truth_file": "../../docs/ground-truth/INVOICE.txt"
+    },
+    {
+      "condition": "Dokumen BAA multi-halaman dengan stempel/tanda tangan",
+      "doc_type": "BAA",
+      "extraction_json": "../../Temporary Storage/202111-DGS-339-BATCH/extraction_results.json",
+      "ground_truth_file": "../../docs/ground-truth/BAA.txt"
+    }
+  ]
+}

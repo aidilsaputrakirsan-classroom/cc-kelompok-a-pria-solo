@@ -1,0 +1,1715 @@
+NOMOR SPK/KONTRAK
+NAMA CС
+NILAI TOTAL KONTRAK
+NO. ACCOUNT SBF
+BERITA ACARA SPLITTING KB/KFS BUNDLING
+(Dilampirkan pada Hard Copy KB/KFS)
+:
+: K.TEL.120427/HK.820/TR4-W300/2024
+: DINAS KOMUNIKASI, INFORMATIKA DAN STATISTIK KOTA BANJARMASIN
+Rp.2.503.405.481,- (BELUM TERMASUK PPN 11%) 4862901
+No Item Pekerjaan Jumlah Bandwidth Satuan Periode
+(Bulan)
+Harga ke Customer
+A
+OTС Satuan Bulanan Total Harga Keterangan (Jangka Layanan)
+IBL
+2
+1 IP Transit Domestik 1 2,200 Mbps 11 이 56,629,254 56,629,254 622,921,790 8 Februari 2025 - 31 Desember 2025 IP Transit Global 1 1 Gb 11 이 63,467,800 63,467,800 698,145,800 3 Februari 2025 - 31 Desember 2025 WMS
+4
+20 20 Mbps 12 이 470,000 9,400,000 112,800,000 Januari 2025 - 31 Desember 2025 Indibiz 2S (Inet + TV) 1 50 Mbps 12 150,000 639,000 639,000 7,818,000 Januari 2025 - 31 Desember 2025 5 VPN IP (Backhaul) 1 1 Mbps 12 0 2,380,000 2,380,000 28,560,000 1L Januari 2025-31 Desember 2025 6 VPN IP (Terminate) 13 512 Kbps 12 이 1,389,000 18,057,000 216,684,00011 Januari 2025 -31 Desember 2025 7 Astinet Reguler 1 100 Mbps 12 이 7,190,000 7,190,000 86,280,000 1 Januari 2025-31 Desember 2025 8 Collocation Neucentrix (Full rack, 10A) 1 0 Paket 12 이 9,500,000 9,500,000 114,000,000 1L Januari 2025 - 31 Desember 2025 9 Sewa IP Public (/26: 56 IP) 62 0 Unit 12 이 100,000 6,200,000 74,400,000 1 Januari 2025 - 31 Desember 2025 10 DDOS Protection 1 0 Paket 12 이 500,000 500,000 6,000,000 1 Januari 2025 -31 Desember 2025 11 IP Transit Domestik eksisting 1 2,800 Mbps 1 0 75,217,379 75,217,379 75,217,379 1 Januari 2025 - 7 Februari 2025 12 IPP Transit Global eksisting 280 Mbps 1 45,313,436 45,313,436 45,313,436 1 Januari 2025 - 7 Februari 2025 Total 150,000 262,795,869 294,493,869 2,088,140,405
+B OBL
+1 Penyediaan Admin dan EoS 2 이 Orang 12 0 8,200,000 16,400,000 196,800,000 11 Januari 2025 - 31 Desember 2025 2 Lisensi APJI 1 0 Paket 12 1,500,000 1,500,000 18,000,000 11 Januari 2025 - 31 Desember 2025 3 Benchmark dan pelatihan MTCRE 1 0 Paket 12 이 16,705,423 16,705,423 200,465,076 1 Januari 2025 -31 Desember 2025 Total 0 26,405,423 34,605,423 415,265,076
+Grand Total 150,000 289,201,292 329,099,292 2,503,405,481
+Banjarmasin, 31 Desember 2024
+Menyetujui,
+ACCOUNT MANAGER
+al
+DWIYAFET PARAMМА
+NIK:
+MANAGER GOVERNMENT SERVICE
+WITEL KALSELTENG
+MUHAMMAD NOOR MUSHODDIQ
+NIK:/850038
+GM WITEL KALSELTENG
+Uesastaut
+YOGA ISTANTO
+NIK. 720412
+MANAGER REGIONAL GOVERNMENT
+ORCHESTRATION SUPPORT
+GDE ADHITYA PRABHAWA
+Mengetahui,
+NIK: 880072
+GM REGIONAL LARGE
+ENTERPRISE & GOVERNMENT SERVICE
+M. CHAYRUDIN
+We
+ NOER
+NIK. 790083
+C
+6 Term Of Payment/Tahapan Pembayaran secara Bulanan setelah TELKOM menerima pembayaran dari
+Diskominfotik Kota Banjarmasin (Back to Back).
+25RGS01443_OBL 2 BUT
+1 of 3
+Hasil Klarifikasi dan Negosiasi:
+No.
+1 Lingkup Pekerjaan/ Scope of Work:
+Deskripsi
+Government Service Kalselteng
+2
+3
+4
+Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin.
+Bill of Quantity (Spesifikasi teknis dan Volume): Terlampir.
+PT Bhakti Unggul Teknovasi memberikan surat penawaran harga Nomor: 961/00/BIS-05/BUT/2024 tanggal
+27 Desember 2024 dengan penawaran harga (sebelum PPN) sebesar Rp 16.800.000.- (Enam Belas Juta
+Delapan Ratus Ribu Rupiah) dengan rincian Bulanan sebesar Rp 1.400.000,- (Satu Juta Empat Ratus
+Ribu Rupiah).
+Dilaksanakan klarifikasi dan negosiasi, disepakati harga terbaik (sebelum PPN) sebesar Rp 14.784.000,-
+(Empat Belas Juta Tujuh Ratus Delapan Puluh Empat Ribu Rupiah) dengan rincian Bulanan sebesar Rp
+1.232.000,- (Satu Juta Dua Ratus Tiga Puluh Dua Ribu Rupiah) dengan PT Bhakti Unggul Teknovasi.
+Skema Bisnis :Pengadaan
+Pimpinan Rapat: Manager Bidding Management & Business Support
+Pada hari ini Jum'at, tanggal Dua Puluh Tujuh bulan Desember tahun Dua Ribu Dua Puluh Empat (27/12/2024),
+bertempat di Balikpapan dilaksanakan Klarifikasi dan Negosiasi Pekerjaan Penyediaan Lisensi APJII untuk
+Diskominfotik Kota Banjarmasin.
+1
+Peserta Rapat:
+Mitra:
+Dany Ramdani - Manager Pemasaran PT Bhakti
+Unggul Teknovasi
+1
+2
+Telkom:
+Yesru Mardaniati - Manager Bidding Management &
+Business Support
+Harisuddin Hakim - Manager Solution & Offering
+3 Muhammad Noor Mushoddiq Manager
+FORM-P6
+Berita Acara Klarifikasi dan Negosiasi
+Penyediaan Lisensi APJII untuk Diskominfotik Kota
+Banjarmasin
+Кииs
+25RGS01443_OBL 2 BUT
+2 of 3
+12
+13
+14
+Denda dan Restitusi:
+Apabila jangka waktu Delivery Pekerjaan tersebut dalam Kontrak Layanan ini dilampaui, maka PT
+Bhakti Unggul Teknovasi dapat dikenakan denda sebesar 100 (satu permil) dari harga Pekerjaan
+sebelum PPN untuk setiap hari kelambatan, dengan batas maksimum 5% (lima persen) dari Harga Pekerjaan.
+Jika dikemudian hari, ada potensi kemungkinan terdapat koreksi terhadap nilai kontrak merujuk hasil
+audit atau review dari BPKP/BPK/Instansi yang berwenang lainnya yang dituangkan di dalam
+dokumen Kontrak Pelaksanaan Pembayaran, maka atas kondisi dimaksud akan dituangkan di dalam
+BAKN sebagai kesepakatan dengan PT Bhakti Unggul Teknovasi.
+Hasil klarifikasi ini akan menjadi dasar harga penawaran bagi TELKOM untuk submit kepada Pelanggan
+Korporat; dimungkinkan untuk dilakukan negosiasi ulang dengan memperhatikan hasil kesepakatan antara
+pihak TELKOM dan Diskominfotik Kota Banjarmasin (subject to re-negotiation).
+Bertindak sebagai waspang dan penandatangan Berita Acara Serah Terima (BAST) adalah Manager Project Management atau pejabat yang ditunjuk
+Demikian berita acara klarifikasi dan negosiasi pekerjaan Penyediaan Lisensi APJII untuk Diskominfotik Kota
+Banjarmasin ini dibuat untuk digunakan sebagaimana mestinya.
+Pengesahan:
+Yesru Mardaniati - Manager Bidding
+Management & Business Support
+Harisuddin Hakim - Manager Solution & Offering
+Muhammad Noor Mushoddiq - Manager
+Government Service Kalselteng
+Dany Ramdani - Manager Pemasaran PT
+Bhakti Unggul Teknovasi
+7 Lokasi instalasi layanan: Kantor Dinas Komunikasi, Informatika, dan Statistik Kota Banjarmasin, Gedung
+Blok B Lt. Dasar, JI. RE Martadinata No.1, Kertak Baru llir, Kec. Banjarmasin Tengah, Kota Banjarmasin,
+Kalimantan Selatan.
+8 Waktu delivery layanan adalah: Paling lambat 31 Desember 2025.
+9 Estimasi jangka waktu layanan/kontrak: 12 Bulan (01 Januari 2025 s.d 31 Desember 2025).
+10 Service level Guarantee (SLG):-
+11 Diperlukan Jaminan:-
+Kertak Baru Ilir, Kec. Banjarmasin Tengah, Kota Banjarmasin, Kalimantan Selatan.
+25RGS01443_OBL_2 BUT
+3 of 3
+Lampiran Berita Acara Klarifikasi dan Negosiasi Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin
+Detail Rincian dan Spesifikasi
+Harga Layanan
+No Detail Item Jumlah Satuan
+Masa
+Layanan
+(Bln)
+Harga Penawaran (IDR) Harga Negosiasi (IDR)
+Bulanan Total Bulanan Total
+1 Lisensi APJII 1 Paket 12 1.400.000 16.800.000 1.232.000
+TOTAL (Sebelum PPN) 16.800.000
+14.784.000
+14.784.000
+Rekap Harga
+No Item Harga Penawaran (IDR) Harga Negosiasi (IDR)
+1 Harga Layanan 16.800.000 14.784.000
+TOTAL (Sebelum PPN) 16.800.000 14.784.000
+Keterangan:
+1. Harga sudah termasuk PPH dan pajak-pajak lainnya akan tetapi belum termasuk PPN.
+2. Lokasi Pelatihan: Kantor Dinas Komunikasi, Informatika, dan Statistik Kota Banjarmasin, Gedung Blok B Lt. Dasar, JI. RE Martadinata No.1.
+3PT.Bh PT. Bhakti Unggul Teknovasi
+Pekerjaan BERITA ACARA REKONSILIASI DELIVERY (BARD)
+: Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin No. Kontrak : K.TEL.14612/HK.810/TR4-R400/2024
+No. Amandemen :-
+Tanggal
+Tanggal
+Telkom
+Indonesia
+: 31 Desember 2024
+Pada Hari Rabu, Tanggal Satu Bulan Januari Tahun Dua Ribu Dua Puluh Lima (01/01/2025), telah dilakukan rekonsiliasi terhadap pekerjaan Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin, kami yang bertanda tangan di bawah ini:
+i. Nama : Eko Rahayu
+Jabatan : Manager Layanan Teknologi
+Dalam hal ini mewakili PT Bhakti Unggul Teknovasi, selanjutnya disebut Sebagai PIHAK PERTAMA il. Nama : Erni Purwanti Dewi
+Jabatan : Mgr. Project Management
+Dalam
+KEDUA hal ini mewakili PT.TELKOM INDONESIA (PERSERO) Tbk, selanjutnya disebut Sebagai PIHAK
+Dengan ini menyatakan:
+1. PIHAK PERTAMA dan PIHAK KEDUA menyepakati bahwa progress pekerjaan telah mencapai 100% sesuai dengan Berita Acara Uji Terima.
+2. Berdasarkan ketentuan yang tercantum dalam kontrak, progress hasil rekonsiliasi di atas sesuai dengan harga pekerjaan Rp. 14.784.000 (Empat Belas Juta Tujuh Ratus Delapan Puluh Empat Ribu Rupiah) belum termasuk PPN. Progress hasil rekonsiliasi di atas telah sesuai dengan ketentuan yang tertera dalam kontrak.
+Bandung, 01 Januari 2025
+PT Bhakti Unggul Teknovasi
+EkoRanal- U
+Manager Layanan Teknologi
+PT TELKOM INDONESIA (PERSERO) Tbk
+Jor Indonesia
+Erni Purwanti Dewi
+Mgr. Project Management
+Telkom Indonesia
+3PT.Unggul Bhakti Teknovasi
+Pekerjaan
+No. Kontrak
+LAMPIRAN BERITA ACARA REKONSILIASI DELIVERY (BARD)
+: Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin
+: K.TEL.14612/HK.810/TR4-R400/2024
+No. Amandemen :-
+Tanggal: 31 Desember 2024
+Tanggal :-
+Pada Hari Rabu, Tanggal Satu Bulan Januari Tahun Dua Ribu Dua Puluh Lima (01/01/2025), telah dilakukan rekonsiliasi terhadap pekerjaan Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin, kami yang bertanda tangan di bawah ini:
+1.Hasil Rekonsiliasi Perhitungan Progress Pekerjaan
+No Detail Item Jumlah Satuan
+Masa
+Layanan
+(Bln) 1 Lisensi APJII 1 Paket
+2.Hasil Rekonsiliasi Perhitungan Nilai Progress Pekerjaan
+12
+Tgl Aktif
+01 Januari 2025
+Progress
+Pekerjaan
+100%
+Masa
+Layanan Harga Pekerjaan (IDR)
+No Detall Item Jumlah Satuan
+(Bln) Bulanan Total
+1 Lisensi APJI 1 Paket 12 1.232.000 14.784.000
+TOTAL (Sebelum PPN) 14.784.000
+3.Progress Pekerjaan telah mencapai 100% dan sesuai dengan ketentuan yang telah tertera dalam Nota
+Pesanan setara dengan harga pekerjaan sebesar Rp. 14.784.000 (Empat Belas Juta Tujuh Ratus Delapan Puluh Empat Ribu Rupiah) belum termasuk PPN.
+Bandung, 01 Janauri 2025
+PT Bhakti Unggul Teknovasi
+Be Tel - U
+Eko Rahayu
+Manager Layanan Teknologi
+PT TELKOM INDONESIA (PERSERO) Tbk
+Telkom
+wadnesia
+Erni Purwanti Dewi
+Mgr. Project Management
+3
+PT Bhakti Unggul Teknovasi
+PT Rhakti
+TEMPEL ndonesia
+E0AMX3954
+Erni Purwanti Dewi
+PT. Bhakti Unggul Tek
+Pekerjaan
+No. Kontrak
+Nilai kontrak
+Deta ncian
+Telkom Indonesia
+Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin
+K.TEL.14612/HK.810/TR4-R400/2024 Tanggal : 31 Desember 2024
+Rp. 14.784.000,-
+Masa
+Layanan Harga Pekerjaan (IDR)
+No Detall Item Jumlah Satuan
+(Bin) Bulanan Total
+1 12 1.232.000 14.784.000
+TOTAL (Sebelum PPN) 14.784.000
+Rekap Harga
+No item Harga Pekerjaan (IDR)
+1 Harga Layanan 14.784.000 Teknovas
+TOTAL (Sebelum PPN) 14.784.000
+Keterangan:
+1.Harga sudah termasuk PPH dan pajak-pajak lainnya akan tetapi belum termasuk PPN
+2.Lokasi Instalasi: Kantor Dinas Komunikasi, Informatika, dan statistik Kota Banjarmasin, Gedung Blok
+Lt Dasar, JI. RE Martadinata No.1, Kertak Baru llir, Kec. Banjarmasin Tengah, Kota Banjarmasin,
+Kalimantan Selatan.
+PT Bhakti Unggul Teknovasi
+hieh
+Ardi Soetrisno Putro
+General Manager Support
+PT TELKOM INDONESIA (PERSERO)
+Talkom
+Indones
+Erni Purwanti DewiM
+Mgr. Project Management
+PT. Bhakti Unggul Teknovasi Telkom
+Indonesia
+Pekerjaan
+BERITA ACARA UJI TERIMA (BAUT)
+: Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin No. Kontrak : K.TEL.14612/HK.810/TR4-R400/2024 Tanggal :31 Desember 2024 No. Amandemen :- Tanggal :-
+Pada Hari Rabu, Tanggal Satu Bulan Januari Tahun Dua Ribu Dua Puluh Lima (01/01/2025), telah dilaksanakan Uji Terima Barang dan atau Jasa, kami yang bertanda tangan di bawah ini:
+i. Nama : Eko Rahayu
+Jabatan : Manager Layanan Teknologi
+Dalam hal ini mewakili PT Bhakti Unggul Teknovasi, selanjutnya disebut Sebagai PIHAK PERTAMA
+i. Nama : Erni Purwanti Dewi
+Jabatan : Mgr. Project Management
+Dalam hal ini mewakili PT.TELKOM INDONESIA (PERSERO) Tbk, selanjutnya disebut Sebagai PIHАК KEDUA
+PIHAK PERTAMA dan PIHAK KEDUA dengan ini menyatakan bahwa pelaksanaan Uji Terima pekerjaan Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin yang meliputi pengujian dan pemeriksaan fisik (terlampir) pekerjaan dinyatakan
+Progress Pekerjaan:
+Progress pekerjaan telah mencapai 100%
+DITERIMА
+Demikian Berita Acara Uji Terima ini dibuat rangkap 3 (tiga) asli, masing-masing sama bunyinya dan ditandatangani oleh kedua belah pihak untuk dipergunakan sebagaimana semestinya.
+PT Bhakti Unggul Teknovasi PT TELKOM INDONESIA (PERSERO) Tbk
+Telkom
+Be TeT-U
+Eko Rahayu
+Manager Layanan Teknologi
+Erni Purwanti Dewi
+Mgr. Project Management
+PT. Bhakti
+Unggul Teknovasi
+LAMPIRAN BERITA ACARA UJI TERIMA (BAUT)
+Telkom
+Indonesia
+: Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin : K.TEL.14612/HK.810/TR4-R400/2024
+Pekerjaan
+No. Kontrak
+No. Amandemen :-
+Tanggal : 31 Desember 2024
+Tanggal
+Pada
+dilaksanakan
+ Hari Rabu, Tanggal Satu Bulan Januari Tahun Dua Ribu Dua Puluh Lima (01/01/2025), telah Uji Terima Barang dan atau Jasa, kami yang bertanda tangan di bawah ini:
+No Detail Item Jumlah Satuan
+Masa
+Layanan
+(Bln)
+No Order / SID /
+Tgl Aktif Status
+1 Lisensi APJII 1 Paket 12
+1-41669778723
+/ 2087352921/
+01 Januari 2025
+OK
+ditandatangani
+Demikian Berita Acara Uji Terima ini dibuat rangkap 3 (tiga) asli, masing-masing sama bunyinya dan oleh kedua belah pihak untuk dipergunakan sebagaimana semestinya.
+PT Bhakti Unggul Teknovasi
+Eko RandylManager Layanan Teknologi
+PT TELKOM INDONESIA (PERSERO) Tbk
+r Telkomy Mrdonesia
+Erni Purwanti Dewi A
+Mgr. Project Management
+Dokumentasi Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin
+Pekerjaan: Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin
+Pemberi Tugas: PT. Telekomunikasi Indonesia, Tbk
+Pelaksana : BHAKTI UNGGUL TEKNOVASI
+No Kontrak: K.TEL.14612/HK.810/TR4-R400/2024
+Data Customer
+Nama: Diskominfotik Kota Banjarmasin
+Periode: 01 Januari 2025 s.d 31 Desember 2025
+A. Detail Pekerjaan
+Lisensi AРJII
+B. Evident
+Evident Terlampir.
+FORM Guideline Verifikasi Dokumen OBL PO/Ticket ID:
+4500560932, 4500560933, 4500560934,
+4500560935, 4500560937, 4500560938,
+4500560939, 4500560940, 4500560941 /
+202507-DGS-021
+Mitra : PT BHAKTI
+UNGGUL TEKNOVASI
+Jenis
+Dok. Isi Dokumen Informasi Pasal Terkait Informasi Kontrak*/Amd./Side
+Letter/Surat Kuasa Pasal Kesesuaian antar Dokumen
+Surat Permohonan Bayar, Invoice, Kwitansi, Dokumen Perpajakan
+1. Tanggal Nota Pesanan 31 Desember 2024
+2. Nomor Nota Pesanan K.TEL.14612/HK.810/TR4-R400/2024 Sesuai
+b. Nama Bank MANDIRI 3. Nama Bank MANDIRI Sesuai
+c. No. Rekening 131.00.8888818-7 4. No. Rekening 131.00.8888818-7 Sesuai
+a. Pembayaran Periode Januari - September 2025
+(Inc PPN) Rp12.307.680 5. Jangka Waktu Kontrak 01 Januari 2025 s/d 31 Desember 2025 Sesuai
+b. Nilai DPP Invoice (Excl. PPN) Rp11.088.000 6. Nilai Termin Ditagihkan (Inc PPN) Rp12.307.680 Sesuai
+c. Pengembalian Uang Muka (Mengurangi Invoice) Rp … 7. Pengembalian UM (jika ada) … Sesuai
+d. Pengembalian Retensi (Mengurangi Invoice) Rp … 8. Pengembalian Retensi (jika ada) … Sesuai
+e. Restitusi SLG (Mengurangi Invoice) Rp …
+f. Denda Delivery (Tidak Mengurangi Invoice) Rp …
+ⓘ (Ketentuan mekanisme pengurangan invoice butir c-f berlaku u/ invoice terbit setelah tanggal 6 September 2021)
+g. Nilai kwitansi dan terbilang (Inc PPn) Rp12.307.680 Sesuai
+a. Nomor Faktur Pajak (4 digit terakhir)
+b. Surat Keterangan Bebas PPh …… (jika ada) Tidak
+BAST / BAPP / BAPB
+a. Tanggal 01 Januari 2025 Lurus
+b. Penandatangan Telkom (diisi nama jabatan ) Mgr. Project Management 9.I. Penandatangan BAUT (Telkom) Mgr. Project Management Sesuai
+c. Penandatangan Mitra (diisi nama jabatan ) Manager Layanan Teknologi II. Penandatangan BAUT (Mitra) Manager Layanan Teknologi Sesuai
+d. Tanggal Aktif 01 Januari 2025 10. Tanggal Target Delivery 31 Desember 2025 Tidak Denda
+e. Lampiran/Scope of Work Ada 11. Scope of Work Kontrak (tidak perlu diisi) Sesuai
+a. Tanggal 01 Januari 2025 Lurus
+b. Penandatangan Telkom (diisi nama jabatan ) Mgr. Project Management Sesuai
+c. Penandatangan Mitra (diisi nama jabatan ) Manager Layanan Teknologi Sesuai
+d. Nilai Progress 100% (Excl. PPN) Rp14.784.000
+e. Lampiran/Scope of Work Ada 12. Scope of Work Kontrak (tidak perlu diisi) Sesuai
+ⓘ Wajib melampirkan BARD untuk P8 yang terbit setelah tanggal ≥ 6 Desember 2021
+Dokumen Pendukung Kontrak*/Amd./Side Letter/Surat Kuasa
+a. Nomor Nota Pesanan
+K.TEL.14612/HK.810/TR4-
+R400/2024
+Invoice dan Kwitansi
+Dua Belas Juta Tiga Ratus Tujuh Ribu Enam Ratus Delapan Puluh Rupiah
+SPB
+Dok.
+Perpajaka
+n
+BAUT BARD
+Page 1 of 3
+Jenis
+Dok. Isi Dokumen Informasi Pasal Terkait Informasi Kontrak*/Amd./Side
+Letter/Surat Kuasa Pasal Kesesuaian antar Dokumen
+Dokumen Pendukung Kontrak*/Amd./Side Letter/Surat Kuasa
+a. Tanggal 01 Januari 2025 13. Tanggal Target Delivery 31 Desember 2025 Lurus
+ⓘ BAPD (Jika terdapat pembebasan denda) Ada / Tidak ⓘ Pejabat Penandatangan BAPD …
+ I. Penandatangan Pihak Telkom - I. Penandatangan Pihak Telkom - Sesuai
+ II. Penandatangan Pihak Mitra - II. Penandatangan Pihak Mitra - Sesuai
+b. Penandatangan Telkom (diisi nama jabatan ) Mgr. Project Management 14.I. Penandatangan BAST (Telkom) Mgr. Project Management Sesuai
+c. Penandatangan Mitra (diisi nama jabatan ) General Manager Support II. Penandatangan BAST (Mitra) General Manager Support Sesuai
+d. No. BAST Telkom TEL.0020/LG.320/TR4-
+R403/2025
+e. No. BAST Mitra 318/01/BIS-08/BUT/2025
+f. Menunjuk Kepada Nota Pesanan 15. Nota Pesanan Ada Sesuai
+g. Nilai Pekerjaan (Excl. PPN) Rp14.784.000 16. Nilai Kontrak (Excl. PPN) Rp14.784.000 Sesuai
+h. Lampiran/Scope of Work (jika ada) Ada 17. Scope of Work Kontrak (tidak perlu diisi) Sesuai
+a. Tanggal Aktif Layanan … 18. Jangka Waktu Kontrak (lihat Informasi butir 5.) Sesuai
+b. Penandatangan Telkom (diisi nama jabatan ) … Sesuai
+c. Penandatangan Mitra (diisi nama jabatan ) … Sesuai
+d. BAPL (n-1) (u/ tagihan pertama perpanjangan) Ada / Tidak
+Dokumen Lain-lain (apabila ada)
+a. BASO Tidak 19. BASO Tidak Dipersyaratkan Sesuai
+b. BAPL/LPL Tidak 20. BAPL/LPL Tidak Dipersyaratkan Sesuai
+c. BA Penyelesaian Pekerjaan Tidak 21. BAPP Tidak Dipersyaratkan Sesuai
+d. BA Rekon Usage Tidak 22. BA Rekon Usage Tidak Dipersyaratkan Sesuai
+e. NPK Ada 23. NPK Dipersyaratkan Sesuai
+f. BA Penjelasan Tidak 24. BA Penjelasan/Ba Kronologis/… Tidak Dipersyaratkan Sesuai
+g. … 25. … Sesuai
+a. Penerbit Jaminan
+- Jaminan: Lembaga penerbit sesuai ketentuan
+Corporate Finance yang berlaku
+… 26. Penandatangan Kontrak (Mitra) Direktur Sesuai
+b. Nilai Jaminan Rp … Sesuai
+c. Jangka Waktu s/d 27. Jangka Waktu Kontrak (lihat Informasi butir 5.) Sesuai
+Jaminan/Surat Pengganti
+d. Menunjuk KL/WO/SP KL / WO / SP Sesuai
+Jaminan
+Pelaksanaan/Pemerliharaa
+BAST/ BA Progress Pekerjaan/ BAPB
+*jika BA >1, dirincikan di lembar terpisah. BAPLA Persyaratan Pembayaran
+Page 2 of 3
+Jenis
+Dok. Isi Dokumen Informasi Pasal Terkait Informasi Kontrak*/Amd./Side
+Letter/Surat Kuasa Pasal Kesesuaian antar Dokumen
+Dokumen Pendukung Kontrak*/Amd./Side Letter/Surat Kuasa
+Kontrak Berlangganan Induk
+a. No KB Adendum Terakhir … 28. Nomor KB pada P8 (tidak perlu diisi) Sesuai
+b. Nilai KB** Rp … 29. Nilai Kontrak (lihat Informasi butir 16.) Sesuai
+ s/d Sesuai
+… bulan Sesuai
+e. BA Splitting (jika nilai KB bersifat Bundling) Ada / Tidak Sesuai
+Return YA (lihat keterangan return di lembar Catatan Verifikasi) NOTE:
+Return TIDAK
+*) Definisi Kontrak: KL/WO/SP/P8
+**) Nilai sebelum PPN
+PIC Mitra
+Tanggal : ………….. Paraf : a. Telkom : PMO
+Verifikator : …………..
+PIC BUD / SDA
+Tanggal : ………….. Paraf :
+Verifikator : …………..
+PIC FCBP02 3. Penandatangan BA Rekon Delivery & BAUT 4. Penandatangan BA Rekon Usage:
+Tanggal : ………….. Paraf : a. Telkom: Project Manager/PIC PMO (Delivery) a. Telkom: Project Manager/PIC PMO (Assurance)
+Verifikator : ………….. b. Mitra: Project Manager/Pejabat Berwenang b. Mitra: Project Manager/Pejabat Berwenang
+b. Mitra : Project Manager/Pejabar Berwenang yang ditunjuk di Kontrak
+30. Jangka Waktu Kontrak (lihat Informasi butir 5.)
+Kontrak Berlangganan
+Induk
+c. Jangka Waktu
+1. Dokumen yang disebutkan di checklist merefer pada ketentuan Kontrak dan Kebijakan Internal Telkom
+2. Untuk Kontrak yang terbit setelah 29 Juli 2021, maka pejabat penandatangan BAST mengikuti ketentuan
+yang tercantum pada PK SDA no 511.01.01/2021
+Page 3 of 3
+Detail Transaksi
+Tambah Transaksi Hapus Transaksi
+KUANTITAS Harga Satuan Potongan Tarif PPN DPP Nilai Tarif PPnBM Tipe Nama T Kode Satuan Total Harga DPP PPN T PPnBM 1
+harga↑ Lain/DPP
+SERVICES
+Penyediaan Lisensi APJIІ
+untuk Diskominfotik Kota
+Banjarmasin Periode Januari
+2025-September 2025
+000000 1,00 Lainnya 11.088.000,00 11.088.000,00 0.00 12% 11.088.000,00 1.219.680.00 10.164.000,00 0,00 0.00
+JUMLAH 11.088.000,00 1.219.680,00 10.164.000,00 0,00
+Menampilkan 1 sampai 1 dari 1 entri << < 10
+Informasi Pembeli
+NPWP* ID Negara Nomor Dokumen Nama*
+0010000131093000 NPWP Paspor Indonesia TELKO*
+NIK Identitas
+Lain
+Alamat* IDTKU*
+JL JAPATI NO.1, RT 000, RW 000, SADANG... 000000
+Email
+Edit Output Invoice
+Dokumen Transaksi
+Uang Muka
+Jenis Faktur
+Normal
+IDTKU
+000000
+Pelunasan
+Π Π
+Masa Pajak
+Desember
+Nomor Faktur
+Nomor Faktur
+Tahun
+2025
+Kode Transaksi* Tanggal Faktur
+03-12-2025 E
+03 - kepada Pemungut PPN selain Insta..
+Referensi
+00/00/KUG-06/BUT/2025
+Alamat
+JL SUMUR BANDUNG NO.12, RT 000, RW...
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000970626
+Vendor
+PEMBERI
+ : 6612762 РТ BHAKTI UNGGUL TEKNOVASI
+PENERIMA: GRNke :1 Plant : SDAF RSO Regional 4 Tanggal GRN : 19.11.2025 Storage Location Ref.PO/SPK/Kontrak: RefPO 4500560932
+Delivery Date Volume
+No. Item-ID
+Urut Material
+Nama Material Sesuai Sesuai Satuan Kontrak Sesuai Dapat Ditolak Sisa Harga Jumlah Jumlah Kontrak/РО DPB SPK/PO DPB Diterima Satuan Harga Denda
+SDAF-1224-14612-TR4/BUT/BJM/JAN24 31.12.2025 0 1 0 이 1.232.000 1.232.000 이
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor : Menyetujui :
+fouy
+NISSA AMELIA PAHLEVY
+NIK: 940090
+Penyimpan:
+Rud
+RIZA LATUL HUSNA
+NIK: 970235
+RSO
+PT.
+ Regional 4: Jl. MT Haryono Telp.
+TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+Fax. Balikpapan,
+Total sebelum PPN: 1.232.000
+Penguji:
+1.
+NIK:
+2.
+NIK:
+3.
+NIK:
+Hal 1/ 1
+Vendor:
+PEMBERI
+ 6612762 РТ ВHAKTI UNGGUL TEKNOVASI
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000970627
+Plant
+PENERIМА:
+: SDAF RSO Regional 4
+GRN ke :
+Tanggal GRN : 19.11.2025 Storage Location : Ref.PO/SPK/Kontrak: 4500560933
+Delivery Date Volume
+No. Item-ID NamaMaterial Sesuai Sesuai |Satuan Kontrak/ Sesuai Dapat Ditolak Sisa Harga Urut Material Kontrak/PO DPB SPK/PO DPB Diterima Satuan Jumlah Harga Denda Jumlah
+SDAF-1224-14612-TR4/BUT/BJM/FEB24 31.12.2025 1 0 1 0 1.232.000 1.232.000 이
+Untuk enagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor : Penyimpan:
+PT. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+RSO Regional 4: J1. MT Haryono Telp.
+Menyetujui :
+Baun
+NISSA AMELIA PAHLEVY
+NIK: 940090
+Fax Balikpapan,
+Rual
+RIZA LATUL HUSNA
+NIK: 970235
+Total sebelum PPN: 1.232.000
+Penguji:
+1.
+NIK:
+2.
+NIK:
+3.
+NIK:
+Hal 1/ 1
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000970628
+Vendor:
+PEMBERI
+ 6612762 РТ ВHAKTIUNGGUL TEKNOVASI
+PENERIMA : GRN ke
+Plant : SDAF RSO Regional 4 Tanggal GRN ::1.1 19.11.2025 Storage Location: Ref.PO/SPK/Kontrak: 4500560934
+Delivery Date Volume
+No. Item-ID Nama Material Sesuai Sesuai Satuan Kontrak/ Sesuai Dapat Ditolak Sisa Harga Jumlah Jumlah Urut Material Kontrak/PО DPB SPK/PO DPB Diterima Satuan Harga Denda
+SDAF-1224-14612-TR4/BUT/BJM/MAR24 31.12.2025 0 0 1.232.000 1.232.000 이
+Untuk enagihan harap ditambahkar PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor:
+PT. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+RSO Regional 4: Jl. MT Harycno Telp.
+Menyetujui :
+-fauyNISSA AMELIA PAHLEVY
+NIK: 940090
+Fax. Balikpapan,
+Penyimpan:
+Roval
+RIZA LATUL HUSNA
+NIK: 970235
+Total sebelum PPN: 1.232.000
+Penguji :
+1.
+NIK:
+2.
+NIK:
+3.
+NIK:
+Hal 1/ 1
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000970629
+Vendor:
+PEMBERI
+ 6612762 РTBHAKTI UNGGUL TEKNOVASI
+PENERIMA: GRN ke
+Plant Plant : SDAF RSO Regional 4 Tanggal GRN :
+:1
+ 19.11.2025
+Storage Location : Ref.PO/SPK/Kontrak: 4500560935
+Delivery Date Volume
+No. Item-ID Nama Material Sesuai Sesuai Satuan Kontrak/ Sesuai Dapat Ditolak Sisa Harga
+Urut Material Kontrak/РО DPB SPK/PO DPB Diterima Satuan
+Jumlah
+Harga
+Jumlah
+Denda
+SDAF-1224-14612-TR4/BUT/BJM/APR24 31.12.2025 1 0 0 이 1.232.000 1.232.000 이
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor: Menyetujui :
+Raumy
+NISSA AMELIA PAHLEVY
+NIK: 940090
+PT. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+RSO Regional 4 : Jl. MT Haryono Telp. Fax. Balikpapan,
+Total sebelum PPN: 1.232.000
+Penyimpan: Penguji:
+1.
+M NIK:
+2
+RIZA LATUL HUSNA
+NIK: 970235
+NIK:
+3
+NIK: Hal 1/ 1
+Goods Receipt Notes (GRN)
+PENERIMА:
+Vendor:
+PEMBERI
+ 6612762 РТ ВНАКTIUNGGUL TEKNOVASI Plant : SDAF RSO Regional 4 Storage Location
+Nomor GRN : 5000970630
+GRN ke :1
+Tanggal GRN : 19.11.2025
+Ref.PO/SPK/Kontrak: 4500560937
+Delivery Date Volume
+No. Item-ID Nama Material Sesuai Sesuai Satuan Kontrak/
+Urut Material Kontrak/PO DPB SPK/PO DPB
+Sesuai Dapat Ditolak Sisa Harga Jumlah Jumlah
+Diterima Satuan Harga Denda
+1 SDAF-1224-14612-TR4/BUT/BJM/MEI24 31.12.2025 1 이 0 1.232.000 1.232.000 0
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor: Menyetujui:
+PT. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional
+RSO Regional 4: Jl. MT Haryono Telp.
+NISSA AMELIA PAHLEVY
+NIK: 940090
+4
+Fax. Balikpapan,
+Penyimpan:
+RNA
+RIZA LATUL HUSNA
+NIK: 970235
+Total sebelum PPN: 1.232.000
+Penguji:
+1.
+NIK:
+2.
+NIK:
+NIK:
+Hal 1/ 1
+3. 3
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000970631
+Vendor:
+PEMBERI
+6612762 РT BHAKTI UNGGUL TEKNOVASI Plant D
+PENERIМА:
+: SDAF RSO Regional 4
+GRN ke
+Tanggal GRN :
+:1
+ 19.11.2025
+Storage Location : Ref.PO/SPK/Kontrak: 4500560938
+Delivery Date Volume
+No. Item-ID Nama Material Sesuai Sesuai Satuan Kontrak/ Sesua Dapat Ditolak Sisa Harga
+Urut Material Kontrak/PО DPB SPK/PO DPB Diterima Satuan
+Jumlah
+Harga
+Jumlah
+Denda
+SDAF-1224-14612-TR4/BUT/BJM/JUN24 31.12.2025 1 이 0 이 1.232.000 1.232.000 0
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor: Menyetujui :
+RayNISSA AMELIA PAHLEVY
+NIK: 940090
+Penyimpan:
+Ruw
+RIZA LATUL HUSNA
+NIK: 970235
+PT. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+4 RSO Regional 4 : J1. MT Haryono Telp. Fax. Balikpapan,
+Total sebelum PPN: 1.232.000
+Penguji:
+1.
+NIK:
+2.
+NIK:
+3.
+NIK:
+Hal 1/ 1
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000970642
+PENERIMA: GRN ke :1
+Vender:
+PEMBERI
+6612762 PTBHAKTI UNGGUL TEKNOVASI Plant : SDAF RSO Regional 4 Tanggal GRN : 19.11.2025 Storage Location Ref.PO/SPK/Kontrak: 4500560939
+Delivery Date Volume
+No. Item-ID Nama Material Sesuai Sesuai Satuan Kontrak/ Sesuai Dapat Ditolak Sisa Harga Jumlah Jumlah
+Urut Material Kontrak/РО DPB SPK/PO DPB Diterima Satuan Harga Denda
+SDAF-1224-14612-TR4/BUT/BJM/JUL24 31.12.2025 이 0 0 1.232.000 1.232.000 Ο
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor :
+PT. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+RSO Regional 4 : J1. MT Haryono Telp.
+Menyetujui :
+Boul
+NISSA AMELIA PAHLEVY
+NIK: 940090
+Fax. Balikpapan,
+Total sebelum PPN 1.232.000
+Penyimpan: Penguji :
+1. R
+RIZA LATUL HUSNA
+NIK: 970235
+NIK:
+2.
+NIK:
+3.
+NIK: Hal 1/ 1
+Vendor:
+PEMBERI
+ 6612762 РТ ВНАКТI UNGGUL TEKNOVASI
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000970643
+Plant
+PENERIMA:
+: SDAF RSO Regional 4
+Storage Location:
+GRN ke :1
+Tanggal GRN : 19.11.2025
+Ref.PO/SPK/Kontrak: 4500560940
+Delivery Date Volume
+No. Item-ID Nama Material Sesuai Sesuai Satuan Kontrak Sesuai Dapat Ditolak Sisa Harga Jumlah Jumlah
+Urut Material Kontrak/PO DPB SPK/PO DPB Diterima Satuan Harga Denda
+SDAF-1224-14612-TR4/BUT/BJM/AGS24 31.12.2025 1 0 1 0 0 1.232.000 1.232.000
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor:
+PT. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+RSO Regional 4: Jl. MT Haryono Telp.
+Menyetujui :
+PaumyNISSA AMELIA PAHLEVY
+NIK: 940090
+Fax. Balikpapan,
+Penyimpan:
+Reul
+RIZA LATUL HUSNA
+NIK: 970235
+Total sebelum PPN: 1.232.000 0
+Penguji:
+1.
+NIK:
+2.
+NIK:
+3.
+NIK: Hal 1/ 1
+Vendor:
+PEMBERI
+ 6612762 PТBНAKTI UNGGUL TEKNOVASI Storage Plant
+PENERIMA:
+ Location
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000970644
+GRN ke :
+: SDAF RSO Regional 4 Tanggal GRN : 19.11.2025
+Ref.PO/SPK/Kontrak: 4500560941
+Delivery Date Volume
+No. Item-ID Nama Material Sesuai Sesual Satuan Kontrak/ Sesuai Dapat Ditolak Sisa Harga Jumlah Jumlah
+Urut Matcrial Kontrak/РO DPB SPK/PO DPB Diterima Satuan Harga Denda
+SDAF-1224-14612-TR4/BUT/BJM//SEP24 31.12.2025 이 0 이 1.232.000 1.232.000 이
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor: Menyetujui :
+NISSA AMELIA PAHLEVY
+NIK: 940090
+PT. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+RSO Regional 4: Jl. MT Haryono Teip. Fax. Balikpapan,
+Penyimpan:
+Rue
+RIZA LATUL HUSNA
+NIK: 970235
+Total sebelum PPN: 1.232.000
+Penguji:
+1.
+NIK:
+2.
+NIK:
+3.
+NIK: Hal 1/ 1
+Vendor:
+PEMBERI
+ 6612762 РТ ВНАКTI UNGGUL TEKNOVASI
+Goods Receipt Notes (GRN)
+Nomor GRN : 5000970645
+PENERIMА :
+Plant : SDAF RSO Regional 4
+Storage Location:
+GRN ke :1
+Tanggal GRN: 19.11.2025
+Ref.PO/SPK/Kontrak : 4500560942
+Delivery Date Volume
+No. Item-ID Nama Material Sesuai Sesuai Satuan Kontrak/ Sesuai Dapat Ditolak Sisa Harga Jumlah Jumlah
+Urut Material Kontrak/PО DPB SPK/PO DPE Diterima Satuan Harga Denda
+1 SDAF-1224-14612-TR4/BUT/BJM/OKT24 31.12.2025 0 0 1.232.000 1.232.000
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor :
+"Pavy
+Menyetujui:
+NISSA AMELIA PAHLEVY
+NIK: 940090
+PT. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional
+RSO Regional 4: Jl. MT Haryono Telp.
+4
+Fax Balikpapan,
+Total sebelum PPN: 1.232.000
+Penyimpan: Penguji:
+Bual 1. NIK: 2.
+RIZA LATUL TUL HUSNA NIK:
+NIK: 970235 3.
+NIK: Hal 1/ 1
+Goods Receipt Notes (GRN)
+PENERIМА:
+Vendor
+PEMBERI
+ : 6612762 РТ ВНAKTI UNGGUL TEKNOVASI Plant Plont : SDAF RSO Regional 4 Storage Location:
+Nomor GRN : 5000970646
+GRN ke :1
+Tanggal GRN : 19.11.2025
+Ref.PO/SPK/Kontrak: 4500560943
+Delivery Date Volume
+No. Item-ID Nama Material Sesuai Sesuai Satuan Kontrak/ Sesuai Dapat Ditolak Sisa Harga Jumlah Jumlah
+Urut Material Kontrak/РО DPB SPK/PO DPB Diterima Satuan Harga Denda
+SDAF-1224-14612-TR4/BUT/BJM/NOV24 31.12.2025 0 0 0 1.232.000 1.232.000 0
+Untuk penagihan harap ditambahkan PPN dan/atau an/atau pajak-pajak lainnya sesuai faktur pajak Total sebelum PPN: 1.232.000
+Rekanan/Vendor: Menyetujui: Penyimpan :
+NISSA AMELIA PAHLEVY
+NIK: 940090
+PT. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+RSO Regional 4: Jl. MT Haryono Telp. Fax. Balikpapan,
+Rai
+RIZA LATUL HUSNA
+NIK: 970235
+Penguji:
+1.
+NIK:
+2.
+NIK:
+3.2
+NIK: Hal 1/ 1
+Vendor:
+PEMBERI
+ 6612762 PT BHAKTI UNGGUL TEKNOVASI
+Goods Receipt Notes (GRN)
+Plant
+PENERIMА:
+: SDAF RSO Regional 4
+Storage Location
+Nomor GRN : 5000970647
+GRN ke :1
+Tanggal Tonani GRN : 19.11.2025
+Ref.PO/SPK/Kontrak: 4500560944
+Delivery Date Volume
+Nc. Item-ID Nama Material Sesuai Sesuai Satuan Kontrak Sesuai Dapat Ditolak Sisa Harga Jumlah Jumlah
+Urut Material Kontrak/РО DPB SPK/PO DPB Diterima Satuan Harga Denda
+SDAF-1224-14612-TR4/BUT/BJM/DES24 31.12.2025 이 0 0 1.232.000 1.232.000 0
+Untuk penagihan harap ditambahkan PPN dan/atau pajak-pajak lainnya sesuai faktur pajak
+Rekanan/Vendor : Menyetujui:
+NISSA AMELIA PAHLEVY
+NIK: 940090
+PT. TELEKOMUNIKASI INDONESIA Tbk, RSO Regional 4
+RSO Regional 4: J1. MT Haryono Telp. Fax. Balikpapan,
+Penyimpan :
+Bual
+RIZA LATUL HUSNA
+NIK: 970235
+Total sebelum PPN: 1.232.000
+Penguji:
+1.
+NIK:
+2.
+NIK:
+3.
+NIK: Hal 1/ 1
+PT. Bhakti Unggul Teknovasi
+KKP Project : Pembayaran Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin
+Surat Nota Pesanan : K.TEL.14612/HK.810/TR4-R400/2024
+Nilai Kontrak (Exl PPn) : 14.784.000
+No No. Invoice Uraian Tanggal Invoice DPP PPN Total Keterangan
+1
+Penyediaan Lisensi APJII untuk Diskominfotik Kota
+Banjarmasin Periode Januari 2025 1.232.000 135.520 1.367.520 On Progress
+2
+Penyediaan Lisensi APJII untuk Diskominfotik Kota
+Banjarmasin Periode Februari 2025 1.232.000 135.520 1.367.520 On Progress
+3
+Penyediaan Lisensi APJII untuk Diskominfotik Kota
+Banjarmasin Periode Maret 2025 1.232.000 135.520 1.367.520 On Progress
+4
+Penyediaan Lisensi APJII untuk Diskominfotik Kota
+Banjarmasin Periode April 2025 1.232.000 135.520 1.367.520 On Progress
+5
+Penyediaan Lisensi APJII untuk Diskominfotik Kota
+Banjarmasin Periode Mei 2025 1.232.000 135.520 1.367.520 On Progress
+6
+Penyediaan Lisensi APJII untuk Diskominfotik Kota
+Banjarmasin Periode Juni 2025 1.232.000 135.520 1.367.520 On Progress
+7
+Penyediaan Lisensi APJII untuk Diskominfotik Kota
+Banjarmasin Periode Juli 2025 1.232.000 135.520 1.367.520 On Progress
+8
+Penyediaan Lisensi APJII untuk Diskominfotik Kota
+Banjarmasin Periode Agustus 2025 1.232.000 135.520 1.367.520 On Progress
+9
+Penyediaan Lisensi APJII untuk Diskominfotik Kota
+Banjarmasin Periode September 2025 1.232.000 135.520 1.367.520 On Progress
+ 11.088.000 1.219.680 12.307.680
+Mengetahui,
+Manager Marketing
+Dany Ramdani
+PT BHAKTI UNGGUL TEKNOVASI No. Kuitansi:
+Jl. Telekomunikasi No.1 Dayeuhkolot Bandung -
+Phone : +62.22.7509961
+Email : info@but.co.id Tanggal:
+Website : but.co.id -
+KUITANSI
+Telah Terima dari :
+Uang Sejumlah :
+Untuk Pembayaran : Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin Periode Januari 2025 –
+September 2025
+PT Telkom Indonesia (Persero) Tbk
+Dua Belas Juta Tiga Ratus Tujuh Ribu Enam Ratus Delapan Puluh Rupiah
+Rp. 12.307.680
+Indah Purnomowati
+Direktur
+PT BHAKTI UNGGUL TEKNOVASI No. Kuitansi:
+Jl. Telekomunikasi No.1 Dayeuhkolot Bandung -
+Phone : +62.22.7509961
+Email : info@but.co.id Tanggal:
+Website : but.co.id -
+KUITANSI
+Telah Terima dari :
+Uang Sejumlah :
+Untuk Pembayaran : Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin Periode Januari 2025 –
+September 2025
+PT Telkom Indonesia (Persero) Tbk
+Dua Belas Juta Tiga Ratus Tujuh Ribu Enam Ratus Delapan Puluh Rupiah
+Rp. 12.307.680
+Indah Purnomowati
+Direktur
+NOTA PESANAN
+Nomor: K.TEL.14612/HK.810/TR4-R400/2024
+Perihal
+Lampiran
+Kepada
+Telkom
+Indonesia
+the world in your hand
+: Nota Pesanan Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin
+: 1 berkas
+PT Bhakti Unggul Teknovasi
+Jalan Telekomunikasi Nomor 1, Kawasan Universitas Telkom, Dayeuhkolot
+Kabupaten Bandung, Jawa Barat 40257
+Dengan Hormat,
+Menunjuk:
+1. Berita Acara Klarifikasi dan Negosiasi tanggal 27 Desember 2024
+2. Surat Penetapan Calon Mitra Pelaksana Nomor TEL.14452/LG.270/TR4-R401/2024 tanggal 27 Desember 2024
+3. Surat Kesanggupan PT Bhakti Unggul Teknovasi Nomor 965/00/HK-16/BUT/2024 tanggal 30 Desember 2024
+4. Surat SP tentang Pekerjaan Penyediaan Jasa Internet dan Fasilitas Telekomunikasi Tahun Anggaran 2025 Nomor K.TEL.120427/HK.820/T4R-W300/2024 tanggal 31 Desember 2024
+Sehubungan dengan hal tersebut diatas, kami menerbitkan Nota Pesanan Penyediaan Lisensi APJII untuk
+Diskominfotik Kota Banjarmasin kepada PT Bhakti Unggul Teknovasi dengan syarat-syarat dan kondisi sebagai berikut:
+1. Total harga pekerjaan (sebelum PPN) sebesar Rp14.784.000,- (Empat Belas Juta Tujuh Ratus Delapan
+Puluh Empat Ribu Rupiah) di mana harga tersebut belum termasuk PPN, namun sudah termasuk pajakpajak lainnya.
+2. Spesifikasi teknis, volume dan lain-lain terlampir.
+3. Term Of Payment/Tahapan Pembayaran secara Bulanan sebesar Rp1.232.000,- (Satu Juta Dua Ratus Tiga
+Puluh Dua Ribu Rupiah) setelah TELKOM menerima pembayaran dari Diskominfotik Kota Banjarmasin (Back to Back).
+4. Lokasi Layanan: Kantor Dinas Komunikasi, Informatika, dan Statistik Kota Banjarmasin, Gedung Blok
+B Lt. Dasar, JI. RE Martadinata No.1, Kertak Baru llir, Kec. Banjarmasin Tengah, Kota Banjarmasin,
+Kalimantan Selatan.
+5. Target Delivery: paling lambat 31 Desember 2025
+6. Jangka Waktu pelaksanaan Pekerjaan ini adalah 1 Januari - 31 Desember 2025
+7. Skema bisnis: Pengadaan
+8. Ketentuan SLG:
+9. Jaminan-Jaminan:-
+10. Bertindak sebagai penandatangan Berita Acara adalah sebagai berikut:
+TELKOM
+-Berita Acara Serah Terima (BAST)
+-Berita Acara Uji Terima (BAUT)
+-Berita Acara Rekonsiliasi Delivery (BARD)
+BUT (Bhakti Unggul Teknovasi)
+-Berita Acara Serah Terima (BAST)
+-Berita Acara Uji Terima (BAUT)
+-Berita Acara Rekonsiliasi Delivery (BARD)
+11. Denda:
+: Mgr. Project Management atau pejabat pengganti
+yang ditunjuk
+: Mgr. Project Management atau pejabat pengganti
+yang ditunjuk
+: Mgr. Project Management atau pejabat pengganti
+yang ditunjuk
+: General Manager Support atau pejabat pengganti
+yang ditunjuk
+: Manager Layanan Teknologi atau pejabat pengganti
+yang ditunjuk
+: Manager Layanan Teknologi atau pejabat pengganti
+yang ditunjuk
+a. Apabila jangka waktu Delivery Pekerjaan tersebut dalam Kontrak Layanan ini dilampaui, maka PT Bhakti
+Unggul Teknovasi dapat dikenakan denda sebesar 1%0 (satu permil) dari harga Pekerjaan sebelum PPN
+untuk setiap hari kelambatan, dengan batas maksimum 5% (lima persen) dari Harga Pekerjaan.
+b. Jika dikemudian hari, ada potensi kemungkinan terdapat koreksi terhadap nilai kontrak merujuk hasil audit
+atau review dari BPKP/BPK/Instansi yang berwenang lainnya yang dituangkan di dalam dokumen Kontrak
+Pelaksanaan Pembayaran, maka atas kondisi dimaksud akan dituangkan di dalam BAKN sebagai
+kesepakatan dengan PT Bhakti Unggul Teknovasi.
+PT. Telekomunikasi Indonesia
+JI. MT. Haryono. No.169. Balikpapan -76114
+Toll
+andonese
+BUDHI SUPRIYON
+SM Regional Sol
+MTERAL
+11AMX283942352
+Be Tel-U
+ARDI SQETRISNO PUTRO
+Lampiran Nota Pesanan Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin
+Nomor: K.TEL.14612/HK.810/TR4-R400/2024
+Detail Rincian dan Spesifikasi
+Harga Layanan
+No Detail Item Jumlah Satuan
+Masa
+Layanan
+(Bln)
+Harga Pekerjaan (IDR)
+Bulanan Total
+1 Lisensi APJII 1 Paket 12 1.232.000 14.784.000
+TOTAL (Sebelum PPN) 14.784.000
+Rekap Harga
+No Item Harga Pekerjaan (IDR)
+1 Harga Layanan 14.784.000
+TOTAL (Sebelum PPN) 14.784.000
+Keterangan:
+1. Harga sudah termasuk PPH dan pajak-pajak lainnya akan tetapi belum termasuk PPN.
+2. Lokasi Instalasi: Kantor Dinas Komunikasi, Informatika, dan Statistik Kota Banjarmasin, Gedung Blok B Lt. Dasar,
+JI. RE Martadinata No.1, Kertak Baru llir, Kec. Banjarmasin Tengah, Kota Banjarmasin, Kalimantan Selatan.
+NAMA CС:
+NAMA MITRA:
+NO KL/SP/WO:
+TAGIHAN:
+NO
+NOTA PERHITUNGAN KEUANGAN (NPK) HАК MITRA
+Dinas Komunikasi, Informatika & Statistik Kota Banjarmasin
+PТ ВНАКTI UNGGUL TEKNOVASI K.TEL.14612/HK.810/TR4-R400/2024
+Agustus 2025 - Oktober 2025 (Usage Januari 2025 - September 2025)
+URAIAN
+Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin
+• Akun: 4862901
+SID: 2087352921
+PERIODE NILAI
+Invoice Agustus 2025
+Usage:
+• Januari 2025
+• Februari 2025
+• Maret 2025
+Rp 1,232,000
+Rp 1,232,000
+Rp 1,232,000
+• April 2025 Rp 1,232,000
+• Mei 2025 Rp 1,232,000
+• Juni 2025 Rp 1,232,000
+• Juli 2025 Rp 1,232,000 Invoice September 2025
+Usage:
+• Agustus 2025 Rp 1,232,000 Invoice Oktober 2025
+Usage:
+• September 2025 Rp 1,232,000 TOTAL HAK MITRA Rp 11,088,000
+Balikpapan, 01 Desember 2025
+Keterangan
+-Nilai Total Hak Mitra belum termasuk PPN yang berlaku
+SM REGIONAL SOLUTION & OPERATION
+BUDHI SUPRIYONO
+NIK. 800075
+MANAGER BIDDING
+MANAGEMENT &
+BUSINESS SUPPORT
+yoh
+YESRU MARDANIATI
+NIK. 850057
+Yang bertanda tangan dibawah ini :
+Nama : Hariyadi
+NIK : 800031
+SURAT PERNYATAAN PEMBAYARAN PELANGGAN TELKOM
+Menyatakan bahwa Pelanggan Telkom di bawah ini telah melakukan melakukan pembayaran ke Telkom dengan rincian sebagai berikut:
+Nama CC Account Tagihan
+Dinas Komunikasi.
+matile Informatika & Statistik Kota 202510 4862901 202509
+Usage
+202509
+202508
+SID Tanggal Flagging Jumlah Flagging Potongan Pajak Payment ID 2087352921 20251015 No Rek Mandiri 1,500,000 M1125100700019 2087352921 20251015 20251015 1,500,000 Banjarmasin 202508 M1125100700019 202507 2087352921 1490045678911 20251015 10,500,000 M1125100700019 Jumlah Rp 13,500,000 Rp
+SM Shared Service & General Support Regional IV
+Syki
+Septiana Rahmayanti
+NIK: 810033
+Balikpapan, 01 Desember 2025
+Manager Billing & Payment Collection Regional IV
+Hariyadi riyadı
+NIK. 800031
+LAMPIRAN SP3 - RINCIAN PEMBAYARAN LAYANAN
+NAMA CC: Dinas Komunikasi, Informatika & Statistik Kota Banjarmasin NO AKUN: 4862901
+TAGIHAN: AGUSTUS 2025 - OKTOBER 2025
+NO URAIAN TAGIHAN
+AGUSTUS 2025
+ТAGIHAN
+SEPTEMBER 2025
+TAGIHAN
+OKTOBER 202 2025 TAGIHAN TELKOM
+2087352921 Biaya OTC BUT IT Assessment Rp 10,500,000 Rp 1,500.000 1,500,000 Rp 1,5000,000 CPE Lainnya Rp 114,800,000 Rp 45,688,693 43,088,693 Rp 128,130,793 Connectivity Rp 162,435,054 Rp 15,770,000 Rp 135,867,054 PPN Rp 31.650.855 Rp 6,925,456 Rp 29,204,762
+PEMBAYARAN
+POTONGAN
+NPP •
+•PPH
+Biaya Bank
+JUMLAH POTONGAN
+JUMLAHYANG SEHARUSNYA DIBAYAR OLEH CC Rp 319,385,909 Rp 69.884.149 o9,884,149 Rp 294,702,609 JUMLAH FLAGGING Rp 319,385,909 Rp 99,884,149 Rp 294,702,609 TANGGAL FLAGGING 20250910 20250919 20251010 20251015 20251015 20251015 20250919 20251020 RINCIAN LAYANAN
+BUT Penyediaan Jasa IT BUT Penyediaan Jasa IT BUT Penyediaan Jasa IT Assessment-Monthly Recurring Assessment-Monthly Recurring Assessment-Monthly Recurring Charges Charges Charges
+Balikpapan, 01 Desember 2025
+Manager Billing & Payment Collection Regional IV
+Hariyadi
+NIK. 800031
+AeYesru Mardaniati
+Tembusan:
+Manager Bidding Management & Business Support
+GM Witel Kalselteng
+• Manager Government Service Kalselteng
+PT. Telekomunikasi Indonesia
+JI. MT. Haryono. No.169. Balikpapan-76114
+25RGS01443_OBL_2 BUT
+1 of 2
+Apabila jangka waktu Delivery Pekerjaan tersebut dalam Kontrak Layanan ini dilamp aui, makа
+Bhakti Unggul Teknovasi dapat dikenakan denda sebesar 1/00 (satu permil) dari harga Pekerjaan
+sebelum PPN untuk setiap hari kelambatan, dengan batas maksimum 5% (lima persen) dari Harga
+Pekerjaan.
+Jika dikemudian hari, ada potensi kemungkinan terdapat koreksi terhadap nilai kontrak merujuk hasil
+audit atau review dari BPKP/BPK/Instansi yang berwenang lainnya yang dituangkan di dalam dokumen
+Kontrak Pelaksanaan Pembayaran, maka atas kondisi dimaksud akan dituangkan di dalam BAKN
+sebagai kesepakatan dengan PT Bhakti Unggul Teknovasi
+12. Bertindak sebagai waspang dan pejabat penandatangan BAST akan diatur lebih lanjut dalam Kontrak
+Layanan/SP antara Telkom dengan PT Bhakti Unggul Teknovasi
+Selanjutnya apabila Telkom ditunjuk/ditetapkan sebagai pemenang tender oleh Diskominfotik Kota
+Banjarmasin, maka Telkom akan menetapkan Saudara sebagai Mitra Pelaksana, Terkait hal tersebut, agar
+Mitra menyampaikan Surat Kesanggupan yang ditandatangani oleh Direktur atau Pejabat lainnya yang
+berwenang diatas materai sebagai pernyataan kesanggupan melaksanakan pekerjaan, selambat lambatnya 3
+(Tiga) hari kerja sejak terbitnya surat ini.
+Demikian kami sampaikan, atas perhatian dan kerjasamanya diucapkan terima kasih.
+Hormat kam
+Kalimantan Selatan.
+6. Estimasi Target Delivery: paling lambat 31 Desember 2025.
+7. Jangka Waktu pelaksanaan pekerjaan ini adalah 12 Bulan (01 Januari 2025 s.d 31 Desember 2025).
+8. Term Of Payment/Tahapan Pembayaran secara Bulanan sebesar Rp 1.232.000,- (Satu Juta Dua Ratus
+Tiga Puluh Dua Ribu Rupiah) dan setelah TELKOM menerima pembayaran dari Diskominfotik Kota
+Banjarmasin (Back to Back).
+9. Ketentuan SLG: -
+10. Jaminan-Jaminan : -
+11. Denda dan Restitusi
+Dengan hormat,
+Menunjuk:
+1. Surat Undangan kami Nomor: TEL.14298/LG.220/TR4-R401/2024 tanggal 23 Desember 2024 tentang
+Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin.
+2. Berita Acara Rapat Penjelasan tanggal 24 Desember 2024.
+3. Indicative Offering Saudara Nomor: 961/00/BIS-05/BUT/2024 tanggal 27 Desember 2024.
+4. Berita Acara Klarifikasi dan Negosiasi harga tanggal 27 Desember 2024.
+Sehubungan dengan hal tersebut di atas, kami menetapkan PT Bhakti Unggul Teknovasi sebagai Calon Mitra
+Pelaksana TELKOM dalam proses pengadaan barang dan atau jasa Penyediaan Lisensi APJII untuk
+Diskominfotik Kota Banjarmasin, dengan ketentuan sebagai berikut:
+1. Ruang Lingkup Pekerjaan: Spesifikasi teknis, volume dan lain-lain terlampir;
+2. Skema bisnis: Pengadaan.
+3. Total harga pekerjaan sebesar Rp 14.784.000,- (Empat Belas Juta Tujuh Ratus Delapan Puluh Empat
+Ribu Rupiah) harga tersebut belum termasuk PPN, namun sudah termasuk pajak-pajak lainnya.
+4. Harga tersebut merupakan subject to negotiation sampai dengan penetapan mitra pelaksana.
+5. Lokasi Pekerjaan: Kantor Dinas Komunikasi, Informatika, dan Statistik Kota Banjarmasin, Gedung Blok
+BItDasar II RF Martadinata No 1 Kertak Baru lir Ker Baniarmasin Tengah Kota Baniarmasin
+Nomor: TEL.14452/LG.270/TR4-R401/2024
+Balikpapan, 27 Desember 2024
+Kepada Yth,
+PT Bhakti Unggul Teknovasi
+Jalan Telekomunikasi No.1, Kab. Bandung,
+Jawa Barat
+Lampiran: 1 (satu) berkas
+Telkom
+Indonesia
+the world in your hand
+Perihal : Penetapan Calon Mitra Pelaksana Penyediaan Lisensi APJII untuk Diskominfotik Kota
+Banjarmasin
+25RGS01443_OBL_2 BUT
+2 of 2
+784.000
+Keterangan:
+1. Harga sudah termasuk PPH dan pajak-pajak lainnya akan tetapi belum termasuk PPN.
+2. Lokasi Instalasi: Kantor Dinas Komunikasi, Informatika, dan Statistik Kota Banjarmasin, Gedung Blok B Lt. Dasar,
+JI. RE Martadinata No.1, Kertak Baru llir, Kec. Banjarmasin Tengah, Kota Banjarmasin, Kalimantan Selatan.
+Harga Layanan
+Diskominfotik Kota Banjarmasin
+Nomor: TEL.14452/LG.270/TR4-R401/2024
+Detail Rincian dan Spesifikasi
+No Detail Item Jumlah Satuan
+Masa
+Layanan
+(Bln)
+Harga Pekerjaan (IDR)
+Bulanan Total
+1 Lisensi APJII 1
+TOTAL (Sebelum PPN)
+Paket 12 1.232.000 14.784.000
+14.784.000
+Rekap Harga
+No Item
+1 Harga Layanan
+TOTT )Sobolum RRY
+Harga Pekerjaan (IDR)
+14.784.000
+14 79400o
+Lampiran Penetapan Calon Mitra Pelaksana Penvediaan Lisensi APJII untuk
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500560932 No. Kontrak/SP : K.TEL.14612/HK.810/TR4-R400/2024
+Tgl. Create : 21.10.2025 Tgl Kontrak/SP : 31.12.2024
+Currency : IDR
+VENDOR INFORMATION
+6612762
+PT BHAKTI UNGGUL TEKNOVASI
+12 Sumur Bandung
+BANDUNG
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-1224-14612-TR4/BUT/BJM/JAN24
+WBS ID : 41667613747/2506-94921
+1 PKT 1.232.000 1.232.000 1.232.000 31.12.2025
+Printed from SAP by 970300, 22.10.2025 09:47:58
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+1.232.000
+0
+1.232.000
+IDR
+IDR
+IDR
+BALIKPAPAN, 22.10.2025
+PT Telkom
+Mgr Sol&Offering
+Harissudin Hakim
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500560933 No. Kontrak/SP : K.TEL.14612/HK.810/TR4-R400/2024
+Tgl. Create : 21.10.2025 Tgl Kontrak/SP : 31.12.2024
+Currency : IDR
+VENDOR INFORMATION
+6612762
+PT BHAKTI UNGGUL TEKNOVASI
+12 Sumur Bandung
+BANDUNG
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-1224-14612-TR4/BUT/BJM/FEB24
+WBS ID : 41667613747/2506-94921
+1 PKT 1.232.000 1.232.000 1.232.000 31.12.2025
+Printed from SAP by 970300, 22.10.2025 09:49:57
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+1.232.000
+0
+1.232.000
+IDR
+IDR
+IDR
+BALIKPAPAN, 22.10.2025
+PT Telkom
+Mgr Sol&Offering
+Harissudin Hakim
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500560934 No. Kontrak/SP : K.TEL.14612/HK.810/TR4-R400/2024
+Tgl. Create : 21.10.2025 Tgl Kontrak/SP : 31.12.2024
+Currency : IDR
+VENDOR INFORMATION
+6612762
+PT BHAKTI UNGGUL TEKNOVASI
+12 Sumur Bandung
+BANDUNG
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-1224-14612-TR4/BUT/BJM/MAR24
+WBS ID : 41667613747/2506-94921
+1 PKT 1.232.000 1.232.000 1.232.000 31.12.2025
+Printed from SAP by 970300, 22.10.2025 09:52:10
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+1.232.000
+0
+1.232.000
+IDR
+IDR
+IDR
+BALIKPAPAN, 22.10.2025
+PT Telkom
+Mgr Sol&Offering
+Harissudin Hakim
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500560937 No. Kontrak/SP : K.TEL.14612/HK.810/TR4-R400/2024
+Tgl. Create : 21.10.2025 Tgl Kontrak/SP : 31.12.2024
+Currency : IDR
+VENDOR INFORMATION
+6612762
+PT BHAKTI UNGGUL TEKNOVASI
+12 Sumur Bandung
+BANDUNG
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-1224-14612-TR4/BUT/BJM/MEI24
+WBS ID : 41667613747/2506-94921
+1 PKT 1.232.000 1.232.000 1.232.000 31.12.2025
+Printed from SAP by 970300, 22.10.2025 09:53:22
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+1.232.000
+0
+1.232.000
+IDR
+IDR
+IDR
+BALIKPAPAN, 22.10.2025
+PT Telkom
+Mgr Sol&Offering
+Harissudin Hakim
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500560938 No. Kontrak/SP : K.TEL.14612/HK.810/TR4-R400/2024
+Tgl. Create : 21.10.2025 Tgl Kontrak/SP : 31.12.2024
+Currency : IDR
+VENDOR INFORMATION
+6612762
+PT BHAKTI UNGGUL TEKNOVASI
+12 Sumur Bandung
+BANDUNG
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-1224-14612-TR4/BUT/BJM/JUN24
+WBS ID : 41667613747/2506-94921
+1 PKT 1.232.000 1.232.000 1.232.000 31.12.2025
+Printed from SAP by 970300, 22.10.2025 10:00:10
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+1.232.000
+0
+1.232.000
+IDR
+IDR
+IDR
+BALIKPAPAN, 22.10.2025
+PT Telkom
+Mgr Sol&Offering
+Harissudin Hakim
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500560939 No. Kontrak/SP : K.TEL.14612/HK.810/TR4-R400/2024
+Tgl. Create : 21.10.2025 Tgl Kontrak/SP : 31.12.2024
+Currency : IDR
+VENDOR INFORMATION
+6612762
+PT BHAKTI UNGGUL TEKNOVASI
+12 Sumur Bandung
+BANDUNG
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-1224-14612-TR4/BUT/BJM/JUL24
+WBS ID : 41667613747/2506-94921
+1 PKT 1.232.000 1.232.000 1.232.000 31.12.2025
+Printed from SAP by 970300, 22.10.2025 10:00:30
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+1.232.000
+0
+1.232.000
+IDR
+IDR
+IDR
+BALIKPAPAN, 22.10.2025
+PT Telkom
+Mgr Sol&Offering
+Harissudin Hakim
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500560940 No. Kontrak/SP : K.TEL.14612/HK.810/TR4-R400/2024
+Tgl. Create : 21.10.2025 Tgl Kontrak/SP : 31.12.2024
+Currency : IDR
+VENDOR INFORMATION
+6612762
+PT BHAKTI UNGGUL TEKNOVASI
+12 Sumur Bandung
+BANDUNG
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-1224-14612-TR4/BUT/BJM/AGS24
+WBS ID : 41667613747/2506-94921
+1 PKT 1.232.000 1.232.000 1.232.000 31.12.2025
+Printed from SAP by 970300, 22.10.2025 10:01:01
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+1.232.000
+0
+1.232.000
+IDR
+IDR
+IDR
+BALIKPAPAN, 22.10.2025
+PT Telkom
+Mgr Sol&Offering
+Harissudin Hakim
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500560941 No. Kontrak/SP : K.TEL.14612/HK.810/TR4-R400/2024
+Tgl. Create : 21.10.2025 Tgl Kontrak/SP : 31.12.2024
+Currency : IDR
+VENDOR INFORMATION
+6612762
+PT BHAKTI UNGGUL TEKNOVASI
+12 Sumur Bandung
+BANDUNG
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-1224-14612-TR4/BUT/BJM//SEP24
+WBS ID : 41667613747/2506-94921
+1 PKT 1.232.000 1.232.000 1.232.000 31.12.2025
+Printed from SAP by 970300, 22.10.2025 10:01:50
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+1.232.000
+0
+1.232.000
+IDR
+IDR
+IDR
+BALIKPAPAN, 22.10.2025
+PT Telkom
+Mgr Sol&Offering
+Harissudin Hakim
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500560942 No. Kontrak/SP : K.TEL.14612/HK.810/TR4-R400/2024
+Tgl. Create : 21.10.2025 Tgl Kontrak/SP : 31.12.2024
+Currency : IDR
+VENDOR INFORMATION
+6612762
+PT BHAKTI UNGGUL TEKNOVASI
+12 Sumur Bandung
+BANDUNG
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-1224-14612-TR4/BUT/BJM/OKT24
+WBS ID : 41667613747/2506-94921
+1 PKT 1.232.000 1.232.000 1.232.000 31.12.2025
+Printed from SAP by 970300, 22.10.2025 10:02:00
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+1.232.000
+0
+1.232.000
+IDR
+IDR
+IDR
+BALIKPAPAN, 22.10.2025
+PT Telkom
+Mgr Sol&Offering
+Harissudin Hakim
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500560943 No. Kontrak/SP : K.TEL.14612/HK.810/TR4-R400/2024
+Tgl. Create : 21.10.2025 Tgl Kontrak/SP : 31.12.2024
+Currency : IDR
+VENDOR INFORMATION
+6612762
+PT BHAKTI UNGGUL TEKNOVASI
+12 Sumur Bandung
+BANDUNG
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-1224-14612-TR4/BUT/BJM/NOV24
+WBS ID : 41667613747/2506-94921
+1 PKT 1.232.000 1.232.000 1.232.000 31.12.2025
+Printed from SAP by 970300, 22.10.2025 10:05:08
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+1.232.000
+0
+1.232.000
+IDR
+IDR
+IDR
+BALIKPAPAN, 22.10.2025
+PT Telkom
+Mgr Sol&Offering
+Harissudin Hakim
+NIK. 890085
+PT Telkom
+RSO Regional 4
+PURCHASE ORDER
+Nomor : 4500560944 No. Kontrak/SP : K.TEL.14612/HK.810/TR4-R400/2024
+Tgl. Create : 21.10.2025 Tgl Kontrak/SP : 31.12.2024
+Currency : IDR
+VENDOR INFORMATION
+6612762
+PT BHAKTI UNGGUL TEKNOVASI
+12 Sumur Bandung
+BANDUNG
+ITEM DESCRIPTION QUANTITY UNIT UNIT PRICE COND. VALUE NET PRICE DLVR.DATE
+00010 SDAF-1224-14612-TR4/BUT/BJM/DES24
+WBS ID : 41667613747/2506-94921
+1 PKT 1.232.000 1.232.000 1.232.000 31.12.2025
+Printed from SAP by 970300, 22.10.2025 10:05:28
+Page 1 of 1
+PO. AMOUNT
+V.A.T
+TOTAL
+1.232.000
+0
+1.232.000
+IDR
+IDR
+IDR
+BALIKPAPAN, 22.10.2025
+PT Telkom
+Mgr Sol&Offering
+Harissudin Hakim
+NIK. 890085
+00010 SDAF-1224-14612-TR4/BUT/B 1 PKT 1.232.000 1.232.000 IDR 31.12.2025
+JM/JAN24
+00020 SDAF-1224-14612-TR4/BUT/B 1 PKT 1.232.000 1.232.000 IDR 31.12.2025
+JM/FEB24
+00030 SDAF-1224-14612-TR4/BUT/B 1 PKT 1.232.000 1.232.000 IDR 31.12.2025
+JM/MAR24
+00040 SDAF-1224-14612-TR4/BUT/B 1 PKT 1.232.000 1.232.000 IDR 31.12.2025
+JM/APR24
+00050 SDAF-1224-14612-TR4/BUT/B 1 PKT 1.232.000 1.232.000 IDR 31.12.2025
+JM/MEI24
+00060 SDAF-1224-14612-TR4/BUT/B 1 PKT 1.232.000 1.232.000 IDR 31.12.2025
+JM/JUN24
+00070 SDAF-1224-14612-TR4/BUT/B 1 PKT 1.232.000 1.232.000 IDR 31.12.2025
+JM/JUL24
+00080 SDAF-1224-14612-TR4/BUT/B 1 PKT 1.232.000 1.232.000 IDR 31.12.2025
+JM/AGS24
+00090 SDAF-1224-14612-TR4/BUT/B 1 PKT 1.232.000 1.232.000 IDR 31.12.2025
+JM//SEP24
+BALIKPAPAN, 11.08.2025
+Mgr Sol&Offering
+Harissudin Hakim
+NIK. 890085
+PT Telkom
+RSO Regional 4
+RSO Regional 4
+PURCHASE REQUISITION
+Nomor : 10430182
+ Printed from SAP by 970300, 11.08.2025 15:42:17
+ITEM URAIAN QUANTITY UNIT NET PRICE TOT. VALUE CURR DLVR.DATE
+00100 SDAF-1224-14612-TR4/BUT/B 1 PKT 1.232.000 1.232.000 IDR 31.12.2025
+JM/OKT24
+00110 SDAF-1224-14612-TR4/BUT/B 1 PKT 1.232.000 1.232.000 IDR 31.12.2025
+JM/NOV24
+00120 SDAF-1224-14612-TR4/BUT/B 1 PKT 1.232.000 1.232.000 IDR 31.12.2025
+JM/DES24
+BALIKPAPAN, 11.08.2025
+Mgr Sol&Offering
+Harissudin Hakim
+NIK. 890085
+PT Telkom
+RSO Regional 4
+RSO Regional 4
+PURCHASE REQUISITION
+Nomor : 10430182
+ Printed from SAP by 970300, 11.08.2025 15:42:17
+ITEM URAIAN QUANTITY UNIT NET PRICE TOT. VALUE CURR DLVR.DATE
+TOTAL 14.784.000 IDR
+UNomor : 965/00/HK-16/BUT/2024
+Lampiran : 1 (satu) berkas
+Bandung, 30 Desember 2024
+Kepada Yth.
+Manager Bidding Management & Business Support
+PT Telekomunikasi Indonesia
+Divisi Regional, Solution, & Operation
+JЛ. МТ. Нaryono No. 169
+Balikpapan, 76114
+Perihal Surat Kesanggupan Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin
+Be Tel -U
+Dengan Hormat,
+Menunjuk Surat Penetapan Calon Mitra Pelaksana Nomor TEL.14452/LG.270/TR4-R401/2024 Tanggal 27
+Desember 2024 perihal Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin, dengan ini kami sampaikan bahwa Perusahaan kami menyatakan:
+1. Sanggup untuk melaksanakan Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin sebesar
+Rp 14.784.000,- (Empat Belas Juta Tujuh Ratus Delapan Puluh Empat Ribu Rupiah) harga belum
+termasuk PPN, namun sudah termasuk pajak-pajak lainnya sesuai dengan ketentuan Pemerintah yang berlaku;
+2. aktu
+202
+Diskominfotik Kota Banjarmasin;
+01 Januari 202
+PT Telkom Ind
+3. Sanggup untuk memenuhi seluruh ketentuan dan persyaratan sebagaimana dimaksud dalam Berita Acara Klarifikasi dan Negosíasi tersebut.
+Hormat Kami,
+PT Bhakti
+Direktur
+kesanggupan ini kami sampaikan dengan sebenar-benarmya untuk dapat dipergunakan
+PТ. ВHAKTI UNGGUL TEKNOVASI
+Head Office : JI. Sumur Bandung No. 12 Bandung
+Operatlonal Office: Ji. Telekomunikasi No. 1 Bandung
+Phone: +62.22.7509961/ +62.22.88819131
+2
+Jangka W
+Desember
+Kontrak Layanan terhitung sejak tanggal
+5, mengikuti masa kontrak/layanan antara
+5 sampai dengan tanggal 31
+onesia (Persero) Tbk dengan
+Demikian surat pernyataan
+sebagaimana mestinya.
+Unggul Teknovasi
+SEPULUM RIDU RUMAH
+METERAI
+TEMPEL
+18AMX218927964
+Indah Purnomowati
+Tel
+Lampiran Surat Nomor
+Tanggal
+Perihal
+: 965/00/HK-16/BUT/2024
+: 30 Desember 2024
+: Surat Kesanggupan Penyediaan Lisensi APJII untuk Diskominfotik Kota
+Banjarmasin
+No Detail Item Jumlah Satuan Bula an
+Harga Pekerjaan (IDR)
+Bulanan Total
+1 APJIІ 1 Paket 12 1.232.000 14.784.000
+TOTAL (Sebelum PPN) 14.784.000
+Rekap Harga
+No Item
+1 Harga Layanan
+TOTAL PPN)
+Hormat Kami,
+PT Bhakti Unggul Teknovasi
+Direktur
+Harga Pekerjaan (IDR)
+14.784.000
+14.784.000
+B
+Indah Purnomow Perdomb@hit
+(Sebelum
+Harga Layanan
+Nomor : /00/KUG-06/BUT/2025
+Bandung,
+Kepada Yth,
+Manager Partner Invoicing & Support
+Unit Regional Solution & Operation
+Kantor PT. Telkom Regional IV Kalimantan Lantai 2,5
+JI. MT. Haryono. No. 169,
+Damai, Balikpapan Tengah,
+Balikpapan, 76114
+Dengan hormat,
+1. Menunjuk:
+a. Nota Pesanan Penyediaan Lisensi APJII untuk Diskominfotik Kota Banjarmasin Nomor:
+K.TEL.14612/HK.810/TR4-R400/2024 tanggal 31 Desember 2024;
+b. Berita Acara Serah Terima (BAST) Nomor: TEL.0020/LG.320/TR4-R403/2025 dan/atau
+318/01/BIS-08/BUT/2025 tanggal 01 Januari 2025;
+2. Bersama ini kami mengajukan permohonan pembayaran penyediaan tersebut sebesar
+Rp.12.307.680,- (Dua Belas Juta Tiga Ratus Tujuh Ribu Enam Ratus Delapan Puluh Rupiah)
+sudah termasuk PPN;
+3. Mohon pembayaran tersebut dapat di transfer melalui rekening kami pada Bank Mandiri
+dengan nomor rekening 131-00-88888-187 a.n PT Bhakti Unggul Teknovasi.
+4. Demikian kami sampaikan, atas perhatian dan kerjasamanya diucapkan terima kasih.
+Hormat Kami
+PT Bhakti Unggul Teknovasi
+Indah Purnomowati
+Direktur
+Perihal : Permohonan Pembayaran Penyediaan Lisensi APJII untuk Diskominfotik Kota
+Banjarmasin Periode Januari 2025 – September 2025
+Lampiran : 1 (satu ) Exp
