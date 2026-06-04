@@ -17,6 +17,7 @@ use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
 use Illuminate\Support\Facades\Http;
 use Illuminate\Support\Facades\Cache;
+use App\Services\SpkSawService;
 
 class ReviewSubmissionController extends Controller
 {
@@ -187,6 +188,8 @@ class ReviewSubmissionController extends Controller
 
             // Simpan hasil
             $this->saveReviewResults($ticket, $response['data'], $requestId);
+
+            app(SpkSawService::class)->evaluateAndStore($ticket->fresh());
 
             // Update status
             Cache::put("review_status_{$ticketNumber}", 'completed', 3600);

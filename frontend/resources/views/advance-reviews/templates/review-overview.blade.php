@@ -70,6 +70,8 @@
             </div>
         </div>
 
+        @include('advance-reviews.partials.spk-saw-panel', ['spkResult' => $spkResult ?? null])
+
         <!-- Cards Grid -->
         @if ($reviewResults->count() > 0)
             <div class="row g-4">

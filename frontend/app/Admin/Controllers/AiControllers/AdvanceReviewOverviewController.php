@@ -7,6 +7,7 @@ use OpenAdmin\Admin\Layout\Content;
 use App\Http\Controllers\Controller;
 use \App\Models\Ticket;
 use \App\Models\AdvanceReviewResult;
+use \App\Models\SpkSawResult;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Log;
@@ -68,6 +69,10 @@ class AdvanceReviewOverviewController extends Controller
 
         // Get DPP dari ground truth (NOPES/KL/SP/WO)
         $dppFormatted = $ticket ? $this->getFormattedDpp($ticket) : null;
+
+        $spkResult = $ticket
+            ? SpkSawResult::where('ticket_id', $ticket->id)->first()
+            : null;
 
         // Create simplified ticket object
         $ticketSimplified = (object) [
@@ -197,6 +202,7 @@ class AdvanceReviewOverviewController extends Controller
             ->body(view('advance-reviews.templates.review-overview', [
                 'ticket' => $ticketSimplified,
                 'reviewResults' => $reviewResults,
+                'spkResult' => $spkResult,
                 'isOpenAdmin' => true,
             ]));
     }

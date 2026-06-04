@@ -95,6 +95,14 @@ class Ticket extends Model
         return $this->hasMany(DateValidation::class);
     }
 
+    /**
+     * Relationship: Ticket has one SPK SAW decision result
+     */
+    public function spkSawResult(): HasOne
+    {
+        return $this->hasOne(SpkSawResult::class);
+    }
+
     // ========================================
     // GROUND TRUTH HELPERS
     // ========================================
