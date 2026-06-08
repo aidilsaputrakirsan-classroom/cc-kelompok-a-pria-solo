@@ -26,10 +26,10 @@ services:
         reservations:
           memory: 256M
     environment:
-      MYSQL_ROOT_PASSWORD: root123
-      MYSQL_DATABASE: cloudapp
-      MYSQL_USER: clouduser
-      MYSQL_PASSWORD: cloudpass
+      MYSQL_ROOT_PASSWORD: ${MYSQL_ROOT_PASSWORD:-root123}
+      MYSQL_DATABASE: ${MYSQL_DATABASE:-cloudapp}
+      MYSQL_USER: ${MYSQL_USER:-clouduser}
+      MYSQL_PASSWORD: ${MYSQL_PASSWORD:-cloudpass}
     ports:
       - "3307:3306"
     volumes:
@@ -37,7 +37,7 @@ services:
     networks:
       - cloudnet
     healthcheck:
-      test: ["CMD", "mysqladmin", "ping", "-h", "127.0.0.1", "-uroot", "-proot123"]
+      test: ["CMD-SHELL", "mysqladmin ping -h 127.0.0.1 -uroot -p$$MYSQL_ROOT_PASSWORD"]
       interval: 10s
       timeout: 5s
       retries: 5

@@ -58,33 +58,26 @@ const FORM_TEMPLATES = {
 function inspectBackendData() {
     console.group('%c 🔍 DEBUG: DATA DARI BACKEND ', 'background: #222; color: #bada55; font-size: 12px; padding: 4px;');
 
-    console.log('%c 1. Available Documents (List Dokumen):', 'color: #00bcd4; font-weight: bold;');
     if (typeof AVAILABLE_DOCUMENTS !== 'undefined') {
         console.table(AVAILABLE_DOCUMENTS); // Tampilkan sebagai tabel agar mudah dibaca
     } else {
         console.error('❌ AVAILABLE_DOCUMENTS is undefined');
     }
 
-    console.log('%c 2. Ground Truth Data (Isi Data OCR/DB):', 'color: #00bcd4; font-weight: bold;');
     if (typeof GROUND_TRUTH_DATA !== 'undefined') {
         console.dir(GROUND_TRUTH_DATA); // Gunakan dir untuk bisa expand object tree
         
         // Additional debug: Show exact keys and field counts
-        console.log('%c 2a. GROUND_TRUTH_DATA Keys:', 'color: #ff9800; font-weight: bold;');
         const gtKeys = Object.keys(GROUND_TRUTH_DATA);
-        console.log('Keys found:', gtKeys);
         
         gtKeys.forEach(key => {
             const data = GROUND_TRUTH_DATA[key];
             const fieldKeys = data ? Object.keys(data) : [];
-            console.log(`  [${key}] has ${fieldKeys.length} fields:`, fieldKeys);
         });
     } else {
         console.error('❌ GROUND_TRUTH_DATA is undefined');
     }
 
-    console.log('%c 3. Ticket Info:', 'color: #00bcd4; font-weight: bold;');
-    console.log('Ticket Number:', typeof TICKET_NUMBER !== 'undefined' ? TICKET_NUMBER : 'UNDEFINED');
 
     console.groupEnd();
 }
@@ -188,7 +181,6 @@ const ProgressTracker = {
 // INITIALIZE ON DOM READY
 // ============================================
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('🚀 Initializing Ground Truth Validation...');
 
     // Panggil fungsi debug untuk melihat data dari BE
     inspectBackendData();
@@ -240,7 +232,6 @@ function handleReviewTicket() {
     showLoading();
     const groundTruthJson = JSON.stringify(GROUND_TRUTH_DATA);
 
-    console.log('🚀 Submitting review Payload:', {
         ticket: TICKET_NUMBER,
         doc_count: Object.keys(GROUND_TRUTH_DATA).length
     });
@@ -261,7 +252,6 @@ function handleReviewTicket() {
         })
     })
         .then(response => {
-            console.log('Response status:', response.status);
             const contentType = response.headers.get('content-type');
             
             // Handle authentication errors (401 = session expired)
@@ -304,7 +294,6 @@ function handleReviewTicket() {
         })
         .then(data => {
             console.group('✅ Review Submission Response (From BE)');
-            console.log('Response Data:', data);
             console.groupEnd();
 
             if (data.success && data.data.status === 'processing') {
@@ -327,7 +316,6 @@ function pollReviewStatus() {
     let pollCount = 0;
     const maxPolls = 200;
 
-    console.log('🔄 Starting status polling...');
 
     const pollInterval = setInterval(() => {
         pollCount++;
@@ -353,11 +341,9 @@ function pollReviewStatus() {
             })
             .then(data => {
                 // Log status setiap kali polling (Optional: bisa dikurangi frekuensinya jika terlalu spam)
-                console.log(`📊 Poll ${pollCount}/${maxPolls} - BE Status:`, data.status, data);
 
                 if (data.status === 'completed') {
                     clearInterval(pollInterval);
-                    console.log('✅ Review completed successfully!');
                     showSuccessOverlay(data.redirect_url || `/tickets/${TICKET_NUMBER}/advance-reviews`);
                 }
                 else if (data.status === 'failed') {
@@ -439,7 +425,6 @@ function showErrorModal(message) {
 function switchDocument(docType) {
     if (docType === currentDocType) return;
 
-    console.log(`🔄 Switching to document: ${docType}`);
     currentDocType = docType;
 
     // [ROTATE FEATURE] Reset rotasi saat ganti dokumen
@@ -457,7 +442,6 @@ function switchDocument(docType) {
     if (doc) {
         document.getElementById('current-doc-name').textContent = doc.label;
         // Debug: Log info dokumen yang sedang aktif
-        console.log('📂 Active Document Info:', doc);
     }
 
     loadPDF(docType);
@@ -481,19 +465,16 @@ async function loadPDF(docType) {
         const doc = AVAILABLE_DOCUMENTS.find(d => d.type === docType);
         if (!doc || !doc.pdf_url) throw new Error('PDF URL not found');
 
-        console.log('📄 Fetching PDF from:', doc.pdf_url);
 
         currentPdfDoc = await pdfjsLib.getDocument({
             url: doc.pdf_url,
             withCredentials: true
         }).promise;
 
-        console.log(`✅ PDF Loaded. Total Pages: ${currentPdfDoc.numPages}`);
 
         for (let pageNum = 1; pageNum <= currentPdfDoc.numPages; pageNum++) {
             try {
                 await renderPageProgressive(pageNum, containerEl);
-                console.log(`✅ Page ${pageNum}/${currentPdfDoc.numPages} rendered`);
             } catch (error) {
                 console.error(`❌ Failed to render page ${pageNum}:`, error);
             }
@@ -577,7 +558,6 @@ async function rotatePage(pageNum) {
         const newRotation = (currentRotation + 90) % 360;
         pageRotations[pageNum] = newRotation;
 
-        console.log(`🔄 Rotating Page ${pageNum}: ${currentRotation}° -> ${newRotation}°`);
 
         // 2. Render ulang
         const page = await currentPdfDoc.getPage(pageNum);
@@ -981,8 +961,6 @@ function setupSaveHandler() {
             const backendKey = getDataKey(currentDocType);
 
             console.group('💾 Save Action Initiated');
-            console.log('Document Type:', backendKey);
-            console.log('Payload Data:', formData);
 
             const response = await fetch(`/projess/validate-ground-truth/${TICKET_NUMBER}/save`, {
                 method: 'POST',
@@ -998,8 +976,6 @@ function setupSaveHandler() {
 
             const result = await response.json();
 
-            console.log('Response Status:', response.status);
-            console.log('Response Body:', result);
             console.groupEnd();
 
             if (!response.ok) throw new Error(result.message || 'Gagal menyimpan data');

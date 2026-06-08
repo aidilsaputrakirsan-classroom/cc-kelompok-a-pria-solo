@@ -9,6 +9,7 @@ from azure.ai.documentintelligence import DocumentIntelligenceClient
 from azure.core.credentials import AzureKeyCredential
 from dotenv import load_dotenv
 
+logger = logging.getLogger(__name__)
 logging.getLogger("azure").setLevel(logging.ERROR)
 
 warnings.filterwarnings('ignore')
@@ -64,7 +65,7 @@ def extract_text_based_pdf(filepath: str, doc_name: str = None):
         }
 
     except Exception as e:
-        print(f"Error Membuka PDF: {e}")
+        logger.error("Error membuka PDF: %s", e)
         return {
             'text_content': ''
         }
@@ -210,10 +211,10 @@ def extract_document_content_di(filepath: str, doc_name: str = None):
         }
 
     except FileNotFoundError:
-        print(f"Error: File {filepath} tidak ditemukan")
+        logger.error("File tidak ditemukan: %s", filepath)
         return None
     except Exception as e:
-        print(f"Error saat ekstraksi dokumen: {str(e)}")
+        logger.error("Error saat ekstraksi dokumen: %s", e)
         return None
 
 
@@ -314,7 +315,7 @@ def find_bounding_box_with_context(paragraphs_data, full_context, target_numeric
         return all_matches
 
     except Exception as e:
-        print(f"Error saat pencarian bounding box dengan context: {str(e)}")
+        logger.warning("Error saat pencarian bounding box dengan context: %s", e)
         return [{'found': False, 'error': str(e)}]
 
 
@@ -391,7 +392,5 @@ def find_word_bounding_box(words_data, search_word, case_sensitive=False):
         return found_words
 
     except Exception as e:
-        print(f"Error saat pencarian bounding box: {str(e)}")
+        logger.warning("Error saat pencarian bounding box: %s", e)
         return []
-
-# print(extract_document_content_di(r"C:\Users\ASUS\Documents\Dokumen Review\NPK\7.NPK (9).pdf")['text_content'])

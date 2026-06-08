@@ -1,7 +1,10 @@
+import logging
 from datetime import datetime
 from typing import List, Dict
 
 from app.services.ocr_service import find_bounding_box_with_context
+
+logger = logging.getLogger(__name__)
 from app.utils.date_validation_utils import (
     extract_all_days_and_dates,
     dict_day_reverse,
@@ -84,11 +87,14 @@ def validate_text_dates(text_dictionary: Dict) -> List[Dict]:
                             })
 
                     if len(bounding_box) > 1:
-                        print(f"Info: Ditemukan {len(bounding_box)} kemunculan untuk tanggal {info.tanggal_bracket}")
+                        logger.info(
+                            "Ditemukan %s kemunculan untuk tanggal %s",
+                            len(bounding_box),
+                            info.tanggal_bracket,
+                        )
 
                 except Exception as e:
-                    print(f"Warning: Gagal mencari bounding box: {e}")
-                    pass
+                    logger.warning("Gagal mencari bounding box: %s", e)
 
             # === HASIL ===
             result = {
@@ -114,9 +120,7 @@ def validate_text_dates(text_dictionary: Dict) -> List[Dict]:
             results.append(result)
 
         except Exception as e:
-            print(f"Error: Gagal validasi tanggal: {e}")
-            import traceback
-            traceback.print_exc()
+            logger.exception("Gagal validasi tanggal: %s", e)
             continue
 
     return results

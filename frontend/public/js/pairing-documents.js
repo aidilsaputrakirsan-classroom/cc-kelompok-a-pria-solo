@@ -29,7 +29,6 @@ const comparisonState = {
 // ========================================
 
 document.addEventListener('DOMContentLoaded', function () {
-    console.log('Pairing Documents Comparison Page Loaded');
     initializeComparison();
 });
 
@@ -46,7 +45,6 @@ async function initializeComparison() {
         const doc1Url = data.doc1_url;
         const doc2Url = data.doc2_url;
 
-        console.log('Loading PDFs:', doc1Url, doc2Url);
 
         // Load both PDFs
         await Promise.all([
@@ -62,7 +60,6 @@ async function initializeComparison() {
         // Setup event listeners
         setupEventListeners();
 
-        console.log('Comparison initialized successfully');
     } catch (error) {
         console.error('Error initializing comparison:', error);
         showError('Failed to load documents for comparison');
@@ -75,7 +72,6 @@ async function initializeComparison() {
  */
 async function loadPDF(url, pdfId) {
     try {
-        console.log(`Loading PDF ${pdfId} from URL:`, url);
 
         const response = await fetch(url, {
             method: 'GET',
@@ -102,7 +98,6 @@ async function loadPDF(url, pdfId) {
             comparisonState.numPages2 = pdf.numPages;
         }
 
-        console.log(`PDF ${pdfId} loaded successfully with ${pdf.numPages} pages`);
     } catch (error) {
         console.error(`Error loading PDF ${pdfId}:`, error);
         console.error('URL was:', url);
@@ -150,7 +145,6 @@ async function renderAllPages() {
             }
         }
 
-        console.log('All pages rendered successfully');
     } catch (error) {
         console.error('Error rendering all pages:', error);
         showError('Error rendering pages');
@@ -210,7 +204,6 @@ async function renderPageToPdf(pdf, pageNum, containerId) {
         
         await renderTask.promise;
 
-        console.log(`✅ Page ${pageNum} rendered at ${Math.round(scale * 100)}% scale for high quality`);
 
         // Append to container
         container.appendChild(canvas);

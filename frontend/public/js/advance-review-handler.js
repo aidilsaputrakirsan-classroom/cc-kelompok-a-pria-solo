@@ -159,10 +159,6 @@ function cleanText(value) {
  * Initialize Advance Result Viewer
  */
 function initAdvanceResultViewer(pdfUrl, ticketNumber, docType) {
-    console.log('📌 initAdvanceResultViewer called');
-    console.log('   PDF URL:', pdfUrl);
-    console.log('   Ticket:', ticketNumber);
-    console.log('   Doc Type:', docType);
 
     PDF_PATH = pdfUrl;
     CURRENT_TICKET_NUMBER = ticketNumber;
@@ -192,11 +188,9 @@ function initAdvanceResultViewer(pdfUrl, ticketNumber, docType) {
  */
 async function loadAdvanceResultPDF() {
     try {
-        console.log('📄 Loading PDF from:', PDF_PATH);
         showLoading();
 
         pdfDocument = await pdfjsLib.getDocument(PDF_PATH).promise;
-        console.log(`✅ PDF Loaded. Total Pages: ${pdfDocument.numPages}`);
 
         const container = document.getElementById('pdf-container');
         container.innerHTML = '';
@@ -207,7 +201,6 @@ async function loadAdvanceResultPDF() {
                 const page = await pdfDocument.getPage(pageNum);
                 const pageElement = await renderSimplePage(page, pageNum);
                 container.appendChild(pageElement);
-                console.log(`✅ Page ${pageNum}/${pdfDocument.numPages} rendered`);
             } catch (error) {
                 console.error(`❌ Failed to render page ${pageNum}:`, error);
             }
@@ -286,7 +279,6 @@ async function rotateAdvanceResultPage(pageNum) {
         const newRotation = (currentRotation + 90) % 360;
         pageRotations[pageNum] = newRotation;
 
-        console.log(`🔄 Rotating Page ${pageNum}: ${currentRotation}° -> ${newRotation}°`);
 
         // 2. Render ulang dengan rotasi baru
         const page = await pdfDocument.getPage(pageNum);
@@ -333,7 +325,6 @@ async function rotateAdvanceResultPage(pageNum) {
 async function loadAdvanceResultData() {
     try {
         const apiUrl = `/projess/api/advance-result/${CURRENT_TICKET_NUMBER}/${CURRENT_DOC_TYPE}/data`;
-        console.log('📡 Fetching data from:', apiUrl);
 
         const response = await fetch(apiUrl);
 
@@ -342,51 +333,29 @@ async function loadAdvanceResultData() {
         }
 
         const data = await response.json();
-        console.log('✅ Data received from backend:', data);
 
         // DEBUG: Log ground truth structure
         console.group('🔍 DEBUG: Ground Truth Structure');
-        console.log('Ground Truth Data:', data.ground_truth);
-        console.log('Keys:', Object.keys(data.ground_truth || {}));
         console.groupEnd();
 
         // DEBUG: Log review stages structure with all issues (including is_valid status)
-        console.log('═══════════════════════════════════════════════════════════');
-        console.log('🔍 DEBUG: Review Data Structure');
-        console.log('═══════════════════════════════════════════════════════════');
-        console.log('Review Stages:', data.review_stages);
-        console.log('Review Data:', data.review_data);
         if (data.review_stages && Array.isArray(data.review_stages)) {
-            console.log('Total Stages:', data.review_stages.length);
             data.review_stages.forEach((stage, idx) => {
-                console.log(`\n📋 Stage ${idx + 1}:`, stage.stage_name || `Stage ${stage.stage_id}`);
-                console.log('   Full Stage Object:', stage);
                 if (stage.issues && Array.isArray(stage.issues)) {
-                    console.log(`   Total Issues: ${stage.issues.length}`);
                     stage.issues.forEach((issue, issueIdx) => {
                         const desc = issue.description || issue.Description || issue.notes || issue.label || '-';
                         const isValid = issue.is_valid !== undefined ? issue.is_valid : 'N/A';
-                        console.log(`\n   📝 Issue ${issueIdx + 1}:`);
-                        console.log(`      Label: ${issue.label || 'N/A'}`);
-                        console.log(`      Description: ${desc}`);
-                        console.log(`      is_valid: ${isValid}`);
-                        console.log(`      Status: ${issue.status || 'N/A'}`);
-                        console.log(`      Full Issue Object:`, issue);
                     });
                 } else {
-                    console.log('   No issues array found in stage');
                 }
             });
         } else {
-            console.log('No review_stages array found in data');
         }
-        console.log('═══════════════════════════════════════════════════════════');
 
         // Render Ground Truth
         // First, check if ground_truth has a nested "Ground Truth" key (from backend wrapper)
         let groundTruthToRender = data.ground_truth;
         if (data.ground_truth && data.ground_truth['Ground Truth']) {
-            console.log('📦 Detected nested "Ground Truth" wrapper - unwrapping');
             groundTruthToRender = data.ground_truth['Ground Truth'];
         }
 
@@ -400,15 +369,12 @@ async function loadAdvanceResultData() {
             
             if (hasDocTypeKeys && keys.length > 1) {
                 // This is ALL ground truths organized by doc_type
-                console.log('🎨 Rendering ALL Ground Truths by Document Type');
                 renderAllGroundTruthsByDocType(groundTruthToRender);
             } else {
                 // Single ground truth object
-                console.log('🎨 Rendering Single Ground Truth');
                 renderGroundTruthFlexible(groundTruthToRender);
             }
         } else if (groundTruthToRender) {
-            console.log('🎨 Rendering Ground Truth');
             renderGroundTruthFlexible(groundTruthToRender);
         } else {
             console.warn('⚠️ No ground truth data received');
@@ -417,30 +383,17 @@ async function loadAdvanceResultData() {
         // Render Stage Cards
         const stages = data.review_stages || data.review_data;
         if (stages) {
-            console.log('📊 Rendering Stage Cards...');
             
             // DEBUG: Log all stages and issues with descriptions (including is_valid status)
-            console.log('═══════════════════════════════════════════════════════════');
-            console.log('🔍 DEBUG: Review Stages & Issues (Before Rendering)');
-            console.log('═══════════════════════════════════════════════════════════');
             stages.forEach((stage, stageIndex) => {
-                console.log(`\n📋 Stage ${stageIndex + 1}: ${stage.stage_name || `Stage ${stage.stage_id}`}`);
                 if (stage.issues && Array.isArray(stage.issues)) {
-                    console.log(`   Total Issues: ${stage.issues.length}`);
                     stage.issues.forEach((issue, issueIndex) => {
                         const description = issue.description || issue.Description || issue.notes || issue.label || '-';
                         const isValid = issue.is_valid !== undefined ? issue.is_valid : 'N/A';
-                        console.log(`\n   📝 Issue ${issueIndex + 1}:`);
-                        console.log(`      Label: ${issue.label || 'N/A'}`);
-                        console.log(`      Description: ${description}`);
-                        console.log(`      is_valid: ${isValid}`);
-                        console.log(`      Status: ${issue.status || 'N/A'}`);
                     });
                 } else {
-                    console.log('   No issues in this stage');
                 }
             });
-            console.log('═══════════════════════════════════════════════════════════\n');
             
             renderStageCards(stages);
         } else {
@@ -476,7 +429,6 @@ function renderAllGroundTruthsByDocType(allGroundTruths) {
         return;
     }
 
-    console.log('📚 Rendering ALL ground truths. Doc types:', Object.keys(allGroundTruths));
 
     const wrapper = document.createElement('div');
     wrapper.className = 'all-ground-truths-container';
@@ -557,9 +509,6 @@ function renderGroundTruthFlexible(groundTruth) {
         return;
     }
 
-    console.log('🔍 Fields received from BE:', Object.keys(groundTruth));
-    console.log('📄 Current Doc Type:', CURRENT_DOC_TYPE);
-    console.log('🎨 Rendering ALL fields (no doc_type filtering)');
 
     const wrapper = document.createElement('div');
     wrapper.className = 'template-kontrak';
@@ -955,12 +904,10 @@ function renderStageCards(stages) {
     container.innerHTML = '';
 
     if (!Array.isArray(stages) || stages.length === 0) {
-        console.log('ℹ️ No stages to render, hiding container');
         container.style.display = 'none';
         return;
     }
 
-    console.log(`✅ Rendering ${stages.length} stage cards`);
     container.style.display = 'flex';
     stages.forEach((stage, index) => {
         const stageCard = createStageCard(stage);
@@ -1039,15 +986,6 @@ function createStageSubcard(issue, stageName) {
     
     // DEBUG: Log description output value (even if is_valid: false)
     const isValid = issue.is_valid !== undefined ? issue.is_valid : 'N/A';
-    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
-    console.log('📝 ISSUE DESCRIPTION OUTPUT:');
-    console.log('   Stage:', stageName);
-    console.log('   Label:', issue.label || 'N/A');
-    console.log('   Description:', descriptionText);
-    console.log('   is_valid:', isValid);
-    console.log('   Status:', issue.status || 'N/A');
-    console.log('   Full Issue Object:', issue);
-    console.log('━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━');
     
     textDiv.innerHTML = `<span class="issue-description">${descriptionText}</span>`;
 
@@ -1279,4 +1217,3 @@ function hidePageLoadingOverlay() {
 window.initAdvanceResultViewer = initAdvanceResultViewer;
 window.rotateAdvanceResultPage = rotateAdvanceResultPage;
 
-console.log('✅ pdf-advance-result.js loaded successfully with ROTATE feature');

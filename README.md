@@ -47,10 +47,26 @@ Berdasarkan struktur proyek di `backend/` dan `frontend/`:
 
 ## 🏗️ Architecture
 
+```mermaid
+flowchart TD
+    USER["👤 Admin (Browser)"] --> GW["🚪 API Gateway<br/>Nginx :8080"]
+    GW -->|"/"| WEB["⚙️ Laravel + Open Admin<br/>:8000"]
+    GW -->|"/api/python/*"| DOC["📄 Document Service<br/>FastAPI :8001"]
+    WEB --> DB[("MySQL 8<br/>cloudapp")]
+    WEB -.->|"HTTP + retry + CB"| DOC
 ```
-[Laravel + Open Admin Frontend] <--HTTP REST--> [FastAPI Backend] <--SQL--> [Database]
-       (Blade, Eloquent, MySQL)                      (Document Validator API)    (MySQL)
-```
+
+Detail reliability & ports: **[docs/architecture.md](docs/architecture.md)**
+
+### Architecture Evolution
+
+| Phase | Weeks | Architecture |
+|-------|-------|--------------|
+| Foundation | 1–4 | Full-stack: FastAPI + Laravel + MySQL |
+| Containerization | 5–7 | Docker Compose (backend, frontend, DB) |
+| CI/CD | 9–11 | GitHub Actions + Railway deployment |
+| Microservices | 12–14 | Nginx gateway + document-service + monitoring |
+| Final | 15–16 | Security hardened + dokumentasi UAS |
 
 ## 🌐 Live Demo (production)
 
@@ -62,7 +78,7 @@ Berdasarkan struktur proyek di `backend/` dan `frontend/`:
 | Health check | [https://backend-production-bdd8.up.railway.app/health](https://backend-production-bdd8.up.railway.app/health) |
 | API docs (Swagger) | [https://backend-production-bdd8.up.railway.app/docs](https://backend-production-bdd8.up.railway.app/docs) |
 
-Detail setup & rollback: **[docs/deployment-guide.md](docs/deployment-guide.md)** · Release M2: **[docs/release-notes-m2.md](docs/release-notes-m2.md)** · Smoke test: **[docs/production-test.md](docs/production-test.md)**
+Detail setup & rollback: **[docs/deployment-guide.md](docs/deployment-guide.md)** · Release M3: **[docs/release-notes-m3.md](docs/release-notes-m3.md)** · Smoke test: **[docs/production-test.md](docs/production-test.md)**
 
 ## 🔄 CI/CD
 
@@ -80,6 +96,7 @@ Ringkas di bawah ini; **langkah lengkap** (clone → `.env` → DB → port): **
 - **Backend:** Python 3.10+, pip
 - **Frontend:** PHP 7.3+ / 8.0+ (sesuai composer.json), Composer, MySQL
 - Git
+- **Environment:** salin `.env.example` (root) serta `backend/.env.example` dan `frontend/.env.example`
 
 ### Backend
 ```bash
@@ -221,6 +238,18 @@ Langkah demi langkah untuk presentasi: **[docs/uts-demo-script.md](docs/uts-demo
 - **FastAPI (Document Validator):** endpoint `POST /information-extraction` dan `POST /review` **tidak** memakai JWT pada proyek magang ini; yang memanggil ke FastAPI adalah **server Laravel** (mis. job `ProcessAdvanceUploadJob` dengan Guzzle) menggunakan base URL dari **`URL_VM_PYTHON`** di `.env`. Untuk production, pembatasan jaringan (hanya jaringan internal / reverse proxy) disarankan.
 - **CORS:** daftar origin di **`CORS_ORIGINS`** (Modul 11) atau **`ALLOWED_ORIGINS`** pada `backend/.env` (whitelist), bukan `*`.
 
+## 🔐 Security (Modul 15)
+
+| Kontrol | Implementasi |
+|---------|--------------|
+| Secrets | Semua kredensial via `.env` / Railway / GitHub Secrets — tidak di Git |
+| Rate limiting | Nginx: 5 req/s login, 20 req/s document API, 30 req/s umum |
+| Input validation | Pydantic (`ticket`, `ground_truth`, batas PDF) |
+| Auth | Laravel session (Open Admin); FastAPI dipanggil internal |
+| Observability | JSON logs, correlation ID, `/metrics`, tanpa expose secret di endpoint health |
+
+Verifikasi lokal: `./scripts/verify-final.sh` · Checklist UAS: **[docs/final-checklist.md](docs/final-checklist.md)**
+
 ## 📡 API (Backend FastAPI)
 
 **Base URL:** `http://127.0.0.1:8001`  
@@ -238,6 +267,19 @@ Langkah demi langkah untuk presentasi: **[docs/uts-demo-script.md](docs/uts-demo
 - Ringkasan + **contoh cURL**: **[docs/api-documentation.md](docs/api-documentation.md)**
 - Hasil testing API: **[docs/api-test-results.md](docs/api-test-results.md)**
 - Jawaban tugas terstruktur Modul 4 (magang): **[docs/tugas-per-minggu/04-tugas-terstruktur.md](docs/tugas-per-minggu/04-tugas-terstruktur.md)**
+- Kontrak API formal (UAS): **[docs/api-contract.md](docs/api-contract.md)**
+
+## 📄 Documentation
+
+| Dokumen | Isi |
+|---------|-----|
+| [architecture.md](docs/architecture.md) | Diagram microservices & reliability |
+| [deployment-guide.md](docs/deployment-guide.md) | Deploy Railway & rollback |
+| [operations-guide.md](docs/operations-guide.md) | Log, metrics, troubleshooting |
+| [api-contract.md](docs/api-contract.md) | Kontrak endpoint & error format |
+| [release-notes-m3.md](docs/release-notes-m3.md) | Release v3.0.0 (final) |
+| [uas-presentation-outline.md](docs/uas-presentation-outline.md) | Slide & demo script UAS |
+| [final-checklist.md](docs/final-checklist.md) | Checklist sebelum UAS |
 
 ## 📅 Roadmap
 
@@ -248,7 +290,8 @@ Langkah demi langkah untuk presentasi: **[docs/uts-demo-script.md](docs/uts-demo
 | 3      | UI Laravel + Open Admin | ✅     |
 | 4      | Full-Stack Integration  | ✅     |
 | 5-7    | Docker & Compose        | ✅     |
-| 8      | UTS Demo                | ⬜     |
+| 8      | UTS Demo                | ✅     |
 | 9-11   | CI/CD Pipeline          | ✅     |
-| 12-14  | Microservices           | ⬜     |
-| 15-16  | Final & UAS             | ⬜     |
+| 12-14  | Microservices           | ✅     |
+| 15     | Final Polish & Security | ✅     |
+| 16     | UAS Demo                | ⬜     |

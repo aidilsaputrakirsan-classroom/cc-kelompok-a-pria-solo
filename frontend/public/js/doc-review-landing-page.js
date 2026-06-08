@@ -106,7 +106,6 @@ document.addEventListener('DOMContentLoaded', function() {
     allReviewCards.forEach(function(card) {
         card.addEventListener('mouseenter', function() {
             const cardType = this.id === 'basicReviewCard' ? 'basic' : 'advanced';
-            console.log(`User hovering over ${cardType} review card`);
             // You can send analytics here if needed
         });
     });
