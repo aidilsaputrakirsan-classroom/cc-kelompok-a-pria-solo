@@ -189,7 +189,6 @@ function initializeDeleteHandlers() {
             const stage = deleteButton.getAttribute('data-stage');
             const ticketCard = deleteButton.closest('.ticket-card');
 
-            console.log('Delete button clicked', { ticketId, stage });
 
             if (ticketId && ticketCard) {
                 showConfirmModal(ticketId, stage, ticketCard);

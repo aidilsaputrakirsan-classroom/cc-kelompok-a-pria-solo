@@ -738,7 +738,6 @@ document.addEventListener("DOMContentLoaded", function () {
             errorModal.show();
 
             console.error("Upload error details:", message);
-            console.log('Form auto-reset completed');
         }, 100);
     }
 
@@ -1016,7 +1015,6 @@ document.addEventListener("DOMContentLoaded", function () {
                         }
                         lastData = await sendChunk(i, chunks[i]);
                     }
-                    console.log("Upload success:", lastData);
                     selectedFilesAdv = [];
                     displayFilesAdv();
                     document.getElementById("ticketNumberAdv").value = "";

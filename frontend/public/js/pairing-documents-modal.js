@@ -20,7 +20,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const modal = document.getElementById('pairingDocsModal');
     if (modal) {
         modal.addEventListener('show.bs.modal', function () {
-            console.log('Pairing Documents Modal opened');
             loadPairingDocuments();
         });
     }
@@ -45,7 +44,6 @@ function loadPairingDocuments() {
 
     // Fetch available documents
     const apiUrl = `/projess/api/tickets/${ticketNumber}/pairing-documents/available`;
-    console.log('Fetching from:', apiUrl);
     fetch(apiUrl)
         .then(response => {
             if (!response.ok) {

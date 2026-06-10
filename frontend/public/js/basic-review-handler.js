@@ -61,15 +61,12 @@ function initPDFViewer(ticketNumber, apiUrl = null) {
 // ========================================
 async function loadTicketData() {
     try {
-        console.log('📡 Fetching ticket data...');
-        console.log('🔗 API URL:', state.apiUrl);
 
         const response = await fetch(state.apiUrl);
         if (!response.ok) {
             throw new Error(`HTTP ${response.status}: ${response.statusText}`);
         }
 
-        console.log('🔵 Response:', response);
 
         const data = await response.json();
 
@@ -82,19 +79,11 @@ async function loadTicketData() {
         // ========================================
         // DETAILED LOGGING FOR DEBUGGING
         // ========================================
-        console.log('📊 ========== DATA RECEIVED FROM API ==========');
-        console.log('📄 Documents:', data.documents);
-        console.log('🗺️ Page Mapping:', data.pageMapping);
-        console.log('🐛 Issues by Page:', data.issues);
-        console.log('📋 Issues List:', data.issuesList);
         
         // Log bounding boxes per issue
-        console.log('🎯 ========== BOUNDING BOXES PER PAGE ==========');
         Object.keys(data.issues || {}).forEach(globalPage => {
             const pageIssues = data.issues[globalPage] || [];
-            console.log(`📄 Page ${globalPage} - ${pageIssues.length} issue(s):`);
             pageIssues.forEach((issue, index) => {
-                console.log(`  Issue ${index + 1}:`, {
                     type: issue.type,
                     id: issue.id,
                     text: issue.text,
@@ -110,12 +99,9 @@ async function loadTicketData() {
         });
         
         // Log issues list with locations
-        console.log('📍 ========== ISSUES LIST WITH LOCATIONS ==========');
         Object.keys(data.issuesList || {}).forEach(issueType => {
             const issues = data.issuesList[issueType] || [];
-            console.log(`📝 ${issueType.toUpperCase()} Issues (${issues.length}):`);
             issues.forEach((issue, index) => {
-                console.log(`  Issue ${index + 1}:`, {
                     id: issue.id,
                     text: issue.text,
                     locations: issue.locations,
@@ -123,7 +109,6 @@ async function loadTicketData() {
                 });
                 if (issue.locations && issue.locations.length > 0) {
                     issue.locations.forEach((loc, locIndex) => {
-                        console.log(`    Location ${locIndex + 1}:`, {
                             docType: loc.docType,
                             pageInDoc: loc.pageInDoc,
                             globalPageNum: loc.globalPageNum,
@@ -134,8 +119,6 @@ async function loadTicketData() {
             });
         });
         
-        console.log('✅ ========== SUMMARY ==========');
-        console.log('✅ Data loaded:', {
             documents: state.documents.length,
             pages: Object.keys(state.pageMapping).length,
             issues: Object.keys(state.issues).length,
@@ -187,8 +170,6 @@ function showBoundingBoxesMissingBannerIfNeeded() {
 // VIEWER BUILDING
 // ========================================
 async function buildViewer() {
-    console.log('🏗️ ========== BUILDING VIEWER ==========');
-    console.log('📊 State overview:', {
         documentsCount: state.documents.length,
         pageMappingCount: Object.keys(state.pageMapping).length,
         issuesCount: Object.keys(state.issues).length,
@@ -209,12 +190,9 @@ async function buildViewer() {
         .map(Number)
         .sort((a, b) => a - b);
 
-    console.log(`📄 Creating ${globalPages.length} virtual page(s):`, globalPages);
-    console.log('📋 Page mapping details:');
     globalPages.forEach(pageNum => {
         const mapping = state.pageMapping[pageNum];
         const pageIssues = getIssuesForPage(pageNum);
-        console.log(`  Page ${pageNum}:`, {
             docType: mapping.docType,
             pageInDoc: mapping.pageInDoc,
             issuesCount: pageIssues.length,
@@ -227,13 +205,10 @@ async function buildViewer() {
         container.appendChild(pageEl);
     });
 
-    console.log('🎨 Rendering all pages immediately...');
     for (const pageNum of globalPages) {
         await renderPage(pageNum);
     }
 
-    console.log('✅ All pages rendered');
-    console.log('🏁 ========== VIEWER BUILD COMPLETE ==========');
 }
 
 function createVirtualPage(globalPageNum) {
@@ -249,7 +224,6 @@ function createVirtualPage(globalPageNum) {
         issueCount = getIssuesForPage(globalPageNum)?.length || 0;
     }
     
-    console.log(`📄 Creating virtual page ${globalPageNum}:`, {
         docType: info?.docType,
         pageInDoc: info?.pageInDoc,
         issueCount: issueCount,
@@ -292,7 +266,6 @@ function createVirtualPage(globalPageNum) {
 // INTERSECTION OBSERVER
 // ========================================
 function setupObservers() {
-    console.log('👁️ Observers disabled - rendering all pages upfront');
 }
 
 function startObserving() { }
@@ -304,7 +277,6 @@ async function renderPage(globalPageNum) {
     const pageEl = document.getElementById(`page-${globalPageNum}`);
     if (!pageEl || pageEl.dataset.state === 'loaded') return;
 
-    console.log(`🎨 Rendering page ${globalPageNum}`);
 
     pageEl.dataset.state = 'loading';
     showLoadingInPage(pageEl);
@@ -335,15 +307,9 @@ async function renderPage(globalPageNum) {
 
         const issues = getIssuesForPage(globalPageNum) || [];
         
-        console.log(`🎯 ========== RENDERING PAGE ${globalPageNum} ==========`);
-        console.log(`📄 Page Info:`, info);
-        console.log(`🐛 Issues for this page:`, issues);
-        console.log(`📊 Issues count:`, issues.length);
         
         if (issues.length > 0) {
-            console.log(`🎨 Drawing ${issues.length} bounding box(es) for page ${globalPageNum}:`);
             issues.forEach((issue, index) => {
-                console.log(`  Bounding Box ${index + 1}:`, {
                     type: issue.type,
                     id: issue.id,
                     text: issue.text?.substring(0, 50),
@@ -374,7 +340,6 @@ async function renderPage(globalPageNum) {
             height: viewport.height
         });
 
-        console.log(`✅ Page ${globalPageNum} rendered`);
 
     } catch (error) {
         console.error(`❌ Render error page ${globalPageNum}:`, error);
@@ -414,8 +379,6 @@ async function loadPDF(docType, pdfUrl, retries = 3) {
 
     for (let attempt = 1; attempt <= retries; attempt++) {
         try {
-            console.log(`📥 Loading ${docType} (attempt ${attempt})`);
-            console.log(`📎 URL: ${pdfUrl}`);
 
             const loadTask = pdfjsLib.getDocument({
                 url: pdfUrl,
@@ -433,7 +396,6 @@ async function loadPDF(docType, pdfUrl, retries = 3) {
             state.pdfDocuments[docType] = pdf;
             state.loadedDocuments.add(docType);
 
-            console.log(`✅ ${docType} loaded (${pdf.numPages} pages)`);
             return pdf;
 
         } catch (error) {
@@ -450,7 +412,6 @@ async function loadPDF(docType, pdfUrl, retries = 3) {
 // BOUNDING BOXES
 // ========================================
 function drawBoundingBoxes(ctx, issues, scale) {
-    console.log(`🎨 drawBoundingBoxes called with ${issues.length} issue(s), scale: ${scale}`);
     
     if (!issues || issues.length === 0) {
         console.warn('⚠️ drawBoundingBoxes: No issues to draw');
@@ -472,7 +433,6 @@ function drawBoundingBoxes(ctx, issues, scale) {
         const w = bbox.width * CONFIG.dpi * scale;
         const h = bbox.height * CONFIG.dpi * scale;
 
-        console.log(`  Drawing bbox ${index + 1}:`, {
             type: issue.type,
             id: issue.id,
             originalBbox: bbox,
@@ -486,10 +446,8 @@ function drawBoundingBoxes(ctx, issues, scale) {
 
         drawLabel(ctx, issue.type.toUpperCase(), x, y, color);
         
-        console.log(`  ✅ Bounding box ${index + 1} drawn successfully`);
     });
     
-    console.log(`✅ Finished drawing ${issues.length} bounding box(es)`);
 }
 
 function drawLabel(ctx, text, x, y, color) {
@@ -528,7 +486,6 @@ function drawLabel(ctx, text, x, y, color) {
 // SCROLL NAVIGATION
 // ========================================
 function scrollToGlobalPage(globalPage) {
-    console.log(`🎯 Scrolling to page ${globalPage}`);
 
     const pageEl = document.getElementById(`page-${globalPage}`);
     if (!pageEl) return;

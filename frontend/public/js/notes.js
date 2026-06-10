@@ -84,7 +84,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
             // Jika kosong, hapus otomatis
             if (trimmedValue === '') {
-                console.log(`🗑️ Auto-deleting empty note: ${category} - ${pointId}`);
                 deletePoint(category, pointId);
             }
         });
@@ -372,7 +371,6 @@ document.addEventListener('DOMContentLoaded', function () {
         }
 
         if (isSaving) {
-            console.log('⏳ Save already in progress, skipping...');
             return;
         }
 
@@ -397,7 +395,6 @@ document.addEventListener('DOMContentLoaded', function () {
 
         const csrfToken = document.querySelector('meta[name="csrf-token"]')?.getAttribute('content');
 
-        console.log('📤 Sending save request:', { ticketNumber, notes });
         
         fetch(`/projess/api/tickets/${ticketNumber}/notes`, {
             method: 'POST',
@@ -408,7 +405,6 @@ document.addEventListener('DOMContentLoaded', function () {
             body: JSON.stringify({ notes })
         })
             .then(response => {
-                console.log('📥 Save response status:', response.status);
                 if (!response.ok) {
                     return response.text().then(text => {
                         console.error('❌ Save failed. Response:', text);
@@ -418,7 +414,6 @@ document.addEventListener('DOMContentLoaded', function () {
                 return response.json();
             })
             .then(data => {
-                console.log('✅ Notes saved successfully:', data);
                 lastSavedState = JSON.stringify(categoryPoints);
 
                 if (isManual) {
@@ -596,13 +591,10 @@ ${notesContent.join('\n\n')}`;
     // ========================================
 
     window.addIssueToNotes = function (issue, location) {
-        console.log('📝 addIssueToNotes called', { issue, location });
         
         const category = getDocumentCategory(location.docType);
         const noteText = generateNoteText(issue, location);
         
-        console.log('📋 Category determined:', category, 'for docType:', location.docType);
-        console.log('📄 Note text:', noteText);
 
         // Ensure categoryPoints[category] exists
         if (!categoryPoints[category]) {
@@ -616,9 +608,6 @@ ${notesContent.join('\n\n')}`;
         // ✅ Save immediately (with small delay to ensure state is updated)
         // Use setTimeout to ensure the state update from addPoint is complete
         setTimeout(() => {
-            console.log('💾 Attempting to save notes to server...');
-            console.log('📊 Current state:', JSON.stringify(categoryPoints));
-            console.log('🎫 Ticket number:', ticketNumber);
             
             if (!ticketNumber) {
                 console.error('❌ Ticket number is missing! Cannot save notes.');
@@ -630,7 +619,6 @@ ${notesContent.join('\n\n')}`;
     };
 
     window.addAdvanceIssueToNotes = function (issue, stageName) {
-        console.log('📝 addAdvanceIssueToNotes called', { issue, stageName });
         
         const urlParts = window.location.pathname.split('/').filter(part => part.length > 0);
         const advanceIndex = urlParts.indexOf('advance-result');
@@ -650,12 +638,10 @@ ${notesContent.join('\n\n')}`;
         }
 
         const category = getDocumentCategory(docType);
-        console.log('📋 Category determined:', category, 'for docType:', docType);
         
         // Use same field priority as advance-review-handler.js
         const description = issue.keterangan || issue.Description || issue.description || issue.notes || issue.label || 'Issue tidak teridentifikasi';
         const noteText = `${stageName}: ${description}`;
-        console.log('📄 Note text:', noteText);
 
         // Ensure categoryPoints[category] exists
         if (!categoryPoints[category]) {
@@ -663,7 +649,6 @@ ${notesContent.join('\n\n')}`;
         }
 
         addPoint(category, noteText);
-        console.log('✅ Point added to state. Category points:', categoryPoints[category]);
         
         showToast('✓ Ditambahkan ke notes', 'success');
         highlightFAB();
@@ -671,9 +656,6 @@ ${notesContent.join('\n\n')}`;
         // ✅ Save immediately (with small delay to ensure state is updated)
         // Use setTimeout to ensure the state update from addPoint is complete
         setTimeout(() => {
-            console.log('💾 Attempting to save notes to server...');
-            console.log('📊 Current state:', JSON.stringify(categoryPoints));
-            console.log('🎫 Ticket number:', ticketNumber);
             
             if (!ticketNumber) {
                 console.error('❌ Ticket number is missing! Cannot save notes.');
@@ -685,7 +667,6 @@ ${notesContent.join('\n\n')}`;
     };
 
     window.addMissingDocsToNotes = function (missingDocs) {
-        console.log('📋 Adding missing docs from overview:', missingDocs);
 
         if (!missingDocs || missingDocs.length === 0) {
             alert('Tidak ada dokumen yang perlu dilengkapi');
@@ -705,7 +686,6 @@ ${notesContent.join('\n\n')}`;
             grouped[category].push(doc);
         });
 
-        console.log('📊 Grouped by category:', grouped);
 
         let addedCount = 0;
 
@@ -714,7 +694,6 @@ ${notesContent.join('\n\n')}`;
 
             if (docs.length > 0) {
                 const noteText = `Mohon untuk melampirkan dokumen ${docs.join(', ')}`;
-                console.log(`✅ Adding to ${category}:`, noteText);
 
                 addPoint(category, noteText);
                 addedCount++;

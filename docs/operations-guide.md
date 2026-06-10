@@ -178,4 +178,43 @@ When integration tests fail in GitHub Actions, Docker logs are automatically exp
 
 ---
 
-*PRIA Solo — Modul 14 Monitoring, Logging & Observability*
+## Security Operations (Modul 15)
+
+### Rate limiting (Nginx gateway)
+
+| Zone | Rate | Burst | Target |
+|------|------|-------|--------|
+| `auth_limit` | 5 req/s | 10 | `POST /projess/auth/login` |
+| `api_python_limit` | 20 req/s | 40 | `/api/python/*` |
+| `general_limit` | 30 req/s | 50 | Laravel routes lainnya |
+
+Test brute-force protection:
+
+```bash
+for i in $(seq 1 15); do
+  curl -s -o /dev/null -w "Request $i: %{http_code}\n" \
+    -X POST http://localhost:8080/projess/auth/login \
+    -d "username=test&password=wrong"
+done
+# Expect HTTP 429 after burst
+```
+
+### Secret audit
+
+```bash
+grep -rn "password\|secret\|api_key" backend/ frontend/app services/ \
+  --include="*.py" --include="*.php" \
+  | grep -v ".env.example" | grep -v vendor
+```
+
+### Final verification
+
+```bash
+./scripts/verify-final.sh
+```
+
+Checklist lengkap: [final-checklist.md](final-checklist.md)
+
+---
+
+*PRIA Solo — Modul 14–15 Monitoring, Security & Operations*

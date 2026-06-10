@@ -1,10 +1,13 @@
 import json
+import logging
 import os
 import re
 import time
 import warnings
 
 from typing import Dict, List
+
+logger = logging.getLogger(__name__)
 from app.utils.prompt_templates import get_prompt_template
 from app.services.ocr_service import find_word_bounding_box
 from app.utils.preprocessor_utils import clean_typo_results
@@ -223,7 +226,7 @@ def validate_text_typos(text_dictionary: Dict, max_retries: int = 3, min_confide
             # Jalankan chain
             result = chain.run(document_text=document_text)
 
-            print(result)
+            logger.debug("Typo chain raw result length: %s", len(result) if result else 0)
 
             # Extract JSON dari response
             json_data = extract_json_from_text(result)
@@ -246,16 +249,16 @@ def validate_text_typos(text_dictionary: Dict, max_retries: int = 3, min_confide
                 # Return list typos (bisa kosong atau berisi objek typo)
                 return typos
             else:
-                print(f"✗ Attempt {attempt + 1}: {message}")
+                logger.warning("Typo validation attempt %s failed: %s", attempt + 1, message)
 
         except ValueError as e:
-            print(f"✗ Attempt {attempt + 1}: {str(e)}")
+            logger.warning("Typo validation attempt %s ValueError: %s", attempt + 1, e)
 
         except json.JSONDecodeError as e:
-            print(f"✗ Attempt {attempt + 1}: JSON decode error - {str(e)}")
+            logger.warning("Typo validation attempt %s JSON decode error: %s", attempt + 1, e)
 
         except Exception as e:
-            print(f"✗ Attempt {attempt + 1}: Unexpected error - {str(e)}")
+            logger.warning("Typo validation attempt %s unexpected error: %s", attempt + 1, e)
 
         # Tunggu sebelum retry (exponential backoff)
         if attempt < max_retries - 1:

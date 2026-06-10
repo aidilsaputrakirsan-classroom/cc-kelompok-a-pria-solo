@@ -1,5 +1,9 @@
+import logging
 from typing import List, Dict
+
 from app.services.ocr_service import find_bounding_box_with_context
+
+logger = logging.getLogger(__name__)
 from app.utils.price_validation_utils import method_compiled_find_all
 from num2words import num2words
 
@@ -53,16 +57,17 @@ def validate_text_prices(text_dictionary: Dict) -> List[Dict]:
                             })
                         else:
                             # Log untuk debugging (hanya jika semua hasil tidak found)
-                            if not bounding_box:  # Log sekali saja
-                                print(f"Warning: Bounding box tidak ditemukan untuk harga {info.angka}")
-                                print(f"  Full context: {full_context[:100]}...")
-                                print(f"  Error: {bbox_result.get('error', 'Unknown')}")
+                            if not bounding_box:
+                                logger.warning(
+                                    "Bounding box tidak ditemukan untuk harga %s (context=%s, error=%s)",
+                                    info.angka,
+                                    full_context[:100],
+                                    bbox_result.get("error", "Unknown"),
+                                )
 
 
                 except Exception as e:
-                    # Silent fail - bounding box tidak kritis
-                    print(f"Warning: Gagal mencari bounding box untuk harga: {e}")
-                    pass
+                    logger.warning("Gagal mencari bounding box untuk harga: %s", e)
 
             # Minimal result
             result = {
@@ -79,8 +84,7 @@ def validate_text_prices(text_dictionary: Dict) -> List[Dict]:
             results.append(result)
 
         except Exception as e:
-            # Silent fail untuk error conversion
-            print(f"Warning: Gagal validasi harga: {e}")
+            logger.warning("Gagal validasi harga: %s", e)
             results.append({
                 "extracted_text": f"Rp {getattr(info, 'angka', 'N/A')} ({getattr(info, 'terbilang', 'N/A')})",
                 "is_valid": False,
