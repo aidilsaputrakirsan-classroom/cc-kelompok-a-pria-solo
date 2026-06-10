@@ -56,13 +56,16 @@ class MetricsCollector:
             self._recent.append((time.time(), is_error))
             self._prune_old()
 
+    def _error_rate_last_minute_unlocked(self) -> float:
+        self._prune_old()
+        if not self._recent:
+            return 0.0
+        errors = sum(1 for _, is_error in self._recent if is_error)
+        return round(errors / len(self._recent) * 100, 2)
+
     def error_rate_last_minute(self) -> float:
         with self._lock:
-            self._prune_old()
-            if not self._recent:
-                return 0.0
-            errors = sum(1 for _, is_error in self._recent if is_error)
-            return round(errors / len(self._recent) * 100, 2)
+            return self._error_rate_last_minute_unlocked()
 
     def check_and_alert(self, correlation_id: str | None = None) -> bool:
         """Log CRITICAL with alert=true if error rate exceeds threshold."""
@@ -121,7 +124,7 @@ class MetricsCollector:
                 "total_requests": self.request_count,
                 "total_errors": self.error_count,
                 "error_rate_percent": error_rate,
-                "error_rate_last_minute_percent": self.error_rate_last_minute(),
+                "error_rate_last_minute_percent": self._error_rate_last_minute_unlocked(),
                 "status_codes": dict(self.status_counts),
                 "latency": latency_stats,
                 "endpoints": endpoints,
